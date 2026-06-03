@@ -1,26 +1,472 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+  --font-heading: var(--font-sora);
+
+  /* Focus Mode brand tokens (Tailwind v4 @theme replaces tailwind.config.js) */
+  --color-surface: #121414;
+  --color-surface-dim: #0c0f0f;
+  --color-surface-bright: #37393a;
+  --color-surface-container-lowest: #0c0f0f;
+  --color-surface-container-low: #1a1c1c;
+  --color-surface-container: #1e2020;
+  --color-surface-container-high: #282a2b;
+  --color-surface-container-highest: #333535;
+  --color-bolt: #fde400;
+  --color-bolt-dim: #dec800;
+  --color-neural: #2eb9df;
+  --color-neural-deep: #1f6feb;
+  --color-silver: #bac8da;
+  --color-on-surface: #e2e2e2;
+  --color-outline: #4b4731;
+  --color-outline-strong: #979177;
+  --color-secondary-container: #3d4a5a;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root, .dark {
+  /* Premium refined radius — intentional mix for Shopify luxury (pills for CTAs, soft for cards) */
+  --radius: 10px;
+
+  --background: #0c0f0f;
+  --foreground: #e8e8e8;
+  --card: #141717;
+  --card-foreground: #e8e8e8;
+  --popover: #16191a;
+  --popover-foreground: #e8e8e8;
+  --primary: #fde400;
+  --primary-foreground: #0c0f0f;
+  --secondary: #1a1e1e;
+  --secondary-foreground: #e8e8e8;
+  --muted: #141717;
+  --muted-foreground: #8a8f98;
+  --accent: #222626;
+  --accent-foreground: #fde400;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: rgba(186, 200, 218, 0.08);
+  --input: rgba(186, 200, 218, 0.12);
+  --ring: #dec800;
+  --chart-1: #fde400;
+  --chart-2: #2eb9df;
+  --chart-3: #dec800;
+  --chart-4: #bac8da;
+  --chart-5: #3d4a5a;
+  --sidebar: #0c0f0f;
+  --sidebar-foreground: #e8e8e8;
+  --sidebar-primary: #fde400;
+  --sidebar-primary-foreground: #0c0f0f;
+  --sidebar-accent: #222626;
+  --sidebar-accent-foreground: #fde400;
+  --sidebar-border: rgba(186, 200, 218, 0.08);
+  --sidebar-ring: #dec800;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1, "kern" 1;
+  }
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-sora), system-ui, sans-serif;
+    font-feature-settings: "kern" 1, "tnum" 0;
+    letter-spacing: -0.02em;
+  }
+  /* Make body text feel editorial + premium (not default Inter generic) */
+  p, li, .text-silver\/70 {
+    line-height: 1.65;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ===== Focus Mode utilities & animations ===== */
+.font-heading { font-family: var(--font-sora), system-ui, sans-serif; }
+.font-mono-data { font-family: var(--font-jetbrains), ui-monospace, monospace; }
+
+.text-glow-bolt { text-shadow: 0 0 32px rgba(253, 228, 0, 0.38); }
+.glow-bolt { box-shadow: 0 0 0 1px rgba(253, 228, 0, 0.18), 0 0 36px rgba(253, 228, 0, 0.22); }
+.glow-neural { box-shadow: 0 0 0 1px rgba(46, 185, 223, 0.18), 0 0 42px rgba(46, 185, 223, 0.26); }
+.drop-glow-bolt { filter: drop-shadow(0 0 22px rgba(253, 228, 0, 0.32)); }
+.drop-glow-neural { filter: drop-shadow(0 12px 48px rgba(46, 185, 223, 0.38)); }
+
+/* Premium subtle grid — used sparingly for depth, much softer than before to avoid tech slop */
+.hud-grid {
+  background-image:
+    linear-gradient(rgba(186, 200, 218, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(186, 200, 218, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* ===== PREMIUM SHOPIFY / ATLAS BOLT-STYLE REDESIGN =====
+   Bespoke high-end ecom feel: refined depth, signature tactile CTAs, no default shadcn or generic AI-vibe rounded buttons/fonts.
+   Fast: lightweight CSS, no new heavy assets/filters on every element. Keeps existing cool 3D anims as stars.
+*/
+
+/* Cool premium glass cards — rich multi-layer shadows + frosted glassmorphism for "expensive floating 3D panels".
+   Matches the luxurious, shadowed, premium depth of the product render in the reference. No flat slop.
+   Used for feature cards, comparison, ROI, pricing side, etc.
+*/
+.premium-card {
+  background: rgba(20, 23, 23, 0.82);
+  border: 1px solid rgba(186, 200, 218, 0.07);
+  border-radius: 12px;
+  /* Layered glass + float: soft large outer shadow for lift, tight inner bevel, subtle glow accents */
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.05) inset,
+    0 18px 48px -18px rgba(0, 0, 0, 0.55),
+    0 6px 12px -3px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+  transition: transform 0.18s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.premium-card:hover {
+  transform: translateY(-3px) scale(1.005);
+  border-color: rgba(186, 200, 218, 0.12);
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.08) inset,
+    0 28px 60px -20px rgba(0, 0, 0, 0.65),
+    0 12px 18px -4px rgba(0, 0, 0, 0.3);
+}
+
+/* Signature premium Shopify-style CTAs — distinctive, not "every other site" rounded slop.
+   Primary: rich bolt yellow, Sora bold, layered depth (inset highlight + soft drop) for expensive tactile press.
+   Used for all main "Buy / Claim" actions. Keeps liquid glass where desired but unifies base treatment.
+*/
+.premium-cta,
+a.premium-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-sora), system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 14.5px;
+  letter-spacing: -0.16px;
+  padding: 15px 34px;
+  border-radius: 9999px;
+  background: #fde400;
+  color: #0c0f0f;
+  border: 1px solid rgba(0,0,0,0.06);
+  /* Richer 3D glass/metal premium treatment: multiple inset speculars + soft outer glow for expensive tactile glass button feel */
+  box-shadow:
+    0 1.5px 0 0 rgba(255,255,255,0.75) inset,
+    0 2px 4px 0 rgba(0,0,0,0.18) inset,
+    0 1px 2px rgba(0,0,0,0.12),
+    0 8px 22px -4px rgba(253,228,0,0.32);
+  transition: all 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
+  white-space: nowrap;
+  text-decoration: none;
+}
+.premium-cta:hover {
+  background: #ffea3d;
+  box-shadow:
+    0 1.5px 0 0 rgba(255,255,255,0.85) inset,
+    0 2px 4px 0 rgba(0,0,0,0.18) inset,
+    0 1px 2px rgba(0,0,0,0.12),
+    0 12px 28px -6px rgba(253,228,0,0.42);
+  transform: translateY(-1px);
+}
+.premium-cta:active {
+  transform: scale(0.985) translateY(0);
+  box-shadow:
+    0 2.5px 0 0 rgba(0,0,0,0.22) inset,
+    0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Secondary premium CTA (elegant outline / glass) — refined, not default thin border px py */
+.premium-cta-secondary,
+a.premium-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-sora), system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: -0.1px;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  /* Frosted glassmorphism premium secondary — alpha bg + soft blur + bevel for true "glass button" cool factor */
+  background: rgba(20, 23, 23, 0.55);
+  color: #e2e2e2;
+  border: 1px solid rgba(186, 200, 218, 0.18);
+  backdrop-filter: blur(8px);
+  box-shadow:
+    0 1px 0 0 rgba(255,255,255,0.08) inset,
+    0 4px 12px -2px rgba(0,0,0,0.3);
+  transition: all 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
+  white-space: nowrap;
+  text-decoration: none;
+}
+.premium-cta-secondary:hover {
+  border-color: rgba(253, 228, 0, 0.5);
+  color: #fde400;
+  background: rgba(253,228,0,0.06);
+  box-shadow:
+    0 1px 0 0 rgba(255,255,255,0.12) inset,
+    0 6px 16px -3px rgba(0,0,0,0.35);
+}
+.premium-cta-secondary:active {
+  transform: scale(0.985);
+  backdrop-filter: blur(4px);
+}
+
+/* Seamless premium product stage (for hero trio, pricing bottle, spatial showcase).
+   ZERO visible borders, ZERO boxy frames, ZERO inner lines — "dont even wanna see the border".
+   The gorgeous 3D floating bottle renders (already the exact premium studio shot from the reference) must look seamless + perfect in the dark elegant bg.
+   Only soft layered shadows, subtle stage gradients, and the image's own drop-shadows + enhanced studio shadows provide the premium depth and "studio lighting" pop.
+   Matches the floating, borderless, luxurious feel of high-end product photography on premium Shopify sites.
+*/
+.premium-product-stage {
+  position: relative;
+  border-radius: 18px;
+  /* No border, no inner ::before, no hard edges. Background blends perfectly with parent dark section. */
+  background: transparent;
+  /* Soft overall depth shadow only — no line. Large and diffused for floating premium effect. */
+  box-shadow:
+    0 40px 120px -40px rgba(0, 0, 0, 0.75),
+    0 15px 35px -15px rgba(0, 0, 0, 0.4);
+  padding: 12px; /* minimal breathing room, not a frame */
+  /* Subtle radial stage "floor" glow for 3D context without any border or chrome */
+  background-image: radial-gradient(ellipse at 50% 70%, rgba(255,255,255,0.015) 0%, transparent 65%);
+}
+
+/* Legacy alias (for any lingering references) — identical to seamless stage, no borders ever */
+.premium-product-viewer {
+  position: relative;
+  border-radius: 18px;
+  background: transparent;
+  box-shadow:
+    0 40px 120px -40px rgba(0, 0, 0, 0.75),
+    0 15px 35px -15px rgba(0, 0, 0, 0.4);
+  padding: 12px;
+  background-image: radial-gradient(ellipse at 50% 70%, rgba(255,255,255,0.015) 0%, transparent 65%);
+}
+
+/* Refined section label + tighter premium typography hierarchy (less generic) */
+.section-label {
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #fde400;
+  opacity: 0.85;
+}
+
+/* Fast, elegant focus for interactive elements (no ugly default rings) */
+:focus-visible {
+  outline: 2px solid rgba(253, 228, 0, 0.45);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Subtle premium divider (Shopify clean) */
+.premium-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(186,200,218,0.08), transparent);
+}
+
+/* Elegant section divider instead of harsh border-b everywhere */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(186, 200, 218, 0.08), transparent);
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+.animate-float-y { animation: float-y 6s ease-in-out infinite; }
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.06); }
+}
+.animate-glow-pulse { animation: glow-pulse 4s ease-in-out infinite; }
+
+@keyframes electric-flicker {
+  0%, 90%, 100% { opacity: 1; }
+  93% { opacity: 0.4; }
+  94% { opacity: 1; }
+  96% { opacity: 0.7; }
+  97% { opacity: 1; }
+}
+.animate-flicker { animation: electric-flicker 5s linear infinite; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 28s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Shopify Buy Button — now fully matches new premium-cta signature (Atlas/Shopify high-end, not default SDK slop) */
+.shopify-buy__btn,
+.shopify-buy__product {
+  font-family: var(--font-sora), system-ui, sans-serif !important;
+}
+.fm-checkout {
+  min-height: 120px;
+}
+.fm-checkout .shopify-buy__layout {
+  background: transparent !important;
+}
+.fm-checkout .shopify-buy__product {
+  border: 1px solid rgba(186, 200, 218, 0.06) !important;
+  background: #141717 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 12px 36px -14px rgba(0,0,0,0.5) !important;
+}
+.fm-checkout .shopify-buy__btn {
+  background: #fde400 !important;
+  color: #0c0f0f !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.16px !important;
+  border-radius: 9999px !important;
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+  font-size: 14.5px !important;
+  font-family: var(--font-sora), system-ui, sans-serif !important;
+  box-shadow:
+    0 1px 0 0 rgba(255,255,255,0.55) inset,
+    0 1px 2px rgba(0,0,0,0.12),
+    0 6px 16px -4px rgba(253,228,0,0.25) !important;
+  transition: all 0.15s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+.fm-checkout .shopify-buy__btn:hover {
+  background: #ffea3d !important;
+  box-shadow:
+    0 1px 0 0 rgba(255,255,255,0.65) inset,
+    0 1px 2px rgba(0,0,0,0.12),
+    0 10px 24px -6px rgba(253,228,0,0.35) !important;
+}
+.fm-checkout .shopify-buy__btn:active {
+  transform: scale(0.985) !important;
+}
+.fm-checkout .shopify-buy__price {
+  color: #e8e8e8 !important;
+  font-family: var(--font-sora), sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.35rem !important;
+}
+.fm-checkout .shopify-buy__title {
+  color: #fff !important;
+  font-size: 1rem !important;
+  font-family: var(--font-sora), sans-serif !important;
+}
+
+/* ===== Fun scroll + conversion animations (inspired by the Google Sans slide + progress CSS the user shared) ===== */
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.92) translateY(12px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.fun-pop { animation: pop-in 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+
+.focus-color-pop {
+  transition: background-color 220ms linear, color 220ms linear;
+}
+.focus-color-pop:hover {
+  background-color: #ffcb00;
+  color: #111;
+}
+
+/* Playful slide-in states for "power moments" */
+.slide-in-left { opacity: 0; transform: translateX(-60px); animation: slideIn 0.6s ease forwards; }
+.slide-in-right { opacity: 0; transform: translateX(60px); animation: slideIn 0.6s ease forwards; }
+
+@keyframes slideIn {
+  to { opacity: 1; transform: translate(0, 0); }
+}
+
+/* Tiny extra fun: discount pulse on pricing cards */
+.discount-pulse {
+  animation: discount-pulse 2.2s ease-in-out infinite;
+}
+@keyframes discount-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(253, 228, 0, 0.3); }
+  50% { box-shadow: 0 0 0 12px rgba(253, 228, 0, 0); }
+}
+
+/* Premium badge / trust pill (used in hero, pricing, nav) — clean Shopify not noisy */
+.premium-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  border: 1px solid rgba(186, 200, 218, 0.1);
+  background: rgba(255,255,255,0.015);
+  color: #fde400;
+  opacity: 0.92;
+}
+
+/* Quick trust / top bar refinements for premium clean Shopify header strip */
+.premium-trust-bar {
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #bac8da;
 }
