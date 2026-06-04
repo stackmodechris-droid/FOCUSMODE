@@ -146,11 +146,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </head>
-      <body className="min-h-full flex flex-col bg-background text-foreground">
-        {/* Meta Pixel Code (Facebook) — standard init + PageView.
-            Using next/script for proper loading/strategy.
-            noscript fallback is required by Meta for no-JS visitors (1x1 tracking pixel). */}
+        {/* Meta Pixel Code — init + PageView in <head> for all pages */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`!function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -163,6 +159,9 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '${SITE.metaPixelId}');
 fbq('track', 'PageView');`}
         </Script>
+        {/* End Meta Pixel Code */}
+      </head>
+      <body className="min-h-full flex flex-col bg-background text-foreground">
         <noscript>
           {/* eslint-disable-next-line @next/next/no-img-element -- Required Meta Pixel noscript fallback (1x1 transparent tracking pixel for no-JS). Standard per Meta docs; cannot/should not use next/image for this. */}
           <img
@@ -173,7 +172,6 @@ fbq('track', 'PageView');`}
             alt=""
           />
         </noscript>
-        {/* End Meta Pixel Code */}
         <MetaPixel />
 
         <Navbar1 />
