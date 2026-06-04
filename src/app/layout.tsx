@@ -1,10 +1,10 @@
 import { Footer } from "@/components/ui/footer";
-import { Navbar1 } from "@/components/ui/shadcnblocks-com-navbar1";
 import { MetaPixel } from "@/components/ui/meta-pixel";
+import { Navbar1 } from "@/components/ui/shadcnblocks-com-navbar1";
 import { SHOPIFY_CART_URL, SITE } from "@/lib/site";
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Inter, JetBrains_Mono, Sora } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const sora = Sora({
@@ -70,13 +70,15 @@ export const metadata: Metadata = {
     description:
       "6+ hours of clean, crash-free focus. Sharper mind, less fatigue, proven results for entrepreneurs, professionals, students, creators & high-performers.",
     url: SITE.url,
-    images: [{ url: "/products/1780438169847-generated-label-image-2.png", width: 1024, height: 1024, alt: "Focus Mode bottle" }],
+    images: [
+      { url: "/og/og-1200x900.png", width: 1200, height: 900, alt: "Focus Mode — No AI, real focus supplement" },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Focus Mode — The Best Focus Supplement for a Sharper, More Productive Mind",
     description: "6+ hours of clean, crash-free mental clarity. Reduces fatigue & headaches. Scientifically backed for peak performance in work, school, business & life.",
-    images: ["/products/1780438169847-generated-label-image-2.png"],
+    images: ["/og/og-1200x900.png"],
   },
   robots: { index: true, follow: true },
 };
