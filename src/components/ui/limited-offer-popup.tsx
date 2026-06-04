@@ -19,23 +19,23 @@ interface Props {
   defaultOpen?: boolean;
 }
 
-export function LimitedOfferPopup({ autoAfterMs = 22000, defaultOpen = false }: Props) {
+export function LimitedOfferPopup({ autoAfterMs = 22500, defaultOpen = false }: Props) {
   const [open, setOpen] = useState(defaultOpen);
   const [step, setStep] = useState<"intro" | "quiz" | "result">("intro");
   const [selected, setSelected] = useState<number | null>(null);
   const [hasShown, setHasShown] = useState(false);
 
-  // Auto open once per session (fun re-engagement, not annoying)
+  // Auto open once only (localStorage so it never nags repeat visitors). Waits ~22s after landing (tuned per plan for better timing/engagement).
   useEffect(() => {
     if (defaultOpen) return;
     const key = "fm_popup_shown";
-    if (sessionStorage.getItem(key)) return;
+    if (localStorage.getItem(key)) return;
 
     const t = setTimeout(() => {
       if (!hasShown) {
         setOpen(true);
         setHasShown(true);
-        sessionStorage.setItem(key, "1");
+        localStorage.setItem(key, "1");
       }
     }, autoAfterMs);
     return () => clearTimeout(t);
@@ -86,16 +86,16 @@ export function LimitedOfferPopup({ autoAfterMs = 22000, defaultOpen = false }: 
             <div className="relative bg-[#ffcb00] px-6 py-5 text-black rounded-t-2xl">
               <div className="flex items-start justify-between">
                 <div>
-                  <div className="text-[10px] tracking-[2px] text-bolt/70">OPERATOR ALERT</div>
+                  <div className="text-[10px] tracking-[2px] text-bolt/70">EXCLUSIVE OFFER</div>
                   <div className="font-heading text-3xl font-extrabold tracking-[-1px] leading-none mt-1">
-                    40% OFF STILL LIVE
+                    40% OFF — YOUR PRICE LOCKED
                   </div>
                 </div>
                 <button onClick={close} className="rounded p-1 hover:bg-black/10" aria-label="Close">
                   <X className="h-5 w-5" />
                 </button>
               </div>
-              <div className="mt-1 text-sm opacity-80">Your price is locked at <span className="font-bold">${SITE.price}</span> (from ${SITE.originalPrice}). Timer is running.</div>
+              <div className="mt-1 text-sm opacity-80">Only <span className="font-bold">${SITE.price}</span> (was ${SITE.originalPrice}). Offer ends soon.</div>
             </div>
 
             <div className="p-6">
@@ -103,10 +103,10 @@ export function LimitedOfferPopup({ autoAfterMs = 22000, defaultOpen = false }: 
                 <>
                   <div className="flex items-center gap-2 text-bolt">
                     <Trophy className="h-5 w-5" />
-                    <span className="text-xs tracking-[1.5px] text-bolt/80">1-QUESTION POWER-UP</span>
+                    <span className="text-xs tracking-[1.5px] text-bolt/80">ONE QUESTION</span>
                   </div>
-                  <h3 className="mt-2 font-heading text-2xl font-bold text-white">What’s quietly killing your edge today?</h3>
-                  <p className="mt-2 text-sm text-silver/70">Answer honestly. We’ll show you exactly how Focus Mode pays for itself in your world.</p>
+                  <h3 className="mt-2 font-heading text-2xl font-bold text-white">What’s quietly draining your focus today?</h3>
+                  <p className="mt-2 text-sm text-silver/70">Tell us honestly. We’ll show how Focus Mode delivers clarity and ROI for you.</p>
 
                   <div className="mt-5 grid gap-2.5">
                     {FOCUS_DRAINS.map((d, i) => (
@@ -119,14 +119,14 @@ export function LimitedOfferPopup({ autoAfterMs = 22000, defaultOpen = false }: 
                       </button>
                     ))}
                   </div>
-                  <button onClick={close} className="mt-4 w-full text-center text-xs tracking-widest text-silver/40 hover:text-silver/70">No thanks, I’ll keep guessing</button>
+                  <button onClick={close} className="mt-4 w-full text-center text-xs tracking-widest text-silver/40 hover:text-silver/70">No thanks</button>
                 </>
               )}
 
               {step === "quiz" && (
                 <div className="py-8 text-center">
                   <div className="mx-auto mb-4 h-2 w-2 animate-ping rounded-full bg-bolt" />
-                  <p className="font-mono-data text-xs text-silver/60">CALCULATING YOUR EDGE DEFICIT…</p>
+                  <p className="font-mono-data text-xs text-silver/60">PREPARING YOUR PERSONAL INSIGHT…</p>
                 </div>
               )}
 
@@ -139,8 +139,8 @@ export function LimitedOfferPopup({ autoAfterMs = 22000, defaultOpen = false }: 
 
                   <div className="mt-6 text-center">
                     <div className="text-sm text-silver/70">That’s why high-performers run on</div>
-                    <div className="mt-1 font-heading text-5xl font-extrabold text-white">${SITE.price}</div>
-                    <div className="text-bolt">— 40% off the regular $100. Limited time.</div>
+                    <div className="mt-1 font-heading text-4xl sm:text-5xl font-extrabold text-white">${SITE.price}</div>
+                    <div className="text-bolt text-sm sm:text-base">— 40% off the regular $100. Limited time.</div>
                   </div>
 
                   <button
@@ -152,7 +152,7 @@ export function LimitedOfferPopup({ autoAfterMs = 22000, defaultOpen = false }: 
 
                   <div className="mt-3 text-center">
                     <button onClick={close} className="text-xs text-silver/50 hover:text-silver/70 underline-offset-4 hover:underline">
-                      I’ll come back when I’m more focused (bad idea)
+                      No thanks, I’ll decide later
                     </button>
                   </div>
                   <p className="mt-4 text-[10px] text-center text-silver/40">30-day empty bottle guarantee • Ships today from USA</p>
@@ -160,9 +160,9 @@ export function LimitedOfferPopup({ autoAfterMs = 22000, defaultOpen = false }: 
               )}
             </div>
 
-            {/* tiny scroll-driven fun footer like the pasted keyframes inspiration */}
+            {/* Elegant footer */}
             <div className="border-t border-border bg-surface-container-low/60 px-6 py-2 text-center text-[10px] font-mono-data tracking-widest text-silver/40">
-              THE FASTER YOU DECIDE, THE SOONER YOUR BRAIN PAYS YOU BACK
+              THE SOONER YOU START, THE SOONER YOUR MIND REWARDS YOU
             </div>
           </motion.div>
         </div>
@@ -180,7 +180,7 @@ export function OpenOfferButton({ className = "" }: { className?: string }) {
         onClick={() => setShow(true)}
         className={`premium-cta-secondary inline-flex items-center gap-2 px-4 py-2 text-sm ${className}`}
       >
-        <Zap className="h-4 w-4" /> What’s my focus leak? (unlock offer)
+        <Zap className="h-4 w-4" /> Discover your edge
       </button>
       <LimitedOfferPopup defaultOpen={show} autoAfterMs={0} />
     </>

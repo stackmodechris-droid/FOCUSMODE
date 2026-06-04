@@ -32,10 +32,10 @@ export function BenefitCards() {
           whileHover={{ y: -3 }}
           className="group relative overflow-hidden premium-card p-7"
         >
-          <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-bolt/8 blur-3xl transition-opacity duration-500 group-hover:bg-bolt/15" />
+          <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-neural/8 blur-3xl transition-opacity duration-500 group-hover:bg-neural/15" />
 
           <div className="relative">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-bolt/10 text-bolt">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-neural/10 text-neural">
               <b.icon className="h-5 w-5" />
             </div>
             <h3 className="mt-6 font-heading text-[20px] font-semibold tracking-[-0.2px] text-white">{b.title}</h3>

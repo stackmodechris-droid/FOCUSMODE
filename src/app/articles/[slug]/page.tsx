@@ -64,7 +64,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <LiquidGlassFilter />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <article className="hud-grid pt-16 md:pt-20">
+      <article className="pt-16 md:pt-20">
         <div className="mx-auto max-w-3xl px-5 py-16 md:py-20 md:px-8">
           <Link href="/articles" className="inline-flex items-center gap-2 font-mono-data text-xs uppercase tracking-widest text-silver/60 transition-colors hover:text-bolt">
             <ArrowLeft className="h-4 w-4" /> All Articles

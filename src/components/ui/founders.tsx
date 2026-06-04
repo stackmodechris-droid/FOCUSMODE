@@ -12,10 +12,10 @@ interface Member {
 }
 
 const MEMBERS: Member[] = [
-  { name: "Stackmodechris", role: "Founder & Formulator", initials: "SC", themeColor: "bg-bolt/20" },
+  { name: "Stackmodechris", role: "Founder & Formulator", initials: "SC", themeColor: "bg-neural/20" },
   { name: "Performance Lab", role: "Formulation", initials: "PL", themeColor: "bg-neural/20" },
-  { name: "Edge Systems", role: "Performance Engineering", initials: "ES", themeColor: "bg-secondary-container/40" },
-  { name: "Stackmode Network", role: "The Mission", initials: "SN", themeColor: "bg-bolt/15" },
+  { name: "Edge Systems", role: "Systems", initials: "ES", themeColor: "bg-secondary-container/40" },
+  { name: "Stackmode Network", role: "The Mission", initials: "SN", themeColor: "bg-neural/15" },
 ];
 
 /** Adapted "team showcase" — the Stackmode Network behind Focus Mode. */
@@ -42,7 +42,7 @@ export function Founders() {
               <h3 className="font-heading text-sm font-bold text-white md:text-base">{m.name}</h3>
               <p className="mt-1 font-mono-data text-[10px] uppercase tracking-widest text-silver/55">{m.role}</p>
             </div>
-            <div className="relative z-10 flex h-16 w-16 items-center justify-center border border-bolt/30 bg-surface-dim font-heading text-xl font-extrabold text-bolt sm:h-20 sm:w-20 sm:text-2xl md:h-24 md:w-24">
+            <div className="relative z-10 flex h-16 w-16 items-center justify-center border border-neural/30 bg-surface-dim font-heading text-xl font-extrabold text-neural sm:h-20 sm:w-20 sm:text-2xl md:h-24 md:w-24">
               {m.initials}
             </div>
           </div>

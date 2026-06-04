@@ -4,16 +4,17 @@ import { FaqAccordion } from "@/components/ui/faq-accordion";
 import { FormulaStack } from "@/components/ui/formula-stack";
 import { Hero } from "@/components/ui/hero";
 import { IngredientsSchematic } from "@/components/ui/ingredients-schematic";
-import { LimitedOfferPopup, OpenOfferButton } from "@/components/ui/limited-offer-popup";
+import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
 import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
 import { MarqueeTrust } from "@/components/ui/marquee-trust";
 import { PricingSection } from "@/components/ui/pricing-section";
 import { FocusRoiCalculator } from "@/components/ui/focus-roi-calculator";
 import { Reveal, SectionLabel } from "@/components/ui/reveal";
-import { NeuralSpecSwitcher } from "@/components/ui/spatial-product-showcase";
+import { ProductShowcase } from "@/components/ui/spatial-product-showcase";
 import { StatsCard } from "@/components/ui/stats-card-1";
 import { StickyBuyBar } from "@/components/ui/sticky-buy-bar";
 import { Testimonials } from "@/components/ui/testimonials";
+import { HomeLazyPopups } from "@/components/ui/home-lazy-popups";
 import { SHOPIFY_CART_URL } from "@/lib/site";
 import { Brain, Coins, TrendingUp } from "lucide-react";
 import Link from "next/link";
@@ -34,22 +35,22 @@ export default function Home() {
       <Hero />
       <MarqueeTrust />
 
-      {/* Premium trust + quick buy bar — elegant, not cluttered */}
+      {/* Premium trust + quick buy bar — elegant, not cluttered. Mobile: stack CTAs to fix cramp/sizing, no overlap with content. */}
       <div className="border-b border-white/10 bg-[#0c0f0f]">
-        <div className="mx-auto max-w-7xl px-5 py-3.5 md:py-4">
-          <div className="flex flex-col items-center justify-between gap-3 md:flex-row">
-            <div className="premium-trust-bar flex items-center gap-3">
-              <span className="font-medium text-bolt/90">40% OFF</span>
+        <div className="mx-auto max-w-7xl px-5 py-3 md:py-4">
+          <div className="flex flex-col items-center justify-between gap-2 md:gap-3 md:flex-row">
+            <div className="premium-trust-bar flex flex-wrap items-center gap-x-3 gap-y-1 text-center md:text-left">
+              <span className="font-medium text-neural/90">40% OFF</span>
               <span className="hidden h-2.5 w-px bg-white/15 sm:block" />
-              <span>30-day guarantee • USA made • For students &amp; ambitious professionals</span>
+              <span className="text-[12px] sm:text-[13px]">30-day guarantee • USA made • For ambitious minds</span>
             </div>
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex w-full flex-col items-stretch gap-1.5 sm:gap-2 sm:w-auto sm:flex-row sm:items-center">
               <OpenOfferButton className="hidden sm:inline-flex" />
-              <a href={SHOPIFY_CART_URL} className="premium-cta">
-                BUY 1 BOTTLE — $59.99
+              <a href={SHOPIFY_CART_URL} className="premium-cta w-full justify-center text-sm sm:w-auto sm:text-[14.5px]">
+                BUY $59.99 <span className="hidden xs:inline">NOW</span>
               </a>
-              <a href="#pricing" className="premium-cta-secondary text-sm px-5 py-2">
-                See pricing &amp; bundles
+              <a href="#pricing" className="premium-cta-secondary w-full justify-center text-xs px-4 py-2.5 sm:w-auto sm:text-sm sm:px-5">
+                See bundles
               </a>
             </div>
           </div>
@@ -62,7 +63,7 @@ export default function Home() {
           <Reveal className="mx-auto max-w-2xl text-center">
             <SectionLabel>The Hidden Tax</SectionLabel>
             <h2 className="mt-4 font-heading text-3xl font-semibold leading-tight tracking-[-0.8px] text-white md:text-5xl md:tracking-[-1.6px]">
-              Slow thinking is costing you <span className="text-bolt">real opportunities</span>
+              Slow thinking is costing you <span className="text-neural">real opportunities</span>
             </h2>
             <p className="mt-5 text-[15px] leading-relaxed text-silver/70 md:text-[16px]">
               Every distracted hour, missed detail, and foggy decision compounds into lost opportunities, revenue, and momentum — in school, business, creative work, and life.
@@ -78,7 +79,7 @@ export default function Home() {
                 { icon: Coins, stat: "Output", label: "Turn clean focus into more wins — in business, school, markets, and creative work" },
               ].map((c, i) => (
                 <div key={i} className="premium-card p-7">
-                  <c.icon className="h-6 w-6 text-bolt" />
+                  <c.icon className="h-6 w-6 text-neural" />
                   <p className="mt-5 font-heading text-3xl font-semibold tracking-[-0.6px] text-white">{c.stat}</p>
                   <p className="mt-2 text-[13.5px] leading-relaxed text-silver/55">{c.label}</p>
                 </div>
@@ -134,11 +135,11 @@ export default function Home() {
                 svg: (
                   <svg width="64" height="38" viewBox="0 0 64 38" className="mb-4">
                     <rect x="6" y="14" width="52" height="3" rx="1" fill="#2eb9df" fillOpacity="0.2" />
-                    <rect x="6" y="14" width="18" height="3" rx="1" fill="#fde400">
+                    <rect x="6" y="14" width="18" height="3" rx="1" fill="#2eb9df">
                       <animate attributeName="x" values="6;32;6" dur="2.1s" repeatCount="indefinite" />
                     </rect>
-                    <circle cx="52" cy="15.5" r="7" fill="none" stroke="#fde400" strokeOpacity="0.5" strokeWidth="1.5" />
-                    <circle cx="52" cy="15.5" r="4" fill="#fde400">
+                    <circle cx="52" cy="15.5" r="7" fill="none" stroke="#2eb9df" strokeOpacity="0.5" strokeWidth="1.5" />
+                    <circle cx="52" cy="15.5" r="4" fill="#2eb9df">
                       <animate attributeName="r" values="3;5.5;3" dur="1.8s" repeatCount="indefinite" />
                     </circle>
                   </svg>
@@ -159,7 +160,7 @@ export default function Home() {
                     <line x1="22" y1="18" x2="34" y2="24" stroke="#2eb9df" strokeWidth="1.5" strokeOpacity="0.4" />
                     <line x1="34" y1="24" x2="46" y2="12" stroke="#2eb9df" strokeWidth="1.5" strokeOpacity="0.4" />
                     <line x1="46" y1="12" x2="56" y2="26" stroke="#2eb9df" strokeWidth="1.5" strokeOpacity="0.4" />
-                    <circle cx="34" cy="24" r="2.5" fill="#fde400">
+                    <circle cx="34" cy="24" r="2.5" fill="#2eb9df">
                       <animate attributeName="opacity" values="0.6;1;0.6" dur="1.8s" repeatCount="indefinite" />
                     </circle>
                   </svg>
@@ -173,15 +174,15 @@ export default function Home() {
                     <rect x="9" y="9" width="8" height="20" rx="1" fill="#2eb9df" fillOpacity="0.2" />
                     <rect x="23" y="14" width="8" height="15" rx="1" fill="#2eb9df" fillOpacity="0.2" />
                     <rect x="37" y="6" width="8" height="23" rx="1" fill="#2eb9df" fillOpacity="0.2" />
-                    <rect x="9" y="9" width="8" height="20" rx="1" fill="#fde400">
+                    <rect x="9" y="9" width="8" height="20" rx="1" fill="#2eb9df">
                       <animate attributeName="height" values="8;20;8" dur="1.65s" repeatCount="indefinite" />
                       <animate attributeName="y" values="21;9;21" dur="1.65s" repeatCount="indefinite" />
                     </rect>
-                    <rect x="23" y="14" width="8" height="15" rx="1" fill="#fde400">
+                    <rect x="23" y="14" width="8" height="15" rx="1" fill="#2eb9df">
                       <animate attributeName="height" values="5;15;5" dur="2.1s" repeatCount="indefinite" />
                       <animate attributeName="y" values="29;14;29" dur="2.1s" repeatCount="indefinite" />
                     </rect>
-                    <rect x="37" y="6" width="8" height="23" rx="1" fill="#fde400">
+                    <rect x="37" y="6" width="8" height="23" rx="1" fill="#2eb9df">
                       <animate attributeName="height" values="10;23;10" dur="1.9s" repeatCount="indefinite" />
                       <animate attributeName="y" values="19;6;19" dur="1.9s" repeatCount="indefinite" />
                     </rect>
@@ -217,8 +218,8 @@ export default function Home() {
               { title: "Generic Nootropics", body: "Under-dosed blends, mystery fillers, no clinical transparency. Marketing over molecules.", bad: true },
               { title: "Focus Mode", body: "Two exact clinical extracts — 24% flavones Ginkgo + 7% ginsenosides Ginseng. Zero fillers. Transparent. Proven to deliver sharper focus, less fatigue, and real productivity gains.", bad: false },
             ].map((c, i) => (
-              <Reveal key={i} delay={i * 0.05} className={`premium-card p-7 transition-all ${c.bad ? "opacity-70" : "border-bolt/40 glow-bolt"}`}>
-                <div className={`text-[10px] tracking-[1.5px] ${c.bad ? "text-silver/35" : "text-bolt"}`}>{c.bad ? "THE OLD WAY" : "THE NEW STANDARD"}</div>
+              <Reveal key={i} delay={i * 0.05} className={`premium-card p-7 transition-all ${c.bad ? "opacity-70" : "border-neural/40 glow-neural"}`}>
+                <div className={`text-[10px] tracking-[1.5px] ${c.bad ? "text-silver/35" : "text-neural"}`}>{c.bad ? "THE OLD WAY" : "THE NEW STANDARD"}</div>
                 <div className="mt-3 mb-1">
                   {c.bad ? (
                     <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden>
@@ -262,7 +263,7 @@ export default function Home() {
             </h2>
           </Reveal>
           <div className="premium-product-stage"> {/* seamless, no border — product viz pops on its own with shadows */}
-            <NeuralSpecSwitcher />
+            <ProductShowcase />
           </div>
         </div>
       </section>
@@ -273,7 +274,7 @@ export default function Home() {
           <Reveal className="mx-auto mb-12 max-w-2xl text-center">
             <SectionLabel>The Formula</SectionLabel>
             <h2 className="mt-4 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">
-              Two clinically-proven ingredients. <span className="text-bolt">Zero fillers. Zero compromise.</span>
+              Two clinically-proven ingredients. <span className="text-neural">Zero fillers. Zero compromise.</span>
             </h2>
             <p className="mt-5 text-[15px] leading-relaxed text-silver/70">
               24% flavones. 7% ginsenosides. Transparent, antioxidant-rich dosing that delivers sharper focus, faster thinking, and sustained productivity for students and high-achievers — backed by real science and centuries of traditional use.
@@ -305,7 +306,7 @@ export default function Home() {
           <Reveal className="mx-auto mb-6 max-w-2xl text-center">
             <SectionLabel>Limited Time • 40% Off</SectionLabel>
             <h2 className="mt-2 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">
-              Buy once. <span className="text-bolt">Out-think everyone.</span>
+              Buy once. <span className="text-neural">Out-think everyone.</span>
             </h2>
             <p className="mt-2 text-silver/70">One bottle. 6+ hours of proven focus per dose. 30 days. Zero risk.</p>
           </Reveal>
@@ -329,7 +330,7 @@ export default function Home() {
 
       {/* Articles teaser */}
       <section className="border-b border-white/10 bg-[#111414]">
-        <div className="mx-auto max-w-7xl px-5 py-20 md:py-24 md:px-8">
+        <div className="mx-auto max-w-7xl px-5 py-20 md:py-24 md:px-8 mobile-bottom-safe">
           <Reveal className="mb-10 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
             <div>
               <SectionLabel>Learn</SectionLabel>
@@ -337,7 +338,7 @@ export default function Home() {
                 Sharpen your mind. Outperform everyone.
               </h2>
             </div>
-            <Link href="/articles" className="text-sm font-medium text-bolt/90 hover:text-bolt transition">
+            <Link href="/articles" className="text-sm font-medium text-neural/90 hover:text-neural transition">
               View all articles →
             </Link>
           </Reveal>
@@ -347,7 +348,7 @@ export default function Home() {
 
       {/* FAQ */}
       <section id="faq">
-        <div className="mx-auto max-w-7xl px-5 py-20 md:py-24 md:px-8">
+        <div className="mx-auto max-w-7xl px-5 py-20 md:py-24 md:px-8 mobile-bottom-safe">
           <Reveal className="mx-auto mb-10 max-w-2xl text-center">
             <SectionLabel>Questions</SectionLabel>
             <h2 className="mt-4 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">
@@ -363,10 +364,8 @@ export default function Home() {
 
       <StickyBuyBar />
 
-      {/* Fun interactive limited-time popup — auto triggers after ~22s on first visit.
-          Psychologist play: curiosity + personal insight + instant reciprocity (the call) + scarcity.
-          Big shiny buy that feels rewarding. */}
-      <LimitedOfferPopup />
+      {/* Premium limited offer popup — lazy-loaded client only after ~22s (tuned timing + perf). Elegant, non-intrusive conversion. */}
+      <HomeLazyPopups />
     </>
   );
 }

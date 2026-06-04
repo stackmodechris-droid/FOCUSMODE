@@ -59,7 +59,7 @@ const SECTIONS = [
 
 export default function TermsPage() {
   return (
-    <section className="hud-grid pt-16 md:pt-20">
+    <section className="pt-16 md:pt-20">
       <div className="mx-auto max-w-3xl px-5 py-16 md:py-20 md:px-8">
         <SectionLabel>Legal</SectionLabel>
         <h1 className="mt-5 font-heading text-4xl font-extrabold leading-tight text-white md:text-5xl">

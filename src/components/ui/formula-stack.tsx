@@ -5,10 +5,10 @@ import { motion } from "motion/react";
 
 const TILES = [
   { id: "ginkgo", label: "Ginkgo Biloba" },
-  { id: "neural", label: "Neural Drive" },
+  { id: "neural", label: "Synergy" },
   { id: "ginseng", label: "Red Ginseng" },
-  { id: "bolt", label: "Bolt Energy" },
-  { id: "caps", label: "Vegcaps" },
+  { id: "bolt", label: "Sustained Power" },
+  { id: "caps", label: "Veg Capsules" },
 ];
 
 /** Adapted "stack integrator": the synergistic Focus Mode formula stack. */
@@ -21,10 +21,10 @@ export function FormulaStack() {
         "shadow-[inset_0_2px_0_rgba(255,255,255,0.05),0_50px_130px_-40px_rgba(0,0,0,0.85)]"
       )}
     >
-      <div className="pointer-events-none absolute -left-28 -top-28 h-80 w-80 rounded-full bg-[radial-gradient(closest-side,rgba(46,185,223,0.18),transparent_70%)] blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-24 -right-28 h-96 w-96 rounded-full bg-[radial-gradient(closest-side,rgba(253,228,0,0.16),transparent_70%)] blur-3xl" />
+      <div className="pointer-events-none absolute -left-20 -top-20 sm:-left-28 sm:-top-28 h-64 w-64 sm:h-80 sm:w-80 rounded-full bg-[radial-gradient(closest-side,rgba(46,185,223,0.18),transparent_70%)] blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-16 -right-20 sm:-bottom-24 sm:-right-28 h-72 w-72 sm:h-96 sm:w-96 rounded-full bg-[radial-gradient(closest-side,rgba(253,228,0,0.16),transparent_70%)] blur-3xl" />
 
-      <div className="relative p-10 md:p-14">
+      <div className="relative p-6 sm:p-8 md:p-14">
         <h2 className="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
           One synergistic stack
         </h2>
@@ -33,7 +33,7 @@ export function FormulaStack() {
           plant-based capsule. No fillers, no fluff.
         </p>
 
-        <div className="mx-auto mt-12 flex max-w-[620px] flex-wrap items-center justify-center gap-6 md:gap-8">
+        <div className="mx-auto mt-8 sm:mt-10 flex max-w-[620px] flex-wrap items-center justify-center gap-5 sm:gap-6 md:gap-8">
           {TILES.map((t, i) => (
             <motion.div
               key={t.label}
@@ -46,7 +46,7 @@ export function FormulaStack() {
             >
               <div
                 className={cn(
-                  "flex h-24 w-24 items-center justify-center border border-white/10 md:h-28 md:w-28",
+                  "flex h-20 w-20 items-center justify-center border border-white/10 sm:h-24 sm:w-24 md:h-28 md:w-28",
                   "bg-[linear-gradient(180deg,rgba(24,28,28,0.92),rgba(14,17,17,0.95))]",
                   "shadow-[inset_0_2px_2px_rgba(255,255,255,0.06),0_26px_70px_-22px_rgba(0,0,0,0.9)]"
                 )}

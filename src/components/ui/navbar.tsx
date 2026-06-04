@@ -46,7 +46,7 @@ export function Navbar() {
             priority
           />
           <span className="font-heading text-lg font-extrabold tracking-tight text-white">
-            FOCUS<span className="text-bolt">MODE</span>
+            FOCUS<span className="text-neural">MODE</span>
           </span>
         </Link>
 

@@ -14,12 +14,12 @@ interface Benefit {
 }
 
 const BENEFITS: Benefit[] = [
-  { icon: Brain, title: "Sharper Mental Clarity", desc: "Cut through brain fog and distraction within 20-30 minutes. Think clearer, longer.", metric: "20-30 MIN ONSET", accent: "neural" },
-  { icon: Zap, title: "Faster Decision-Making", desc: "Enhanced processing for sharp calls in business, exams, creative work, and high-stakes moments.", metric: "REACTION +", accent: "bolt" },
+  { icon: Brain, title: "Sharper Mental Clarity", desc: "Cut through brain fog and distraction within 20-30 minutes. Think clearer, longer.", metric: "20-30 MIN", accent: "neural" },
+  { icon: Zap, title: "Faster Decision-Making", desc: "Enhanced processing for sharp calls in business, exams, creative work, and high-stakes moments.", metric: "SPEED +", accent: "bolt" },
   { icon: Timer, title: "Sustained Focus", desc: "Stay locked in for 6+ hours with zero jitters and zero afternoon crashes. Real productivity.", metric: "6+ HOURS", accent: "bolt" },
   { icon: Database, title: "Improved Memory", desc: "Remember critical details, patterns, conversations, and strategies when it matters most.", metric: "RECALL +", accent: "neural" },
-  { icon: ShieldCheck, title: "No Jitters, No Crash", desc: "Zero caffeine, zero synthetic stimulants. Pure, clean mental performance all day.", metric: "0 STIMULANTS", accent: "bolt" },
-  { icon: Activity, title: "Neurological Support", desc: "Better blood flow + powerful antioxidants = fewer headaches, less fatigue, and long-term brain vitality.", metric: "BLOOD FLOW +", accent: "neural" },
+  { icon: ShieldCheck, title: "No Jitters, No Crash", desc: "Zero caffeine, zero synthetic stimulants. Pure, clean mental performance all day.", metric: "CLEAN", accent: "bolt" },
+  { icon: Activity, title: "Neurological Support", desc: "Better blood flow + powerful antioxidants = fewer headaches, less fatigue, and long-term brain vitality.", metric: "VITALITY +", accent: "neural" },
 ];
 
 // Angles for 6 nodes, evenly spaced, starting from top
@@ -30,21 +30,25 @@ export function LockedInVisual() {
   const activeBenefit = active !== null ? BENEFITS[active] : null;
 
   // Responsive orbit radius + card scale for no overlaps, no clipping, perfect on mobile & desktop
+  // Tuned wider spacing on mobile so squares (nodes) not too close to pill or each other
   const [orbitRadius, setOrbitRadius] = useState(178);
   const [cardScale, setCardScale] = useState(1);
 
   useEffect(() => {
     const updateLayout = () => {
       const w = window.innerWidth;
-      if (w < 420) {
-        setOrbitRadius(118);
-        setCardScale(0.88);
+      if (w < 375) {
+        setOrbitRadius(92); // aggressive for 375px to stop pill + squares/nodes overlapping each other and edges
+        setCardScale(0.68);
+      } else if (w < 420) {
+        setOrbitRadius(102);
+        setCardScale(0.74);
       } else if (w < 640) {
-        setOrbitRadius(138);
-        setCardScale(0.93);
+        setOrbitRadius(125);
+        setCardScale(0.82);
       } else if (w < 768) {
-        setOrbitRadius(162);
-        setCardScale(0.97);
+        setOrbitRadius(148);
+        setCardScale(0.9);
       } else {
         setOrbitRadius(192);
         setCardScale(1);
@@ -56,42 +60,29 @@ export function LockedInVisual() {
   }, []);
 
   return (
-    <div className="relative mx-auto w-full max-w-[860px] select-none min-h-[580px] pt-12 pb-10 sm:min-h-[620px] sm:pt-14 sm:pb-12 md:min-h-[660px] md:pt-16 md:pb-14">
-      {/* Ambient background animated SVG - neural field + rotating rings */}
+    <div className="relative mx-auto w-full max-w-[860px] select-none min-h-[380px] pt-2 pb-2 sm:min-h-[440px] sm:pt-4 sm:pb-4 md:min-h-[600px] md:pt-10 md:pb-8">
+      {/* Ambient background — clean premium orbs + subtle static rings (no spinning coded tech) */}
       <svg
-        className="pointer-events-none absolute inset-0 -m-8 h-[110%] w-[110%] opacity-60"
+        className="pointer-events-none absolute inset-0 -m-6 sm:-m-8 h-[100%] w-[100%] sm:h-[110%] sm:w-[110%] opacity-35"
         viewBox="0 0 800 620"
         fill="none"
         aria-hidden
       >
-        {/* Outer slow rotating ring */}
-        <motion.g
-          animate={{ rotate: 360 }}
-          transition={{ duration: 48, repeat: Infinity, ease: "linear" }}
-          style={{ transformOrigin: "400px 310px" }}
-        >
-          <circle cx="400" cy="310" r="268" stroke="#2eb9df" strokeOpacity="0.12" strokeWidth="1" strokeDasharray="3 9" />
-        </motion.g>
+        {/* Static elegant rings for depth */}
+        <circle cx="400" cy="310" r="268" stroke="#2eb9df" strokeOpacity="0.07" strokeWidth="1" strokeDasharray="2 10" />
+        <circle cx="400" cy="310" r="210" stroke="#fde400" strokeOpacity="0.05" strokeWidth="1" />
+        <circle cx="400" cy="310" r="198" stroke="#fde400" strokeOpacity="0.07" strokeWidth="1.25" strokeDasharray="1 7" />
 
-        {/* Counter rotating inner ring */}
-        <motion.g
-          animate={{ rotate: -360 }}
-          transition={{ duration: 32, repeat: Infinity, ease: "linear" }}
-          style={{ transformOrigin: "400px 310px" }}
-        >
-          <circle cx="400" cy="310" r="198" stroke="#fde400" strokeOpacity="0.09" strokeWidth="1.5" strokeDasharray="1 7" />
-        </motion.g>
-
-        {/* Pulsing core ring */}
+        {/* Soft pulsing core for premium life (very subtle) */}
         <motion.circle
           cx="400"
           cy="310"
           r="92"
           stroke="#2eb9df"
-          strokeOpacity="0.25"
+          strokeOpacity="0.16"
           strokeWidth="1"
-          animate={{ r: [88, 102, 88], opacity: [0.15, 0.35, 0.15] }}
-          transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+          animate={{ r: [88, 99, 88], opacity: [0.1, 0.2, 0.1] }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
         />
 
         {/* 6 radial connection lines - base faint (responsive to orbit) */}
@@ -109,14 +100,14 @@ export function LockedInVisual() {
               x2={x2}
               y2={y2}
               stroke={isActive ? (BENEFITS[i].accent === "bolt" ? "#fde400" : "#2eb9df") : "#2eb9df"}
-              strokeOpacity={isActive ? 0.55 : 0.09}
-              strokeWidth={isActive ? 2.5 : 1}
+              strokeOpacity={isActive ? 0.4 : 0.08}
+              strokeWidth={isActive ? 1.5 : 1}
               strokeLinecap="round"
             />
           );
         })}
 
-        {/* Subtle orbiting dots on outer ring - animated SVG particles */}
+        {/* Subtle orbiting dots on outer ring - minimal motion */}
         {Array.from({ length: 5 }).map((_, i) => (
           <motion.circle
             key={`dot-${i}`}
@@ -159,7 +150,7 @@ export function LockedInVisual() {
       </svg>
 
       {/* Central glowing explanation text layers — BIG GLOWING WORDS BEHIND THE PILL (smaller on mobile) */}
-      <div className="pointer-events-none absolute left-1/2 top-[47%] z-0 -translate-x-1/2 -translate-y-1/2 text-center">
+      <div className="pointer-events-none absolute left-1/2 top-[18%] sm:top-[28%] z-0 -translate-x-1/2 -translate-y-1/2 text-center">
         <AnimatePresence mode="wait">
           {activeBenefit && (
             <motion.div
@@ -168,7 +159,7 @@ export function LockedInVisual() {
               animate={{ opacity: [0.06, 0.13, 0.06], scale: 1, filter: "blur(6px)" }}
               exit={{ opacity: 0, scale: 0.8, filter: "blur(18px)" }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="font-heading text-[52px] sm:text-[68px] md:text-[92px] font-black tracking-[-5.5px] md:tracking-[-7px] leading-[0.82] text-white max-w-[92%] mx-auto"
+              className="font-heading text-[28px] sm:text-[44px] md:text-[78px] font-black tracking-[-3.5px] md:tracking-[-5.5px] leading-[0.82] text-white max-w-[88%] mx-auto"
               style={{
                 textShadow:
                   activeBenefit.accent === "bolt"
@@ -183,7 +174,7 @@ export function LockedInVisual() {
       </div>
 
       {/* The actual pill — absolutely centered in tall container so nodes never clip or overlap text/edges */}
-      <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 flex h-[320px] w-full max-w-[420px] items-center justify-center sm:h-[360px] sm:max-w-[460px] md:h-[400px] md:max-w-[520px]">
+      <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 flex h-[210px] w-full max-w-[280px] items-center justify-center sm:h-[255px] sm:max-w-[320px] md:h-[360px] md:max-w-[440px]">
         {/* Layered glowing orbs behind pill (the "glow behind these") */}
         <div
           className="absolute left-1/2 top-1/2 h-[68%] w-[68%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-neural/25 blur-[110px]"
@@ -209,10 +200,10 @@ export function LockedInVisual() {
 
         {/* Layered ghost pills for depth + using the pill.png prominently (cool factor) */}
         <div className="absolute left-1/2 top-[51%] z-0 -translate-x-1/2 -translate-y-1/2 opacity-20 blur-[2px]">
-          <Image src="/products/pill.png" alt="" width={240} height={240} className="rotate-[-12deg] scale-[0.72]" />
+          <Image src="/products/pill.png" alt="" width={240} height={240} className="rotate-[-12deg] scale-[0.72] mix-blend-multiply" />
         </div>
         <div className="absolute left-1/2 top-[49%] z-0 -translate-x-1/2 -translate-y-1/2 opacity-10 blur-[6px]">
-          <Image src="/products/pill.png" alt="" width={270} height={270} className="rotate-[17deg] scale-[0.82]" />
+          <Image src="/products/pill.png" alt="" width={270} height={270} className="rotate-[17deg] scale-[0.82] mix-blend-multiply" />
         </div>
 
         {/* The Pill PNG itself — large, floating, glowing */}
@@ -233,7 +224,7 @@ export function LockedInVisual() {
               alt="Focus Mode premium capsule — the core of locked-in performance"
               width={420}
               height={420}
-              className="relative z-10 h-auto w-[232px] drop-shadow-[0_40px_90px_rgba(0,0,0,0.75)] sm:w-[268px] md:w-[298px] select-none"
+              className="relative z-10 h-auto w-[158px] drop-shadow-[0_40px_90px_rgba(0,0,0,0.75)] sm:w-[188px] md:w-[240px] select-none mix-blend-multiply"
               draggable={false}
               priority
             />
@@ -247,8 +238,8 @@ export function LockedInVisual() {
         </motion.div>
 
         {/* LOCKED status badge floating near pill */}
-        <div className="absolute bottom-[8%] left-1/2 z-30 -translate-x-1/2 rounded-full border border-white/15 bg-[#0c0f0f]/90 px-3 py-0.5 text-[8px] tracking-[3px] text-bolt/90 backdrop-blur sm:bottom-[10%] sm:px-4 sm:py-1 sm:text-[9px] sm:tracking-[3.5px]">
-          <span className="mr-1.5 inline-block h-1 w-1 animate-pulse rounded-full bg-bolt align-middle" />
+        <div className="absolute bottom-[6%] left-1/2 z-30 -translate-x-1/2 rounded-full border border-white/15 bg-[#0c0f0f]/90 px-2 py-0.5 text-[6px] tracking-[2px] text-neural/90 backdrop-blur sm:bottom-[8%] sm:px-3 sm:py-0.5 sm:text-[7px] sm:tracking-[2.5px]">
+          <span className="mr-1.5 inline-block h-1 w-1 animate-pulse rounded-full bg-neural align-middle" />
           STAY LOCKED
         </div>
       </div>
@@ -284,7 +275,7 @@ export function LockedInVisual() {
                 y: isActive ? -2 : 0,
               }}
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
-              className={`group relative flex w-[114px] flex-col items-center rounded-2xl border px-2.5 py-2.5 text-center backdrop-blur-xl transition-all sm:w-[132px] md:w-[156px] ${
+              className={`group relative flex w-[68px] flex-col items-center rounded-2xl border px-1.5 py-1.5 text-center backdrop-blur-xl transition-all xs:w-[76px] sm:w-[108px] md:w-[138px] ${
                 isActive
                   ? "border-white/20 bg-[#141717]/95 shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_20px_55px_-18px_rgba(0,0,0,0.6)]"
                   : "border-white/8 bg-[#121414]/70 hover:border-white/15"
@@ -306,8 +297,8 @@ export function LockedInVisual() {
               )}
 
               {/* Mini animated SVG icon container — pulsing ring + icon */}
-              <div className="relative mb-1.5 mt-0.5 flex h-7 w-7 items-center justify-center sm:h-8 sm:w-8">
-                <svg width="28" height="28" viewBox="0 0 28 28" className="absolute sm:h-[32px] sm:w-[32px]">
+              <div className="relative mb-1 mt-0.5 flex h-5 w-5 items-center justify-center sm:h-6 sm:w-6">
+                <svg width="20" height="20" viewBox="0 0 20 20" className="absolute sm:h-[24px] sm:w-[24px]">
                   <motion.circle
                     cx="14"
                     cy="14"
@@ -332,16 +323,16 @@ export function LockedInVisual() {
                     transition={{ duration: 2.8, repeat: isActive ? Infinity : 0, ease: "linear" }}
                   />
                 </svg>
-                <Icon className={`relative h-3 w-3 sm:h-3.5 sm:w-3.5 ${isActive ? (b.accent === "bolt" ? "text-bolt" : "text-neural") : "text-silver/70 group-hover:text-silver/90"}`} />
+                <Icon className={`relative h-2.5 w-2.5 sm:h-3 sm:w-3 ${isActive ? (b.accent === "bolt" ? "text-bolt" : "text-neural") : "text-silver/70 group-hover:text-silver/90"}`} />
               </div>
 
-              <div className="font-heading text-[11px] font-semibold leading-tight tracking-[-0.1px] text-white sm:text-[12px] md:text-[12.5px]">
+              <div className="font-heading text-[8px] font-semibold leading-tight tracking-[-0.1px] text-white sm:text-[10px] md:text-[11px]">
                 {b.title}
               </div>
-              <div className="mt-0.5 font-mono-data text-[8px] tracking-[1.5px] text-neural/80 sm:text-[9px]">{b.metric}</div>
+              <div className="mt-0.5 font-mono-data text-[6px] tracking-[1.2px] text-neural/80 sm:text-[7.5px]">{b.metric}</div>
 
               {/* Inline glowing explanation on the node itself for extra clarity */}
-              <p className="mt-1 line-clamp-2 text-[9px] leading-snug text-silver/55 group-hover:text-silver/70 sm:text-[9.5px]">
+              <p className="mt-0.5 line-clamp-2 text-[6.5px] leading-snug text-silver/55 group-hover:text-silver/70 sm:text-[8px]">
                 {b.desc}
               </p>
             </motion.button>
@@ -350,7 +341,7 @@ export function LockedInVisual() {
       })}
 
       {/* Bottom subtle caption */}
-      <div className="pointer-events-none absolute -bottom-2 left-1/2 z-10 -translate-x-1/2 text-center text-[9px] tracking-[2px] text-silver/35 sm:-bottom-1 sm:text-[10px]">
+      <div className="pointer-events-none absolute -bottom-1 left-1/2 z-10 -translate-x-1/2 text-center text-[7px] tracking-[1.5px] text-silver/35 sm:-bottom-0 sm:text-[8px]">
         HOVER OR TAP NODES TO ACTIVATE GLOW EXPLANATIONS
       </div>
     </div>

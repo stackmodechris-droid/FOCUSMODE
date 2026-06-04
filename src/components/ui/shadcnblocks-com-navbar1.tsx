@@ -46,7 +46,7 @@ const Navbar1 = ({
     <header className="sticky top-0 z-50 w-full border-b border-white/[0.04] bg-[#0c0f0f]/70 backdrop-blur-3xl">
       {/* Integrated flush progress — no separate fixed 3px element, no gap, seamless to viewport top */}
       <div className="absolute left-0 top-0 h-px w-full bg-white/10">
-        <div className="h-full bg-bolt transition-[width] duration-100" style={{ width: `${progress}%` }} />
+        <div className="h-full bg-neural transition-[width] duration-100" style={{ width: `${progress}%` }} />
       </div>
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         {/* Desktop */}
@@ -64,7 +64,7 @@ const Navbar1 = ({
               />
             </div>
             <span className="font-heading text-[21px] font-semibold tracking-[-0.4px] text-white">
-              FOCUS<span className="text-bolt tracking-[-0.2px]">MODE</span>
+              FOCUS<span className="text-neural tracking-[-0.2px]">MODE</span>
             </span>
           </Link>
 
@@ -74,7 +74,7 @@ const Navbar1 = ({
               <Link
                 key={link.label}
                 href={link.href}
-                className="font-medium text-silver/80 transition-all hover:text-white relative after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-bolt after:transition-all hover:after:w-full"
+                className="font-medium text-silver/80 transition-all hover:text-white relative after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-neural after:transition-all hover:after:w-full"
               >
                 {link.label}
               </Link>
@@ -99,31 +99,23 @@ const Navbar1 = ({
           </div>
         </nav>
 
-        {/* Mobile - premium compact */}
+        {/* Mobile - premium compact: logo + menu only. Buy CTA lives in the elegant full menu + sticky bar + other sections to avoid cramp/overlap with title on small screens. */}
         <div className="flex h-16 items-center justify-between lg:hidden">
           <Link href={logo.url} className="flex items-center gap-2.5" aria-label="Focus Mode home">
             <Image src={logo.src} width={36} height={36} className="h-9 w-9 drop-glow-neural" alt={logo.alt} priority />
             <span className="font-heading text-[19px] font-semibold tracking-[-0.3px] text-white">
-              FOCUS<span className="text-bolt">MODE</span>
+              FOCUS<span className="text-neural">MODE</span>
             </span>
           </Link>
 
-          <div className="flex items-center gap-2">
-            <Link
-              href={SHOPIFY_CART_URL}
-              className="premium-cta inline-flex items-center gap-1.5 px-5 py-2 text-xs"
-            >
-              Buy Now $59.99
-            </Link>
-            <button
-              type="button"
-              aria-label="Open menu"
-              onClick={() => setMobileOpen(true)}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white transition active:bg-white/5"
-            >
-              <Menu className="h-5 w-5" />
-            </button>
-          </div>
+          <button
+            type="button"
+            aria-label="Open menu"
+            onClick={() => setMobileOpen(true)}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white transition active:bg-white/5"
+          >
+            <Menu className="h-5 w-5" />
+          </button>
         </div>
       </div>
 
@@ -144,7 +136,7 @@ const Navbar1 = ({
                 <Link href="/" className="flex items-center gap-2.5" onClick={closeMobile}>
                   <Image src={logo.src} width={32} height={32} className="h-8 w-8" alt={logo.alt} />
                   <span className="font-heading text-xl font-semibold tracking-[-0.3px] text-white">
-                    FOCUS<span className="text-bolt">MODE</span>
+                    FOCUS<span className="text-neural">MODE</span>
                   </span>
                 </Link>
                 <button
@@ -164,7 +156,7 @@ const Navbar1 = ({
                     key={idx}
                     href={link.href}
                     onClick={closeMobile}
-                    className="py-4 font-heading font-medium text-white border-b border-white/10 last:border-0 active:text-bolt transition-colors"
+                    className="py-4 font-heading font-medium text-white border-b border-white/10 last:border-0 active:text-neural transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -172,7 +164,7 @@ const Navbar1 = ({
                 <Link
                   href="/faq"
                   onClick={closeMobile}
-                  className="py-4 font-heading font-medium text-white/90 border-b border-white/10 active:text-bolt transition-colors"
+                  className="py-4 font-heading font-medium text-white/90 border-b border-white/10 active:text-neural transition-colors"
                 >
                   FAQ
                 </Link>

@@ -43,7 +43,7 @@ export function SectionLabel({ children, className }: { children: ReactNode; cla
         className
       )}
     >
-      <span className="h-px w-4 bg-bolt/50" />
+      <span className="h-px w-4 bg-neural/50" />
       {children}
     </span>
   );

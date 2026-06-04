@@ -1,7 +1,9 @@
 import { Footer } from "@/components/ui/footer";
 import { Navbar1 } from "@/components/ui/shadcnblocks-com-navbar1";
+import { MetaPixel } from "@/components/ui/meta-pixel";
 import { SHOPIFY_CART_URL, SITE } from "@/lib/site";
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter, JetBrains_Mono, Sora } from "next/font/google";
 import "./globals.css";
 
@@ -44,16 +46,23 @@ export const metadata: Metadata = {
     "mental clarity supplement",
     "focus for entrepreneurs professionals students",
     "Stackmode",
+    "6 hour focus no crash",
+    "clinical focus formula",
   ],
   authors: [{ name: SITE.legalName, url: SITE.partnerUrl }],
   creator: SITE.founder,
   publisher: SITE.legalName,
   alternates: { canonical: "/" },
   icons: {
-    icon: [{ url: "/icon.png", type: "image/png" }],
-    apple: [{ url: "/icon.png" }],
-    shortcut: ["/icon.png"],
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/favicon-32x32.png"],
   },
+  manifest: "/manifest.json",
   openGraph: {
     type: "website",
     siteName: SITE.name,
@@ -61,15 +70,19 @@ export const metadata: Metadata = {
     description:
       "6+ hours of clean, crash-free focus. Sharper mind, less fatigue, proven results for entrepreneurs, professionals, students, creators & high-performers.",
     url: SITE.url,
-    images: [{ url: "/products/bottle-front.png", width: 1024, height: 1024, alt: "Focus Mode bottle" }],
+    images: [{ url: "/products/1780438169847-generated-label-image-2.png", width: 1024, height: 1024, alt: "Focus Mode bottle" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Focus Mode — The Best Focus Supplement for a Sharper, More Productive Mind",
     description: "6+ hours of clean, crash-free mental clarity. Reduces fatigue & headaches. Scientifically backed for peak performance in work, school, business & life.",
-    images: ["/products/bottle-front.png"],
+    images: ["/products/1780438169847-generated-label-image-2.png"],
   },
   robots: { index: true, follow: true },
+};
+
+export const viewport = {
+  themeColor: "#fde400",
 };
 
 const jsonLd = {
@@ -96,7 +109,7 @@ const jsonLd = {
       "@type": "Product",
       "@id": `${SITE.url}/#product`,
       name: "Focus Mode — Cognitive Performance Formula",
-      image: [`${SITE.url}/products/bottle-front.png`],
+      image: [`${SITE.url}/products/1780438169847-generated-label-image-2.png`],
       description: SITE.description,
       brand: { "@type": "Brand", name: SITE.brand },
       sku: "FM-60CAP",
@@ -133,6 +146,34 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        {/* Meta Pixel Code (Facebook) — standard init + PageView.
+            Using next/script for proper loading/strategy.
+            noscript fallback is required by Meta for no-JS visitors (1x1 tracking pixel). */}
+        <Script id="meta-pixel" strategy="afterInteractive">
+          {`!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '${SITE.metaPixelId}');
+fbq('track', 'PageView');`}
+        </Script>
+        <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element -- Required Meta Pixel noscript fallback (1x1 transparent tracking pixel for no-JS). Standard per Meta docs; cannot/should not use next/image for this. */}
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src={`https://www.facebook.com/tr?id=${SITE.metaPixelId}&ev=PageView&noscript=1`}
+            alt=""
+          />
+        </noscript>
+        {/* End Meta Pixel Code */}
+        <MetaPixel />
+
         <Navbar1 />
         <main className="flex-1">{children}</main>
         <Footer />

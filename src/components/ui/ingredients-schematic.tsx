@@ -11,9 +11,9 @@ const FACTS = [
 
 export function IngredientsSchematic() {
   return (
-    <div className="grid gap-6 lg:grid-cols-[1fr_0.8fr]">
+    <div className="grid gap-8 sm:gap-6 lg:grid-cols-[1fr_0.8fr]">
       {/* Ingredient readouts */}
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid gap-6 sm:gap-5 md:gap-6 sm:grid-cols-2">
         {INGREDIENTS.map((ing, i) => (
           <motion.div
             key={ing.name}
@@ -25,13 +25,13 @@ export function IngredientsSchematic() {
           >
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-neural via-bolt to-transparent" />
             <div className="flex items-center justify-between font-mono-data text-[11px] uppercase tracking-widest text-neural">
-              <span>INGREDIENT_{String(i + 1).padStart(2, "0")}</span>
-              <span className="text-bolt">{ing.dose}</span>
+              <span>ACTIVE {i + 1}</span>
+              <span className="text-neural">{ing.dose}</span>
             </div>
             <h3 className="mt-4 font-heading text-xl font-bold text-white">{ing.name}</h3>
             <p className="mt-1 font-mono-data text-xs uppercase tracking-widest text-silver/50">{ing.spec}</p>
             <p className="mt-4 text-sm leading-relaxed text-silver/65">{ing.detail}</p>
-            <div className="mt-5 border-t border-border pt-4 font-mono-data text-[11px] uppercase tracking-widest text-bolt">
+            <div className="mt-5 border-t border-border pt-4 font-mono-data text-[11px] uppercase tracking-widest text-neural">
               ▸ {ing.role}
             </div>
           </motion.div>
@@ -81,7 +81,7 @@ export function IngredientsSchematic() {
               alt=""
               width={92}
               height={92}
-              className="rotate-[22deg] drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
+              className="rotate-[22deg] drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)] mix-blend-multiply"
             />
           </div>
         </div>

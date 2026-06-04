@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 };
 
 const PHILOSOPHY = [
-  { icon: Cpu, title: "Performance as Infrastructure", body: "Treat your mind like a high-availability server. Uptime is mandatory. Our formula supports the structural health of your neural networks." },
+  { icon: Cpu, title: "Mind as the Ultimate Asset", body: "Your cognition is the foundation of every win. Focus Mode protects and elevates it with clinical precision — for sustained high performance." },
   { icon: Eye, title: "Clinical Transparency", body: "No proprietary blends. No hidden fillers. Every milligram is accounted for, published, and justified by peer-reviewed research." },
   { icon: Leaf, title: "Pure Ingredients", body: "Sourced globally for maximum bioavailability. If an ingredient doesn't meet the rigorous standards of elite cognitive optimization, it doesn't enter our supply chain." },
 ];
@@ -27,14 +27,14 @@ export default function OurStoryPage() {
     <>
       <LiquidGlassFilter />
       <section className="relative overflow-hidden border-b border-border bg-surface-dim pt-16 md:pt-20">
-        <ElectricBrainBg density={22} />
+        <ElectricBrainBg />
         <div className="relative mx-auto max-w-4xl px-5 py-20 md:py-24 text-center md:px-8">
           <Reveal>
-            <SectionLabel>Design Protocol</SectionLabel>
+            <SectionLabel>Our Standard</SectionLabel>
             <h1 className="mx-auto mt-6 max-w-3xl font-heading text-4xl font-extrabold leading-[1.05] tracking-tight text-white md:text-6xl">
               Engineered by the Elite, <br />
               <span className="text-silver">for the </span>
-              <span className="text-bolt text-glow-bolt">Elite.</span>
+              <span className="text-neural">Elite.</span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-silver/75 md:text-lg">
               We didn&apos;t set out to build another supplement company. We set out to solve a critical infrastructure
@@ -76,7 +76,7 @@ export default function OurStoryPage() {
           </Reveal>
           <Reveal delay={0.15} className="flex justify-center">
             <div className="premium-product-stage max-w-[320px]">
-              <ProductGlow src="/products/bottle-capsules.png" alt="Focus Mode bottle and capsules" size={460} glow="dual" />
+              <ProductGlow src="/products/1780438169844-generated-label-image-0.png" alt="Focus Mode bottle and capsules" size={460} glow="dual" />
             </div>
           </Reveal>
         </div>
@@ -93,7 +93,7 @@ export default function OurStoryPage() {
             {PHILOSOPHY.map((p, i) => (
               <Reveal key={p.title} delay={i * 0.08}>
                 <div className="h-full premium-card p-7">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-bolt/10 text-bolt">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-neural/10 text-neural">
                     <p.icon className="h-5 w-5" />
                   </div>
                   <h3 className="mt-6 font-heading text-[19px] font-semibold tracking-[-0.2px] text-white">{p.title}</h3>
@@ -106,7 +106,7 @@ export default function OurStoryPage() {
       </section>
 
       {/* The Network */}
-      <section className="hud-grid">
+      <section>
         <div className="mx-auto max-w-7xl px-5 py-24 md:px-8">
           <Reveal className="mb-14 text-center">
             <SectionLabel>The Team</SectionLabel>

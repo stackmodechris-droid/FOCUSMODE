@@ -11,7 +11,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-[#ffea3d] rounded-full shadow-[0_1px_0_0_rgba(255,255,255,0.5)_inset,0_2px_8px_-2px_rgba(0,0,0,0.2)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.2)_inset]",
         outline:
-          "border border-white/20 bg-transparent hover:border-bolt/50 hover:text-bolt rounded-full",
+          "border border-white/20 bg-transparent hover:border-neural/50 hover:text-neural rounded-full",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-[#222626] rounded-full border border-white/10",
         ghost:

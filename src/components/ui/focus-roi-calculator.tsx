@@ -21,9 +21,9 @@ export function FocusRoiCalculator() {
   const bottleCost = 59.99;
 
   return (
-    <div className="premium-card border-bolt/30 p-8 md:p-10">
-      <div className="font-mono-data text-xs uppercase tracking-[2px] text-bolt">PERSONAL MATH • NO BS</div>
-      <h3 className="mt-2 font-heading text-3xl font-extrabold text-white">What is 6+ hrs of clean focus worth… to <span className="text-bolt">you</span>?</h3>
+    <div className="premium-card border-neural/30 p-8 md:p-10">
+      <div className="font-mono-data text-xs uppercase tracking-[2px] text-neural">YOUR FOCUS ROI</div>
+      <h3 className="mt-2 font-heading text-3xl font-extrabold text-white">What is 6+ hrs of clean focus worth… to <span className="text-neural">you</span>?</h3>
       <p className="mt-1 text-sm text-silver/70">Slide your reality. See the real cost of brain fog for students, professionals, and creators — then the life-changing ROI of one bottle.</p>
 
       <div className="mt-8 space-y-8">
@@ -31,7 +31,7 @@ export function FocusRoiCalculator() {
         <div>
           <div className="flex justify-between text-sm mb-2">
             <div>Hours lost to fog or distractions each week (school, work, or life)</div>
-            <div className="font-mono-data text-bolt font-bold tabular-nums">{hoursLost} hrs</div>
+            <div className="font-mono-data text-neural font-bold tabular-nums">{hoursLost} hrs</div>
           </div>
           <input
             type="range"
@@ -40,10 +40,10 @@ export function FocusRoiCalculator() {
             step={1}
             value={hoursLost}
             onChange={e => setHoursLost(parseInt(e.target.value))}
-            className="w-full accent-bolt"
+            className="w-full accent-neural"
           />
           <div className="flex justify-between text-[10px] text-silver/50 mt-1">
-            <div>Weekend warrior</div><div>Full send operator</div>
+            <div>Light load</div><div>High performer</div>
           </div>
         </div>
 
@@ -51,7 +51,7 @@ export function FocusRoiCalculator() {
         <div>
           <div className="flex justify-between text-sm mb-2">
             <div>What an extra focused hour is worth to your business, career, or goals</div>
-            <div className="font-mono-data text-bolt font-bold tabular-nums">${hourlyValue}</div>
+            <div className="font-mono-data text-neural font-bold tabular-nums">${hourlyValue}</div>
           </div>
           <input
             type="range"
@@ -60,16 +60,16 @@ export function FocusRoiCalculator() {
             step={5}
             value={hourlyValue}
             onChange={e => setHourlyValue(parseInt(e.target.value))}
-            className="w-full accent-bolt"
+            className="w-full accent-neural"
           />
           <div className="flex justify-between text-[10px] text-silver/50 mt-1">
-            <div>Early stage</div><div>High-stakes closer</div>
+            <div>Student / early career</div><div>Executive / founder</div>
           </div>
         </div>
       </div>
 
       {/* Results - big and emotional */}
-      <div className="mt-9 rounded-xl border border-bolt/20 bg-black/30 p-6">
+      <div className="mt-9 rounded-xl border border-neural/20 bg-black/30 p-6">
         <div className="text-xs uppercase tracking-widest text-silver/50">Conservative recovery (we use 65%)</div>
 
         <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-3 text-center">
@@ -82,14 +82,14 @@ export function FocusRoiCalculator() {
             <div className="text-xs text-silver/60">extra per month</div>
           </div>
           <div className="sm:border-l border-border sm:pl-4">
-            <div className="text-4xl font-extrabold text-bolt tabular-nums">${yearlyGain}</div>
-            <div className="text-xs text-bolt/80">extra per year (or lost if you do nothing)</div>
+            <div className="text-4xl font-extrabold text-neural tabular-nums">${yearlyGain}</div>
+            <div className="text-xs text-neural/80">extra per year (or lost if you do nothing)</div>
           </div>
         </div>
 
         <div className="mt-6 text-center text-sm">
           One bottle costs <span className="font-bold text-white">${bottleCost}</span>.
-          <span className="block text-bolt">Payback in &lt; 1 day for most students and professionals.</span>
+          <span className="block text-neural">Payback in &lt; 1 day for most students and professionals.</span>
         </div>
       </div>
 

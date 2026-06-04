@@ -29,6 +29,14 @@
   --color-outline: #4b4731;
   --color-outline-strong: #979177;
   --color-secondary-container: #3d4a5a;
+  /* Premium glass supplement shop additions + spacing per spec */
+  --color-accent: #1f6feb;
+  --color-text-blue: #2eb9df;
+  --spacing-unit: 8px;
+  --container-max: 1280px;
+  --gutter: 24px;
+  --margin-desktop: 64px;
+  --margin-mobile: 20px;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -139,13 +147,7 @@
 .drop-glow-bolt { filter: drop-shadow(0 0 22px rgba(253, 228, 0, 0.32)); }
 .drop-glow-neural { filter: drop-shadow(0 12px 48px rgba(46, 185, 223, 0.38)); }
 
-/* Premium subtle grid — used sparingly for depth, much softer than before to avoid tech slop */
-.hud-grid {
-  background-image:
-    linear-gradient(rgba(186, 200, 218, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(186, 200, 218, 0.035) 1px, transparent 1px);
-  background-size: 56px 56px;
-}
+/* (hud-grid removed — clean premium Atlas aesthetic, no coded/tech grid lines) */
 
 /* ===== PREMIUM SHOPIFY / ATLAS BOLT-STYLE REDESIGN =====
    Bespoke high-end ecom feel: refined depth, signature tactile CTAs, no default shadcn or generic AI-vibe rounded buttons/fonts.
@@ -157,24 +159,26 @@
    Used for feature cards, comparison, ROI, pricing side, etc.
 */
 .premium-card {
-  background: rgba(20, 23, 23, 0.82);
-  border: 1px solid rgba(186, 200, 218, 0.07);
-  border-radius: 12px;
-  /* Layered glass + float: soft large outer shadow for lift, tight inner bevel, subtle glow accents */
+  background: rgba(18, 21, 22, 0.78);
+  border: 1px solid rgba(186, 200, 218, 0.09);
+  border-radius: 16px;
+  /* Richer glassmorphism premium supplement shop: heavier frost, deeper multi-layer shadows for luxury floating panels */
   box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.05) inset,
-    0 18px 48px -18px rgba(0, 0, 0, 0.55),
-    0 6px 12px -3px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(6px);
+    0 1px 0 0 rgba(255, 255, 255, 0.06) inset,
+    0 1px 0 0 rgba(255,255,255,0.02) inset,
+    0 24px 70px -24px rgba(0, 0, 0, 0.65),
+    0 10px 24px -6px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
   transition: transform 0.18s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.18s ease, border-color 0.18s ease;
 }
 .premium-card:hover {
   transform: translateY(-3px) scale(1.005);
-  border-color: rgba(186, 200, 218, 0.12);
+  border-color: rgba(186, 200, 218, 0.16);
   box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.08) inset,
-    0 28px 60px -20px rgba(0, 0, 0, 0.65),
-    0 12px 18px -4px rgba(0, 0, 0, 0.3);
+    0 1px 0 0 rgba(255, 255, 255, 0.09) inset,
+    0 32px 80px -22px rgba(0, 0, 0, 0.72),
+    0 14px 26px -6px rgba(0, 0, 0, 0.38);
 }
 
 /* Signature premium Shopify-style CTAs — distinctive, not "every other site" rounded slop.
@@ -299,8 +303,8 @@ a.premium-cta-secondary {
   font-weight: 600;
   letter-spacing: 1.8px;
   text-transform: uppercase;
-  color: #fde400;
-  opacity: 0.85;
+  color: #2eb9df;
+  opacity: 0.9;
 }
 
 /* Fast, elegant focus for interactive elements (no ugly default rings) */
@@ -364,16 +368,17 @@ a.premium-cta-secondary {
   font-family: var(--font-sora), system-ui, sans-serif !important;
 }
 .fm-checkout {
-  min-height: 120px;
+  min-height: 70px; /* reduced: embed now only the Buy button (img + price removed for white-BG fix + no dup) */
 }
 .fm-checkout .shopify-buy__layout {
   background: transparent !important;
 }
 .fm-checkout .shopify-buy__product {
-  border: 1px solid rgba(186, 200, 218, 0.06) !important;
-  background: #141717 !important;
-  border-radius: 14px !important;
-  box-shadow: 0 12px 36px -14px rgba(0,0,0,0.5) !important;
+  border: none !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
 }
 .fm-checkout .shopify-buy__btn {
   background: #fde400 !important;
@@ -411,6 +416,21 @@ a.premium-cta-secondary {
   color: #fff !important;
   font-size: 1rem !important;
   font-family: var(--font-sora), sans-serif !important;
+}
+
+/* White-BG image removal for Shopify embed (the embedded product card had white studio bottle PNG clashing with dark theme).
+   We show our own premium ProductGlow + custom price above; embed now renders ONLY the clean yellow Buy Now button. */
+.fm-checkout img,
+.fm-checkout .shopify-buy__product__img,
+.fm-checkout .shopify-buy__product__img-wrapper,
+.fm-checkout [class*="img"] {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+}
+.fm-checkout .shopify-buy__price {
+  display: none !important;
 }
 
 /* ===== Fun scroll + conversion animations (inspired by the Google Sans slide + progress CSS the user shared) ===== */
@@ -459,7 +479,7 @@ a.premium-cta-secondary {
   border-radius: 9999px;
   border: 1px solid rgba(186, 200, 218, 0.1);
   background: rgba(255,255,255,0.015);
-  color: #fde400;
+  color: #2eb9df;
   opacity: 0.92;
 }
 
@@ -469,4 +489,114 @@ a.premium-cta-secondary {
   font-size: 11px;
   letter-spacing: 1px;
   color: #bac8da;
+}
+
+/* ===== Mobile sizing & premium Atlas polish fixes ===== */
+@media (max-width: 420px) {
+  .premium-cta,
+  a.premium-cta {
+    font-size: 13px !important;
+    padding: 13px 22px !important;
+    letter-spacing: -0.1px;
+  }
+  .premium-cta-secondary,
+  a.premium-cta-secondary {
+    font-size: 12px !important;
+    padding: 11px 18px !important;
+  }
+  h1 { font-size: 36px !important; line-height: 0.95 !important; letter-spacing: -1.8px !important; }
+}
+
+/* Ensure no button/title overlap, generous tap targets, clean spacing */
+.premium-card { margin-bottom: 0; }
+button, a { min-height: 44px; } /* iOS/Android tap target */
+section { overflow: visible; } /* prevent clip on mobile anims */
+
+/* ===== Mobile centering + premium glass shop polish (375px, 768px) =====
+   Center everything on mobile per request. Make sections SMALLER on mobile.
+   Fix spacing: scan elements, prevent overlaps, tighter but breathable for conversions.
+   Keep desktop spacious/premium.
+*/
+@media (max-width: 767px) {
+  /* Center key content blocks, headings, labels, cards content on mobile */
+  .mx-auto.max-w-2xl,
+  .mx-auto.max-w-3xl,
+  .mx-auto.max-w-5xl,
+  .premium-card,
+  .reveal,
+  .section-label,
+  h1, h2, h3,
+  .premium-trust-bar {
+    text-align: center !important;
+  }
+  /* Center grids and flex that collapse on mobile */
+  .mt-12.grid,
+  .grid.items-start {
+    justify-items: center;
+  }
+  .premium-card p,
+  .premium-card h3,
+  .premium-card ul,
+  .premium-card .flex.items-start {
+    text-align: center !important;
+  }
+  /* Make sections SMALLER on mobile + fix spacing (no cramp, no overlap, good for conv) */
+  .py-20 { padding-top: 2.25rem; padding-bottom: 2.25rem; }
+  .py-12 { padding-top: 1.75rem; padding-bottom: 1.75rem; }
+  .py-24 { padding-top: 2.25rem; padding-bottom: 2.25rem; }
+  .mt-12 { margin-top: 1.5rem; }
+  .mt-14 { margin-top: 1.75rem; }
+  .gap-5 { gap: 0.875rem; }
+  .gap-6 { gap: 0.875rem; }
+  .gap-8 { gap: 1rem; }
+  /* Individual element spacing fixes for no overlap */
+  section > div.mx-auto { padding-left: 1rem; padding-right: 1rem; }
+  /* Center nav menu links in overlay for mobile */
+  .flex-col.gap-1.px-6 { align-items: center; text-align: center; }
+  .flex-col.gap-1.px-6 a { width: 100%; justify-content: center; }
+
+  /* Pricing section specific mobile centering polish (per plan: section not properly centered on mobile) */
+  #pricing .grid,
+  #pricing .premium-card,
+  #pricing .premium-product-stage {
+    text-align: center;
+    justify-items: center;
+  }
+  #pricing .flex.items-center.justify-between,
+  #pricing .flex.items-baseline,
+  #pricing .flex.items-center.gap-2,
+  #pricing .flex.items-center.gap-x-6 {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #pricing ul {
+    display: inline-block;
+    text-align: left;
+  }
+  #pricing .mt-7.border-t {
+    text-align: center;
+  }
+  /* Make the left product visual centered and appropriately sized on mobile */
+  #pricing .premium-product-stage {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Readable text bump on tiny screens */
+  .text-\[13\.5px\] { font-size: 14px; }
+  /* Keep CTAs full width but centered text */
+  .premium-cta, .premium-cta-secondary { justify-content: center; }
+  /* Locked pill visual + orbiting squares: extra room, perfect sizing no overlap on 375px */
+  .min-h-\[380px\] { min-height: 340px; }
+  .min-h-\[420px\] { min-height: 340px; }
+  /* Prevent fixed "Buy Now" sticky bar from overlapping bottom content (FAQ buy button, etc.) on mobile */
+  .mobile-bottom-safe { padding-bottom: 4.25rem !important; }
+}
+
+/* Premium richer depth for atlas luxury (subtle lift, no flat) */
+.premium-card {
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.06) inset,
+    0 1px 0 0 rgba(255,255,255,0.02) inset,
+    0 24px 70px -24px rgba(0, 0, 0, 0.65),
+    0 10px 24px -6px rgba(0, 0, 0, 0.35);
 }

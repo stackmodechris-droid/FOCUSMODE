@@ -14,7 +14,7 @@ export function Testimonials() {
         transition={{ duration: 0.6 }}
         className="premium-card p-8 md:p-12 relative"
       >
-        <Quote className="absolute right-8 top-8 h-10 w-10 text-bolt/10" />
+        <Quote className="absolute right-8 top-8 h-10 w-10 text-neural/10" />
 
         <div className="text-[15px] md:text-[17px] leading-relaxed text-silver/85">
           I built Focus Mode because I was the first customer. Mental fatigue was destroying my output. By early afternoon the fog would hit — slow decisions, missed details, and the feeling that my brain just couldn&apos;t keep up with the businesses I was trying to scale.

@@ -23,6 +23,8 @@ const OPTIONS = {
     styles: {
       title: { display: "none" },
       description: { display: "none" },
+      img: { display: "none" },
+      imgWrapper: { display: "none" },
       button: {
         "font-size": "15px",
         "padding-top": "18px",
@@ -35,7 +37,7 @@ const OPTIONS = {
         "letter-spacing": "0.04em",
         "text-transform": "uppercase",
       },
-      price: { "font-weight": "700", color: "#e2e2e2", "font-size": "1.35rem", "font-family": "var(--font-sora), system-ui, sans-serif" },
+      price: { display: "none" },
       compareAt: { display: "none" },
     },
     buttonDestination: "checkout",
@@ -106,7 +108,8 @@ export function CheckoutContainer({ className }: { className?: string }) {
 
     if (window.ShopifyBuy && window.ShopifyBuy.UI) {
       initShopify();
-      setLoaded(true);
+      // Defer setState out of effect body to satisfy react-hooks and avoid potential cascading renders (perf)
+      setTimeout(() => setLoaded(true), 0);
     } else {
       loadScript();
     }
@@ -120,9 +123,8 @@ export function CheckoutContainer({ className }: { className?: string }) {
     <div className={className}>
       <div id={domId} ref={nodeRef} />
       {!loaded && (
-        <div className="pointer-events-none mt-2 flex h-14 items-center justify-between rounded-xl border border-white/8 bg-[#141717] px-5 text-xs font-mono-data uppercase tracking-[1.5px] text-silver/40 md:flex">
-          <span>SECURE CHECKOUT</span>
-          <span>LOADING…</span>
+        <div className="pointer-events-none mt-1 flex h-11 items-center justify-center rounded-lg border border-white/8 bg-[#141717] px-5 text-xs font-mono-data uppercase tracking-[1.5px] text-silver/40">
+          LOADING SECURE CHECKOUT…
         </div>
       )}
     </div>

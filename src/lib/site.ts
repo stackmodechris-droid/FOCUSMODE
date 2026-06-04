@@ -15,6 +15,7 @@ export const SITE = {
   email: "support@stackmode.net",
   description:
     "The highest-performing focus supplement on earth. 6+ hours of clean, crash-free mental clarity, sharper decisions, and zero fatigue — for entrepreneurs, professionals, students, creators, and high-performers who refuse to let brain fog hold them back. Scientifically dosed Ginkgo + Ginseng. USA made. 30-day guarantee.",
+  metaPixelId: "1808935510076455",
 } as const;
 
 export const SHOPIFY_CART_URL =
@@ -29,10 +30,11 @@ export const NAV_LINKS = [
 ] as const;
 
 export const PRODUCT_IMAGES = {
-  front: "/products/bottle-front.png",
-  trio: "/products/bottle-trio.png",
-  capsules: "/products/bottle-capsules.png",
-  open: "/products/bottle-open.png",
+  front: "/products/1780438169847-generated-label-image-2.png",
+  trio: "/products/1780438169836-generated-label-image-3.png",
+  capsules: "/products/1780438169844-generated-label-image-0.png",
+  open: "/products/1780438169849-generated-label-image-1.png",
+  pill: "/products/pill.png",
 } as const;
 
 export const FAQS: { q: string; a: string }[] = [

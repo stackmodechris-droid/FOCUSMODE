@@ -84,7 +84,7 @@ export function ProductGlow({
           width={size}
           height={size}
           priority={priority}
-          className="h-auto w-full select-none object-contain drop-shadow-[0_32px_70px_rgba(0,0,0,0.65)] drop-shadow-[0_8px_18px_rgba(0,0,0,0.35)]"
+          className="h-auto w-full select-none object-contain drop-shadow-[0_32px_70px_rgba(0,0,0,0.65)] drop-shadow-[0_8px_18px_rgba(0,0,0,0.35)] mix-blend-multiply"
           draggable={false}
         />
       </motion.div>

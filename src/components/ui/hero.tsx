@@ -10,12 +10,12 @@ import { motion } from "motion/react";
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#0a0c0c]">
-      {/* Premium seamless top visual: very faint grid flows under the glass navbar for continuity (no gap, no slop) */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 hud-grid opacity-30" />
+      {/* Premium seamless dark stage — no HUD grid (clean Atlas luxury, not coded tech) */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(253,228,0,0.015)_0%,transparent_60%)]" />
       {/* Soft orbs for 3D richness */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-24 left-1/3 h-[520px] w-[520px] rounded-full bg-bolt/[0.035] blur-[120px]" />
-        <div className="absolute top-1/3 right-1/4 h-[380px] w-[380px] rounded-full bg-neural/[0.04] blur-[110px]" />
+        <div className="absolute -top-16 sm:-top-24 left-1/3 h-[320px] w-[320px] sm:h-[520px] sm:w-[520px] rounded-full bg-neural/[0.035] blur-[80px] sm:blur-[120px]" />
+        <div className="absolute top-1/4 sm:top-1/3 right-1/4 h-[240px] w-[240px] sm:h-[380px] sm:w-[380px] rounded-full bg-neural/[0.04] blur-[70px] sm:blur-[110px]" />
       </div>
 
       {/* Content - padded to sit below the glass nav, while bg/grid flows seamless to top edge */}
@@ -33,7 +33,7 @@ export function Hero() {
           {/* Premium headline - tighter, bolder, luxurious spacing */}
           <h1 className="font-heading text-[42px] font-semibold leading-[0.96] tracking-[-2.2px] text-white sm:text-[56px] md:text-[72px] lg:text-[84px]">
             Elite focus.<br />
-            <span className="text-bolt tracking-[-2.6px]">Engineered for operators.</span>
+            <span className="text-neural tracking-[-2.6px]">Engineered for peak performance.</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-[620px] text-[15px] leading-relaxed text-silver/70 md:mt-7 md:text-[17px]">
@@ -65,16 +65,16 @@ export function Hero() {
               <span className="text-silver/40">from ambitious students, professionals &amp; creators</span>
             </div>
             <span className="hidden h-3 w-px bg-white/15 sm:inline-block" />
-            <a href="#pricing" className="font-medium text-bolt/90 hover:text-bolt transition">Shop now →</a>
+            <a href="#pricing" className="font-medium text-neural/90 hover:text-neural transition">Shop now →</a>
           </div>
         </motion.div>
       </div>
 
       {/* Hero product showcase - prominent, 3D, beautiful (seamless premium floating stage — no border, matches the perfect render in Image #1) */}
-      <div className="relative z-10 mx-auto -mt-2 max-w-5xl px-5 pb-14 md:-mt-4 md:pb-20">
+      <div className="relative z-10 mx-auto mt-1 sm:-mt-1 md:-mt-2 max-w-5xl px-5 pb-10 sm:pb-14 md:pb-20">
         <div className="premium-product-stage mx-auto max-w-[780px]">
           <ProductGlow
-            src="/products/bottle-trio.png"
+            src="/products/1780438169836-generated-label-image-3.png"
             alt="Focus Mode bottles"
             size={680}
             glow="dual"

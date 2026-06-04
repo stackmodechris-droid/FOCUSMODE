@@ -63,7 +63,7 @@ export function StatsCard({ title, currentValue, valuePrefix, valuePostfix, desc
     >
       <div className="flex flex-row items-center justify-between pb-2">
         <h3 className="font-mono-data text-[10px] tracking-[1.6px] text-silver/60">{title}</h3>
-        <TrendingUp className="h-4 w-4 text-bolt" />
+        <TrendingUp className="h-4 w-4 text-neural" />
       </div>
       <div>
         <div ref={cardRef} className="flex flex-col gap-4">

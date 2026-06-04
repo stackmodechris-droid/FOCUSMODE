@@ -35,12 +35,12 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-surface-dim">
       <div className="mx-auto max-w-7xl px-5 py-16 md:px-8">
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-5">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-5 md:gap-10">
           <div className="col-span-2 md:col-span-2">
             <Link href="/" className="flex items-center gap-2.5">
               <Image src="/logo.png" alt="Focus Mode logo" width={40} height={40} className="h-10 w-10 drop-glow-neural" />
               <span className="font-heading text-xl font-extrabold tracking-tight text-white">
-                FOCUS<span className="text-bolt">MODE</span>
+                FOCUS<span className="text-neural">MODE</span>
               </span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-silver/70">
@@ -56,7 +56,7 @@ export function Footer() {
 
           {COLS.map((col) => (
             <div key={col.title}>
-              <h3 className="font-mono-data text-xs uppercase tracking-widest text-bolt">{col.title}</h3>
+              <h3 className="font-mono-data text-xs uppercase tracking-widest text-neural">{col.title}</h3>
               <ul className="mt-4 space-y-3">
                 {col.links.map((l) => (
                   <li key={l.label}>
@@ -84,7 +84,7 @@ export function Footer() {
             <div className="flex flex-col md:flex-row md:items-center gap-3 text-xs">
               <a
                 href={SITE.partnerUrl}
-                className="font-medium text-silver/70 hover:text-bolt transition-colors"
+                className="font-medium text-silver/70 hover:text-neural transition-colors"
               >
                 Learn how to trade and grow your business at stackmode.net
               </a>
