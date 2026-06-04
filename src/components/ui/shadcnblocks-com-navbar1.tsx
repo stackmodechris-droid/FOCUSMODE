@@ -1,11 +1,11 @@
 "use client"
 
+import { SHOPIFY_CART_URL } from "@/lib/site"
 import { Menu, X, Zap } from "lucide-react"
+import { AnimatePresence, motion } from "motion/react"
 import Image from "next/image"
 import Link from "next/link"
-import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "motion/react"
-import { SHOPIFY_CART_URL } from "@/lib/site"
+import { useEffect, useState } from "react"
 
 const Navbar1 = ({
   logo = {
@@ -43,7 +43,7 @@ const Navbar1 = ({
   const closeMobile = () => setMobileOpen(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/[0.04] bg-[#0c0f0f]/70 backdrop-blur-3xl">
+    <header className="sticky top-0 z-50 w-full border-b border-white/[0.04] bg-[#0c0f0f]">
       {/* Integrated flush progress — no separate fixed 3px element, no gap, seamless to viewport top */}
       <div className="absolute left-0 top-0 h-px w-full bg-white/10">
         <div className="h-full bg-neural transition-[width] duration-100" style={{ width: `${progress}%` }} />
@@ -127,7 +127,7 @@ const Navbar1 = ({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.12 }}
-            className="fixed inset-0 z-[70] bg-[#0a0c0c]/98 backdrop-blur-3xl lg:hidden"
+            className="fixed inset-0 z-[70] bg-[#0a0c0c] lg:hidden"
             onClick={closeMobile}
           >
             <div className="flex h-full flex-col" onClick={(e) => e.stopPropagation()}>
