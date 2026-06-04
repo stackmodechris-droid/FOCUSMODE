@@ -3,7 +3,7 @@
 import { CheckoutContainer } from "@/components/ui/checkout-container";
 import { ProductGlow } from "@/components/ui/product-glow";
 import { SectionLabel } from "@/components/ui/reveal";
-import { SHOPIFY_CART_URL, SITE } from "@/lib/site";
+import { SHOPIFY_CART_URL, SITE, trackAddToCart } from "@/lib/site";
 import { Check, Clock, ShieldCheck, Truck } from "lucide-react";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
@@ -116,6 +116,7 @@ export function PricingSection() {
           <CheckoutContainer className="fm-checkout" />
           <a
             href={SHOPIFY_CART_URL}
+            onClick={trackAddToCart}
             className="mt-3 block text-center font-mono-data text-[10px] uppercase tracking-widest text-silver/50 hover:text-neural underline-offset-4 hover:underline"
           >
             or open full Shopify cart →

@@ -1,6 +1,6 @@
 "use client"
 
-import { SHOPIFY_CART_URL } from "@/lib/site"
+import { SHOPIFY_CART_URL, trackAddToCart } from "@/lib/site"
 import { Menu, X, Zap } from "lucide-react"
 import { AnimatePresence, motion } from "motion/react"
 import Image from "next/image"
@@ -91,6 +91,7 @@ const Navbar1 = ({
             </Link>
             <Link
               href={SHOPIFY_CART_URL}
+              onClick={trackAddToCart}
               className="premium-cta group inline-flex items-center gap-2 px-7 py-[13px] text-sm"
             >
               Buy Now — $59.99
@@ -174,7 +175,7 @@ const Navbar1 = ({
               <div className="mt-auto p-6">
                 <Link
                   href={SHOPIFY_CART_URL}
-                  onClick={closeMobile}
+                  onClick={() => { closeMobile(); trackAddToCart(); }}
                   className="premium-cta flex w-full items-center justify-center gap-3 py-5 text-lg active:bg-[#ffea3d]"
                 >
                   Buy Focus Mode — $59.99 <Zap className="h-5 w-5 fill-black" />

@@ -1,20 +1,21 @@
 import { ArticlesGrid } from "@/components/ui/blog-posts";
-import { LockedInVisual } from "@/components/ui/locked-in-visual";
 import { FaqAccordion } from "@/components/ui/faq-accordion";
+import { FocusRoiCalculator } from "@/components/ui/focus-roi-calculator";
 import { FormulaStack } from "@/components/ui/formula-stack";
 import { Hero } from "@/components/ui/hero";
+import { HomeLazyPopups } from "@/components/ui/home-lazy-popups";
 import { IngredientsSchematic } from "@/components/ui/ingredients-schematic";
 import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
 import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
+import { LockedInVisual } from "@/components/ui/locked-in-visual";
 import { MarqueeTrust } from "@/components/ui/marquee-trust";
 import { PricingSection } from "@/components/ui/pricing-section";
-import { FocusRoiCalculator } from "@/components/ui/focus-roi-calculator";
 import { Reveal, SectionLabel } from "@/components/ui/reveal";
+import { ShopifyBuyAnchor } from "@/components/ui/shopify-buy-anchor";
 import { ProductShowcase } from "@/components/ui/spatial-product-showcase";
 import { StatsCard } from "@/components/ui/stats-card-1";
 import { StickyBuyBar } from "@/components/ui/sticky-buy-bar";
 import { Testimonials } from "@/components/ui/testimonials";
-import { HomeLazyPopups } from "@/components/ui/home-lazy-popups";
 import { SHOPIFY_CART_URL } from "@/lib/site";
 import { Brain, Coins, TrendingUp } from "lucide-react";
 import Link from "next/link";
@@ -46,9 +47,9 @@ export default function Home() {
             </div>
             <div className="flex w-full flex-col items-stretch gap-1.5 sm:gap-2 sm:w-auto sm:flex-row sm:items-center">
               <OpenOfferButton className="hidden sm:inline-flex" />
-              <a href={SHOPIFY_CART_URL} className="premium-cta w-full justify-center text-sm sm:w-auto sm:text-[14.5px]">
+              <ShopifyBuyAnchor className="premium-cta w-full justify-center text-sm sm:w-auto sm:text-[14.5px]">
                 BUY $59.99 <span className="hidden xs:inline">NOW</span>
-              </a>
+              </ShopifyBuyAnchor>
               <a href="#pricing" className="premium-cta-secondary w-full justify-center text-xs px-4 py-2.5 sm:w-auto sm:text-sm sm:px-5">
                 See bundles
               </a>

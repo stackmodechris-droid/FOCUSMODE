@@ -1,8 +1,9 @@
 "use client";
 
-import * as React from "react";
-import Link from "next/link";
+import { SHOPIFY_CART_URL, trackAddToCart } from "@/lib/site";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import * as React from "react";
 
 interface LiquidGlassButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
@@ -16,8 +17,15 @@ interface LiquidGlassButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEl
  * Keeps the user's liked liquid/glare animations.
  */
 export const LiquidGlassButton = React.forwardRef<HTMLButtonElement, LiquidGlassButtonProps>(
-  ({ className, children, href, variant = "bolt", ...props }, ref) => {
+  ({ className, children, href, variant = "bolt", onClick, ...props }, ref) => {
     const isBolt = variant === "bolt";
+    const isShopify = href === SHOPIFY_CART_URL;
+
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+      if (isShopify) trackAddToCart();
+      onClick?.(e as React.MouseEvent<HTMLButtonElement>);
+    };
+
     const content = (
       <span
         className={cn(
@@ -54,14 +62,14 @@ export const LiquidGlassButton = React.forwardRef<HTMLButtonElement, LiquidGlass
 
     if (href) {
       return (
-        <Link href={href} className="inline-flex">
+        <Link href={href} className="inline-flex" onClick={handleClick}>
           {content}
         </Link>
       );
     }
 
     return (
-      <button ref={ref} type="button" className="inline-flex" {...props}>
+      <button ref={ref} type="button" className="inline-flex" onClick={handleClick} {...props}>
         {content}
       </button>
     );

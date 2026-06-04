@@ -1,6 +1,6 @@
 "use client";
 
-import { SHOPIFY_CART_URL, SITE } from "@/lib/site";
+import { SHOPIFY_CART_URL, SITE, trackAddToCart } from "@/lib/site";
 import { Zap } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
@@ -36,6 +36,7 @@ export function StickyBuyBar() {
             </div>
             <Link
               href={SHOPIFY_CART_URL}
+              onClick={trackAddToCart}
               className="premium-cta inline-flex items-center gap-1 px-3 py-1.5 text-[10px] active:bg-[#ffea3d]"
             >
               BUY <Zap className="h-3 w-3 fill-black" />

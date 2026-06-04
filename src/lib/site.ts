@@ -85,3 +85,10 @@ export const INGREDIENTS = [
 
 export const FDA_DISCLAIMER =
   "These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Consult a healthcare professional before use.";
+
+/** Fire Meta Pixel AddToCart event if fbq is available. */
+export function trackAddToCart() {
+  if (typeof window !== "undefined" && (window as unknown as Record<string, unknown>).fbq) {
+    ((window as unknown as Record<string, (cmd: string, event: string) => void>).fbq)("track", "AddToCart");
+  }
+}

@@ -1,5 +1,6 @@
 "use client";
 
+import { trackAddToCart } from "@/lib/site";
 import { useEffect, useId, useRef, useState } from "react";
 
 interface ShopifyUI {
@@ -42,6 +43,11 @@ const OPTIONS = {
     },
     buttonDestination: "checkout",
     text: { button: "Buy Now · Secure Shopify Checkout" },
+    events: {
+      openCheckout: () => {
+        trackAddToCart();
+      },
+    },
   },
   cart: {
     styles: {

@@ -1,6 +1,6 @@
 "use client";
 
-import { SHOPIFY_CART_URL, SITE } from "@/lib/site";
+import { SHOPIFY_CART_URL, SITE, trackAddToCart } from "@/lib/site";
 import { X, Zap } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
@@ -35,6 +35,7 @@ export function LimitedOfferPopup({ autoAfterMs = 45000, defaultOpen = false }: 
   const close = () => setOpen(false);
 
   const goBuy = () => {
+    trackAddToCart();
     // fun: small celebration before redirect
     const el = document.createElement("div");
     el.textContent = "⚡ LOCKED IN";

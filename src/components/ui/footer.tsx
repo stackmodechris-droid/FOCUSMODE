@@ -1,4 +1,6 @@
-import { FDA_DISCLAIMER, SHOPIFY_CART_URL, SITE } from "@/lib/site";
+"use client";
+
+import { FDA_DISCLAIMER, SHOPIFY_CART_URL, SITE, trackAddToCart } from "@/lib/site";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -60,7 +62,11 @@ export function Footer() {
               <ul className="mt-4 space-y-3">
                 {col.links.map((l) => (
                   <li key={l.label}>
-                    <Link href={l.href} className="text-sm text-silver/70 transition-colors hover:text-white">
+                    <Link
+                      href={l.href}
+                      onClick={l.href === SHOPIFY_CART_URL ? trackAddToCart : undefined}
+                      className="text-sm text-silver/70 transition-colors hover:text-white"
+                    >
                       {l.label}
                     </Link>
                   </li>
