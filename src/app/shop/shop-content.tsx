@@ -69,14 +69,14 @@ export function ShopContent() {
           <div className="mt-10 grid gap-5 md:grid-cols-2 items-stretch max-w-4xl mx-auto">
             {/* Focus Mode */}
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="relative h-full flex flex-col rounded-2xl border-2 border-yellow-300 bg-white p-6 shadow-lg">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded bg-yellow-400 px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider text-black shadow-sm">40% OFF TODAY</div>
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded bg-yellow-400 px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-black shadow-sm">40% OFF TODAY</div>
               <div className="flex-1 flex flex-col">
                 <div className="flex items-center gap-3">
                   <div className="w-20 h-20 shrink-0 rounded-xl overflow-hidden bg-gray-50">
                     <Image src="/products/1780438169847-generated-label-image-2.png" alt="Focus Mode" width={80} height={80} className="w-full h-full object-contain" />
                   </div>
                   <div>
-                    <div className="text-[10px] uppercase tracking-[2px] text-blue-500 font-semibold">All-Natural Brain Booster</div>
+                    <div className="text-xs uppercase tracking-[2px] text-blue-500 font-semibold">All-Natural Brain Booster</div>
                     <h2 className="font-heading text-2xl font-semibold text-gray-900">Focus Mode</h2>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ export function ShopContent() {
                     <Image src={GREENS.images.front} alt={GREENS.name} width={80} height={80} className="w-full h-full object-contain" />
                   </div>
                   <div>
-                    <div className="text-[10px] uppercase tracking-[2px] text-green-600 font-semibold">Whole-Plant Daily Energy</div>
+                    <div className="text-xs uppercase tracking-[2px] text-green-600 font-semibold">Whole-Plant Daily Energy</div>
                     <h2 className="font-heading text-2xl font-semibold text-gray-900">{GREENS.name}</h2>
                   </div>
                 </div>
@@ -142,7 +142,7 @@ export function ShopContent() {
               </div>
             </div>
             <div>
-              <div className="uppercase tracking-[2px] text-[10px] text-blue-500 mb-2 font-semibold">Elite Nootropic</div>
+              <div className="uppercase tracking-[2px] text-xs text-blue-500 mb-2 font-semibold">Elite Nootropic</div>
               <h2 className="font-heading text-4xl md:text-5xl font-semibold tracking-[-1px] text-gray-900">Focus Mode</h2>
               <p className="mt-3 text-lg text-gray-600">6+ hours of clean, crash-free mental clarity. Sharper decisions, faster recall, zero fog.</p>
 
@@ -161,7 +161,7 @@ export function ShopContent() {
                 ))}
               </div>
 
-              <p className="mt-8 text-[10px] text-gray-400">Ships same day • 30-day guarantee • Subscribe & save extra at checkout</p>
+              <p className="mt-8 text-xs text-gray-400">Ships same day • 30-day guarantee • Subscribe & save extra at checkout</p>
             </div>
           </div>
         </div>
@@ -175,12 +175,12 @@ export function ShopContent() {
               <div className="premium-product-stage max-w-[420px]">
                 <ProductGlow src={GREENS.images.front} alt={GREENS.name} size={520} glow="neural" priority />
               </div>
-              <button onClick={() => setShowFacts(!showFacts)} className="absolute -bottom-2 right-4 text-[10px] tracking-[1.5px] px-4 py-1.5 rounded-full border border-gray-200 bg-white hover:bg-gray-50 transition text-gray-500">
+              <button onClick={() => setShowFacts(!showFacts)} className="absolute -bottom-2 right-4 text-xs tracking-[1.5px] px-4 py-1.5 rounded-full border border-gray-200 bg-white hover:bg-gray-50 transition text-gray-500">
                 {showFacts ? "HIDE" : "VIEW"} FULL SUPPLEMENT FACTS
               </button>
             </div>
             <div>
-              <div className="uppercase tracking-[2px] text-[10px] text-green-600 mb-2 font-semibold">Whole-Plant Daily Nutrition</div>
+              <div className="uppercase tracking-[2px] text-xs text-green-600 mb-2 font-semibold">Whole-Plant Daily Nutrition</div>
               <h2 className="font-heading text-4xl md:text-5xl font-semibold tracking-[-1px] text-gray-900">{GREENS.name}</h2>
               <p className="mt-3 text-lg text-gray-600">{GREENS.description}</p>
 
@@ -207,7 +207,7 @@ export function ShopContent() {
                 </div>
               </div>
 
-              <p className="mt-8 text-[10px] text-gray-400">{GREENS.usage} • {GREENS.manufactured} made • No artificial additives</p>
+              <p className="mt-8 text-xs text-gray-400">{GREENS.usage} • {GREENS.manufactured} made • No artificial additives</p>
             </div>
           </div>
 
@@ -245,7 +245,7 @@ export function ShopContent() {
                   <Zap className="h-5 w-5 text-blue-500" />
                 </div>
                 <div>
-                  <div className="text-[10px] uppercase tracking-[2px] text-blue-500 font-semibold">Focus Mode Capsules</div>
+                  <div className="text-xs uppercase tracking-[2px] text-blue-500 font-semibold">Focus Mode Capsules</div>
                   <div className="font-heading text-lg font-semibold text-gray-900">The 2×2 Protocol</div>
                 </div>
               </div>
@@ -276,7 +276,7 @@ export function ShopContent() {
                   <Leaf className="h-5 w-5 text-green-600" />
                 </div>
                 <div>
-                  <div className="text-[10px] uppercase tracking-[2px] text-green-600 font-semibold">Super Energy Blend</div>
+                  <div className="text-xs uppercase tracking-[2px] text-green-600 font-semibold">Super Energy Blend</div>
                   <div className="font-heading text-lg font-semibold text-gray-900">The 60-Second Ritual</div>
                 </div>
               </div>

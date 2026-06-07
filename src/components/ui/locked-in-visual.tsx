@@ -38,17 +38,17 @@ export function LockedInVisual() {
     const updateLayout = () => {
       const w = window.innerWidth;
       if (w < 375) {
-        setOrbitRadius(98); // aggressive for 375px to stop pill + squares/nodes overlapping each other and edges
-        setCardScale(0.72);
+        setOrbitRadius(115);
+        setCardScale(0.88);
       } else if (w < 420) {
-        setOrbitRadius(108);
-        setCardScale(0.78);
+        setOrbitRadius(125);
+        setCardScale(0.92);
       } else if (w < 640) {
-        setOrbitRadius(130);
-        setCardScale(0.85);
+        setOrbitRadius(142);
+        setCardScale(0.96);
       } else if (w < 768) {
-        setOrbitRadius(148);
-        setCardScale(0.9);
+        setOrbitRadius(158);
+        setCardScale(1);
       } else {
         setOrbitRadius(192);
         setCardScale(1);
@@ -286,10 +286,10 @@ export function LockedInVisual() {
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
               className={`group relative flex w-[80px] flex-col items-center rounded-2xl border px-1.5 py-1.5 text-center backdrop-blur-xl transition-all sm:w-[108px] md:w-[138px] ${
                 isActive
-                  ? "border-white/30 bg-surface-container-high/95 shadow-[0_0_0_1px_rgba(255,255,255,0.1),0_20px_55px_-18px_rgba(0,0,0,0.6)]"
+                  ? "border-white/40 bg-white/20 shadow-[0_0_0_1px_rgba(255,255,255,0.15),0_20px_55px_-18px_rgba(0,0,0,0.5)]"
                   : b.accent === "bolt"
-                    ? "border-bolt/25 bg-surface-container/80 hover:border-bolt/40"
-                    : "border-neural/25 bg-surface-container/80 hover:border-neural/40"
+                    ? "border-bolt/30 bg-white/12 hover:border-bolt/50 hover:bg-white/18"
+                    : "border-neural/30 bg-white/12 hover:border-neural/50 hover:bg-white/18"
               }`}
               style={{ transform: `scale(${cardScale})`, transformOrigin: "center" }}
               aria-label={b.title}
