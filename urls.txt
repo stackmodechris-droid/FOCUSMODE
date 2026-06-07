@@ -1,0 +1,50 @@
+FOCUS MODE — ALL URLS
+=====================
+
+NAVBAR LINKS
+------------
+https://focusmodeshop.com/our-story
+https://focusmodeshop.com/articles
+https://focusmodeshop.com/learn-more
+https://focusmodeshop.com/#benefits
+https://focusmodeshop.com/#performance
+https://focusmodeshop.com/#pricing
+https://focusmodeshop.com/faq
+
+EXTERNAL URLS
+--------------
+https://focusmodeshop.com
+https://stackmode.net
+https://qg5zmc-rx.myshopify.com/cart/47880589476098:1?channel=buy_button
+https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js
+https://connect.facebook.net/en_US/fbevents.js
+https://www.facebook.com/tr?id=1808935510076455&ev=PageView&noscript=1
+https://schema.org
+mailto:support@stackmode.net
+tel:+16785584327
+
+ALL INTERNAL PAGES (FULL URLS)
+------------------------------
+https://focusmodeshop.com/
+https://focusmodeshop.com/shop
+https://focusmodeshop.com/our-story
+https://focusmodeshop.com/articles
+https://focusmodeshop.com/articles/[slug]
+https://focusmodeshop.com/learn-more
+https://focusmodeshop.com/faq
+https://focusmodeshop.com/terms
+https://focusmodeshop.com/terms#shipping
+https://focusmodeshop.com/privacy
+https://focusmodeshop.com/#benefits
+https://focusmodeshop.com/#performance
+https://focusmodeshop.com/#pricing
+
+STATIC ASSETS (IMAGES)
+----------------------
+https://focusmodeshop.com/logo.png
+https://focusmodeshop.com/products/1780438169847-generated-label-image-2.png
+https://focusmodeshop.com/products/1780438169836-generated-label-image-3.png
+https://focusmodeshop.com/products/1780438169844-generated-label-image-0.png
+https://focusmodeshop.com/products/1780438169849-generated-label-image-1.png
+https://focusmodeshop.com/products/pill.png
+https://focusmodeshop.com/icon.png

@@ -609,3 +609,17 @@ section { overflow: visible; } /* prevent clip on mobile anims */
   border-color: #2eb9df;
   background: rgba(46, 185, 223, 0.06);
 }
+
+/* Nav high-converting colored product buttons (used in navbar for Focus blue + Greens green) */
+.nav-blue {
+  background: #1e90ff;
+  color: #fff;
+  font-weight: 700;
+}
+.nav-blue:hover { background: #1a7dd9; }
+.nav-green {
+  background: #16a34a;
+  color: #fff;
+  font-weight: 700;
+}
+.nav-green:hover { background: #15803d; }

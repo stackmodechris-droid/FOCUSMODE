@@ -32,9 +32,9 @@ export default function ShopPage() {
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="#focus" className="premium-cta px-9 py-4 text-[15px]">Get Focus Mode — ${focusPrice}</a>
-            <a href="#greens" className="premium-cta-secondary px-9 py-4 text-[15px]">Get Daily Greens — ${greensPrice}</a>
-            <Link href="#stack" className="premium-cta-secondary px-8 py-4 text-sm">Build the Complete Stack</Link>
+            <a href="#focus" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1e90ff] hover:bg-[#1a7dd9] active:scale-[0.985] px-8 py-3.5 text-[15px] font-heading font-bold text-white transition">Focus Mode — ${focusPrice}</a>
+            <a href="#greens" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#16a34a] hover:bg-[#15803d] active:scale-[0.985] px-8 py-3.5 text-[15px] font-heading font-bold text-white transition">Super Energy Blend — ${greensPrice}</a>
+            <Link href="#stack" className="premium-cta-secondary px-8 py-3.5 text-sm">Full Stack</Link>
           </div>
           <p className="mt-4 text-[11px] text-silver/50 tracking-[1.5px] uppercase">30-day guarantee on both • Ships today from USA</p>
         </div>
