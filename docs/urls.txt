@@ -3,12 +3,12 @@ FOCUS MODE — ALL URLS
 
 NAVBAR LINKS
 ------------
-https://focusmodeshop.com/our-story
+https://focusmodeshop.com/
+https://focusmodeshop.com/shop
+https://focusmodeshop.com/shop#focus
+https://focusmodeshop.com/shop#greens
 https://focusmodeshop.com/articles
 https://focusmodeshop.com/learn-more
-https://focusmodeshop.com/#benefits
-https://focusmodeshop.com/#performance
-https://focusmodeshop.com/#pricing
 https://focusmodeshop.com/faq
 
 EXTERNAL URLS
@@ -16,6 +16,7 @@ EXTERNAL URLS
 https://focusmodeshop.com
 https://stackmode.net
 https://qg5zmc-rx.myshopify.com/cart/47880589476098:1?channel=buy_button
+https://qg5zmc-rx.myshopify.com/cart/47960755863810:1?channel=buy_button
 https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js
 https://connect.facebook.net/en_US/fbevents.js
 https://www.facebook.com/tr?id=1808935510076455&ev=PageView&noscript=1
@@ -26,6 +27,9 @@ tel:+16785584327
 ALL INTERNAL PAGES (FULL URLS)
 ------------------------------
 https://focusmodeshop.com/
+https://focusmodeshop.com/shop
+https://focusmodeshop.com/shop#focus
+https://focusmodeshop.com/shop#greens
 https://focusmodeshop.com/our-story
 https://focusmodeshop.com/articles
 https://focusmodeshop.com/articles/[slug]
@@ -34,9 +38,12 @@ https://focusmodeshop.com/faq
 https://focusmodeshop.com/terms
 https://focusmodeshop.com/terms#shipping
 https://focusmodeshop.com/privacy
+https://focusmodeshop.com/#products
+https://focusmodeshop.com/#impact
 https://focusmodeshop.com/#benefits
-https://focusmodeshop.com/#performance
+https://focusmodeshop.com/#formula
 https://focusmodeshop.com/#pricing
+https://focusmodeshop.com/#faq
 
 STATIC ASSETS (IMAGES)
 ----------------------
@@ -46,4 +53,8 @@ https://focusmodeshop.com/products/1780438169836-generated-label-image-3.png
 https://focusmodeshop.com/products/1780438169844-generated-label-image-0.png
 https://focusmodeshop.com/products/1780438169849-generated-label-image-1.png
 https://focusmodeshop.com/products/pill.png
+https://focusmodeshop.com/greens/1780842565396-generated-label-image-2_800x800.png
+https://focusmodeshop.com/greens/1780842565402-generated-label-image-3_800x800.png
+https://focusmodeshop.com/greens/1780842565406-generated-label-image-0_800x800.png
+https://focusmodeshop.com/greens/1780842565435-generated-label-image-1_800x800.png
 https://focusmodeshop.com/icon.png

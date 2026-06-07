@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { motion, AnimatePresence } from "motion/react";
-import { Menu, X, Zap } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
+import { Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);

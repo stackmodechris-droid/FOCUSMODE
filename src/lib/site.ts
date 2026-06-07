@@ -3,7 +3,7 @@ export const SITE = {
   brand: "Focus Mode",
   legalName: "The Stackmode Network LLC",
   founder: "Stackmodechris",
-  url: "https://focusmode.stackmode.net",
+  url: "https://focusmodeshop.com",
   partnerUrl: "https://stackmode.net",
   tagline: "Think Faster. Work Smarter. Earn More.",
   price: 59.99,
@@ -21,21 +21,20 @@ export const SITE = {
 export const SHOPIFY_CART_URL =
   "https://qg5zmc-rx.myshopify.com/cart/47880589476098:1?channel=buy_button";
 
-// Daily Greens Powder — second product in the Daily Edge lineup
 export const GREENS_CART_URL =
   "https://qg5zmc-rx.myshopify.com/cart/47960755863810:1?channel=buy_button";
 
 export const GREENS = {
-  name: "Green SuperFood",
+  name: "Super Energy Blend",
   brand: "Focus Mode",
-  price: 49.99,
+  price: 45,
   currency: "USD",
   netWeight: "0.28 lb (126 g)",
   servings: 30,
   servingSize: "1 scoop (4.2 g)",
   supplyDays: 30,
   description:
-    "Pure plant-based Green SuperFood for clean, sustained energy and daily vitality. 20+ whole plants, superfoods and adaptogens in one scoop — the natural foundation for athletes, busy professionals, students, and anyone who wants real all-day energy and brain support without jitters or crashes.",
+    "Pure plant-based Super Energy Blend for clean, sustained energy and daily vitality. 20+ whole plants, superfoods and adaptogens in one scoop — the natural foundation for athletes, busy professionals, students, and anyone who wants real all-day energy and brain support without jitters or crashes.",
   howItWorks:
     "Mix one scoop into 6–8 oz of cold water or your morning beverage and you're done — a full spectrum of superfoods in under a minute, so you can get back to what matters.",
   ingredientsIntro:
@@ -73,11 +72,11 @@ export const GREENS = {
 } as const;
 
 export const NAV_LINKS = [
-  { label: "Focus", href: "/#products" },
-  { label: "Greens", href: "/#products" },
+  { label: "Focus Mode", href: "/shop#focus" },
+  { label: "Energy Blend", href: "/shop#greens" },
   { label: "Journal", href: "/articles" },
   { label: "Story", href: "/our-story" },
-  { label: "Formula", href: "/learn-more" },
+  { label: "Science", href: "/learn-more" },
 ] as const;
 
 export const PRODUCT_IMAGES = {

@@ -1,11 +1,12 @@
 "use client";
 
-import { GREENS, GREENS_CART_URL, SHOPIFY_CART_URL, SITE, trackAddToCart } from "@/lib/site";
-import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
+import { LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
 import { ProductGlow } from "@/components/ui/product-glow";
-import { Reveal, SectionLabel } from "@/components/ui/reveal";
+import { SectionLabel } from "@/components/ui/reveal";
+import { GREENS, GREENS_CART_URL, SHOPIFY_CART_URL, SITE, trackAddToCart } from "@/lib/site";
 import { Check, ShieldCheck, Truck, Zap } from "lucide-react";
 import { motion } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -20,23 +21,81 @@ export default function ShopPage() {
     <>
       <LiquidGlassFilter />
 
-      {/* Shop Hero — clean, premium, dual-product focused (beats cluttered GNC grids) */}
       <section className="border-b border-white/10 pt-16 md:pt-20">
-        <div className="mx-auto max-w-7xl px-5 py-16 md:py-20 md:px-8 text-center">
-          <SectionLabel>The Daily Edge Protocol</SectionLabel>
-          <h1 className="mt-4 font-heading text-4xl font-semibold tracking-[-1.2px] text-white md:text-6xl">
-            Two products.<br />One complete daily foundation.
-          </h1>
-          <p className="mt-6 max-w-2xl mx-auto text-[15px] md:text-lg text-silver/70">
-            Focus Mode capsules for 6+ hours of clean mental clarity + Daily Greens Powder for whole-plant vitamins, minerals, and adaptogens that fuel the physical and cognitive base your performance demands. Premium. Transparent. USA made.
-          </p>
-
-          <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="#focus" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1e90ff] hover:bg-[#1a7dd9] active:scale-[0.985] px-8 py-3.5 text-[15px] font-heading font-bold text-white transition">Focus Mode — ${focusPrice}</a>
-            <a href="#greens" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#16a34a] hover:bg-[#15803d] active:scale-[0.985] px-8 py-3.5 text-[15px] font-heading font-bold text-white transition">Super Energy Blend — ${greensPrice}</a>
-            <Link href="#stack" className="premium-cta-secondary px-8 py-3.5 text-sm">Full Stack</Link>
+        <div className="mx-auto max-w-7xl px-5 py-12 md:py-16 md:px-8">
+          <div className="mx-auto max-w-4xl text-center">
+            <SectionLabel>Buy In Seconds</SectionLabel>
+            <h1 className="mt-4 font-heading text-4xl font-semibold tracking-[-1.2px] text-white md:text-6xl">
+              Pick your edge.<br />Checkout fast.
+            </h1>
+            <p className="mt-5 mx-auto max-w-2xl text-[15px] md:text-lg text-silver/70">
+              No endless supplement aisle. Choose the all-natural brain booster, the whole-plant energy blend, or stack both for the complete daily protocol.
+            </p>
           </div>
-          <p className="mt-4 text-[11px] text-silver/50 tracking-[1.5px] uppercase">30-day guarantee on both • Ships today from USA</p>
+
+          <div className="mt-9 grid gap-4 lg:grid-cols-3">
+            <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} className="premium-card border-[#1e90ff]/30 p-6">
+              <div className="premium-product-stage mx-auto max-w-[260px]">
+                <ProductGlow src="/products/1780438169847-generated-label-image-2.png" alt="Focus Mode all-natural brain booster" size={360} glow="dual" priority />
+              </div>
+              <div className="mt-4 text-[10px] uppercase tracking-[2px] text-[#7ec4ff]">All-Natural Brain Booster</div>
+              <h2 className="mt-1 font-heading text-3xl font-semibold text-white">Focus Mode</h2>
+              <div className="mt-2 flex items-baseline gap-2">
+                <span className="font-heading text-4xl font-bold">${focusPrice}</span>
+                <span className="text-sm text-silver/50 line-through">${SITE.originalPrice}</span>
+                <span className="rounded bg-bolt px-2 py-0.5 text-xs font-bold text-black">40% OFF</span>
+              </div>
+              <div className="mt-4 space-y-2 text-sm text-silver/75">
+                {["6+ hours clean focus", "Ginkgo + Ginseng clinical extracts", "Zero synthetic stimulants"].map((t) => (
+                  <div key={t} className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-neural" /> {t}</div>
+                ))}
+              </div>
+              <a href={SHOPIFY_CART_URL} onClick={trackAddToCart} className="premium-cta mt-6 w-full py-4">
+                Buy Focus Mode — ${focusPrice} <Zap className="h-4 w-4 fill-black" />
+              </a>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 }} className="premium-card border-[#16a34a]/30 p-6">
+              <div className="premium-product-stage mx-auto max-w-[260px]">
+                <ProductGlow src={GREENS.images.front} alt="Super Energy Blend whole-plant greens" size={360} glow="neural" priority />
+              </div>
+              <div className="mt-4 text-[10px] uppercase tracking-[2px] text-[#7ee6a0]">Whole-Plant Daily Energy</div>
+              <h2 className="mt-1 font-heading text-3xl font-semibold text-white">{GREENS.name}</h2>
+              <div className="mt-2 flex items-baseline gap-2">
+                <span className="font-heading text-4xl font-bold">${greensPrice}</span>
+                <span className="text-sm text-silver/50">{GREENS.servings} servings</span>
+              </div>
+              <div className="mt-4 space-y-2 text-sm text-silver/75">
+                {["20+ plants, superfoods & adaptogens", "Clean sustained energy foundation", "One scoop daily"].map((t) => (
+                  <div key={t} className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-neural" /> {t}</div>
+                ))}
+              </div>
+              <a href={GREENS_CART_URL} onClick={trackAddToCart} className="premium-cta mt-6 w-full bg-[#16a34a] py-4 text-white hover:bg-[#15803d]">
+                Buy Energy Blend — ${greensPrice} <Zap className="h-4 w-4 fill-white" />
+              </a>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.16 }} className="premium-card flex flex-col justify-between p-6">
+              <div>
+                <div className="text-[10px] uppercase tracking-[2px] text-neural">Best Routine</div>
+                <h2 className="mt-2 font-heading text-3xl font-semibold text-white">Complete Daily Edge Stack</h2>
+                <p className="mt-3 text-sm text-silver/70">
+                  Start with clean whole-plant energy, then layer in Focus Mode for the work blocks, studying, calls, and deep execution that move your life forward.
+                </p>
+                <div className="mt-5 grid gap-2 text-sm text-silver/75">
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">Step 1: one scoop Super Energy Blend</div>
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">Step 2: Focus Mode before deep work</div>
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">Result: energy + clarity + consistency</div>
+                </div>
+              </div>
+              <div className="mt-6 grid gap-2">
+                <a href={GREENS_CART_URL} onClick={trackAddToCart} className="premium-cta-secondary w-full border-[#16a34a]/40 text-[#7ee6a0]">Add Greens — ${greensPrice}</a>
+                <a href={SHOPIFY_CART_URL} onClick={trackAddToCart} className="premium-cta w-full">Add Focus — ${focusPrice}</a>
+              </div>
+            </motion.div>
+          </div>
+
+          <p className="mt-5 text-center text-[11px] text-silver/50 tracking-[1.5px] uppercase">30-day guarantee on both • Shopify secure checkout • Ships today from USA</p>
         </div>
       </section>
 
@@ -133,7 +192,7 @@ export default function ShopPage() {
               </div>
 
               <div className="mt-8">
-                <div className="font-medium tracking-[1px] text-xs text-neural mb-3">WHAT'S INSIDE — TAP TO EXPLORE SYNERGY</div>
+                <div className="font-medium tracking-[1px] text-xs text-neural mb-3">WHAT&apos;S INSIDE — TAP TO EXPLORE SYNERGY</div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {GREENS.ingredients.map((ing, idx) => (
                     <button
@@ -175,10 +234,12 @@ export default function ShopPage() {
                 <button onClick={() => setShowFacts(false)} className="text-silver/60 hover:text-white">Close</button>
               </div>
               <div className="p-4">
-                <img
+                <Image
                   src={GREENS.factsImage}
                   alt="Daily Greens Powder Supplement Facts label"
-                  className="w-full h-auto rounded-lg border border-white/10"
+                  width={842}
+                  height={461}
+                  className="h-auto w-full rounded-lg border border-white/10"
                 />
               </div>
               <div className="px-6 py-4 text-[11px] text-silver/60 border-t border-white/10">

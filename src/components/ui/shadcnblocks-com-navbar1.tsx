@@ -33,6 +33,7 @@ const Navbar1 = ({
   }, [])
 
   const navLinks = [
+    { label: "Home", href: "/" },
     { label: "Shop", href: "/shop" },
     { label: "Journal", href: "/articles" },
     { label: "Story", href: "/our-story" },
@@ -82,6 +83,13 @@ const Navbar1 = ({
 
           {/* Right side — High-converting dual product buttons: Blue Focus + Green Super Energy Blend */}
           <div className="flex items-center gap-2.5">
+            <Link
+              href="/shop"
+              className="group inline-flex items-center gap-2 rounded-full bg-bolt hover:brightness-105 active:scale-[0.985] px-5 py-2.5 text-sm font-heading font-extrabold text-black transition-all shadow-[0_1px_0_0_rgba(255,255,255,0.45)_inset,0_2px_10px_-2px_rgba(253,228,0,0.55)]"
+            >
+              Shop Now
+              <Zap className="h-3.5 w-3.5 fill-black/80 transition group-hover:translate-x-px" />
+            </Link>
             <Link
               href={SHOPIFY_CART_URL}
               onClick={trackAddToCart}
@@ -191,9 +199,9 @@ const Navbar1 = ({
                 <Link
                   href="/shop"
                   onClick={closeMobile}
-                  className="block w-full text-center text-sm py-2 text-silver/70 hover:text-white transition"
+                  className="flex w-full items-center justify-center gap-2.5 rounded-full bg-bolt active:scale-[0.985] py-4 text-lg font-heading font-extrabold text-black shadow-[0_1px_0_0_rgba(255,255,255,0.45)_inset]"
                 >
-                  Shop the full stack →
+                  Shop Now <Zap className="h-5 w-5 fill-black/80" />
                 </Link>
                 <p className="pt-1 text-center text-[10px] font-mono-data uppercase tracking-[2px] text-silver/40">
                   30 day guarantee • Ships from USA

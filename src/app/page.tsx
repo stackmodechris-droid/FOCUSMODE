@@ -107,7 +107,7 @@ export default function Home() {
               </div>
 
               <div className="mt-4 flex items-baseline gap-2">
-                <span className="font-heading text-4xl tabular-nums">$49.99</span>
+                <span className="font-heading text-4xl tabular-nums">${GREENS.price}</span>
                 <span className="text-sm text-silver/50">30 servings</span>
               </div>
 
@@ -124,7 +124,7 @@ export default function Home() {
 
               <div className="mt-auto pt-5">
                 <a href={GREENS_CART_URL} className="flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-[#16a34a] hover:bg-[#15803d] px-6 py-3 font-heading text-sm font-bold text-white w-full transition active:scale-[0.985]">
-                  Buy Super Energy Blend — $49.99
+                  Buy Super Energy Blend — ${GREENS.price}
                 </a>
               </div>
               <div className="text-center text-[10px] mt-2 text-silver/50">USA made • No artificial additives</div>
@@ -138,7 +138,7 @@ export default function Home() {
                 Buy Focus Mode — ${SITE.price}
               </ShopifyBuyAnchor>
               <a href={GREENS_CART_URL} className="flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-[#16a34a] hover:bg-[#15803d] px-6 py-3.5 font-heading text-[15px] font-bold text-white transition active:scale-[0.985]">
-                Buy Super Energy Blend — $49.99
+                Buy Super Energy Blend — ${GREENS.price}
               </a>
             </div>
             <p className="mt-2 text-center text-xs text-silver/60">Stack both for complete daily edge. 30-day guarantee.</p>
@@ -290,7 +290,7 @@ export default function Home() {
                 <div>✓ Fuels body &amp; brain</div>
               </div>
               <div className="mt-6 flex gap-3">
-                <a href={GREENS_CART_URL} className="premium-cta px-7">Buy Super Energy Blend — $49.99</a>
+                <a href={GREENS_CART_URL} className="premium-cta px-7">Buy Super Energy Blend — ${GREENS.price}</a>
                 <Link href="/shop#greens" className="premium-cta-secondary px-7">Learn more</Link>
               </div>
               <p className="mt-2 text-[10px] text-silver/50">30 servings • USA made</p>
