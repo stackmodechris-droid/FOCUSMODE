@@ -24,7 +24,7 @@ export function FocusRoiCalculator() {
     <div className="premium-card border-neural/30 p-8 md:p-10">
       <div className="font-mono-data text-xs uppercase tracking-[2px] text-neural">YOUR FOCUS ROI</div>
       <h3 className="mt-2 font-heading text-3xl font-extrabold text-white">What is 6+ hrs of clean focus worth… to <span className="text-neural">you</span>?</h3>
-      <p className="mt-1 text-sm text-silver/70">Slide your reality. See the real cost of brain fog for students, professionals, and creators — then the life-changing ROI of one bottle.</p>
+      <p className="mt-1 text-sm text-white/70">Slide your reality. See the real cost of brain fog for students, professionals, and creators — then the life-changing ROI of one bottle.</p>
 
       <div className="mt-8 space-y-8">
         {/* Hours lost slider */}

@@ -175,6 +175,162 @@ export const ARTICLES: Article[] = [
     ],
     keywords: ["memory loss supplement", "improve recall", "brain fog memory", "nootropic for memory"],
   },
+  {
+    slug: "gut-brain-axis-nutrition",
+    title: "The Gut-Brain Axis: How Your Gut Health Controls Your Focus",
+    metaTitle: "Gut-Brain Axis & Focus — How Gut Health Affects Your Brain",
+    metaDescription:
+      "Your gut microbiome directly influences mental clarity, mood, and focus. Learn how whole-plant nutrition and greens powders support the gut-brain connection for sharper cognition.",
+    category: "Health & Nutrition",
+    excerpt: "90% of serotonin is made in your gut. If your gut is off, your focus is off.",
+    readTime: 8,
+    views: 3120,
+    image:
+      "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?w=1200&q=80&auto=format&fit=crop",
+    intro:
+      "Scientists now call the gut your 'second brain' for good reason. The gut-brain axis is a bidirectional communication highway between your digestive system and your central nervous system — and it has a direct impact on how clearly you think, how stable your mood is, and how long you can stay locked in on hard tasks.",
+    sections: [
+      {
+        heading: "Why Gut Health = Brain Performance",
+        body: [
+          "Your gut microbiome produces neurotransmitters, regulates inflammation, and influences blood-brain barrier integrity. When your gut is inflamed or imbalanced from processed foods, stress, or lack of fiber, your brain pays the price in the form of brain fog, sluggish thinking, and low motivation.",
+          "The Super Energy Blend delivers 20+ whole plants, fibers, and polyphenols that feed beneficial gut bacteria — creating the foundation for clearer, faster cognition.",
+        ],
+      },
+      {
+        heading: "Whole Plants, Real Focus",
+        body: [
+          "Spirulina and Barley Grass provide chlorophyll and prebiotic compounds that support beneficial bacteria. Beet Root improves blood flow not just to muscles, but to the brain.",
+          "When your gut is nourished with real plant diversity instead of processed stimulants, your mental stamina becomes organic — not forced.",
+        ],
+      },
+      {
+        heading: "Build the Foundation First",
+        body: [
+          "Before you layer in nootropics for peak focus, make sure your biological foundation is solid. That means hydration, sleep, movement, and daily whole-plant nutrition.",
+          "Start your day with Super Energy Blend, then stack Focus Mode 20 minutes later for the complete physical + mental performance stack.",
+        ],
+      },
+    ],
+    keywords: ["gut brain axis focus", "gut health brain fog", "greens powder gut health", "whole plant nutrition brain"],
+  },
+  {
+    slug: "sleep-cognitive-performance",
+    title: "Sleep Is the Ultimate Nootropic Nobody Talks About",
+    metaTitle: "Sleep & Cognitive Performance — The Underrated Nootropic",
+    metaDescription:
+      "Before buying any focus supplement, fix your sleep. Learn why deep sleep is the single most powerful cognitive enhancer and how to protect it without sacrificing productivity.",
+    category: "Health & Recovery",
+    excerpt: "One bad night of sleep drops your IQ equivalent by 15 points. Here's how to fix it.",
+    readTime: 7,
+    views: 2890,
+    image:
+      "https://images.unsplash.com/photo-1541781777631-fa182f7d3d1f?w=1200&q=80&auto=format&fit=crop",
+    intro:
+      "Everyone wants the pill that fixes focus. But the most powerful cognitive enhancer is free, natural, and most people are severely deficient in it: deep, restorative sleep. No supplement can fully compensate for chronic sleep debt.",
+    sections: [
+      {
+        heading: "What Sleep Actually Does for Your Brain",
+        body: [
+          "During deep sleep, your brain clears metabolic waste through the glymphatic system, consolidates memories, and rebalances neurotransmitters. Skipping sleep doesn't just make you tired — it literally leaves toxins in your brain.",
+          "One night of 6 hours or less measurably impairs attention, working memory, and decision-making speed. For students and professionals, that's the difference between an A and a C, or a closed deal and a missed opportunity.",
+        ],
+      },
+      {
+        heading: "The Ashwagandha + Ginseng Sleep Stack",
+        body: [
+          "Ashwagandha, found in Super Energy Blend, is a clinically studied adaptogen that helps lower cortisol — the stress hormone that keeps you wired at night.",
+          "When cortisol drops in the evening, melatonin can rise naturally, helping you fall asleep faster and reach deeper sleep stages without relying on sedatives or sleep aids.",
+        ],
+      },
+      {
+        heading: "Protect Your Sleep Like Your Income",
+        body: [
+          "Set a hard stop for work. Dim lights 2 hours before bed. Keep your room cool and dark. And avoid caffeine after 2pm — even 'clean' stimulants can disrupt sleep architecture.",
+          "Use Focus Mode in the morning and early afternoon only. Its Ginkgo + Ginseng formula is designed for daytime performance, not nighttime use.",
+        ],
+      },
+    ],
+    keywords: ["sleep cognitive performance", "deep sleep brain health", "ashwagandha sleep", "focus supplement sleep"],
+  },
+  {
+    slug: "natural-energy-vs-caffeine",
+    title: "Natural Energy vs Caffeine: Why Clean Fuel Wins",
+    metaTitle: "Natural Energy vs Caffeine — Why Plant-Based Fuel Wins Long-Term",
+    metaDescription:
+      "Caffeine borrows energy from your future self. Discover how whole-plant adaptogens and superfoods deliver clean, sustained energy without the crash, jitters, or tolerance buildup.",
+    category: "Health & Nutrition",
+    excerpt: "Caffeine is a loan with brutal interest. Whole-plant energy is an investment that compounds.",
+    readTime: 6,
+    views: 3450,
+    image:
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&q=80&auto=format&fit=crop",
+    intro:
+      "The average professional consumes 3+ cups of coffee per day. The result? A short spike followed by anxiety, dependency, and a brutal afternoon crash. There's a better way — and it's been used for thousands of years.",
+    sections: [
+      {
+        heading: "Why Caffeine Is a Bad Deal",
+        body: [
+          "Caffeine works by blocking adenosine receptors — temporarily preventing your brain from feeling tired. But the adenosine doesn't go away. It builds up, and when the caffeine wears off, you get hit with exhaustion, brain fog, and irritability all at once.",
+          "Over time, you need more caffeine to get the same effect. Your sleep suffers. Your cortisol spikes. And your focus becomes dependent on a substance rather than your own biology.",
+        ],
+      },
+      {
+        heading: "The Whole-Plant Alternative",
+        body: [
+          "Super Energy Blend uses Panax Ginseng, Green Tea Extract (gentle L-theanine), and Ashwagandha to support your body's own energy production pathways — not block them.",
+          "Instead of forcing alertness, these adaptogens help your cells generate ATP more efficiently, improve oxygen utilization, and buffer stress so your energy feels stable, not forced.",
+        ],
+      },
+      {
+        heading: "Make the Switch",
+        body: [
+          "Replace your second coffee with Super Energy Blend. You'll notice the difference by day 3: no jitters, no crash, just smooth, reliable output from morning to evening.",
+          "Pair it with Focus Mode when you need peak mental clarity — the combination of whole-plant nutrition + clinical nootropics is the most sustainable performance stack available.",
+        ],
+      },
+    ],
+    keywords: ["natural energy vs caffeine", "clean energy no crash", "adaptogen energy", "whole plant superfood energy"],
+  },
+  {
+    slug: "adaptogens-stress-focus",
+    title: "Adaptogens for Stress: Stay Calm and Sharply Focused",
+    metaTitle: "Adaptogens for Stress & Focus — The Science of Calm Clarity",
+    metaDescription:
+      "Chronic stress destroys focus. Learn how adaptogens like Ashwagandha, Panax Ginseng, and Ginkgo Biloba help your brain stay calm, sharp, and resilient under pressure.",
+    category: "Health & Stress",
+    excerpt: "Stress is the silent focus killer. Adaptogens are the antidote.",
+    readTime: 7,
+    views: 2760,
+    image:
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80&auto=format&fit=crop",
+    intro:
+      "Your brain can't focus when it's in survival mode. Chronic stress floods your system with cortisol, which impairs prefrontal cortex function — the exact part of your brain responsible for planning, decision-making, and sustained attention. Adaptogens are nature's answer.",
+    sections: [
+      {
+        heading: "How Stress Hijacks Your Focus",
+        body: [
+          "Under acute stress, your amygdala takes over and your prefrontal cortex goes offline. That's why you make impulsive decisions, forget important details, and feel mentally scattered during high-pressure moments.",
+          "Chronic low-grade stress — from deadlines, notifications, financial pressure, and poor sleep — keeps cortisol elevated all day. The result is a brain that feels busy but produces nothing.",
+        ],
+      },
+      {
+        heading: "The Adaptogen Stack Inside Focus Mode",
+        body: [
+          "Panax Ginseng (7% Ginsenosides) helps regulate the HPA axis — your body's central stress response system. It modulates cortisol instead of suppressing it, so you stay alert without feeling wired.",
+          "Ashwagandha in Super Energy Blend has been shown in clinical studies to significantly reduce cortisol levels and improve stress resilience. When combined with Ginkgo's blood-flow support, the result is calm, unshakable focus.",
+        ],
+      },
+      {
+        heading: "Build Stress Resilience Daily",
+        body: [
+          "Adaptogens aren't a one-time fix. They work best when taken consistently, building cumulative resilience in your nervous system over weeks and months.",
+          "Take Focus Mode twice daily and Super Energy Blend every morning. Over 2-4 weeks, you'll notice you're handling pressure with more clarity and less anxiety — no matter what the day throws at you.",
+        ],
+      },
+    ],
+    keywords: ["adaptogens stress focus", "ashwagandha cortisol", "ginseng stress relief", "calm focus supplement"],
+  },
 ];
 
 export function getArticle(slug: string) {

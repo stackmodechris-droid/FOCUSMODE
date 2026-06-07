@@ -34,9 +34,10 @@ const Navbar1 = ({
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Shop", href: "/shop" },
-    { label: "Journal", href: "/articles" },
+    { label: "Focus Mode", href: "/shop#focus" },
+    { label: "Energy Blend", href: "/shop#greens" },
+    { label: "Articles", href: "/articles" },
     { label: "Story", href: "/our-story" },
-    { label: "Formula", href: "/learn-more" },
   ]
 
   const closeMobile = () => setMobileOpen(false)

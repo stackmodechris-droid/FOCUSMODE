@@ -1,8 +1,9 @@
 "use client";
 
+import { FaqAccordion } from "@/components/ui/faq-accordion";
 import { ProductGlow } from "@/components/ui/product-glow";
 import { ShopifyFocusEmbed, ShopifyGreensEmbed } from "@/components/ui/shopify-buy-embed";
-import { GREENS, GREENS_CART_URL, SHOPIFY_CART_URL, SITE } from "@/lib/site";
+import { GREENS, SITE } from "@/lib/site";
 import { Check, Clock, Leaf, ShieldCheck, Star, Truck, Zap } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
@@ -149,12 +150,7 @@ export default function ShopPage() {
                 ))}
               </div>
 
-              <div className="mt-8">
-                <a href={SHOPIFY_CART_URL} className="premium-cta w-full justify-center">
-                  Buy Focus Mode Now <Zap className="h-4 w-4" />
-                </a>
-              </div>
-              <p className="mt-3 text-[10px] text-gray-400">Ships same day • 30-day guarantee • Subscribe & save extra at checkout</p>
+              <p className="mt-8 text-[10px] text-gray-400">Ships same day • 30-day guarantee • Subscribe & save extra at checkout</p>
             </div>
           </div>
         </div>
@@ -200,12 +196,7 @@ export default function ShopPage() {
                 </div>
               </div>
 
-              <div className="mt-8">
-                <a href={GREENS_CART_URL} className="premium-cta w-full justify-center bg-[#16a34a] text-white hover:bg-[#15803d] shadow-[0_1px_0_0_rgba(255,255,255,0.25)_inset,0_2px_8px_-2px_rgba(22,163,74,0.45)]">
-                  Buy Energy Blend Now <Leaf className="h-4 w-4" />
-                </a>
-              </div>
-              <p className="mt-3 text-[10px] text-gray-400">{GREENS.usage} • {GREENS.manufactured} made • No artificial additives</p>
+              <p className="mt-8 text-[10px] text-gray-400">{GREENS.usage} • {GREENS.manufactured} made • No artificial additives</p>
             </div>
           </div>
 
@@ -224,40 +215,94 @@ export default function ShopPage() {
         </div>
       </section>
 
-      {/* BUNDLE */}
-      <section id="stack" className="border-b border-gray-100 bg-gray-50/50">
-        <div className="mx-auto max-w-5xl px-5 py-16 md:py-20 md:px-8 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-yellow-50 border border-yellow-200 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[1.5px] text-yellow-700 mb-4">
-            Best Value
-          </div>
-          <h2 className="font-heading text-3xl md:text-5xl font-semibold tracking-[-1px] text-gray-900">Focus Mode + {GREENS.name}</h2>
-          <p className="mt-4 max-w-xl mx-auto text-gray-600">
-            One scoop of whole-plant nutrition + two capsules of clinical nootropics. The complete protocol for ambitious minds.
-          </p>
-
-          <div className="mt-10 grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-            <div className="rounded-2xl border border-gray-200 bg-white p-7 text-left">
-              <div className="text-green-600 text-xs tracking-[1.5px] font-semibold">STEP 1 — FOUNDATION</div>
-              <div className="mt-2 font-heading text-2xl text-gray-900">{GREENS.name}</div>
-              <div className="text-sm text-gray-500 mt-1">20+ plants, superfoods & adaptogens in 60 seconds.</div>
-              <div className="mt-4 text-2xl font-semibold tabular-nums text-gray-900">${greensPrice}</div>
+      {/* HOW TO USE — Supplement style */}
+      <section className="border-b border-gray-100 bg-gray-50/50">
+        <div className="mx-auto max-w-7xl px-5 py-16 md:py-20 md:px-8">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[1.5px] text-blue-600 mb-4">
+              Protocol
             </div>
-            <div className="rounded-2xl border-2 border-yellow-300 bg-white p-7 text-left shadow-md">
-              <div className="text-blue-600 text-xs tracking-[1.5px] font-semibold">STEP 2 — PERFORMANCE</div>
-              <div className="mt-2 font-heading text-2xl text-gray-900">Focus Mode Capsules</div>
-              <div className="text-sm text-gray-500 mt-1">6+ hours clean, crash-free clarity powered by clinical extracts.</div>
-              <div className="mt-4 text-2xl font-semibold tabular-nums text-gray-900">${focusPrice} <span className="text-xs align-super text-gray-400 line-through">${SITE.originalPrice}</span></div>
-            </div>
+            <h2 className="font-heading text-3xl md:text-4xl font-semibold tracking-[-1px] text-gray-900">How to Use</h2>
+            <p className="mt-3 text-gray-500 max-w-xl mx-auto">Simple routines. Maximum results. Designed to fit any lifestyle.</p>
           </div>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-3 w-full max-w-2xl mx-auto">
-            <a href={SHOPIFY_CART_URL} className="premium-cta flex-1 justify-center min-w-[200px]">
-              Buy Focus Mode <Zap className="h-4 w-4" />
-            </a>
-            <a href={GREENS_CART_URL} className="premium-cta flex-1 justify-center min-w-[200px] bg-[#16a34a] text-white hover:bg-[#15803d] shadow-[0_1px_0_0_rgba(255,255,255,0.25)_inset,0_2px_8px_-2px_rgba(22,163,74,0.45)]">
-              Buy Energy Blend <Leaf className="h-4 w-4" />
-            </a>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* Focus Mode How To */}
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="h-10 w-10 rounded-full bg-blue-50 flex items-center justify-center">
+                  <Zap className="h-5 w-5 text-blue-500" />
+                </div>
+                <div>
+                  <div className="text-[10px] uppercase tracking-[2px] text-blue-500 font-semibold">Focus Mode Capsules</div>
+                  <div className="font-heading text-lg font-semibold text-gray-900">The 2×2 Protocol</div>
+                </div>
+              </div>
+              <div className="space-y-4">
+                {[
+                  { step: "1", title: "Morning dose", desc: "Take 2 capsules with water 20–30 min before your first deep-work block or meeting." },
+                  { step: "2", title: "Afternoon dose", desc: "Take 2 capsules after lunch to sustain clarity through the 2pm slump." },
+                  { step: "3", title: "Lock in", desc: "Eliminate distractions. Phone away. One task at a time. Let the extracts do the rest." },
+                ].map((item) => (
+                  <div key={item.step} className="flex gap-3">
+                    <div className="shrink-0 h-6 w-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs font-bold">{item.step}</div>
+                    <div>
+                      <div className="text-sm font-semibold text-gray-900">{item.title}</div>
+                      <div className="text-sm text-gray-500">{item.desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-5 rounded-lg bg-blue-50/60 p-3 text-xs text-blue-700">
+                Pro tip: Stack with Super Energy Blend in the morning for all-day physical + mental stamina.
+              </div>
+            </div>
+
+            {/* Greens How To */}
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="h-10 w-10 rounded-full bg-green-50 flex items-center justify-center">
+                  <Leaf className="h-5 w-5 text-green-600" />
+                </div>
+                <div>
+                  <div className="text-[10px] uppercase tracking-[2px] text-green-600 font-semibold">Super Energy Blend</div>
+                  <div className="font-heading text-lg font-semibold text-gray-900">The 60-Second Ritual</div>
+                </div>
+              </div>
+              <div className="space-y-4">
+                {[
+                  { step: "1", title: "Scoop", desc: "Add 1 scoop (4.2g) to 6–8 oz of cold water, juice, or your smoothie." },
+                  { step: "2", title: "Mix", desc: "Stir or shake for 10 seconds until fully dissolved." },
+                  { step: "3", title: "Drink", desc: "Consume within 10 minutes of mixing for optimal nutrient density." },
+                ].map((item) => (
+                  <div key={item.step} className="flex gap-3">
+                    <div className="shrink-0 h-6 w-6 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-xs font-bold">{item.step}</div>
+                    <div>
+                      <div className="text-sm font-semibold text-gray-900">{item.title}</div>
+                      <div className="text-sm text-gray-500">{item.desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-5 rounded-lg bg-green-50/60 p-3 text-xs text-green-700">
+                Best taken in the morning on an empty stomach or with a light breakfast.
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="border-b border-gray-100">
+        <div className="mx-auto max-w-7xl px-5 py-16 md:py-20 md:px-8">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 rounded-full bg-gray-100 border border-gray-200 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[1.5px] text-gray-600 mb-4">
+              Questions
+            </div>
+            <h2 className="font-heading text-3xl md:text-4xl font-semibold tracking-[-1px] text-gray-900">Frequently Asked Questions</h2>
+            <p className="mt-3 text-gray-500 max-w-xl mx-auto">Everything you need to know before you lock in.</p>
+          </div>
+          <FaqAccordion withSchema variant="light" />
         </div>
       </section>
 

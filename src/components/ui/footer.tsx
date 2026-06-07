@@ -8,10 +8,9 @@ const COLS = [
   {
     title: "Shop",
     links: [
-      { label: "Buy Focus Mode", href: "/shop" },
-      { label: "Buy Super Energy Blend", href: "/shop" },
-      { label: "The Formula", href: "/learn-more" },
-      { label: "How It Works", href: "/#benefits" },
+      { label: "Focus Mode Capsules", href: "/shop#focus" },
+      { label: "Super Energy Blend", href: "/shop#greens" },
+      { label: "How It Works", href: "/shop" },
       { label: "FAQ", href: "/faq" },
     ],
   },
@@ -19,6 +18,7 @@ const COLS = [
     title: "Company",
     links: [
       { label: "Our Story", href: "/our-story" },
+      { label: "The Formula", href: "/our-story" },
       { label: "Articles", href: "/articles" },
       { label: "Stackmode Network", href: SITE.partnerUrl },
     ],

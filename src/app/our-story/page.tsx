@@ -1,12 +1,14 @@
+import { ArticlesGrid } from "@/components/ui/blog-posts";
 import { ElectricBrainBg } from "@/components/ui/electric-brain";
 import { Founders } from "@/components/ui/founders";
 import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
 import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
 import { ProductGlow } from "@/components/ui/product-glow";
 import { Reveal, SectionLabel } from "@/components/ui/reveal";
-import { SITE } from "@/lib/site";
-import { Cpu, Eye, Leaf } from "lucide-react";
+import { INGREDIENTS, SITE } from "@/lib/site";
+import { Activity, Brain, Cpu, Database, Eye, Leaf, Zap } from "lucide-react";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Our Story | Atlanta Focus Supplement by Stackmodechris",
@@ -105,7 +107,7 @@ export default function OurStoryPage() {
       </section>
 
       {/* The Network */}
-      <section>
+      <section className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-24 md:px-8">
           <Reveal className="mb-14 text-center">
             <SectionLabel>The Team</SectionLabel>
@@ -118,6 +120,73 @@ export default function OurStoryPage() {
           <div className="mt-14 flex justify-center">
             <LiquidGlassButton href="/shop">Get Focus Mode</LiquidGlassButton>
           </div>
+        </div>
+      </section>
+
+      {/* Formula */}
+      <section className="border-b border-white/10 bg-[#111414]">
+        <div className="mx-auto max-w-7xl px-5 py-24 md:px-8">
+          <Reveal className="mb-12 text-center">
+            <SectionLabel>The Formula</SectionLabel>
+            <h2 className="mt-4 font-heading text-3xl font-semibold tracking-[-0.5px] text-white md:text-4xl">
+              A Look Inside The Capsule
+            </h2>
+            <p className="mt-4 text-silver/65">No proprietary blends. Just pure, performance engineering.</p>
+          </Reveal>
+
+          <div className="grid items-center gap-10 lg:grid-cols-2">
+            <Reveal className="flex justify-center">
+              <div className="premium-product-stage max-w-[320px]">
+                <ProductGlow src="/products/1780438169849-generated-label-image-1.png" alt="Focus Mode capsules" size={460} glow="dual" className="max-w-[280px] sm:max-w-sm md:max-w-none" />
+              </div>
+            </Reveal>
+            <div className="space-y-5">
+              {INGREDIENTS.map((ing, i) => (
+                <Reveal key={ing.name} delay={i * 0.1}>
+                  <div className="premium-card p-6">
+                    <div className="flex items-center justify-between font-mono-data text-[11px] uppercase tracking-widest text-neural">
+                      <span>{ing.spec}</span>
+                      <span className="text-neural">{ing.dose}</span>
+                    </div>
+                    <h3 className="mt-3 font-heading text-xl font-bold text-white">{ing.name}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-silver/65">{ing.detail}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { icon: Zap, title: "Dopaminergic Activation", body: "Ginsenosides support dopamine and acetylcholine for motivation and crisp decision-making." },
+              { icon: Activity, title: "Synaptic Velocity", body: "Optimized oxygen and blood flow enhance processing speed and memory." },
+              { icon: Brain, title: "Cognitive Endurance", body: "Adaptogens buffer stress and prevent the afternoon crash for 6+ hours of clarity." },
+              { icon: Database, title: "The Standard", body: "Aggressively dosed, clinically-backed, fully transparent. Zero proprietary blends." },
+            ].map((m, i) => (
+              <Reveal key={m.title} delay={i * 0.06}>
+                <div className="h-full premium-card p-6">
+                  <m.icon className="h-5 w-5 text-neural" />
+                  <h3 className="mt-4 font-heading text-[16px] font-semibold tracking-[-0.2px] text-white">{m.title}</h3>
+                  <p className="mt-2 text-[13px] leading-relaxed text-silver/60">{m.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Journal */}
+      <section>
+        <div className="mx-auto max-w-7xl px-5 py-24 md:px-8">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+            <Reveal>
+              <SectionLabel>The Journal</SectionLabel>
+              <h2 className="mt-3 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-4xl">Sharpen your mind.</h2>
+              <p className="mt-3 text-silver/65 max-w-lg">Evidence-based reads on focus, discipline, and elite cognitive performance.</p>
+            </Reveal>
+            <Link href="/articles" className="text-sm font-medium text-neural/90 hover:text-neural transition-colors">All articles →</Link>
+          </div>
+          <ArticlesGrid limit={3} />
         </div>
       </section>
     </>
