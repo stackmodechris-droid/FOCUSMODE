@@ -60,7 +60,7 @@ export const GREENS = {
   manufactured: "USA",
   additives: "None",
   warnings:
-    "⚠️ Not intended for use by pregnant or nursing mothers, children under 18, or individuals with known medical conditions without physician approval. Do not exceed the recommended dose. Keep out of reach of children. Do not use if safety seal is damaged or missing. Store in a cool, dry place.",
+    "Do not exceed the recommended dose. Keep out of reach of infants and children. Store in a cool, dry place.",
   fdaDisclaimer:
     "These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Consult a healthcare professional before use.",
   images: {
