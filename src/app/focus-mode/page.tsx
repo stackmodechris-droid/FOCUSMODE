@@ -5,6 +5,7 @@ import { SITE } from "@/lib/site";
 import { Check, Clock, ShieldCheck, Star, Truck, Zap } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Focus Mode Capsules | Best Nootropic for 6+ Hour Focus & Mental Clarity",
@@ -184,8 +185,9 @@ export default function FocusModePage() {
           </div>
           <h2 className="font-heading text-3xl md:text-4xl font-semibold tracking-[-1px] text-gray-900">Ready to lock in?</h2>
           <p className="mt-3 text-gray-500 max-w-xl mx-auto">One bottle. 30 days of sharper focus. Ships today from the USA.</p>
-          <div className="mt-6 max-w-md mx-auto rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
-            <ShopifyFocusEmbed />
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a href="/shop" className="inline-flex items-center justify-center rounded-xl bg-bolt px-8 py-4 text-sm font-bold uppercase tracking-wider text-black hover:bg-bolt-dim transition">Buy Now — ${SITE.price}</a>
+            <Link href="/shop" className="inline-flex items-center justify-center rounded-xl border border-gray-300 px-8 py-4 text-sm font-medium text-gray-700 hover:bg-gray-50 transition">View Shop →</Link>
           </div>
         </div>
       </section>

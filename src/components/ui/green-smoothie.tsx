@@ -3,14 +3,19 @@
 import { motion } from "motion/react";
 
 /**
- * Premium green smoothie swirl animation — pure SVG/CSS, zero heavy assets.
- * Fast-loading, seamless on white/light backgrounds.
+ * Premium green smoothie swirl animation with floating vitamins & electric arcs.
+ * Pure SVG/CSS, zero heavy assets. Fast-loading.
  */
 export function GreenSmoothieAnimation({ className }: { className?: string }) {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
-      {/* Soft ambient glow behind the smoothie */}
-      <div className="absolute inset-0 rounded-full bg-[#16a34a]/[0.06] blur-[60px]" />
+      {/* Electric glow aura behind the glass */}
+      <motion.div
+        className="absolute inset-0 rounded-full blur-[60px]"
+        style={{ background: "radial-gradient(circle, rgba(74,222,128,0.18) 0%, rgba(34,197,94,0.06) 60%, transparent 100%)" }}
+        animate={{ scale: [1, 1.15, 1], opacity: [0.6, 1, 0.6] }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+      />
 
       <svg
         viewBox="0 0 240 320"
@@ -40,6 +45,15 @@ export function GreenSmoothieAnimation({ className }: { className?: string }) {
             <stop offset="100%" stopColor="#15803d" stopOpacity="0.3" />
           </radialGradient>
 
+          {/* Electric glow filter */}
+          <filter id="electricGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+
           {/* Clip path for liquid inside glass */}
           <clipPath id="glassClip">
             <path d="M70 60 L80 260 Q80 280 100 280 L140 280 Q160 280 160 260 L170 60 Z" />
@@ -58,6 +72,38 @@ export function GreenSmoothieAnimation({ className }: { className?: string }) {
             </feMerge>
           </filter>
         </defs>
+
+        {/* Electric arcs around the glass */}
+        <motion.g
+          animate={{ opacity: [0.3, 0.9, 0.3] }}
+          transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+          filter="url(#electricGlow)"
+        >
+          <path d="M55 120 L45 110 L50 100 L38 90" stroke="#facc15" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          <path d="M185 130 L195 120 L190 105 L202 95" stroke="#facc15" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          <path d="M48 200 L38 210 L45 225 L35 240" stroke="#facc15" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          <path d="M192 210 L204 220 L198 235 L208 245" stroke="#facc15" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        </motion.g>
+
+        {/* Small spark dots around the glass */}
+        {[
+          { cx: 42, cy: 95, r: 1.5 },
+          { cx: 198, cy: 92, r: 1.2 },
+          { cx: 35, cy: 215, r: 1.8 },
+          { cx: 205, cy: 230, r: 1.4 },
+          { cx: 55, cy: 80, r: 1 },
+          { cx: 188, cy: 75, r: 1.3 },
+        ].map((s, i) => (
+          <motion.circle
+            key={`spark-${i}`}
+            cx={s.cx}
+            cy={s.cy}
+            r={s.r}
+            fill="#fef08a"
+            animate={{ opacity: [0.2, 1, 0.2], scale: [0.8, 1.4, 0.8] }}
+            transition={{ duration: 1.5 + i * 0.3, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 }}
+          />
+        ))}
 
         {/* Glass shadow */}
         <ellipse cx="120" cy="285" rx="55" ry="8" fill="rgba(0,0,0,0.12)" />
@@ -113,6 +159,51 @@ export function GreenSmoothieAnimation({ className }: { className?: string }) {
               opacity="0.5"
             />
           </motion.g>
+
+          {/* Floating vitamin capsules inside the liquid */}
+          {[
+            { cx: 105, cy: 150, w: 8, h: 3, rot: 25, delay: 0, dur: 4 },
+            { cx: 130, cy: 180, w: 7, h: 2.5, rot: -15, delay: 1.2, dur: 3.5 },
+            { cx: 115, cy: 210, w: 9, h: 3.5, rot: 40, delay: 0.6, dur: 4.2 },
+            { cx: 140, cy: 140, w: 6, h: 2, rot: 10, delay: 2, dur: 3.8 },
+          ].map((v, i) => (
+            <motion.g
+              key={`cap-${i}`}
+              animate={{
+                cy: [v.cy, v.cy - 12, v.cy],
+                cx: [v.cx, v.cx + (i % 2 === 0 ? 6 : -6), v.cx],
+                rotate: [v.rot, v.rot + 20, v.rot],
+              }}
+              transition={{ duration: v.dur, delay: v.delay, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <ellipse cx={v.cx} cy={v.cy} rx={v.w} ry={v.h} fill="#fbbf24" opacity="0.85" />
+              <ellipse cx={v.cx} cy={v.cy} rx={v.w * 0.5} ry={v.h} fill="#f59e0b" opacity="0.7" />
+            </motion.g>
+          ))}
+
+          {/* Floating white tablet circles */}
+          {[
+            { cx: 120, cy: 165, r: 2.5, delay: 0.3, dur: 3.5 },
+            { cx: 95, cy: 195, r: 2, delay: 0.9, dur: 4 },
+            { cx: 145, cy: 205, r: 3, delay: 1.5, dur: 3.2 },
+            { cx: 108, cy: 130, r: 1.8, delay: 2.2, dur: 3.8 },
+            { cx: 135, cy: 225, r: 2.2, delay: 0.5, dur: 4.5 },
+          ].map((t, i) => (
+            <motion.circle
+              key={`tab-${i}`}
+              cx={t.cx}
+              cy={t.cy}
+              r={t.r}
+              fill="#fefce8"
+              opacity={0.8}
+              animate={{
+                cy: [t.cy, t.cy - 10, t.cy],
+                cx: [t.cx, t.cx + (i % 2 === 0 ? 5 : -5), t.cx],
+                opacity: [0.5, 0.95, 0.5],
+              }}
+              transition={{ duration: t.dur, delay: t.delay, repeat: Infinity, ease: "easeInOut" }}
+            />
+          ))}
 
           {/* Floating particles / blend bits */}
           {[

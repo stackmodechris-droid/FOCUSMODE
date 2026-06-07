@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useId, useRef } from "react";
 
 const SHOPIFY_SCRIPT = "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";
 const DOMAIN = "qg5zmc-rx.myshopify.com";
@@ -47,6 +47,8 @@ function useShopifyEmbed({ productId, nodeId, options }: ShopifyEmbedProps) {
       onReady(client).then((ui) => {
         const node = document.getElementById(nodeId);
         if (!node) return;
+        if (node.childNodes.length > 0) return; // prevent double-injection
+        node.innerHTML = "";
         ui.createComponent("product", {
           id: productId,
           node,
@@ -55,13 +57,18 @@ function useShopifyEmbed({ productId, nodeId, options }: ShopifyEmbedProps) {
         });
       });
     });
+
+    return () => {
+      const node = document.getElementById(nodeId);
+      if (node) node.innerHTML = "";
+    };
   }, [productId, nodeId, options]);
 }
 
 const focusOptions = {
   product: {
     styles: {
-      product: { "@media (min-width: 601px)": { "max-width": "100%", "margin-left": "0", "margin-bottom": "50px" }, "text-align": "left" },
+      product: { "@media (min-width: 601px)": { "max-width": "100%", "margin-left": "0", "margin-bottom": "50px" }, "@media (max-width: 600px)": { "max-width": "100%", "margin-left": "0", "margin-bottom": "20px" }, "text-align": "left" },
       title: { "font-size": "26px", color: "#000000" },
       button: { "font-size": "18px", "padding-top": "17px", "padding-bottom": "17px", color: "#000000", ":hover": { color: "#000000", "background-color": "#dce600" }, "background-color": "#f4ff00", ":focus": { "background-color": "#dce600" }, "border-radius": "5px", "padding-left": "67px", "padding-right": "67px" },
       quantityInput: { "font-size": "18px", "padding-top": "17px", "padding-bottom": "17px" },
@@ -113,7 +120,7 @@ const focusOptions = {
 const greensOptions = {
   product: {
     styles: {
-      product: { "@media (min-width: 601px)": { "max-width": "100%", "margin-left": "0", "margin-bottom": "50px" }, "text-align": "left" },
+      product: { "@media (min-width: 601px)": { "max-width": "100%", "margin-left": "0", "margin-bottom": "50px" }, "@media (max-width: 600px)": { "max-width": "100%", "margin-left": "0", "margin-bottom": "20px" }, "text-align": "left" },
       title: { "font-size": "26px", color: "#000000" },
       button: { "font-size": "18px", "padding-top": "17px", "padding-bottom": "17px", color: "#000000", ":hover": { color: "#000000", "background-color": "#00e611" }, "background-color": "#00ff13", ":focus": { "background-color": "#00e611" }, "border-radius": "5px", "padding-left": "67px", "padding-right": "67px" },
       quantityInput: { "font-size": "18px", "padding-top": "17px", "padding-bottom": "17px" },
@@ -163,11 +170,15 @@ const greensOptions = {
 };
 
 export function ShopifyFocusEmbed() {
-  useShopifyEmbed({ productId: "9428000047362", nodeId: "product-component-1780855571732", options: focusOptions as unknown as Record<string, unknown> });
-  return <div id="product-component-1780855571732" className="fm-shopify-embed" />;
+  const id = useId().replace(/:/g, "");
+  const nodeId = `product-component-focus-${id}`;
+  useShopifyEmbed({ productId: "9428000047362", nodeId, options: focusOptions as unknown as Record<string, unknown> });
+  return <div id={nodeId} className="fm-shopify-embed w-full" />;
 }
 
 export function ShopifyGreensEmbed() {
-  useShopifyEmbed({ productId: "9451359273218", nodeId: "product-component-1780855606412", options: greensOptions as unknown as Record<string, unknown> });
-  return <div id="product-component-1780855606412" className="fm-shopify-embed" />;
+  const id = useId().replace(/:/g, "");
+  const nodeId = `product-component-greens-${id}`;
+  useShopifyEmbed({ productId: "9451359273218", nodeId, options: greensOptions as unknown as Record<string, unknown> });
+  return <div id={nodeId} className="fm-shopify-embed w-full" />;
 }

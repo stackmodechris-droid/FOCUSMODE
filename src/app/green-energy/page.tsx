@@ -4,6 +4,7 @@ import { GREENS } from "@/lib/site";
 import { Check, Clock, Leaf, ShieldCheck, Star, Truck } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Super Energy Blend | Best Daily Greens Powder for Clean Energy & Focus",
@@ -173,8 +174,9 @@ export default function GreenEnergyPage() {
           </div>
           <h2 className="font-heading text-3xl md:text-4xl font-semibold tracking-[-1px] text-gray-900">Fuel your day the clean way</h2>
           <p className="mt-3 text-gray-500 max-w-xl mx-auto">One scoop. 20+ superfoods. Ships today from the USA.</p>
-          <div className="mt-6 max-w-md mx-auto rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
-            <ShopifyGreensEmbed />
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a href="/shop" className="inline-flex items-center justify-center rounded-xl bg-green-500 px-8 py-4 text-sm font-bold uppercase tracking-wider text-white hover:bg-green-600 transition">Buy Now — ${GREENS.price}</a>
+            <Link href="/shop" className="inline-flex items-center justify-center rounded-xl border border-gray-300 px-8 py-4 text-sm font-medium text-gray-700 hover:bg-gray-50 transition">View Shop →</Link>
           </div>
         </div>
       </section>

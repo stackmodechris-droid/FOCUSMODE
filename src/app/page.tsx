@@ -234,6 +234,60 @@ export default function Home() {
         </div>
       </section>
 
+      {/* GREEN ENERGY SHOWCASE — Bottom of home page */}
+      <section className="border-b border-white/10 bg-[#111414]">
+        <div className="mx-auto max-w-7xl px-5 py-14 md:py-20 md:px-8">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+            <div className="relative flex justify-center order-2 lg:order-1">
+              <GreenSmoothieAnimation className="max-w-[420px] w-full" />
+            </div>
+            <div className="order-1 lg:order-2">
+              <SectionLabel>Whole-Plant Daily Energy</SectionLabel>
+              <h2 className="mt-2 font-heading text-3xl md:text-5xl font-semibold tracking-[-0.8px] text-white">Super Energy Blend</h2>
+              <p className="mt-3 text-silver/75 text-lg">20+ plants, superfoods &amp; adaptogens in one scoop. Clean all-day energy + the foundation that makes Focus Mode work even better.</p>
+
+              <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-silver/70">
+                <div className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-green-400 shrink-0" />
+                  Spirulina &amp; Barley Grass
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-green-400 shrink-0" />
+                  Beet Root &amp; Acai
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-green-400 shrink-0" />
+                  Panax Ginseng &amp; Ashwagandha
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-green-400 shrink-0" />
+                  Turmeric &amp; Ginger
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-green-400 shrink-0" />
+                  Green Tea Extract + Black Pepper
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-green-400 shrink-0" />
+                  1 scoop = 60 seconds
+                </div>
+              </div>
+
+              <div className="mt-6 flex items-baseline gap-3">
+                <span className="font-heading text-4xl font-extrabold tabular-nums tracking-[-1.5px] text-white">${GREENS.price}</span>
+                <span className="text-silver/50">USD &bull; {GREENS.servings} servings</span>
+              </div>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a href="/green-energy" className="premium-cta px-7">Buy Super Energy Blend</a>
+                <Link href="/green-energy" className="premium-cta-secondary px-7">Learn more</Link>
+              </div>
+              <p className="mt-2 text-[10px] text-silver/50">USA made &bull; No artificial additives</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <StickyBuyBar />
 
       {/* Premium limited offer popup — lazy-loaded client only after ~22s (tuned timing + perf). Elegant, non-intrusive conversion. */}
