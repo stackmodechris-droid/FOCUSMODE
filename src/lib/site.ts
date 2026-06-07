@@ -14,7 +14,7 @@ export const SITE = {
   supplyDays: 30,
   email: "support@stackmode.net",
   description:
-    "The highest-performing all-natural halal focus supplement on earth. Straight from nature. 6+ hours of clean, crash-free mental clarity, sharper decisions, and zero fatigue — for entrepreneurs, professionals, students, creators, and high-performers who refuse to let brain fog hold them back. Scientifically dosed Ginkgo + Ginseng. Zero fillers. USA made. 30-day guarantee.",
+    "The highest-performing all-natural focus supplement on earth. Straight from nature. 6+ hours of clean, crash-free mental clarity, sharper decisions, and zero fatigue — for entrepreneurs, professionals, students, creators, and high-performers who refuse to let brain fog hold them back. Scientifically dosed Ginkgo + Ginseng. Zero fillers. USA made. 30-day guarantee. Halal-friendly ingredients.",
   metaPixelId: "1808935510076455",
 } as const;
 

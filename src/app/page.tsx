@@ -17,7 +17,15 @@ import { StickyBuyBar } from "@/components/ui/sticky-buy-bar";
 import { Testimonials } from "@/components/ui/testimonials";
 import { GREENS } from "@/lib/site";
 import { Brain, Coins, TrendingUp } from "lucide-react";
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Focus Mode | #1 All-Natural Focus Supplement & Daily Greens for Clean Energy",
+  description:
+    "The #1 all-natural focus supplement and daily greens powder. 6+ hours crash-free focus + clean all-day energy. Clinical Ginkgo + Ginseng + 20+ superfoods. Zero fillers, zero caffeine, zero crash. USA made. 40% off today + 30-day guarantee.",
+  alternates: { canonical: "/" },
+};
 
 const incomeChart = [
   { name: "W1", value: 38 },

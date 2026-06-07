@@ -7,13 +7,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Focus Mode Capsules | All-Natural Nootropic for 6+ Hour Focus, No Crash",
+  title: "Focus Mode Capsules | Best Nootropic for 6+ Hour Focus & Mental Clarity",
   description:
-    "The highest-performing all-natural halal focus supplement. 24% Ginkgo flavones + 7% Ginsenosides. 6+ hours of clean, crash-free mental clarity. 60 capsules, 30-day supply. USA made. 30-day guarantee.",
+    "Buy the best all-natural nootropic for focus and productivity. 24% Ginkgo Biloba flavones + 7% Red Asian Ginseng ginsenosides. 6+ hours crash-free mental clarity. 60 capsules, 30-day supply. Zero fillers, zero caffeine. USA made. 40% off + 30-day guarantee.",
   alternates: { canonical: "/focus-mode" },
   openGraph: {
-    title: "Focus Mode — All-Natural 6+ Hour Focus Supplement",
-    description: "Clinical Ginkgo + Ginseng. Zero fillers. No crash. 40% off.",
+    title: "Focus Mode Capsules | Best Nootropic for 6+ Hour Focus & Mental Clarity",
+    description: "Clinical Ginkgo + Ginseng. 6+ hours crash-free focus. 60 capsules. Zero fillers. 40% off.",
     url: "/focus-mode",
   },
 };

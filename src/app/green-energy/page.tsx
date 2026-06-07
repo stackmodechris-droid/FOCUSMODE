@@ -6,13 +6,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Super Energy Blend | Whole-Plant Daily Greens Powder for Clean Energy",
+  title: "Super Energy Blend | Best Daily Greens Powder for Clean Energy & Focus",
   description:
-    "20+ plants, superfoods & adaptogens in one scoop. Spirulina, Beet, Acai, Ginseng, Ashwagandha + more. Clean sustained energy without jitters or crashes. 30 servings. USA made.",
+    "Buy the best daily greens powder with 20+ superfoods & adaptogens. Spirulina, Beet Root, Acai, Ginseng, Ashwagandha. Clean sustained energy without jitters or crashes. 30 servings. USA made. 30-day guarantee.",
   alternates: { canonical: "/green-energy" },
   openGraph: {
-    title: "Super Energy Blend — Whole-Plant Daily Greens",
-    description: "20+ superfoods in one scoop. Clean energy. No crash.",
+    title: "Super Energy Blend | Best Daily Greens Powder for Clean Energy & Focus",
+    description: "20+ superfoods in one scoop. Clean energy. No crash. 30 servings.",
     url: "/green-energy",
   },
 };

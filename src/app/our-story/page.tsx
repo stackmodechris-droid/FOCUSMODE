@@ -13,7 +13,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Our Story | Atlanta Focus Supplement by Focus Mode",
   description:
-    "The story behind Focus Mode — the Atlanta-based all-natural halal focus supplement. Clinical Ginkgo + Ginseng for no-crash mental clarity. Straight from nature.",
+    "The story behind Focus Mode — the Atlanta-based all-natural focus supplement. Clinical Ginkgo + Ginseng for no-crash mental clarity. Straight from nature. Halal-friendly ingredients.",
   alternates: { canonical: "/our-story" },
 };
 
