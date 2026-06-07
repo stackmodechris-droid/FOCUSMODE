@@ -9,9 +9,9 @@ import { INGREDIENTS } from "@/lib/site";
 import { SHOPIFY_CART_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "The Science of Elite Focus — For Students, Professionals & Lifelong Learners",
+  title: "The Science | Best Focus Supplement Ingredients & Clinical Dosing",
   description:
-    "Discover how Ginkgo Biloba and Red Asian Ginseng deliver sustained cognitive endurance, natural antioxidant support, and a sharper mind for students, professionals, creators, and anyone protecting their brain health.",
+    "Ginkgo Biloba 24% flavones + Red Asian Ginseng 7% ginsenosides. The exact clinical formula inside Focus Mode — the crash-free focus supplement for students, professionals, entrepreneurs and creators.",
   alternates: { canonical: "/learn-more" },
 };
 

@@ -10,9 +10,9 @@ import { SITE } from "@/lib/site";
 import { SHOPIFY_CART_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Our Story — Engineered by the Elite",
+  title: "Our Story | Atlanta Focus Supplement by Stackmodechris",
   description:
-    "Focus Mode was built by Stackmodechris and The Stackmode Network to solve cognitive fatigue in high-stakes environments. This is our story.",
+    "The story behind Focus Mode — the Atlanta-based focus supplement by Stackmodechris and The Stackmode Network. Clinical Ginkgo + Ginseng for no-crash mental clarity.",
   alternates: { canonical: "/our-story" },
 };
 

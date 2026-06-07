@@ -48,6 +48,9 @@ export function Footer() {
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-silver/70">
               {SITE.tagline} Engineered by {SITE.founder} and {SITE.legalName} for entrepreneurs, professionals, students, creators, and high-performers who demand a sharper mind.
             </p>
+            <p className="mt-1 text-sm font-semibold text-neural">
+              Based in Atlanta, Georgia • USA Manufactured
+            </p>
             <p className="mt-4 font-mono-data text-xs uppercase tracking-widest text-silver/50">
               {SITE.capsules} Capsules · {SITE.supplyDays}-Day Supply · USA Manufactured
             </p>
@@ -83,7 +86,7 @@ export function Footer() {
           </p>
           <div className="mt-6 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
             <p className="font-mono-data text-xs text-silver/50">
-              © {new Date().getFullYear()} {SITE.legalName}. All rights reserved.
+              © {new Date().getFullYear()} {SITE.legalName}. All rights reserved. • <span className="text-neural/80">GoAdd Focus. Based in Atlanta.</span>
             </p>
 
             {/* Organized marketing + contact at bottom of pages (shopping site focus) */}
@@ -103,13 +106,29 @@ export function Footer() {
                   Call / Text 678-558-4327
                 </a>
                 <a
-                  href="mailto:tradingeducation@stackmode.net"
+                  href="mailto:support@stackmode.net"
                   className="premium-cta-secondary inline-flex items-center gap-1.5 px-3 py-1 text-xs"
                 >
-                  tradingeducation@stackmode.net
+                  support@stackmode.net
                 </a>
               </div>
             </div>
+          </div>
+
+          {/* Ultra-subtle transparent footer strip at the very bottom for backlinks/SEO on every page */}
+          <div className="mt-5 pt-3 border-t border-white/5 text-center">
+            <p className="font-mono-data text-[9px] md:text-[10px] tracking-[1.5px] text-silver/20">
+              The Stackmode Network LLC • Atlanta, Georgia •{" "}
+              <a
+                href={SITE.partnerUrl}
+                target="_blank"
+                rel="noopener"
+                className="text-silver/30 hover:text-silver/50 transition-colors underline-offset-2 hover:underline"
+              >
+                Stackmode.net
+              </a>
+              {" "}— GoAdd Focus Mode to your stack.
+            </p>
           </div>
         </div>
       </div>

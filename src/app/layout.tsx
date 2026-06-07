@@ -30,24 +30,26 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Focus Mode — The #1 Focus Supplement for Sharper Minds & Peak Performance",
+    default: "Focus Supplement | Focus Mode — 6+ Hours Clean Focus, No Crash",
     template: "%s | Focus Mode",
   },
   description:
-    "Think faster. Work smarter. Perform at your highest level. Focus Mode delivers 6+ hours of clean, crash-free mental clarity, reduced fatigue, and scientifically proven focus — for entrepreneurs, professionals, students, creators, and high-performers in business, school, medicine, and beyond — anyone who needs a sharper, more productive mind. 40% off. 30-day guarantee.",
+    "Focus supplement engineered for entrepreneurs, professionals, students & creators. 6+ hours of clean, crash-free mental clarity with Ginkgo Biloba (24% flavones) + Red Asian Ginseng (7% ginsenosides). Atlanta-based. 40% off. 30-day guarantee. No jitters, no caffeine.",
   applicationName: SITE.name,
   keywords: [
+    "focus supplement",
     "best focus supplement",
     "nootropic for focus and productivity",
     "crash free focus supplement",
     "brain fog supplement",
-    "Ginkgo Biloba Ginseng nootropic",
+    "ginkgo biloba ginseng focus",
     "Focus Mode supplement",
     "mental clarity supplement",
     "focus for entrepreneurs professionals students",
-    "Stackmode",
+    "Stackmode focus supplement",
     "6 hour focus no crash",
     "clinical focus formula",
+    "Atlanta focus supplement",
   ],
   authors: [{ name: SITE.legalName, url: SITE.partnerUrl }],
   creator: SITE.founder,
@@ -58,6 +60,7 @@ export const metadata: Metadata = {
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/logo.png", sizes: "800x800", type: "image/png" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
     shortcut: ["/favicon-32x32.png"],
@@ -66,18 +69,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: SITE.name,
-    title: "Focus Mode — Elite Focus Supplement for Peak Performance",
+    title: "Focus Supplement | Focus Mode — Clean 6+ Hour Focus, No Crash",
     description:
-      "6+ hours of clean, crash-free focus. Sharper mind, less fatigue, proven results for entrepreneurs, professionals, students, creators & high-performers.",
+      "The focus supplement for peak performers. 6+ hours clean mental clarity, no jitters, no crash. Ginkgo + Ginseng. Made for entrepreneurs, pros, students, creators. Atlanta-based Stackmode Network.",
     url: SITE.url,
     images: [
-      { url: "/og/og-1200x900.png", width: 1200, height: 900, alt: "Focus Mode — No AI, real focus supplement" },
+      { url: "/og/og-1200x900.png", width: 1448, height: 1086, alt: "Focus Mode — Elite focus supplement, no crash, Atlanta made" },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Focus Mode — The Best Focus Supplement for a Sharper, More Productive Mind",
-    description: "6+ hours of clean, crash-free mental clarity. Reduces fatigue & headaches. Scientifically backed for peak performance in work, school, business & life.",
+    title: "Focus Supplement: 6+ Hours Clean Focus No Crash | Focus Mode",
+    description: "Ginkgo Biloba + Red Asian Ginseng focus supplement. Sharper mind, zero fog, sustained performance for ambitious minds. Atlanta-based.",
     images: ["/og/og-1200x900.png"],
   },
   robots: { index: true, follow: true },
@@ -94,11 +97,18 @@ const jsonLd = {
       "@type": "Organization",
       "@id": `${SITE.url}/#organization`,
       name: SITE.legalName,
-      alternateName: "Stackmode Network",
+      alternateName: ["Stackmode Network", "Focus Mode"],
       url: SITE.url,
       logo: `${SITE.url}/logo.png`,
       founder: { "@type": "Person", name: SITE.founder },
-      sameAs: [SITE.partnerUrl],
+      sameAs: [SITE.partnerUrl, "https://stackmode.net"],
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Atlanta",
+        addressRegion: "GA",
+        addressCountry: "US",
+      },
+      telephone: "+1-678-558-4327",
     },
     {
       "@type": "WebSite",
@@ -110,8 +120,11 @@ const jsonLd = {
     {
       "@type": "Product",
       "@id": `${SITE.url}/#product`,
-      name: "Focus Mode — Cognitive Performance Formula",
-      image: [`${SITE.url}/products/1780438169847-generated-label-image-2.png`],
+      name: "Focus Mode Focus Supplement",
+      image: [
+        `${SITE.url}/products/1780438169847-generated-label-image-2.png`,
+        `${SITE.url}/products/1780438169836-generated-label-image-3.png`,
+      ],
       description: SITE.description,
       brand: { "@type": "Brand", name: SITE.brand },
       sku: "FM-60CAP",
@@ -126,7 +139,72 @@ const jsonLd = {
       aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: "4.9",
+        reviewCount: "127",
+        bestRating: "5",
       },
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": `${SITE.url}/#localbusiness`,
+      name: SITE.legalName,
+      url: SITE.url,
+      logo: `${SITE.url}/logo.png`,
+      image: `${SITE.url}/logo.png`,
+      description: "Atlanta-based focus supplement and cognitive performance formula by Stackmode Network. Clean, crash-free mental clarity for high-performers.",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Atlanta",
+        addressRegion: "GA",
+        addressCountry: "US",
+      },
+      telephone: "+1-678-558-4327",
+      sameAs: [SITE.partnerUrl],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${SITE.url}/#faq`,
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How fast does Focus Mode work?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Most high-performers feel the brain fog lift within 20-30 minutes. Ginkgo Biloba increases oxygen delivery to neural pathways while Red Asian Ginseng ramps up dopamine and acetylcholine for fast, clean mental activation.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Will it give me jitters or a crash like caffeine?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. Focus Mode contains zero synthetic stimulants and zero caffeine. You get 6+ hours of sustained, locked-in focus with no anxiety and no afternoon crash.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Who is Focus Mode designed for?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Entrepreneurs building businesses, professionals crushing deadlines, students mastering exams, creators writing and shipping, doctors and executives making critical calls under pressure, business leaders scaling, and anyone who needs a sharper, more productive mind without jitters or crashes.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do I take it?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Take 2 capsules, twice daily. For maximum performance, take 20-30 minutes before your most important study session, meeting, exam, or deep-work block.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What's actually inside Focus Mode?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Two clinically-backed, antioxidant-rich ingredients: Ginkgo Biloba Leaf Extract (24% Flavones) for cerebral blood flow and mental clarity, and Red Asian Ginseng Extract (7% Ginsenosides) for dopamine support and stress resilience — in clean, plant-based capsules. Zero fillers.",
+          },
+        },
+      ],
     },
   ],
 };

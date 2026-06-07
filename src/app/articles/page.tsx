@@ -6,9 +6,9 @@ import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
 import { SHOPIFY_CART_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Articles — Focus, Discipline & Peak Performance",
+  title: "Focus Supplement Articles | Beat Brain Fog, Build Discipline",
   description:
-    "Evidence-based articles on beating brain fog, building discipline, fighting mental fatigue, and sharpening memory for entrepreneurs, professionals, students, creators, and high-performers.",
+    "Evidence-based articles on the best focus supplement strategies: beat brain fog, build discipline without caffeine, improve recall, and engineer sustained mental performance for entrepreneurs, professionals & students.",
   alternates: { canonical: "/articles" },
 };
 

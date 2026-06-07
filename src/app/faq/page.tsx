@@ -6,9 +6,9 @@ import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
 import { SHOPIFY_CART_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Focus Mode FAQ — For Students, Professionals & Lifelong Brain Health",
+  title: "Focus Supplement FAQ | How Focus Mode Works, Dosing, Safety",
   description:
-    "Answers to common questions about Focus Mode: how fast it works, dosage, ingredients, safety, and real results for entrepreneurs, professionals, students, creators, and anyone needing sustained focus without fatigue.",
+    "Focus supplement FAQ: how fast does the best no-crash focus formula work, exact Ginkgo + Ginseng dosing, safety for students/professionals, and results without caffeine jitters. Atlanta made.",
   alternates: { canonical: "/faq" },
 };
 

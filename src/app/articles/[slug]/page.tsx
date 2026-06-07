@@ -32,7 +32,14 @@ export async function generateMetadata({
       title: article.metaTitle,
       description: article.metaDescription,
       url: `${SITE.url}/articles/${article.slug}`,
-      images: [{ url: article.image }],
+      images: [
+        {
+          url: "/og/og-1200x900.png",
+          width: 1448,
+          height: 1086,
+          alt: `Focus Mode — ${article.title}`,
+        },
+      ],
     },
   };
 }
