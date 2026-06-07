@@ -33,11 +33,12 @@ const Navbar1 = ({
   }, [])
 
   const navLinks = [
-    { label: "Our Story", href: "/our-story" },
+    { label: "Shop", href: "/shop" },
+    { label: "Focus Mode", href: "/#pricing" },
+    { label: "Daily Greens", href: "/shop#greens" },
     { label: "Journal", href: "/articles" },
+    { label: "Our Story", href: "/our-story" },
     { label: "The Formula", href: "/learn-more" },
-    { label: "Solution", href: "/#benefits" },
-    { label: "For Ambitious Minds", href: "/#performance" },
   ]
 
   const closeMobile = () => setMobileOpen(false)
@@ -81,20 +82,20 @@ const Navbar1 = ({
             ))}
           </div>
 
-          {/* Right side premium CTAs — unified signature style */}
+          {/* Right side premium CTAs — now supports the full Daily Edge lineup (Shop first, not supplement-only) */}
           <div className="flex items-center gap-3">
             <Link
-              href="/#pricing"
+              href="/shop"
               className="premium-cta-secondary hidden md:inline-flex text-sm px-5 py-2"
             >
-              Shop
+              Shop the Stack
             </Link>
             <Link
               href={SHOPIFY_CART_URL}
               onClick={trackAddToCart}
               className="premium-cta group inline-flex items-center gap-2 px-7 py-[13px] text-sm"
             >
-              Buy Now — $59.99
+              Buy Focus — $59.99
               <Zap className="h-4 w-4 fill-black transition group-hover:translate-x-px" />
             </Link>
           </div>
@@ -171,14 +172,21 @@ const Navbar1 = ({
                 </Link>
               </div>
 
-              {/* Bottom premium CTA block */}
+              {/* Bottom premium CTA block — lineup aware */}
               <div className="mt-auto p-6">
+                <Link
+                  href="/shop"
+                  onClick={closeMobile}
+                  className="premium-cta flex w-full items-center justify-center gap-3 py-5 text-lg active:bg-[#ffea3d] mb-2"
+                >
+                  Shop the Daily Edge Stack <Zap className="h-5 w-5 fill-black" />
+                </Link>
                 <Link
                   href={SHOPIFY_CART_URL}
                   onClick={() => { closeMobile(); trackAddToCart(); }}
-                  className="premium-cta flex w-full items-center justify-center gap-3 py-5 text-lg active:bg-[#ffea3d]"
+                  className="premium-cta-secondary flex w-full items-center justify-center gap-2 py-3 text-sm active:bg-white/10"
                 >
-                  Buy Focus Mode — $59.99 <Zap className="h-5 w-5 fill-black" />
+                  Buy Focus Mode — $59.99
                 </Link>
                 <p className="mt-4 text-center text-[10px] font-mono-data uppercase tracking-[2px] text-silver/40">
                   30 day guarantee • Ships from USA

@@ -70,7 +70,7 @@ export function LimitedOfferPopup({ defaultOpen = false }: Props) {
                   <div>
                     <div className="text-[10px] tracking-[2px] text-black/60">EXCLUSIVE OFFER</div>
                     <div className="font-heading text-3xl font-extrabold tracking-[-1px] leading-none mt-1">
-                      40% OFF — YOUR PRICE LOCKED
+                      40% OFF FOCUS — BUILD YOUR STACK
                     </div>
                   </div>
                   <button onClick={close} className="rounded p-1 hover:bg-black/10" aria-label="Close">

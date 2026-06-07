@@ -38,6 +38,9 @@ export const metadata: Metadata = {
   applicationName: SITE.name,
   keywords: [
     "focus supplement",
+    "daily greens powder",
+    "whole plant greens",
+    "superfood greens",
     "best focus supplement",
     "nootropic for focus and productivity",
     "crash free focus supplement",

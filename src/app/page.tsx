@@ -5,19 +5,19 @@ import { FormulaStack } from "@/components/ui/formula-stack";
 import { Hero } from "@/components/ui/hero";
 import { HomeLazyPopups } from "@/components/ui/home-lazy-popups";
 import { IngredientsSchematic } from "@/components/ui/ingredients-schematic";
-import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
 import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
 import { LockedInVisual } from "@/components/ui/locked-in-visual";
 import { MarqueeTrust } from "@/components/ui/marquee-trust";
 import { PricingSection } from "@/components/ui/pricing-section";
+import { ProductGlow } from "@/components/ui/product-glow";
 import { Reveal, SectionLabel } from "@/components/ui/reveal";
 import { ShopifyBuyAnchor } from "@/components/ui/shopify-buy-anchor";
 import { ProductShowcase } from "@/components/ui/spatial-product-showcase";
 import { StatsCard } from "@/components/ui/stats-card-1";
 import { StickyBuyBar } from "@/components/ui/sticky-buy-bar";
 import { Testimonials } from "@/components/ui/testimonials";
-import { SHOPIFY_CART_URL } from "@/lib/site";
-import { Brain, Coins, TrendingUp } from "lucide-react";
+import { GREENS, GREENS_CART_URL, SHOPIFY_CART_URL, SITE } from "@/lib/site";
+import { Brain, Check, Coins, TrendingUp } from "lucide-react";
 import Link from "next/link";
 
 const incomeChart = [
@@ -36,27 +36,129 @@ export default function Home() {
       <Hero />
       <MarqueeTrust />
 
-      {/* Premium trust + quick buy bar — elegant, not cluttered. Mobile: stack CTAs to fix cramp/sizing, no overlap with content. */}
-      <div className="border-b border-white/10 bg-[#0c0f0f]">
-        <div className="mx-auto max-w-7xl px-5 py-3 md:py-4">
-          <div className="flex flex-col items-center justify-between gap-2 md:gap-3 md:flex-row">
-            <div className="premium-trust-bar flex flex-wrap items-center gap-x-3 gap-y-1 text-center md:text-left">
-              <span className="font-medium text-neural/90">40% OFF</span>
-              <span className="hidden h-2.5 w-px bg-white/15 sm:block" />
-              <span className="text-[12px] sm:text-[13px]">30-day guarantee • USA made • For ambitious minds</span>
+      {/* BOTH PRODUCTS AT TOP — Clean all-natural energy & focus supplement story.
+          Optimized horizontal shop layout. Prominent discount. Two clear buy buttons.
+          Targets athletes, businessmen, students, brain/energy boost, focus, sustained clean energy.
+          Green SuperFood visuals from provided assets. */}
+      <section id="products" className="border-b border-white/10 bg-[#0c0f0f]">
+        <div className="mx-auto max-w-7xl px-5 py-8 md:py-10">
+          {/* Promo header with discount in your face + shop top right */}
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-6 border-b border-white/10">
+            <div className="flex items-start gap-4">
+              <div className="shrink-0">
+                <div className="bg-bolt text-black font-heading font-extrabold text-2xl md:text-[30px] leading-none px-5 py-2.5 rounded-md tracking-[-0.5px]">40% OFF</div>
+                <div className="text-center text-[10px] text-bolt/90 font-bold tracking-[2px] mt-1">TODAY ONLY</div>
+              </div>
+              <div>
+                <div className="text-sm uppercase tracking-[2px] text-neural">All-Natural • Plant-Based • Halal Suitable</div>
+                <div className="font-heading text-2xl md:text-3xl text-white mt-1 leading-tight">Clean Energy.<br />Sharp Focus. Real Results.</div>
+                <div className="mt-1 text-bolt text-sm font-medium">Save $40 on Focus Mode today • Sustained energy & brain boost for athletes, professionals, students & high-performers</div>
+              </div>
             </div>
-            <div className="flex w-full flex-col items-stretch gap-1.5 sm:gap-2 sm:w-auto sm:flex-row sm:items-center">
-              <OpenOfferButton className="hidden sm:inline-flex" />
-              <ShopifyBuyAnchor className="premium-cta w-full justify-center text-sm sm:w-auto sm:text-[14.5px]">
-                BUY $59.99 <span className="hidden xs:inline">NOW</span>
-              </ShopifyBuyAnchor>
-              <a href="#pricing" className="premium-cta-secondary w-full justify-center text-xs px-4 py-2.5 sm:w-auto sm:text-sm sm:px-5">
-                See bundles
-              </a>
+
+            {/* Shop button top right */}
+            <div className="md:text-right flex-shrink-0">
+              <Link href="/shop" className="inline-flex items-center justify-center bg-bolt text-black font-heading font-bold px-8 py-3 rounded-md text-base w-full md:w-auto hover:brightness-105 active:scale-[0.985] transition">
+                SHOP NOW
+              </Link>
+              <div className="text-[10px] text-silver/50 mt-1 tracking-widest">Ships today from USA • 30-day guarantee</div>
             </div>
           </div>
+
+          {/* Story intro — best writing for clean energy all natural supplement */}
+          <div className="max-w-3xl mx-auto text-center py-6">
+            <p className="text-[15px] leading-relaxed text-silver/80">
+              Pure plant-based power for the modern high-performer. Whether you're an athlete chasing endurance, a businessman making critical decisions, a student powering through exams and schoolwork, or anyone who needs reliable brain energy and all-day vitality — our clean, all-natural formulas deliver sustained focus and energy without jitters, crashes, or synthetic stimulants. Nature's edge for body and mind.
+            </p>
+          </div>
+
+          {/* Two products — horizontal shop style, easy to choose and click */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-6xl mx-auto">
+            {/* Focus Mode Supplement */}
+            <div className="premium-card p-6 flex flex-col">
+              <div className="flex gap-4 items-start">
+                <div className="w-20 h-20 flex-shrink-0">
+                  <img src="/products/1780438169847-generated-label-image-2.png" alt="Focus Mode supplement bottle" className="w-full h-full object-contain" />
+                </div>
+                <div className="flex-1">
+                  <div className="uppercase text-neural text-xs tracking-[1.5px]">6+ HOUR CLEAN FOCUS</div>
+                  <div className="font-heading text-2xl mt-0.5">Focus Mode Supplement</div>
+                  <div className="text-sm text-silver/70 mt-1">Clinically-dosed Ginkgo + Ginseng. All-natural plant extracts for sharp mental energy and sustained concentration.</div>
+                </div>
+              </div>
+
+              <div className="mt-4 flex items-baseline gap-2">
+                <span className="font-heading text-4xl tabular-nums">${SITE.price}</span>
+                <span className="text-sm text-silver/50 line-through">was ${SITE.originalPrice}</span>
+                <span className="ml-2 text-xs font-bold bg-bolt text-black px-2 py-0.5 rounded">40% OFF</span>
+              </div>
+
+              <div className="mt-3 text-xs text-silver/60 flex flex-wrap gap-x-4">
+                <span>✓ Brain boost & focus</span>
+                <span>✓ Zero crash energy</span>
+                <span>✓ For athletes, pros & students</span>
+              </div>
+
+              <div className="mt-auto pt-5">
+                <ShopifyBuyAnchor className="premium-cta w-full justify-center py-3 text-sm">Buy Focus Mode Supplement — ${SITE.price}</ShopifyBuyAnchor>
+              </div>
+              <div className="text-center text-[10px] mt-2 text-silver/50">60 capsules • 30-day supply • USA made</div>
+            </div>
+
+            {/* Green SuperFood / Green Energy Blend — with superfood images */}
+            <div className="premium-card p-6 flex flex-col">
+              <div className="flex gap-4 items-start">
+                <div className="w-20 h-20 flex-shrink-0">
+                  <img src="/greens/1780842565396-generated-label-image-2_800x800.png" alt="Green SuperFood label" className="w-full h-full object-contain" />
+                </div>
+                <div className="flex-1">
+                  <div className="uppercase text-neural text-xs tracking-[1.5px]">WHOLE-PLANT DAILY ENERGY</div>
+                  <div className="font-heading text-2xl mt-0.5">Green SuperFood</div>
+                  <div className="text-sm text-silver/70 mt-1">20+ plants, superfoods & adaptogens. The pure, all-natural foundation for clean sustained energy and daily vitality.</div>
+                </div>
+              </div>
+
+              <div className="mt-4 flex items-baseline gap-2">
+                <span className="font-heading text-4xl tabular-nums">$49.99</span>
+                <span className="text-sm text-silver/50">30 servings</span>
+              </div>
+
+              <div className="mt-3 text-xs text-silver/60 flex flex-wrap gap-x-4">
+                <span>✓ All-day clean energy</span>
+                <span>✓ Brain & body support</span>
+                <span>✓ Athletes • Business • School</span>
+              </div>
+
+              {/* Extra superfood visuals for the provided assets */}
+              <div className="mt-3 flex gap-2">
+                <img src="/greens/1780842565402-generated-label-image-3_800x800.png" alt="Green SuperFood angle" className="w-10 h-10 object-contain rounded border border-white/10" />
+                <img src="/greens/1780842565406-generated-label-image-0_800x800.png" alt="Green SuperFood angle" className="w-10 h-10 object-contain rounded border border-white/10" />
+              </div>
+
+              <div className="mt-auto pt-5">
+                <a href={GREENS_CART_URL} className="flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-[#16a34a] hover:bg-[#15803d] px-6 py-3 font-heading text-sm font-bold text-white w-full transition active:scale-[0.985]">
+                  Buy Green SuperFood — $49.99
+                </a>
+              </div>
+              <div className="text-center text-[10px] mt-2 text-silver/50">1 scoop daily • USA made • No artificial additives</div>
+            </div>
+          </div>
+
+          {/* Two direct buttons — clean choice for the two products */}
+          <div className="mt-6 max-w-[620px] mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <ShopifyBuyAnchor className="premium-cta flex-1 justify-center py-3.5 text-[15px]">
+                Buy Focus Mode Supplement — ${SITE.price}
+              </ShopifyBuyAnchor>
+
+              <a href={GREENS_CART_URL} className="flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-[#16a34a] hover:bg-[#15803d] px-6 py-3.5 font-heading text-[15px] font-bold text-white transition active:scale-[0.985]">
+                Buy Green Energy Blend — $49.99
+              </a>
+            </div>
+            <p className="mt-2 text-center text-xs text-silver/60">Choose one or both. All natural. Plant-based. Halal suitable. Clean energy & focus that lasts.</p>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* The Cost of Brain Fog */}
       <section id="cost" className="border-b border-white/10">
@@ -298,6 +400,43 @@ export default function Home() {
             </h2>
           </Reveal>
           <FocusRoiCalculator />
+        </div>
+      </section>
+
+      {/* Visual Daily Greens Superfood section (informational + shop energy, highly visual) */}
+      <section className="border-b border-white/10 bg-[#111414]">
+        <div className="mx-auto max-w-7xl px-5 py-16 md:py-20 md:px-8">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+            <div>
+              <SectionLabel>Whole-Plant Foundation</SectionLabel>
+              <h2 className="mt-3 font-heading text-3xl md:text-5xl font-semibold tracking-[-0.8px] text-white">Daily Greens Powder</h2>
+              <p className="mt-4 text-silver/70 text-[15px]">
+                {GREENS.description}
+              </p>
+              <ul className="mt-6 space-y-2 text-sm text-silver/75">
+                <li className="flex gap-3"><Check className="h-4 w-4 mt-0.5 text-neural" /> Mix 1 scoop in 6–8 oz water or smoothie — done in under 60 seconds</li>
+                <li className="flex gap-3"><Check className="h-4 w-4 mt-0.5 text-neural" /> 20+ plants including Spirulina, Barley Grass, Beet, Acai, Turmeric, Ginseng & Ashwagandha + Black Pepper for max absorption</li>
+                <li className="flex gap-3"><Check className="h-4 w-4 mt-0.5 text-neural" /> Fuels the physical & mental base that makes Focus Mode even more effective</li>
+              </ul>
+              <div className="mt-7 flex gap-3">
+                <Link href="/shop#greens" className="premium-cta px-7">Buy Daily Greens — $49.99</Link>
+                <Link href="/shop" className="premium-cta-secondary px-7">Explore the full stack</Link>
+              </div>
+              <p className="mt-3 text-[10px] text-silver/50">30 servings • USA made • No artificial additives</p>
+            </div>
+
+            {/* Visual — reuse ProductGlow with one of the clean new greens labels */}
+            <div className="relative flex justify-center">
+              <div className="premium-product-stage max-w-[380px]">
+                <ProductGlow
+                  src={GREENS.images.front}
+                  alt="Daily Greens Powder tub — whole plant superfood nutrition"
+                  size={460}
+                  glow="neural"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -21,12 +21,63 @@ export const SITE = {
 export const SHOPIFY_CART_URL =
   "https://qg5zmc-rx.myshopify.com/cart/47880589476098:1?channel=buy_button";
 
+// Daily Greens Powder — second product in the Daily Edge lineup
+export const GREENS_CART_URL =
+  "https://qg5zmc-rx.myshopify.com/cart/47960755863810:1?channel=buy_button";
+
+export const GREENS = {
+  name: "Green SuperFood",
+  brand: "Focus Mode",
+  price: 49.99,
+  currency: "USD",
+  netWeight: "0.28 lb (126 g)",
+  servings: 30,
+  servingSize: "1 scoop (4.2 g)",
+  supplyDays: 30,
+  description:
+    "Pure plant-based Green SuperFood for clean, sustained energy and daily vitality. 20+ whole plants, superfoods and adaptogens in one scoop — the natural foundation for athletes, busy professionals, students, and anyone who wants real all-day energy and brain support without jitters or crashes.",
+  howItWorks:
+    "Mix one scoop into 6–8 oz of cold water or your morning beverage and you're done — a full spectrum of superfoods in under a minute, so you can get back to what matters.",
+  ingredientsIntro:
+    "A thoughtfully sourced blend of greens, berries, roots, and adaptogens — Barley Grass, Spirulina, Broccoli, Wheatgrass, Beet Root, Acai, Blueberry, Pomegranate, Turmeric, Ginger, Panax Ginseng, Ashwagandha, and more — rounded out with Black Pepper Extract to maximize absorption.",
+  ingredients: [
+    { name: "Barley Grass Powder (leaf)", amount: "—", role: "Chlorophyll + natural vitamins for sustained energy" },
+    { name: "Spirulina Powder (whole plant)", amount: "—", role: "Complete protein + antioxidants for mental stamina" },
+    { name: "Broccoli Powder (leaf)", amount: "—", role: "Sulforaphane support for cellular health" },
+    { name: "Wheat Grass Powder (leaf)", amount: "—", role: "Detox support + concentrated greens nutrition" },
+    { name: "Beet Root Powder", amount: "—", role: "Natural nitrates for blood flow & endurance" },
+    { name: "Acai Juice Powder (fruit)", amount: "—", role: "Anthocyanins for brain & recovery" },
+    { name: "Blueberry Powder (fruit)", amount: "—", role: "Flavonoids for cognitive protection" },
+    { name: "Pomegranate Powder (fruit)", amount: "—", role: "Polyphenols for cardiovascular & cellular health" },
+    { name: "Turmeric Extract (root)", amount: "—", role: "Curcumin for healthy inflammation response" },
+    { name: "Ginger Powder (root)", amount: "—", role: "Digestive comfort & absorption" },
+    { name: "Panax Ginseng Powder (root)", amount: "—", role: "Adaptogen for mental energy & resilience (synergizes with Focus Mode)" },
+    { name: "Ashwagandha Powder (root)", amount: "—", role: "Stress adaptation & calm focus" },
+    { name: "Green Tea Extract (leaf)", amount: "—", role: "Gentle L-theanine + catechins for smooth alertness" },
+    { name: "Black Pepper Extract", amount: "—", role: "Piperine to dramatically increase nutrient absorption" },
+  ],
+  factsImage: "/greens/d0247e84c2ab57d48958ef01f29b2654de5b944d-842x461.png",
+  usage: "1 scoop daily in 6–8 oz of cold water or beverage; consume within 10 minutes of mixing.",
+  manufactured: "USA",
+  additives: "None",
+  warnings:
+    "⚠️ Not intended for use by pregnant or nursing mothers, children under 18, or individuals with known medical conditions without physician approval. Do not exceed the recommended dose. Keep out of reach of children. Do not use if safety seal is damaged or missing. Store in a cool, dry place.",
+  fdaDisclaimer:
+    "These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Consult a healthcare professional before use.",
+  images: {
+    front: "/greens/1780842565396-generated-label-image-2_800x800.png",
+    angle1: "/greens/1780842565402-generated-label-image-3_800x800.png",
+    angle2: "/greens/1780842565406-generated-label-image-0_800x800.png",
+    angle3: "/greens/1780842565435-generated-label-image-1_800x800.png",
+  },
+} as const;
+
 export const NAV_LINKS = [
-  { label: "Our Story", href: "/our-story" },
+  { label: "Focus", href: "/#products" },
+  { label: "Greens", href: "/#products" },
   { label: "Journal", href: "/articles" },
-  { label: "The Formula", href: "/learn-more" },
-  { label: "Solution", href: "/#benefits" },
-  { label: "For Ambitious Minds", href: "/#performance" },
+  { label: "Story", href: "/our-story" },
+  { label: "Formula", href: "/learn-more" },
 ] as const;
 
 export const PRODUCT_IMAGES = {
