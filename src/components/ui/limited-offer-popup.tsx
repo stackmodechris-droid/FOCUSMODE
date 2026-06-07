@@ -1,6 +1,6 @@
 "use client";
 
-import { PRODUCT_IMAGES, SHOPIFY_CART_URL, SITE, trackAddToCart } from "@/lib/site";
+import { PRODUCT_IMAGES, SITE } from "@/lib/site";
 import { X, Zap } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
@@ -21,7 +21,6 @@ export function LimitedOfferPopup({ defaultOpen = false }: Props) {
   const close = () => setOpen(false);
 
   const goBuy = () => {
-    trackAddToCart();
     // fun: small celebration before redirect
     const el = document.createElement("div");
     el.textContent = "⚡ LOCKED IN";
@@ -29,7 +28,7 @@ export function LimitedOfferPopup({ defaultOpen = false }: Props) {
     document.body.appendChild(el);
     setTimeout(() => el.remove(), 650);
     setTimeout(() => {
-      window.location.href = SHOPIFY_CART_URL;
+      window.location.href = "/shop";
     }, 280);
   };
 
@@ -45,22 +44,19 @@ export function LimitedOfferPopup({ defaultOpen = false }: Props) {
             onClick={e => e.stopPropagation()}
             className="relative w-full max-w-lg overflow-hidden rounded-2xl premium-card shadow-2xl"
           >
-            {/* Background bottle with glow halos */}
-            <div className="absolute inset-0 z-0 overflow-hidden">
-              <div className="absolute left-1/2 top-1/2 h-[85%] w-[85%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-neural/25 blur-[100px] animate-glow-pulse" />
-              <div className="absolute left-1/2 top-1/2 h-[65%] w-[65%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-bolt/15 blur-[80px] animate-glow-pulse" />
+            {/* Light ambient background with subtle glow halos */}
+            <div className="absolute inset-0 z-0 overflow-hidden rounded-2xl">
+              <div className="absolute left-1/2 top-1/2 h-[85%] w-[85%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-neural/10 blur-[100px] animate-glow-pulse" />
+              <div className="absolute left-1/2 top-1/2 h-[65%] w-[65%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-bolt/10 blur-[80px] animate-glow-pulse" />
               <Image
                 src={PRODUCT_IMAGES.front}
                 alt="Focus Mode bottle"
                 fill
                 priority
-                className="object-contain opacity-[0.45] mix-blend-multiply scale-125"
+                className="object-contain opacity-[0.15] scale-125"
                 sizes="(max-width: 768px) 100vw, 512px"
               />
             </div>
-
-            {/* Dark gradient overlay for text readability */}
-            <div className="absolute inset-0 z-1 bg-linear-to-t from-black/95 via-black/75 to-black/50" />
 
             {/* Content */}
             <div className="relative z-10">
@@ -81,8 +77,8 @@ export function LimitedOfferPopup({ defaultOpen = false }: Props) {
               </div>
 
               <div className="p-8 text-center">
-                <div className="font-heading text-5xl sm:text-6xl font-extrabold text-white text-glow-bolt">${SITE.price}</div>
-                <div className="text-bolt text-sm mt-1">40% off — was ${SITE.originalPrice}</div>
+                <div className="font-heading text-5xl sm:text-6xl font-extrabold text-gray-900">${SITE.price}</div>
+                <div className="text-gray-500 text-sm mt-1">40% off — was ${SITE.originalPrice}</div>
 
                 <button
                   onClick={goBuy}
@@ -91,10 +87,10 @@ export function LimitedOfferPopup({ defaultOpen = false }: Props) {
                   CLAIM NOW <Zap className="h-5 w-5" />
                 </button>
 
-                <button onClick={close} className="mt-3 text-xs text-silver/50 hover:text-silver/70 underline-offset-4 hover:underline">
+                <button onClick={close} className="mt-3 text-xs text-gray-400 hover:text-gray-600 underline-offset-4 hover:underline">
                   No thanks
                 </button>
-                <p className="mt-3 text-[10px] text-silver/40">30-day guarantee • Ships from USA</p>
+                <p className="mt-3 text-[10px] text-gray-400">30-day guarantee • Ships from USA</p>
               </div>
             </div>
           </motion.div>

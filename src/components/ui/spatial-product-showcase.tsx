@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
-import { motion, AnimatePresence, type Variants } from "motion/react";
-import { Brain, Zap, Timer, Activity, Pill, ShieldCheck, type LucideIcon } from "lucide-react";
 import { PRODUCT_IMAGES } from "@/lib/site";
+import { Activity, Brain, Pill, ShieldCheck, Timer, Zap, type LucideIcon } from "lucide-react";
+import { AnimatePresence, motion, type Variants } from "motion/react";
+import Image from "next/image";
+import { useState } from "react";
 
 type ViewId = "formula" | "capsules" | "open" | "pill";
 
@@ -129,12 +129,12 @@ export function ProductShowcase() {
                 alt={data.title}
                 fill
                 sizes="(max-width: 1024px) 80vw, 40vw"
-                className="object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] mix-blend-multiply"
+                className="object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
               />
             </motion.div>
           </AnimatePresence>
         </div>
-        <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 whitespace-nowrap rounded border border-white/10 bg-[#0c0f0f]/90 px-2 py-1 text-[8px] tracking-[1px] text-silver/70 backdrop-blur sm:-bottom-2 sm:px-4 sm:py-2 sm:text-[10px] sm:tracking-[1.5px]">
+        <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 whitespace-nowrap rounded border border-black/10 bg-white/90 px-2 py-1 text-[8px] tracking-[1px] text-gray-600 backdrop-blur sm:-bottom-2 sm:px-4 sm:py-2 sm:text-[10px] sm:tracking-[1.5px]">
           <span className="mr-2 inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-neural align-middle" />
           {data.status}
         </div>

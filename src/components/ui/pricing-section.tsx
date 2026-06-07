@@ -1,9 +1,8 @@
 "use client";
 
-import { CheckoutContainer } from "@/components/ui/checkout-container";
 import { ProductGlow } from "@/components/ui/product-glow";
 import { SectionLabel } from "@/components/ui/reveal";
-import { SHOPIFY_CART_URL, SITE, trackAddToCart } from "@/lib/site";
+import { GREENS, SITE } from "@/lib/site";
 import { Check, Clock, ShieldCheck, Truck } from "lucide-react";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
@@ -113,14 +112,17 @@ export function PricingSection() {
           <div className="mb-3 flex items-center gap-2 text-[10px] tracking-[1.5px] text-silver/50">
             <div className="h-px flex-1 bg-white/10" /> SECURE SHOPIFY CHECKOUT <div className="h-px flex-1 bg-white/10" />
           </div>
-          <CheckoutContainer className="fm-checkout" />
           <a
-            href={SHOPIFY_CART_URL}
-            onClick={trackAddToCart}
+            href="/shop"
             className="mt-3 block text-center font-mono-data text-[10px] uppercase tracking-widest text-silver/50 hover:text-neural underline-offset-4 hover:underline"
           >
             or open full Shopify cart →
           </a>
+        </div>
+
+        <div className="mt-5 flex items-center justify-between gap-3 rounded-xl border border-[#16a34a]/20 bg-[#16a34a]/5 px-4 py-3 text-xs">
+          <div className="text-silver/70">Want the complete stack? Add <span className="text-[#7ee6a0] font-semibold">Super Energy Blend</span> — ${GREENS.price}</div>
+          <a href="/shop" className="shrink-0 font-bold text-[#7ee6a0] hover:text-[#16a34a] transition-colors">Add Greens →</a>
         </div>
 
         <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-silver/55">

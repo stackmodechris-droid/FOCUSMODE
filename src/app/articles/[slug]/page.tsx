@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { ARTICLES, getArticle } from "@/lib/articles";
 import { SITE } from "@/lib/site";
-import { SHOPIFY_CART_URL } from "@/lib/site";
+import { } from "@/lib/site";
 import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
 import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
 
@@ -113,7 +113,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               <a href={SITE.partnerUrl} className="text-bolt underline">stackmode.net</a>.
             </p>
             <div className="mt-6 flex justify-center">
-              <LiquidGlassButton href={SHOPIFY_CART_URL}>Get Focus Mode</LiquidGlassButton>
+              <LiquidGlassButton href="/shop">Get Focus Mode</LiquidGlassButton>
               <OpenOfferButton />
             </div>
           </div>

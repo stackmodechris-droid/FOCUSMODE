@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { Activity, Brain, Database, ShieldCheck, Timer, Zap, type LucideIcon } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
-import { Brain, Zap, Timer, Database, ShieldCheck, Activity, type LucideIcon } from "lucide-react";
+import { useEffect, useState } from "react";
 
 interface Benefit {
   icon: LucideIcon;
@@ -200,10 +200,10 @@ export function LockedInVisual() {
 
         {/* Layered ghost pills for depth + using the pill.png prominently (cool factor) */}
         <div className="absolute left-1/2 top-[51%] z-0 -translate-x-1/2 -translate-y-1/2 opacity-20 blur-[2px]">
-          <Image src="/products/pill.png" alt="" width={240} height={240} className="rotate-[-12deg] scale-[0.72] mix-blend-multiply" />
+          <Image src="/products/pill.png" alt="" width={240} height={240} className="rotate-[-12deg] scale-[0.72]" />
         </div>
         <div className="absolute left-1/2 top-[49%] z-0 -translate-x-1/2 -translate-y-1/2 opacity-10 blur-[6px]">
-          <Image src="/products/pill.png" alt="" width={270} height={270} className="rotate-[17deg] scale-[0.82] mix-blend-multiply" />
+          <Image src="/products/pill.png" alt="" width={270} height={270} className="rotate-[17deg] scale-[0.82]" />
         </div>
 
         {/* The Pill PNG itself — large, floating, glowing */}
@@ -224,7 +224,7 @@ export function LockedInVisual() {
               alt="Focus Mode premium capsule — the core of locked-in performance"
               width={420}
               height={420}
-              className="relative z-10 h-auto w-[158px] drop-shadow-[0_40px_90px_rgba(0,0,0,0.75)] sm:w-[188px] md:w-[240px] select-none mix-blend-multiply"
+              className="relative z-10 h-auto w-[158px] drop-shadow-[0_40px_90px_rgba(0,0,0,0.75)] sm:w-[188px] md:w-[240px] select-none"
               draggable={false}
               priority
             />
@@ -238,7 +238,7 @@ export function LockedInVisual() {
         </motion.div>
 
         {/* LOCKED status badge floating near pill */}
-        <div className="absolute bottom-[6%] left-1/2 z-30 -translate-x-1/2 rounded-full border border-white/15 bg-[#0c0f0f]/90 px-2 py-0.5 text-[6px] tracking-[2px] text-neural/90 backdrop-blur sm:bottom-[8%] sm:px-3 sm:py-0.5 sm:text-[7px] sm:tracking-[2.5px]">
+        <div className="absolute bottom-[6%] left-1/2 z-30 -translate-x-1/2 rounded-full border border-black/10 bg-white/90 px-2 py-0.5 text-[6px] tracking-[2px] text-neural/90 backdrop-blur sm:bottom-[8%] sm:px-3 sm:py-0.5 sm:text-[7px] sm:tracking-[2.5px]">
           <span className="mr-1.5 inline-block h-1 w-1 animate-pulse rounded-full bg-neural align-middle" />
           STAY LOCKED
         </div>

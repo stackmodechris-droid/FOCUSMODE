@@ -1,8 +1,8 @@
 "use client";
 
+import { INGREDIENTS } from "@/lib/site";
 import { motion } from "motion/react";
 import Image from "next/image";
-import { INGREDIENTS } from "@/lib/site";
 
 const FACTS = [
   { label: "Serving Size", value: "2 Capsules" },
@@ -81,7 +81,7 @@ export function IngredientsSchematic() {
               alt=""
               width={92}
               height={92}
-              className="rotate-[22deg] drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)] mix-blend-multiply"
+              className="rotate-[22deg] drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
             />
           </div>
         </div>

@@ -1,6 +1,5 @@
 "use client";
 
-import { SHOPIFY_CART_URL, trackAddToCart } from "@/lib/site";
 
 interface Props {
   children: React.ReactNode;
@@ -9,7 +8,7 @@ interface Props {
 
 export function ShopifyBuyAnchor({ children, className }: Props) {
   return (
-    <a href={SHOPIFY_CART_URL} onClick={trackAddToCart} className={className}>
+    <a href="/shop" className={className}>
       {children}
     </a>
   );

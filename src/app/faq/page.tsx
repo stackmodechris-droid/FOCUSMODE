@@ -1,9 +1,8 @@
-import type { Metadata } from "next";
-import { Reveal, SectionLabel } from "@/components/ui/reveal";
 import { FaqAccordion } from "@/components/ui/faq-accordion";
-import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
 import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
-import { SHOPIFY_CART_URL } from "@/lib/site";
+import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
+import { Reveal, SectionLabel } from "@/components/ui/reveal";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Focus Supplement FAQ | How Focus Mode Works, Dosing, Safety",
@@ -27,7 +26,7 @@ export default function FaqPage() {
           </Reveal>
           <FaqAccordion withSchema />
           <div className="mt-14 flex flex-col items-center gap-3">
-            <LiquidGlassButton href={SHOPIFY_CART_URL}>Get Focus Mode Now</LiquidGlassButton>
+            <LiquidGlassButton href="/shop">Get Focus Mode Now</LiquidGlassButton>
             <OpenOfferButton />
             <p className="text-[10px] text-silver/50">Or answer 1 fun question inside the popup for a personalized “why you need this”</p>
           </div>

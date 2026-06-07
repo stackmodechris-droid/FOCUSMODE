@@ -1,7 +1,7 @@
 import { Footer } from "@/components/ui/footer";
 import { MetaPixel } from "@/components/ui/meta-pixel";
 import { Navbar1 } from "@/components/ui/shadcnblocks-com-navbar1";
-import { SHOPIFY_CART_URL, SITE } from "@/lib/site";
+import { SITE } from "@/lib/site";
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Sora } from "next/font/google";
 import Script from "next/script";
@@ -133,7 +133,7 @@ const jsonLd = {
       sku: "FM-60CAP",
       offers: {
         "@type": "Offer",
-        url: SHOPIFY_CART_URL,
+        url: "/shop",
         priceCurrency: SITE.currency,
         price: SITE.price,
         availability: "https://schema.org/InStock",
@@ -220,7 +220,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${sora.variable} ${inter.variable} ${jetbrains.variable} h-full antialiased`}
+      className={`${sora.variable} ${inter.variable} ${jetbrains.variable} h-full antialiased`}
     >
       <head>
         <script

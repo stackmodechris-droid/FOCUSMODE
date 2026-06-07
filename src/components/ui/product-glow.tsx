@@ -1,9 +1,9 @@
 "use client";
 
-import { useRef } from "react";
-import Image from "next/image";
-import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { cn } from "@/lib/utils";
+import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
+import Image from "next/image";
+import { useRef } from "react";
 
 interface ProductGlowProps {
   src: string;
@@ -57,10 +57,10 @@ export function ProductGlow({
     >
       {/* Glow halos */}
       {(glow === "neural" || glow === "dual") && (
-        <div className="absolute left-1/2 top-1/2 h-[70%] w-[70%] -translate-x-1/2 -translate-y-1/2 animate-glow-pulse rounded-full bg-neural/40 blur-[90px]" />
+        <div className="absolute left-1/2 top-1/2 h-[90%] w-[90%] -translate-x-1/2 -translate-y-1/2 animate-glow-pulse rounded-full bg-neural/55 blur-[80px]" />
       )}
       {(glow === "bolt" || glow === "dual") && (
-        <div className="absolute left-1/2 top-1/2 h-[55%] w-[55%] -translate-x-1/2 -translate-y-1/2 animate-glow-pulse rounded-full bg-bolt/30 blur-[80px]" />
+        <div className="absolute left-1/2 top-1/2 h-[75%] w-[75%] -translate-x-1/2 -translate-y-1/2 animate-glow-pulse rounded-full bg-bolt/45 blur-[70px]" />
       )}
 
       {/* Soft studio ground/floor shadow for premium floating 3D product photography (makes the seamless render pop exactly like the reference Image #1 — no outer frame needed).
@@ -84,7 +84,8 @@ export function ProductGlow({
           width={size}
           height={size}
           priority={priority}
-          className="h-auto w-full select-none object-contain drop-shadow-[0_32px_70px_rgba(0,0,0,0.65)] drop-shadow-[0_8px_18px_rgba(0,0,0,0.35)] mix-blend-multiply"
+          className="h-auto w-full select-none object-contain"
+          style={{ filter: "drop-shadow(0 32px 70px rgba(0,0,0,0.65)) drop-shadow(0 8px 18px rgba(0,0,0,0.35))" }}
           draggable={false}
         />
       </motion.div>

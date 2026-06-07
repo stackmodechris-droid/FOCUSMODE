@@ -1,9 +1,8 @@
-import type { Metadata } from "next";
-import { Reveal, SectionLabel } from "@/components/ui/reveal";
 import { ArticlesGrid } from "@/components/ui/blog-posts";
-import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
 import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
-import { SHOPIFY_CART_URL } from "@/lib/site";
+import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
+import { Reveal, SectionLabel } from "@/components/ui/reveal";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Focus Supplement Articles | Beat Brain Fog, Build Discipline",
@@ -31,7 +30,7 @@ export default function ArticlesPage() {
           <ArticlesGrid />
 
           <div className="mt-16 flex flex-col items-center gap-3">
-            <LiquidGlassButton href={SHOPIFY_CART_URL}>Get Focus Mode</LiquidGlassButton>
+            <LiquidGlassButton href="/shop">Get Focus Mode</LiquidGlassButton>
             <OpenOfferButton />
             <p className="text-[10px] text-silver/50">Or open the popup — answer 1 question, see your personal “why buy now”.</p>
           </div>

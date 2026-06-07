@@ -1,6 +1,6 @@
 "use client";
 
-import { FDA_DISCLAIMER, SHOPIFY_CART_URL, SITE, trackAddToCart } from "@/lib/site";
+import { FDA_DISCLAIMER, SITE } from "@/lib/site";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,7 +8,8 @@ const COLS = [
   {
     title: "Shop",
     links: [
-      { label: "Buy Focus Mode", href: SHOPIFY_CART_URL },
+      { label: "Buy Focus Mode", href: "/shop" },
+      { label: "Buy Super Energy Blend", href: "/shop" },
       { label: "The Formula", href: "/learn-more" },
       { label: "How It Works", href: "/#benefits" },
       { label: "FAQ", href: "/faq" },
@@ -67,7 +68,6 @@ export function Footer() {
                   <li key={l.label}>
                     <Link
                       href={l.href}
-                      onClick={l.href === SHOPIFY_CART_URL ? trackAddToCart : undefined}
                       className="text-sm text-silver/70 transition-colors hover:text-white"
                     >
                       {l.label}

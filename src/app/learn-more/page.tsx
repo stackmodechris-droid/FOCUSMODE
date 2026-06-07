@@ -1,12 +1,11 @@
-import type { Metadata } from "next";
-import { Brain, Zap, Activity, Database, Target, Lock, Leaf } from "lucide-react";
-import { Reveal, SectionLabel } from "@/components/ui/reveal";
-import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
-import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
-import { ProductGlow } from "@/components/ui/product-glow";
 import { ElectricBrainBg } from "@/components/ui/electric-brain";
+import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
+import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
+import { ProductGlow } from "@/components/ui/product-glow";
+import { Reveal, SectionLabel } from "@/components/ui/reveal";
 import { INGREDIENTS } from "@/lib/site";
-import { SHOPIFY_CART_URL } from "@/lib/site";
+import { Activity, Brain, Database, Leaf, Lock, Target, Zap } from "lucide-react";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "The Science | Best Focus Supplement Ingredients & Clinical Dosing",
@@ -44,7 +43,7 @@ export default function LearnMorePage() {
               We engineered a neuro-activation sequence for real life. Discover the clinically-dosed ingredients behind 6+ hours of sustained focus, reduced mental fatigue, and a sharper mind — for entrepreneurs, professionals, students, and creators who perform at the highest level.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <LiquidGlassButton href={SHOPIFY_CART_URL}>Get The Formula</LiquidGlassButton>
+              <LiquidGlassButton href="/shop">Get The Formula</LiquidGlassButton>
               <LiquidGlassButton href="/#formula" variant="glass">Explore Ingredients</LiquidGlassButton>
               <OpenOfferButton />
             </div>
@@ -133,7 +132,7 @@ export default function LearnMorePage() {
             ))}
           </div>
           <div className="mt-12 flex justify-center">
-            <LiquidGlassButton href={SHOPIFY_CART_URL}>Get Focus Mode</LiquidGlassButton>
+            <LiquidGlassButton href="/shop">Get Focus Mode</LiquidGlassButton>
           </div>
         </div>
       </section>

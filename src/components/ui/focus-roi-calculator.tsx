@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { LiquidGlassButton } from "./liquid-glass-button";
-import { SHOPIFY_CART_URL } from "@/lib/site";
+import { } from "@/lib/site";
 
 /**
  * Fun, interactive ROI calculator.
@@ -94,7 +94,7 @@ export function FocusRoiCalculator() {
       </div>
 
       <div className="mt-6 flex justify-center">
-        <LiquidGlassButton href={SHOPIFY_CART_URL}>
+        <LiquidGlassButton href="/shop">
           Stop losing ${weeklyGain} every week — Buy Focus Mode
         </LiquidGlassButton>
       </div>

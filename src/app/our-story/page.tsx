@@ -1,13 +1,12 @@
-import type { Metadata } from "next";
-import { Cpu, Eye, Leaf } from "lucide-react";
-import { Reveal, SectionLabel } from "@/components/ui/reveal";
-import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
-import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
-import { ProductGlow } from "@/components/ui/product-glow";
 import { ElectricBrainBg } from "@/components/ui/electric-brain";
 import { Founders } from "@/components/ui/founders";
+import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
+import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
+import { ProductGlow } from "@/components/ui/product-glow";
+import { Reveal, SectionLabel } from "@/components/ui/reveal";
 import { SITE } from "@/lib/site";
-import { SHOPIFY_CART_URL } from "@/lib/site";
+import { Cpu, Eye, Leaf } from "lucide-react";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Our Story | Atlanta Focus Supplement by Stackmodechris",
@@ -70,7 +69,7 @@ export default function OurStoryPage() {
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
-              <LiquidGlassButton href={SHOPIFY_CART_URL}>Get Focus Mode</LiquidGlassButton>
+              <LiquidGlassButton href="/shop">Get Focus Mode</LiquidGlassButton>
               <OpenOfferButton />
             </div>
           </Reveal>
@@ -117,7 +116,7 @@ export default function OurStoryPage() {
           </Reveal>
           <Founders />
           <div className="mt-14 flex justify-center">
-            <LiquidGlassButton href={SHOPIFY_CART_URL}>Get Focus Mode</LiquidGlassButton>
+            <LiquidGlassButton href="/shop">Get Focus Mode</LiquidGlassButton>
           </div>
         </div>
       </section>

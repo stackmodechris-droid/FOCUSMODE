@@ -2,6 +2,7 @@ import { ArticlesGrid } from "@/components/ui/blog-posts";
 import { FaqAccordion } from "@/components/ui/faq-accordion";
 import { FocusRoiCalculator } from "@/components/ui/focus-roi-calculator";
 import { FormulaStack } from "@/components/ui/formula-stack";
+import { GreenSmoothieAnimation } from "@/components/ui/green-smoothie";
 import { Hero } from "@/components/ui/hero";
 import { HomeLazyPopups } from "@/components/ui/home-lazy-popups";
 import { IngredientsSchematic } from "@/components/ui/ingredients-schematic";
@@ -9,16 +10,13 @@ import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-gla
 import { LockedInVisual } from "@/components/ui/locked-in-visual";
 import { MarqueeTrust } from "@/components/ui/marquee-trust";
 import { PricingSection } from "@/components/ui/pricing-section";
-import { ProductGlow } from "@/components/ui/product-glow";
 import { Reveal, SectionLabel } from "@/components/ui/reveal";
-import { ShopifyBuyAnchor } from "@/components/ui/shopify-buy-anchor";
 import { ProductShowcase } from "@/components/ui/spatial-product-showcase";
 import { StatsCard } from "@/components/ui/stats-card-1";
 import { StickyBuyBar } from "@/components/ui/sticky-buy-bar";
 import { Testimonials } from "@/components/ui/testimonials";
-import { GREENS, GREENS_CART_URL, SHOPIFY_CART_URL, SITE } from "@/lib/site";
+import { GREENS } from "@/lib/site";
 import { Brain, Coins, TrendingUp } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 const incomeChart = [
@@ -36,115 +34,6 @@ export default function Home() {
       <LiquidGlassFilter />
       <Hero />
       <MarqueeTrust />
-
-      {/* DUAL PRODUCT VISUAL SHOP — High-converting, minimal text, strong visuals */}
-      <section id="products" className="border-b border-white/10 bg-[#0c0f0f]">
-        <div className="mx-auto max-w-7xl px-5 py-8 md:py-10">
-          {/* Punchy header */}
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-6 border-b border-white/10">
-            <div className="flex items-start gap-4">
-              <div className="shrink-0">
-                <div className="bg-bolt text-black font-heading font-extrabold text-2xl md:text-[30px] leading-none px-5 py-2.5 rounded-md tracking-[-0.5px]">40% OFF</div>
-                <div className="text-center text-[10px] text-bolt/90 font-bold tracking-[2px] mt-1">TODAY ONLY</div>
-              </div>
-              <div>
-                <div className="text-sm uppercase tracking-[2px] text-neural">All-Natural • Plant-Based • USA Made</div>
-                <div className="font-heading text-2xl md:text-3xl text-white mt-1 leading-tight">Focus + Daily Greens.<br />Peak performance, zero crash.</div>
-              </div>
-            </div>
-            <div className="md:text-right flex-shrink-0">
-              <Link href="/shop" className="inline-flex items-center justify-center bg-bolt text-black font-heading font-bold px-8 py-3 rounded-md text-base w-full md:w-auto hover:brightness-105 active:scale-[0.985] transition">
-                VIEW FULL STACK
-              </Link>
-              <div className="text-[10px] text-silver/50 mt-1 tracking-widest">Ships today • 30-day guarantee</div>
-            </div>
-          </div>
-
-          {/* Two visual product cards — less text, big images, direct CTAs */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-6xl mx-auto pt-6">
-            {/* Focus Mode — Blue accent card */}
-            <div className="premium-card p-6 flex flex-col border-[#1e90ff]/30">
-              <div className="flex gap-4 items-start">
-                <div className="w-20 h-20 flex-shrink-0 relative">
-                  <Image src="/products/1780438169847-generated-label-image-2.png" alt="Focus Mode supplement bottle" fill className="object-contain" priority />
-                </div>
-                <div className="flex-1">
-                  <div className="inline-block uppercase text-[10px] tracking-[1.5px] bg-[#1e90ff]/10 text-[#1e90ff] px-2 py-0.5 rounded">6+ HOUR CLEAN FOCUS</div>
-                  <div className="font-heading text-2xl mt-1">Focus Mode</div>
-                  <div className="text-sm text-silver/70 mt-1">Clinically-dosed Ginkgo + Ginseng. Sharp mental energy. Zero jitters. Zero crash.</div>
-                </div>
-              </div>
-
-              <div className="mt-4 flex items-baseline gap-2">
-                <span className="font-heading text-4xl tabular-nums">${SITE.price}</span>
-                <span className="text-sm text-silver/50 line-through">was ${SITE.originalPrice}</span>
-                <span className="ml-2 text-xs font-bold bg-bolt text-black px-2 py-0.5 rounded">40% OFF</span>
-              </div>
-
-              <div className="mt-3 text-xs text-silver/60 flex flex-wrap gap-x-4">
-                <span>✓ Brain boost &amp; focus</span>
-                <span>✓ Zero crash</span>
-                <span>✓ 30-day supply</span>
-              </div>
-
-              <div className="mt-auto pt-5">
-                <ShopifyBuyAnchor className="premium-cta w-full justify-center py-3 text-sm">Buy Focus Mode — ${SITE.price}</ShopifyBuyAnchor>
-              </div>
-              <div className="text-center text-[10px] mt-2 text-silver/50">60 capsules • USA made</div>
-            </div>
-
-            {/* Green Super Energy Blend — Green accent card */}
-            <div className="premium-card p-6 flex flex-col border-[#16a34a]/30">
-              <div className="flex gap-4 items-start">
-                <div className="w-20 h-20 flex-shrink-0 relative">
-                  <Image src="/greens/1780842565396-generated-label-image-2_800x800.png" alt="Super Energy Blend label" fill className="object-contain" />
-                </div>
-                <div className="flex-1">
-                  <div className="inline-block uppercase text-[10px] tracking-[1.5px] bg-[#16a34a]/10 text-[#16a34a] px-2 py-0.5 rounded">WHOLE-PLANT DAILY ENERGY</div>
-                  <div className="font-heading text-2xl mt-1">Super Energy Blend</div>
-                  <div className="text-sm text-silver/70 mt-1">20+ plants, superfoods &amp; adaptogens. Clean sustained energy + daily vitality foundation.</div>
-                </div>
-              </div>
-
-              <div className="mt-4 flex items-baseline gap-2">
-                <span className="font-heading text-4xl tabular-nums">${GREENS.price}</span>
-                <span className="text-sm text-silver/50">30 servings</span>
-              </div>
-
-              <div className="mt-3 text-xs text-silver/60 flex flex-wrap gap-x-4">
-                <span>✓ All-day clean energy</span>
-                <span>✓ Brain &amp; body support</span>
-                <span>✓ 1 scoop daily</span>
-              </div>
-
-              <div className="mt-3 flex gap-2">
-                <div className="w-10 h-10 relative rounded border border-white/10 overflow-hidden"><Image src="/greens/1780842565402-generated-label-image-3_800x800.png" alt="Super Energy Blend" fill className="object-contain" /></div>
-                <div className="w-10 h-10 relative rounded border border-white/10 overflow-hidden"><Image src="/greens/1780842565406-generated-label-image-0_800x800.png" alt="Super Energy Blend" fill className="object-contain" /></div>
-              </div>
-
-              <div className="mt-auto pt-5">
-                <a href={GREENS_CART_URL} className="flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-[#16a34a] hover:bg-[#15803d] px-6 py-3 font-heading text-sm font-bold text-white w-full transition active:scale-[0.985]">
-                  Buy Super Energy Blend — ${GREENS.price}
-                </a>
-              </div>
-              <div className="text-center text-[10px] mt-2 text-silver/50">USA made • No artificial additives</div>
-            </div>
-          </div>
-
-          {/* Direct dual CTAs — high conversion row */}
-          <div className="mt-6 max-w-[620px] mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <ShopifyBuyAnchor className="premium-cta flex-1 justify-center py-3.5 text-[15px]">
-                Buy Focus Mode — ${SITE.price}
-              </ShopifyBuyAnchor>
-              <a href={GREENS_CART_URL} className="flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-[#16a34a] hover:bg-[#15803d] px-6 py-3.5 font-heading text-[15px] font-bold text-white transition active:scale-[0.985]">
-                Buy Super Energy Blend — ${GREENS.price}
-              </a>
-            </div>
-            <p className="mt-2 text-center text-xs text-silver/60">Stack both for complete daily edge. 30-day guarantee.</p>
-          </div>
-        </div>
-      </section>
 
       {/* VISUAL IMPACT — Short, punchy, stats forward */}
       <section id="impact" className="border-b border-white/10">
@@ -195,21 +84,6 @@ export default function Home() {
           <div className="mt-6">
             <LockedInVisual />
           </div>
-        </div>
-      </section>
-
-      {/* DESIGNED FOR — Visual, minimal text, high scan */}
-      <section className="border-b border-white/10 bg-[#111414]">
-        <div className="mx-auto max-w-7xl px-5 py-12 md:py-14 md:px-8">
-          <div className="text-center mb-6">
-            <SectionLabel>Built For</SectionLabel>
-          </div>
-          <div className="flex flex-wrap justify-center gap-3 text-sm">
-            {["Entrepreneurs & Founders", "Professionals & Executives", "Students & High-Achievers", "Creators & Deep Workers", "Athletes & Coaches"].map((label, i) => (
-              <div key={i} className="premium-card px-5 py-2.5 text-silver/90 border-white/10">{label}</div>
-            ))}
-          </div>
-          <p className="text-center text-xs text-silver/50 mt-5">6+ hours clean focus. No crash. For anyone who gets paid to think clearly.</p>
         </div>
       </section>
 
@@ -290,21 +164,14 @@ export default function Home() {
                 <div>✓ Fuels body &amp; brain</div>
               </div>
               <div className="mt-6 flex gap-3">
-                <a href={GREENS_CART_URL} className="premium-cta px-7">Buy Super Energy Blend — ${GREENS.price}</a>
+                <a href="/shop" className="premium-cta px-7">Buy Super Energy Blend — ${GREENS.price}</a>
                 <Link href="/shop#greens" className="premium-cta-secondary px-7">Learn more</Link>
               </div>
               <p className="mt-2 text-[10px] text-silver/50">30 servings • USA made</p>
             </div>
 
             <div className="relative flex justify-center">
-              <div className="premium-product-stage max-w-[360px]">
-                <ProductGlow
-                  src={GREENS.images.front}
-                  alt="Super Energy Blend greens tub"
-                  size={420}
-                  glow="neural"
-                />
-              </div>
+              <GreenSmoothieAnimation className="max-w-[360px]" />
             </div>
           </div>
         </div>
@@ -354,7 +221,7 @@ export default function Home() {
           </div>
           <FaqAccordion withSchema />
           <div className="mt-8 flex justify-center">
-            <LiquidGlassButton href={SHOPIFY_CART_URL}>Buy Focus Mode Now</LiquidGlassButton>
+            <LiquidGlassButton href="/shop">Buy Focus Mode Now</LiquidGlassButton>
           </div>
         </div>
       </section>

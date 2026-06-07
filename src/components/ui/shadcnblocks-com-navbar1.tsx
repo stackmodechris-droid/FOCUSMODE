@@ -1,6 +1,5 @@
 "use client"
 
-import { GREENS_CART_URL, SHOPIFY_CART_URL, trackAddToCart } from "@/lib/site"
 import { Leaf, Menu, X, Zap } from "lucide-react"
 import { AnimatePresence, motion } from "motion/react"
 import Image from "next/image"
@@ -91,16 +90,16 @@ const Navbar1 = ({
               <Zap className="h-3.5 w-3.5 fill-black/80 transition group-hover:translate-x-px" />
             </Link>
             <Link
-              href={SHOPIFY_CART_URL}
-              onClick={trackAddToCart}
+              href="/shop"
+
               className="group inline-flex items-center gap-2 rounded-full bg-[#1e90ff] hover:bg-[#1a7dd9] active:scale-[0.985] px-5 py-2.5 text-sm font-heading font-bold text-white transition-all shadow-[0_1px_0_0_rgba(255,255,255,0.25)_inset,0_2px_8px_-2px_rgba(30,144,255,0.45)]"
             >
               Focus Mode
               <Zap className="h-3.5 w-3.5 fill-white/90 transition group-hover:translate-x-px" />
             </Link>
             <Link
-              href={GREENS_CART_URL}
-              onClick={trackAddToCart}
+              href="/shop"
+
               className="group inline-flex items-center gap-2 rounded-full bg-[#16a34a] hover:bg-[#15803d] active:scale-[0.985] px-5 py-2.5 text-sm font-heading font-bold text-white transition-all shadow-[0_1px_0_0_rgba(255,255,255,0.2)_inset,0_2px_8px_-2px_rgba(22,163,74,0.45)]"
             >
               Super Energy Blend
@@ -183,15 +182,15 @@ const Navbar1 = ({
               {/* Bottom premium dual CTA block — Blue Focus + Green Super Energy Blend (high converting) */}
               <div className="mt-auto p-6 space-y-2.5">
                 <Link
-                  href={SHOPIFY_CART_URL}
-                  onClick={() => { closeMobile(); trackAddToCart(); }}
+                  href="/shop"
+
                   className="flex w-full items-center justify-center gap-2.5 rounded-full bg-[#1e90ff] active:scale-[0.985] py-4 text-lg font-heading font-bold text-white shadow-[0_1px_0_0_rgba(255,255,255,0.25)_inset]"
                 >
                   Focus Mode <Zap className="h-5 w-5 fill-white/90" />
                 </Link>
                 <Link
-                  href={GREENS_CART_URL}
-                  onClick={() => { closeMobile(); trackAddToCart(); }}
+                  href="/shop"
+
                   className="flex w-full items-center justify-center gap-2.5 rounded-full bg-[#16a34a] active:scale-[0.985] py-4 text-lg font-heading font-bold text-white shadow-[0_1px_0_0_rgba(255,255,255,0.2)_inset]"
                 >
                   Super Energy Blend <Leaf className="h-5 w-5" />

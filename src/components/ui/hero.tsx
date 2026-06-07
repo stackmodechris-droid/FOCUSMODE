@@ -1,8 +1,7 @@
 "use client";
 
-import { LiquidGlassButton } from "@/components/ui/liquid-glass-button";
 import { ProductGlow } from "@/components/ui/product-glow";
-import { GREENS, GREENS_CART_URL, SHOPIFY_CART_URL, SITE, trackAddToCart } from "@/lib/site";
+import { GREENS, SITE } from "@/lib/site";
 import { ChevronDown, Leaf, ShieldCheck, Star, Truck, Zap } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
@@ -10,12 +9,22 @@ import Link from "next/link";
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#0a0c0c]">
-      {/* Premium seamless dark stage — no HUD grid (clean Atlas luxury, not coded tech) */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(253,228,0,0.015)_0%,transparent_60%)]" />
-      {/* Soft orbs for 3D richness */}
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-16 sm:-top-24 left-1/3 h-[320px] w-[320px] sm:h-[520px] sm:w-[520px] rounded-full bg-neural/[0.035] blur-[80px] sm:blur-[120px]" />
-        <div className="absolute top-1/4 sm:top-1/3 right-1/4 h-[240px] w-[240px] sm:h-[380px] sm:w-[380px] rounded-full bg-neural/4 blur-[70px] sm:blur-[110px]" />
+      {/* Clean, seamless light theme ambient background — soft airy gradients, no dark beams */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+        {/* Soft top-center warm glow */}
+        <div
+          className="absolute left-1/2 -top-20 h-[360px] w-[600px] sm:h-[480px] sm:w-[900px] -translate-x-1/2 rounded-full bg-gradient-to-b from-[#fde400]/[0.07] to-transparent blur-[80px] sm:blur-[120px]"
+        />
+        {/* Soft teal ambient glow right */}
+        <div
+          className="absolute top-1/4 right-[5%] h-[240px] w-[240px] sm:h-[380px] sm:w-[380px] rounded-full bg-[#2eb9df]/[0.05] blur-[70px] sm:blur-[100px]"
+        />
+        {/* Soft teal ambient glow left */}
+        <div
+          className="absolute top-[10%] left-[8%] h-[200px] w-[200px] sm:h-[320px] sm:w-[320px] rounded-full bg-[#2eb9df]/[0.04] blur-[60px] sm:blur-[90px]"
+        />
+        {/* Subtle clean floor fade to white */}
+        <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-white/60 to-transparent" />
       </div>
 
       {/* Content - padded to sit below the glass nav, while bg/grid flows seamless to top edge */}
@@ -57,7 +66,7 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 mx-auto mt-8 max-w-7xl px-5 pb-10 sm:pb-14 md:pb-20">
-        <div className="grid gap-4 lg:grid-cols-[1fr_1fr_0.85fr]">
+        <div className="grid gap-4 lg:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
@@ -91,9 +100,9 @@ export function Hero() {
                   <span className="rounded-full bg-white/5 px-3 py-1">Zero crash</span>
                   <span className="rounded-full bg-white/5 px-3 py-1">60 capsules</span>
                 </div>
-                <LiquidGlassButton href={SHOPIFY_CART_URL} className="mt-5 w-full px-6 py-[16px] text-[14px]">
+                <a href="/shop" className="premium-cta mt-5 w-full">
                   Buy Focus Mode <Star className="h-4 w-4 fill-black" />
-                </LiquidGlassButton>
+                </a>
               </div>
             </div>
           </motion.div>
@@ -130,39 +139,34 @@ export function Hero() {
                   <span className="rounded-full bg-white/5 px-3 py-1">Adaptogens</span>
                   <span className="rounded-full bg-white/5 px-3 py-1">1 scoop daily</span>
                 </div>
-                <a href={GREENS_CART_URL} onClick={trackAddToCart} className="premium-cta mt-5 w-full bg-[#16a34a] text-white hover:bg-[#15803d]">
+                <a href="/shop" className="premium-cta mt-5 w-full">
                   Buy Energy Blend <Leaf className="h-4 w-4" />
                 </a>
               </div>
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.26 }}
-            className="premium-card flex flex-col justify-between p-6 text-center lg:text-left"
-          >
-            <div>
-              <div className="text-[10px] font-bold uppercase tracking-[2px] text-neural">The Daily Edge Protocol</div>
-              <h2 className="mt-3 font-heading text-3xl font-semibold tracking-[-0.7px] text-white">Stack both. Feel the difference.</h2>
-              <div className="mt-4 grid grid-cols-3 gap-2 text-center text-[11px] text-silver/70">
-                <div className="rounded-xl border border-white/10 bg-white/3 p-3">Clean energy</div>
-                <div className="rounded-xl border border-white/10 bg-white/3 p-3">Mental clarity</div>
-                <div className="rounded-xl border border-white/10 bg-white/3 p-3">No crash</div>
-              </div>
-              <p className="mt-4 text-sm text-silver/65">
-                Big supplement stores bury you in endless grids. Focus Mode gives you the two-product stack that matters: natural daily energy plus locked-in cognitive performance.
-              </p>
-            </div>
-            <div className="mt-6 flex flex-col gap-2">
-              <Link href="/shop" className="premium-cta w-full">Shop the full stack</Link>
-              <Link href="/learn-more" className="premium-cta-secondary w-full">See the formula</Link>
-            </div>
-          </motion.div>
         </div>
 
-        <div className="mt-4 grid gap-2 text-center text-[11px] uppercase tracking-[1.5px] text-silver/45 sm:grid-cols-4">
+        {/* Compact stack upsell strip */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.32 }}
+          className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 rounded-2xl border border-white/10 bg-white/2.5 px-5 py-3.5 backdrop-blur-sm"
+        >
+          <div className="flex items-center gap-3 text-sm text-silver/70">
+            <span className="text-neural font-bold text-xs uppercase tracking-[1.5px]">Complete Daily Edge Stack</span>
+            <span className="hidden sm:inline text-white/20">·</span>
+            <span className="hidden sm:inline">Focus Mode + Super Energy Blend</span>
+            <span className="text-xs text-silver/45">Clean energy + locked-in focus, zero crash</span>
+          </div>
+          <Link href="/shop" className="shrink-0 text-xs font-bold uppercase tracking-[1.5px] text-bolt hover:text-bolt/80 transition-colors">
+            View Complete Stack →
+          </Link>
+        </motion.div>
+
+        <div className="mt-3 grid gap-2 text-center text-[11px] uppercase tracking-[1.5px] text-silver/45 sm:grid-cols-4">
           <div className="rounded-full border border-white/10 px-3 py-2">Shopify secure checkout</div>
           <div className="rounded-full border border-white/10 px-3 py-2">USA manufactured</div>
           <div className="rounded-full border border-white/10 px-3 py-2">Transparent labels</div>

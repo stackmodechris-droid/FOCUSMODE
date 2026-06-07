@@ -1,6 +1,5 @@
 "use client";
 
-import { SHOPIFY_CART_URL, trackAddToCart } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import * as React from "react";
@@ -19,10 +18,8 @@ interface LiquidGlassButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEl
 export const LiquidGlassButton = React.forwardRef<HTMLButtonElement, LiquidGlassButtonProps>(
   ({ className, children, href, variant = "bolt", onClick, ...props }, ref) => {
     const isBolt = variant === "bolt";
-    const isShopify = href === SHOPIFY_CART_URL;
 
     const handleClick = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
-      if (isShopify) trackAddToCart();
       onClick?.(e as React.MouseEvent<HTMLButtonElement>);
     };
 
