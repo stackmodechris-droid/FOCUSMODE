@@ -30,7 +30,7 @@ export default function ArticlesPage() {
           <ArticlesGrid />
 
           <div className="mt-16 flex flex-col items-center gap-3">
-            <LiquidGlassButton href="/shop">Get Focus Mode</LiquidGlassButton>
+            <LiquidGlassButton href="/focus-mode">Get Focus Mode</LiquidGlassButton>
             <OpenOfferButton />
             <p className="text-[10px] text-silver/50">Or open the popup — answer 1 question, see your personal “why buy now”.</p>
           </div>

@@ -43,7 +43,7 @@ export default function LearnMorePage() {
               We engineered a neuro-activation sequence for real life. Discover the clinically-dosed ingredients behind 6+ hours of sustained focus, reduced mental fatigue, and a sharper mind — for entrepreneurs, professionals, students, and creators who perform at the highest level.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <LiquidGlassButton href="/shop">Get The Formula</LiquidGlassButton>
+              <LiquidGlassButton href="/focus-mode">Get The Formula</LiquidGlassButton>
               <LiquidGlassButton href="/#formula" variant="glass">Explore Ingredients</LiquidGlassButton>
               <OpenOfferButton />
             </div>
@@ -132,7 +132,7 @@ export default function LearnMorePage() {
             ))}
           </div>
           <div className="mt-12 flex justify-center">
-            <LiquidGlassButton href="/shop">Get Focus Mode</LiquidGlassButton>
+            <LiquidGlassButton href="/focus-mode">Get Focus Mode</LiquidGlassButton>
           </div>
         </div>
       </section>

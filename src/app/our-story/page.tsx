@@ -11,9 +11,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Our Story | Atlanta Focus Supplement by Stackmodechris",
+  title: "Our Story | Atlanta Focus Supplement by Focus Mode",
   description:
-    "The story behind Focus Mode — the Atlanta-based focus supplement by Stackmodechris and The Stackmode Network. Clinical Ginkgo + Ginseng for no-crash mental clarity.",
+    "The story behind Focus Mode — the Atlanta-based all-natural halal focus supplement. Clinical Ginkgo + Ginseng for no-crash mental clarity. Straight from nature.",
   alternates: { canonical: "/our-story" },
 };
 
@@ -49,7 +49,7 @@ export default function OurStoryPage() {
       <section className="border-b border-white/10">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 md:py-24 md:px-8 lg:grid-cols-2">
           <Reveal>
-            <SectionLabel>Founder · Stackmode Network LLC</SectionLabel>
+            <SectionLabel>Founder · Focus Mode</SectionLabel>
             <h2 className="mt-5 font-heading text-3xl font-extrabold leading-tight text-white md:text-4xl">
               The Story of {SITE.founder}
             </h2>
@@ -65,13 +65,13 @@ export default function OurStoryPage() {
                 every single day.&rdquo;
               </p>
               <p>
-                So {SITE.founder} and The Stackmode Network engineered the solution: a clinically-dosed, fully
+                So {SITE.founder} and the Focus Mode team engineered the solution: a clinically-dosed, fully
                 transparent formula for sustained cognitive performance. Now, it&apos;s available to everyone who
                 demands the same relentless output.
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
-              <LiquidGlassButton href="/shop">Get Focus Mode</LiquidGlassButton>
+              <LiquidGlassButton href="/focus-mode">Get Focus Mode</LiquidGlassButton>
               <OpenOfferButton />
             </div>
           </Reveal>
@@ -112,13 +112,13 @@ export default function OurStoryPage() {
           <Reveal className="mb-14 text-center">
             <SectionLabel>The Team</SectionLabel>
             <h2 className="mt-5 font-heading text-3xl font-extrabold leading-tight text-white md:text-4xl">
-              The Stackmode Network
+              The Focus Mode Team
             </h2>
             <p className="mt-4 text-silver/65">A mission-driven team helping high-performers in business, school, creative work, and the markets win with a sharper mind.</p>
           </Reveal>
           <Founders />
           <div className="mt-14 flex justify-center">
-            <LiquidGlassButton href="/shop">Get Focus Mode</LiquidGlassButton>
+            <LiquidGlassButton href="/focus-mode">Get Focus Mode</LiquidGlassButton>
           </div>
         </div>
       </section>

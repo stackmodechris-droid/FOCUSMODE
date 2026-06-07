@@ -114,7 +114,7 @@ export function ProductShowcase() {
         <div className="absolute aspect-square w-[82%] rounded-full border border-white/10" />
         <div className="absolute aspect-square w-[68%] rounded-full bg-neural/10 blur-3xl" />
         <div className="absolute aspect-square w-[46%] rounded-full bg-bolt/8 blur-3xl" />
-        <div className="relative flex aspect-square w-full max-w-md items-center justify-center">
+        <div className="relative flex aspect-square w-full max-w-lg items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={data.id}

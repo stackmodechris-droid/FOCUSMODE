@@ -63,7 +63,7 @@ export const ARTICLES: Article[] = [
     title: "Discipline Is a Biochemical State (Not Just Willpower)",
     metaTitle: "Discipline Is Biochemical — How to Engineer Self-Control",
     metaDescription:
-      "Discipline isn't moral failure — it's brain chemistry. Learn how dopamine, focus, and the right nootropic stack make self-control automatic.",
+      "Discipline isn't moral failure — it's brain chemistry. Learn how dopamine, focus, and the right nootropic formula make self-control automatic.",
     category: "Performance Psychology",
     excerpt: "Stop blaming your willpower. Your discipline is downstream of your neurochemistry.",
     readTime: 6,
@@ -71,7 +71,7 @@ export const ARTICLES: Article[] = [
     image:
       "https://images.unsplash.com/photo-1517960413843-0aee8e2b3285?w=1200&q=80&auto=format&fit=crop",
     intro:
-      "Everyone tells you to 'just be more disciplined.' But discipline isn't a character trait you're born with — it's a biochemical state you can engineer. Here's how the highest performers stack the deck in their favor.",
+      "Everyone tells you to 'just be more disciplined.' But discipline isn't a character trait you're born with — it's a biochemical state you can engineer. Here's how the highest performers tip the scales in their favor.",
     sections: [
       {
         heading: "Willpower Is a Limited Resource",
@@ -91,7 +91,7 @@ export const ARTICLES: Article[] = [
         heading: "Build the Environment, Then Add the Fuel",
         body: [
           "Combine Focus Mode with simple environment design: phone in another room, one task at a time, a clear start ritual.",
-          "Want a system tailored to you? Order Focus Mode and study the execution frameworks at stackmode.net to build your own protocol.",
+          "Want a system tailored to you? Order Focus Mode and build your own daily protocol for peak performance.",
         ],
       },
     ],
@@ -169,7 +169,7 @@ export const ARTICLES: Article[] = [
         heading: "Train It and Fuel It",
         body: [
           "Pair Focus Mode with active recall, spaced repetition, and enough sleep, and you compound the benefits over time.",
-          "Serious about your edge? Order Focus Mode and use the performance routines at stackmode.net to build a system that sticks.",
+          "Serious about your edge? Order Focus Mode and build a daily performance system that sticks.",
         ],
       },
     ],
@@ -208,7 +208,7 @@ export const ARTICLES: Article[] = [
         heading: "Build the Foundation First",
         body: [
           "Before you layer in nootropics for peak focus, make sure your biological foundation is solid. That means hydration, sleep, movement, and daily whole-plant nutrition.",
-          "Start your day with Super Energy Blend, then stack Focus Mode 20 minutes later for the complete physical + mental performance stack.",
+          "Start your day with Super Energy Blend, then add Focus Mode 20 minutes later for the complete physical + mental performance bundle.",
         ],
       },
     ],
@@ -237,7 +237,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
-        heading: "The Ashwagandha + Ginseng Sleep Stack",
+        heading: "The Ashwagandha + Ginseng Sleep Support",
         body: [
           "Ashwagandha, found in Super Energy Blend, is a clinically studied adaptogen that helps lower cortisol — the stress hormone that keeps you wired at night.",
           "When cortisol drops in the evening, melatonin can rise naturally, helping you fall asleep faster and reach deeper sleep stages without relying on sedatives or sleep aids.",
@@ -286,7 +286,7 @@ export const ARTICLES: Article[] = [
         heading: "Make the Switch",
         body: [
           "Replace your second coffee with Super Energy Blend. You'll notice the difference by day 3: no jitters, no crash, just smooth, reliable output from morning to evening.",
-          "Pair it with Focus Mode when you need peak mental clarity — the combination of whole-plant nutrition + clinical nootropics is the most sustainable performance stack available.",
+          "Pair it with Focus Mode when you need peak mental clarity — the combination of whole-plant nutrition + clinical nootropics is the most sustainable performance bundle available.",
         ],
       },
     ],
@@ -315,7 +315,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
-        heading: "The Adaptogen Stack Inside Focus Mode",
+        heading: "The Adaptogen Formula Inside Focus Mode",
         body: [
           "Panax Ginseng (7% Ginsenosides) helps regulate the HPA axis — your body's central stress response system. It modulates cortisol instead of suppressing it, so you stay alert without feeling wired.",
           "Ashwagandha in Super Energy Blend has been shown in clinical studies to significantly reduce cortisol levels and improve stress resilience. When combined with Ginkgo's blood-flow support, the result is calm, unshakable focus.",

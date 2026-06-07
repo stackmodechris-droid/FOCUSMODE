@@ -40,7 +40,7 @@ export function Hero() {
           </div>
 
           <h1 className="mx-auto max-w-5xl font-heading text-[40px] font-semibold leading-[0.95] tracking-[-2px] text-white sm:text-[56px] md:text-[74px] lg:text-[88px]">
-            Buy the daily edge stack.<br />
+            Unlock your daily edge.<br />
             <span className="text-neural tracking-[-2.6px]">Focus + clean energy.</span>
           </h1>
 
@@ -62,6 +62,22 @@ export function Hero() {
             <span className="inline-flex items-center gap-1 text-silver/55"><Truck className="h-4 w-4 text-neural" /> Ships today</span>
             <span className="inline-flex items-center gap-1 text-silver/55"><ShieldCheck className="h-4 w-4 text-neural" /> 30-day guarantee</span>
           </div>
+
+          {/* Halal & nature trust bar */}
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-2 text-[11px] font-semibold uppercase tracking-[1.5px] text-silver/70">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5">
+              <ShieldCheck className="h-3.5 w-3.5 text-neural" /> Halal Ingredients
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5">
+              <Leaf className="h-3.5 w-3.5 text-[#16a34a]" /> Straight From Nature
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5">
+              <Zap className="h-3.5 w-3.5 text-bolt" /> Zero Fillers
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5">
+              <Star className="h-3.5 w-3.5 text-bolt" /> USA Manufactured
+            </span>
+          </div>
         </motion.div>
       </div>
 
@@ -82,12 +98,12 @@ export function Hero() {
                   size={430}
                   glow="dual"
                   priority
-                  className="mx-auto max-w-[210px] sm:max-w-[260px] lg:max-w-[300px]"
+                  className="mx-auto max-w-[240px] sm:max-w-[300px] lg:max-w-[380px]"
                 />
               </div>
               <div>
                 <div className="inline-flex items-center gap-1 rounded-full border border-[#1e90ff]/30 bg-[#1e90ff]/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[1.5px] text-[#7ec4ff]">
-                  <Zap className="h-3 w-3" /> All-Natural Brain Booster
+                  <Zap className="h-5 w-5" /> All-Natural Brain Booster
                 </div>
                 <h2 className="mt-3 font-heading text-3xl font-semibold tracking-[-0.8px] text-white md:text-4xl">Focus Mode</h2>
                 <div className="mt-2 flex items-baseline gap-2">
@@ -100,7 +116,7 @@ export function Hero() {
                   <span className="rounded-full bg-white/5 px-3 py-1">Zero crash</span>
                   <span className="rounded-full bg-white/5 px-3 py-1">60 capsules</span>
                 </div>
-                <a href="/shop" className="premium-cta mt-5 w-full">
+                <a href="/focus-mode" className="premium-cta mt-5 w-full">
                   Buy Focus Mode <Star className="h-4 w-4 fill-black" />
                 </a>
               </div>
@@ -122,12 +138,12 @@ export function Hero() {
                   size={410}
                   glow="neural"
                   priority
-                  className="mx-auto max-w-[190px] sm:max-w-[240px] lg:max-w-[285px]"
+                  className="mx-auto max-w-[220px] sm:max-w-[280px] lg:max-w-[360px]"
                 />
               </div>
               <div>
                 <div className="inline-flex items-center gap-1 rounded-full border border-[#16a34a]/30 bg-[#16a34a]/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[1.5px] text-[#7ee6a0]">
-                  <Leaf className="h-3 w-3" /> Whole-Plant Energy
+                  <Leaf className="h-5 w-5" /> Whole-Plant Energy
                 </div>
                 <h2 className="mt-3 font-heading text-3xl font-semibold tracking-[-0.8px] text-white md:text-4xl">{GREENS.name}</h2>
                 <div className="mt-2 flex items-baseline gap-2">
@@ -139,7 +155,7 @@ export function Hero() {
                   <span className="rounded-full bg-white/5 px-3 py-1">Adaptogens</span>
                   <span className="rounded-full bg-white/5 px-3 py-1">1 scoop daily</span>
                 </div>
-                <a href="/shop" className="premium-cta mt-5 w-full">
+                <a href="/green-energy" className="premium-cta mt-5 w-full">
                   Buy Energy Blend <Leaf className="h-4 w-4" />
                 </a>
               </div>
@@ -148,7 +164,7 @@ export function Hero() {
 
         </div>
 
-        {/* Compact stack upsell strip */}
+        {/* Compact bundle upsell strip */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -156,20 +172,20 @@ export function Hero() {
           className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 rounded-2xl border border-white/10 bg-white/2.5 px-5 py-3.5 backdrop-blur-sm"
         >
           <div className="flex items-center gap-3 text-sm text-silver/70">
-            <span className="text-neural font-bold text-xs uppercase tracking-[1.5px]">Complete Daily Edge Stack</span>
+            <span className="text-neural font-bold text-xs uppercase tracking-[1.5px]">Complete Daily Edge</span>
             <span className="hidden sm:inline text-white/20">·</span>
             <span className="hidden sm:inline">Focus Mode + Super Energy Blend</span>
             <span className="text-xs text-silver/45">Clean energy + locked-in focus, zero crash</span>
           </div>
           <Link href="/shop" className="shrink-0 text-xs font-bold uppercase tracking-[1.5px] text-bolt hover:text-bolt/80 transition-colors">
-            View Complete Stack →
+            View Complete Bundle →
           </Link>
         </motion.div>
 
         <div className="mt-3 grid gap-2 text-center text-[11px] uppercase tracking-[1.5px] text-silver/45 sm:grid-cols-4">
-          <div className="rounded-full border border-white/10 px-3 py-2">Shopify secure checkout</div>
+          <div className="rounded-full border border-white/10 px-3 py-2">Halal ingredients</div>
+          <div className="rounded-full border border-white/10 px-3 py-2">Straight from nature</div>
           <div className="rounded-full border border-white/10 px-3 py-2">USA manufactured</div>
-          <div className="rounded-full border border-white/10 px-3 py-2">Transparent labels</div>
           <div className="rounded-full border border-white/10 px-3 py-2">No artificial additives</div>
         </div>
 

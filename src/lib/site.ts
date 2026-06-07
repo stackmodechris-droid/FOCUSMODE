@@ -14,7 +14,7 @@ export const SITE = {
   supplyDays: 30,
   email: "support@stackmode.net",
   description:
-    "The highest-performing focus supplement on earth. 6+ hours of clean, crash-free mental clarity, sharper decisions, and zero fatigue — for entrepreneurs, professionals, students, creators, and high-performers who refuse to let brain fog hold them back. Scientifically dosed Ginkgo + Ginseng. USA made. 30-day guarantee.",
+    "The highest-performing all-natural halal focus supplement on earth. Straight from nature. 6+ hours of clean, crash-free mental clarity, sharper decisions, and zero fatigue — for entrepreneurs, professionals, students, creators, and high-performers who refuse to let brain fog hold them back. Scientifically dosed Ginkgo + Ginseng. Zero fillers. USA made. 30-day guarantee.",
   metaPixelId: "1808935510076455",
 } as const;
 
@@ -72,9 +72,10 @@ export const GREENS = {
 } as const;
 
 export const NAV_LINKS = [
-  { label: "Focus Mode", href: "/shop#focus" },
-  { label: "Energy Blend", href: "/shop#greens" },
-  { label: "Journal", href: "/articles" },
+  { label: "Focus Mode", href: "/focus-mode" },
+  { label: "Green Energy", href: "/green-energy" },
+  { label: "Shop", href: "/shop" },
+  { label: "Articles", href: "/articles" },
   { label: "Story", href: "/our-story" },
   { label: "Science", href: "/learn-more" },
 ] as const;

@@ -1,8 +1,8 @@
 "use client";
 
+import { } from "@/lib/site";
 import { useState } from "react";
 import { LiquidGlassButton } from "./liquid-glass-button";
-import { } from "@/lib/site";
 
 /**
  * Fun, interactive ROI calculator.
@@ -69,32 +69,36 @@ export function FocusRoiCalculator() {
       </div>
 
       {/* Results - big and emotional */}
-      <div className="mt-9 rounded-xl border border-neural/20 bg-black/30 p-6">
-        <div className="text-xs uppercase tracking-widest text-silver/50">Conservative recovery (we use 65%)</div>
+      <div className="mt-9 rounded-xl border border-neural/20 bg-gradient-to-br from-[#f0f9fc] via-white to-[#f6fbfd] p-6 relative overflow-hidden">
+        {/* Soft neural glow accent for premium depth */}
+        <div aria-hidden className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-neural/10 blur-[50px]" />
+        <div aria-hidden className="pointer-events-none absolute -left-6 -bottom-6 h-24 w-24 rounded-full bg-bolt/10 blur-[40px]" />
 
-        <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-3 text-center">
-          <div>
-            <div className="text-4xl font-extrabold text-white tabular-nums">${weeklyGain}</div>
-            <div className="text-xs text-silver/60">extra per week</div>
+        <div className="relative z-10 text-xs uppercase tracking-widest text-gray-500">Conservative recovery (we use 65%)</div>
+
+        <div className="relative z-10 mt-4 grid grid-cols-1 gap-5 sm:grid-cols-3 text-center">
+          <div className="rounded-lg bg-white/60 p-3">
+            <div className="text-3xl sm:text-4xl font-extrabold text-gray-900 tabular-nums">${weeklyGain}</div>
+            <div className="mt-1 text-xs text-gray-500">extra per week</div>
           </div>
-          <div>
-            <div className="text-4xl font-extrabold text-white tabular-nums">${monthlyGain}</div>
-            <div className="text-xs text-silver/60">extra per month</div>
+          <div className="rounded-lg bg-white/60 p-3">
+            <div className="text-3xl sm:text-4xl font-extrabold text-gray-900 tabular-nums">${monthlyGain}</div>
+            <div className="mt-1 text-xs text-gray-500">extra per month</div>
           </div>
-          <div className="sm:border-l border-border sm:pl-4">
-            <div className="text-4xl font-extrabold text-neural tabular-nums">${yearlyGain}</div>
-            <div className="text-xs text-neural/80">extra per year (or lost if you do nothing)</div>
+          <div className="rounded-lg bg-gradient-to-br from-neural/5 to-white p-3 sm:border-l border-gray-200 sm:pl-5">
+            <div className="text-3xl sm:text-4xl font-extrabold text-neural tabular-nums">${yearlyGain}</div>
+            <div className="mt-1 text-xs text-neural/70">extra per year (or lost if you do nothing)</div>
           </div>
         </div>
 
-        <div className="mt-6 text-center text-sm">
-          One bottle costs <span className="font-bold text-white">${bottleCost}</span>.
-          <span className="block text-neural">Payback in &lt; 1 day for most students and professionals.</span>
+        <div className="relative z-10 mt-6 text-center text-sm text-gray-700">
+          One bottle costs <span className="font-bold text-gray-900">${bottleCost}</span>.
+          <span className="block text-neural font-medium mt-0.5">Payback in &lt; 1 day for most students and professionals.</span>
         </div>
       </div>
 
       <div className="mt-6 flex justify-center">
-        <LiquidGlassButton href="/shop">
+        <LiquidGlassButton href="/focus-mode">
           Stop losing ${weeklyGain} every week — Buy Focus Mode
         </LiquidGlassButton>
       </div>

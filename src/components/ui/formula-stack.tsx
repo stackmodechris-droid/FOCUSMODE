@@ -36,7 +36,7 @@ function AccentBar({ color }: { color: string }) {
   );
 }
 
-/** Premium synergistic formula stack — two ingredients in concert. */
+/** Premium synergistic formula — two ingredients in concert. */
 export function FormulaStack() {
   return (
     <div className="mx-auto w-full max-w-[920px]">
@@ -47,7 +47,7 @@ export function FormulaStack() {
           viewport={{ once: true }}
           className="font-heading text-3xl font-semibold tracking-[-0.6px] text-gray-900 sm:text-4xl"
         >
-          One synergistic stack
+          One synergistic formula
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 12 }}

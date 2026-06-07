@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "motion/react";
 import { Quote } from "lucide-react";
+import { motion } from "motion/react";
 
 export function Testimonials() {
   // Real founder story — no fake reviews. Focused on the ingredients, results, and shopping the product.
@@ -27,7 +27,7 @@ export function Testimonials() {
         <figcaption className="mt-8 pt-6 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <p className="font-heading text-lg font-semibold text-white tracking-[-0.2px]">Stackmodechris</p>
-            <p className="text-sm text-neural/80 tracking-[0.5px]">Founder, Focus Mode &amp; Stackmode Network</p>
+            <p className="text-sm text-neural/80 tracking-[0.5px]">Founder, Focus Mode</p>
           </div>
           <div className="text-xs text-silver/50 md:text-right leading-tight">
             Eliminated mental fatigue • 8–10+ hrs locked focus daily<br />

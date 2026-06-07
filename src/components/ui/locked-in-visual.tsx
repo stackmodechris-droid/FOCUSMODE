@@ -297,8 +297,8 @@ export function LockedInVisual() {
               )}
 
               {/* Mini animated SVG icon container — pulsing ring + icon */}
-              <div className="relative mb-1 mt-0.5 flex h-5 w-5 items-center justify-center sm:h-6 sm:w-6">
-                <svg width="20" height="20" viewBox="0 0 20 20" className="absolute sm:h-[24px] sm:w-[24px]">
+              <div className="relative mb-1 mt-0.5 flex h-7 w-7 items-center justify-center sm:h-8 sm:w-8 md:h-9 md:w-9">
+                <svg width="28" height="28" viewBox="0 0 28 28" className="absolute h-[28px] w-[28px] sm:h-[32px] sm:w-[32px] md:h-[36px] md:w-[36px]">
                   <motion.circle
                     cx="14"
                     cy="14"
@@ -323,16 +323,16 @@ export function LockedInVisual() {
                     transition={{ duration: 2.8, repeat: isActive ? Infinity : 0, ease: "linear" }}
                   />
                 </svg>
-                <Icon className={`relative h-2.5 w-2.5 sm:h-3 sm:w-3 ${isActive ? (b.accent === "bolt" ? "text-bolt" : "text-neural") : "text-silver/70 group-hover:text-silver/90"}`} />
+                <Icon className={`relative h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 ${isActive ? (b.accent === "bolt" ? "text-bolt" : "text-neural") : "text-gray-300 group-hover:text-gray-200"}`} />
               </div>
 
-              <div className="font-heading text-[8px] font-semibold leading-tight tracking-[-0.1px] text-white sm:text-[10px] md:text-[11px]">
+              <div className="font-heading text-[8px] font-semibold leading-tight tracking-[-0.1px] text-gray-100 sm:text-[10px] md:text-[11px]">
                 {b.title}
               </div>
               <div className="mt-0.5 font-mono-data text-[6px] tracking-[1.2px] text-neural/80 sm:text-[7.5px]">{b.metric}</div>
 
               {/* Inline glowing explanation on the node itself for extra clarity */}
-              <p className="mt-0.5 line-clamp-2 text-[6.5px] leading-snug text-silver/55 group-hover:text-silver/70 sm:text-[8px]">
+              <p className="mt-0.5 line-clamp-2 text-[6.5px] leading-snug text-gray-400 group-hover:text-gray-300 sm:text-[8px]">
                 {b.desc}
               </p>
             </motion.button>
@@ -342,7 +342,7 @@ export function LockedInVisual() {
 
       {/* Bottom subtle caption */}
       <div className="pointer-events-none absolute -bottom-1 left-1/2 z-10 -translate-x-1/2 text-center text-[7px] tracking-[1.5px] text-silver/35 sm:-bottom-0 sm:text-[8px]">
-        HOVER OR TAP NODES TO ACTIVATE GLOW EXPLANATIONS
+        <span className="text-gray-400">HOVER OR TAP NODES TO ACTIVATE GLOW EXPLANATIONS</span>
       </div>
     </div>
   );

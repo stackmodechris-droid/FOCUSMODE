@@ -113,16 +113,16 @@ export function PricingSection() {
             <div className="h-px flex-1 bg-white/10" /> SECURE SHOPIFY CHECKOUT <div className="h-px flex-1 bg-white/10" />
           </div>
           <a
-            href="/shop"
+            href="/focus-mode"
             className="mt-3 block text-center font-mono-data text-[10px] uppercase tracking-widest text-silver/50 hover:text-neural underline-offset-4 hover:underline"
           >
-            or open full Shopify cart →
+            or view full Focus Mode details →
           </a>
         </div>
 
         <div className="mt-5 flex items-center justify-between gap-3 rounded-xl border border-[#16a34a]/20 bg-[#16a34a]/5 px-4 py-3 text-xs">
-          <div className="text-silver/70">Want the complete stack? Add <span className="text-[#7ee6a0] font-semibold">Super Energy Blend</span> — ${GREENS.price}</div>
-          <a href="/shop" className="shrink-0 font-bold text-[#7ee6a0] hover:text-[#16a34a] transition-colors">Add Greens →</a>
+          <div className="text-silver/70">Want the complete bundle? Add <span className="text-[#7ee6a0] font-semibold">Super Energy Blend</span> — ${GREENS.price}</div>
+          <a href="/green-energy" className="shrink-0 font-bold text-[#7ee6a0] hover:text-[#16a34a] transition-colors">Add Greens →</a>
         </div>
 
         <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-silver/55">

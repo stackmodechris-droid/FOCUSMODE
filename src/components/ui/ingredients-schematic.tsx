@@ -43,7 +43,7 @@ export function IngredientsSchematic() {
         initial={{ opacity: 0, scale: 0.97 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="relative border-2 border-silver/40 bg-surface-dim p-6 font-mono-data text-on-surface"
+        className="relative border-2 border-silver/40 bg-surface-dim p-6 font-mono-data text-gray-900"
       >
         <h3 className="border-b-4 border-silver pb-2 font-heading text-2xl font-extrabold tracking-tight">
           Supplement Facts

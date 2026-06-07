@@ -26,7 +26,7 @@ export default function FaqPage() {
           </Reveal>
           <FaqAccordion withSchema />
           <div className="mt-14 flex flex-col items-center gap-3">
-            <LiquidGlassButton href="/shop">Get Focus Mode Now</LiquidGlassButton>
+            <LiquidGlassButton href="/focus-mode">Get Focus Mode Now</LiquidGlassButton>
             <OpenOfferButton />
             <p className="text-[10px] text-silver/50">Or answer 1 fun question inside the popup for a personalized “why you need this”</p>
           </div>

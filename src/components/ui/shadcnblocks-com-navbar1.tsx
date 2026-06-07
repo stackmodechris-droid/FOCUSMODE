@@ -33,9 +33,9 @@ const Navbar1 = ({
 
   const navLinks = [
     { label: "Home", href: "/" },
+    { label: "Focus Mode", href: "/focus-mode" },
+    { label: "Green Energy", href: "/green-energy" },
     { label: "Shop", href: "/shop" },
-    { label: "Focus Mode", href: "/shop#focus" },
-    { label: "Energy Blend", href: "/shop#greens" },
     { label: "Articles", href: "/articles" },
     { label: "Story", href: "/our-story" },
   ]
@@ -81,30 +81,14 @@ const Navbar1 = ({
             ))}
           </div>
 
-          {/* Right side — High-converting dual product buttons: Blue Focus + Green Super Energy Blend */}
-          <div className="flex items-center gap-2.5">
+          {/* Right side — Clean single CTA */}
+          <div className="flex items-center">
             <Link
               href="/shop"
-              className="group inline-flex items-center gap-2 rounded-full bg-bolt hover:brightness-105 active:scale-[0.985] px-5 py-2.5 text-sm font-heading font-extrabold text-black transition-all shadow-[0_1px_0_0_rgba(255,255,255,0.45)_inset,0_2px_10px_-2px_rgba(253,228,0,0.55)]"
+              className="group inline-flex items-center gap-2 rounded-full bg-bolt hover:brightness-105 active:scale-[0.985] px-6 py-2.5 text-sm font-heading font-extrabold text-black transition-all shadow-[0_1px_0_0_rgba(255,255,255,0.45)_inset,0_2px_10px_-2px_rgba(253,228,0,0.55)]"
             >
               Shop Now
-              <Zap className="h-3.5 w-3.5 fill-black/80 transition group-hover:translate-x-px" />
-            </Link>
-            <Link
-              href="/shop"
-
-              className="group inline-flex items-center gap-2 rounded-full bg-[#1e90ff] hover:bg-[#1a7dd9] active:scale-[0.985] px-5 py-2.5 text-sm font-heading font-bold text-white transition-all shadow-[0_1px_0_0_rgba(255,255,255,0.25)_inset,0_2px_8px_-2px_rgba(30,144,255,0.45)]"
-            >
-              Focus Mode
-              <Zap className="h-3.5 w-3.5 fill-white/90 transition group-hover:translate-x-px" />
-            </Link>
-            <Link
-              href="/shop"
-
-              className="group inline-flex items-center gap-2 rounded-full bg-[#16a34a] hover:bg-[#15803d] active:scale-[0.985] px-5 py-2.5 text-sm font-heading font-bold text-white transition-all shadow-[0_1px_0_0_rgba(255,255,255,0.2)_inset,0_2px_8px_-2px_rgba(22,163,74,0.45)]"
-            >
-              Super Energy Blend
-              <Leaf className="h-3.5 w-3.5 transition group-hover:translate-x-px" />
+              <Zap className="h-4 w-4 fill-black/80 transition group-hover:translate-x-px" />
             </Link>
           </div>
         </nav>
@@ -183,18 +167,16 @@ const Navbar1 = ({
               {/* Bottom premium dual CTA block — Blue Focus + Green Super Energy Blend (high converting) */}
               <div className="mt-auto p-6 space-y-2.5">
                 <Link
-                  href="/shop"
-
-                  className="flex w-full items-center justify-center gap-2.5 rounded-full bg-[#1e90ff] active:scale-[0.985] py-4 text-lg font-heading font-bold text-white shadow-[0_1px_0_0_rgba(255,255,255,0.25)_inset]"
+                  href="/focus-mode"
+                  className="flex w-full items-center justify-center gap-2.5 rounded-full bg-[#1e90ff] active:scale-[0.985] py-4 text-lg font-heading font-bold text-black shadow-[0_1px_0_0_rgba(255,255,255,0.25)_inset]"
                 >
-                  Focus Mode <Zap className="h-5 w-5 fill-white/90" />
+                  Focus Mode <Zap className="h-5 w-5 fill-black/80" />
                 </Link>
                 <Link
-                  href="/shop"
-
-                  className="flex w-full items-center justify-center gap-2.5 rounded-full bg-[#16a34a] active:scale-[0.985] py-4 text-lg font-heading font-bold text-white shadow-[0_1px_0_0_rgba(255,255,255,0.2)_inset]"
+                  href="/green-energy"
+                  className="flex w-full items-center justify-center gap-2.5 rounded-full bg-[#16a34a] active:scale-[0.985] py-4 text-lg font-heading font-bold text-black shadow-[0_1px_0_0_rgba(255,255,255,0.2)_inset]"
                 >
-                  Super Energy Blend <Leaf className="h-5 w-5" />
+                  Super Energy Blend <Leaf className="h-5 w-5 fill-black/80" />
                 </Link>
                 <Link
                   href="/shop"

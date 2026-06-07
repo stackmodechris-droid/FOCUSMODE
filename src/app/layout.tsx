@@ -30,11 +30,11 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Focus Supplement | Focus Mode — 6+ Hours Clean Focus, No Crash",
+    default: "Halal Focus Supplement | Focus Mode — All-Natural 6+ Hour Focus, No Crash",
     template: "%s | Focus Mode",
   },
   description:
-    "Focus supplement engineered for entrepreneurs, professionals, students & creators. 6+ hours of clean, crash-free mental clarity with Ginkgo Biloba (24% flavones) + Red Asian Ginseng (7% ginsenosides). Atlanta-based. 40% off. 30-day guarantee. No jitters, no caffeine.",
+    "All-natural halal focus supplement straight from nature. 6+ hours of clean, crash-free mental clarity with Ginkgo Biloba (24% flavones) + Red Asian Ginseng (7% ginsenosides). Zero fillers. No jitters, no caffeine. Atlanta-based. 40% off. 30-day guarantee.",
   applicationName: SITE.name,
   keywords: [
     "focus supplement",
@@ -49,7 +49,11 @@ export const metadata: Metadata = {
     "Focus Mode supplement",
     "mental clarity supplement",
     "focus for entrepreneurs professionals students",
-    "Stackmode focus supplement",
+    "halal focus supplement",
+    "natural brain booster",
+    "all natural energy supplement",
+    "straight from nature supplement",
+    "clean focus no crash",
     "6 hour focus no crash",
     "clinical focus formula",
     "Atlanta focus supplement",
@@ -72,9 +76,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: SITE.name,
-    title: "Focus Supplement | Focus Mode — Clean 6+ Hour Focus, No Crash",
+    title: "Halal Focus Supplement | Focus Mode — All-Natural 6+ Hour Focus, No Crash",
     description:
-      "The focus supplement for peak performers. 6+ hours clean mental clarity, no jitters, no crash. Ginkgo + Ginseng. Made for entrepreneurs, pros, students, creators. Atlanta-based Stackmode Network.",
+      "The all-natural halal focus supplement for peak performers. 6+ hours clean mental clarity, no jitters, no crash. Ginkgo + Ginseng. Straight from nature. Zero fillers. Made for entrepreneurs, pros, students, creators. Atlanta-based.",
     url: SITE.url,
     images: [
       { url: "/og/og-1200x900.png", width: 1448, height: 1086, alt: "Focus Mode — Elite focus supplement, no crash, Atlanta made" },
@@ -82,8 +86,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Focus Supplement: 6+ Hours Clean Focus No Crash | Focus Mode",
-    description: "Ginkgo Biloba + Red Asian Ginseng focus supplement. Sharper mind, zero fog, sustained performance for ambitious minds. Atlanta-based.",
+    title: "Halal Focus Supplement: 6+ Hours Clean Focus No Crash | Focus Mode",
+    description: "All-natural halal focus supplement with Ginkgo Biloba + Red Asian Ginseng. Straight from nature. Zero fillers. Sharper mind, zero fog, sustained performance for ambitious minds. Atlanta-based.",
     images: ["/og/og-1200x900.png"],
   },
   robots: { index: true, follow: true },

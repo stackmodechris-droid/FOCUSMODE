@@ -20,7 +20,7 @@ const COLS = [
       { label: "Our Story", href: "/our-story" },
       { label: "The Formula", href: "/our-story" },
       { label: "Articles", href: "/articles" },
-      { label: "Stackmode Network", href: SITE.partnerUrl },
+      { label: "Partner Network", href: SITE.partnerUrl },
     ],
   },
   {
@@ -89,15 +89,8 @@ export function Footer() {
               © {new Date().getFullYear()} {SITE.legalName}. All rights reserved. • <span className="text-neural/80">GoAdd Focus. Based in Atlanta.</span>
             </p>
 
-            {/* Organized marketing + contact at bottom of pages (shopping site focus) */}
+            {/* Contact */}
             <div className="flex flex-col md:flex-row md:items-center gap-3 text-xs">
-              <a
-                href={SITE.partnerUrl}
-                className="font-medium text-silver/70 hover:text-neural transition-colors"
-              >
-                Learn how to trade and grow your business at stackmode.net
-              </a>
-              <span className="hidden md:inline text-silver/30">·</span>
               <div className="flex items-center gap-3">
                 <a
                   href="tel:+16785584327"
@@ -127,7 +120,7 @@ export function Footer() {
               >
                 Stackmode.net
               </a>
-              {" "}— GoAdd Focus Mode to your stack.
+              {" "}— GoAdd Focus Mode to your routine.
             </p>
           </div>
         </div>

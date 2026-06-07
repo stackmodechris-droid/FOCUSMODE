@@ -1,13 +1,12 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
+import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
 import { ARTICLES, getArticle } from "@/lib/articles";
 import { SITE } from "@/lib/site";
-import { } from "@/lib/site";
-import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
-import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
+import { ArrowLeft } from "lucide-react";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
 
 
 export function generateStaticParams() {
@@ -84,7 +83,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             {article.title}
           </h1>
           <p className="mt-4 font-mono-data text-xs uppercase tracking-widest text-silver/50">
-            {article.readTime} min read · Stackmode Network
+            {article.readTime} min read · Focus Mode
           </p>
 
           <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden border border-border">
@@ -109,11 +108,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <div className="mt-12 border border-bolt/30 bg-surface-container-low p-8 text-center">
             <h3 className="font-heading text-2xl font-bold text-white">Ready to think faster?</h3>
             <p className="mt-3 text-silver/70">
-              Shop the formula that powers elite focus. Learn how to trade and grow your business at{" "}
-              <a href={SITE.partnerUrl} className="text-bolt underline">stackmode.net</a>.
+              Shop the all-natural formula that powers elite focus. Straight from nature. No fillers.
             </p>
             <div className="mt-6 flex justify-center">
-              <LiquidGlassButton href="/shop">Get Focus Mode</LiquidGlassButton>
+              <LiquidGlassButton href="/focus-mode">Get Focus Mode</LiquidGlassButton>
               <OpenOfferButton />
             </div>
           </div>

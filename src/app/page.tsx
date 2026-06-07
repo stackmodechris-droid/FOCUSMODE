@@ -164,8 +164,8 @@ export default function Home() {
                 <div>✓ Fuels body &amp; brain</div>
               </div>
               <div className="mt-6 flex gap-3">
-                <a href="/shop" className="premium-cta px-7">Buy Super Energy Blend — ${GREENS.price}</a>
-                <Link href="/shop#greens" className="premium-cta-secondary px-7">Learn more</Link>
+                <a href="/green-energy" className="premium-cta px-7">Buy Super Energy Blend — ${GREENS.price}</a>
+                <Link href="/green-energy" className="premium-cta-secondary px-7">Learn more</Link>
               </div>
               <p className="mt-2 text-[10px] text-silver/50">30 servings • USA made</p>
             </div>
@@ -221,7 +221,7 @@ export default function Home() {
           </div>
           <FaqAccordion withSchema />
           <div className="mt-8 flex justify-center">
-            <LiquidGlassButton href="/shop">Buy Focus Mode Now</LiquidGlassButton>
+            <LiquidGlassButton href="/focus-mode">Buy Focus Mode Now</LiquidGlassButton>
           </div>
         </div>
       </section>

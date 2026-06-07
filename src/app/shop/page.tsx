@@ -7,6 +7,7 @@ import { GREENS, SITE } from "@/lib/site";
 import { Check, Clock, Leaf, ShieldCheck, Star, Truck, Zap } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 function LimitedTimer() {
@@ -57,10 +58,10 @@ export default function ShopPage() {
               <Zap className="h-3 w-3" /> 40% OFF — LIMITED TIME
             </div>
             <h1 className="font-heading text-4xl font-semibold tracking-[-1.2px] md:text-6xl text-gray-900">
-              The edge stack.<br />Add to cart in seconds.
+              The daily edge.<br />Add to cart in seconds.
             </h1>
             <p className="mt-5 mx-auto max-w-2xl text-[15px] md:text-lg text-gray-500">
-              Two clean, clinical products built for sharper work, better output, and zero crash. Choose one or stack both.
+              Two clean, clinical products built for sharper work, better output, and zero crash. Choose one or bundle both.
             </p>
           </div>
 
@@ -89,6 +90,9 @@ export default function ShopPage() {
               <div className="mt-5 rounded-xl border border-gray-100 bg-gray-50 p-4">
                 <ShopifyFocusEmbed />
               </div>
+              <Link href="/focus-mode" className="mt-3 block text-center text-sm font-medium text-blue-600 hover:text-blue-700 hover:underline">
+                View full Focus Mode details →
+              </Link>
             </motion.div>
 
             {/* Super Energy Blend */}
@@ -112,6 +116,9 @@ export default function ShopPage() {
               <div className="mt-5 rounded-xl border border-gray-100 bg-gray-50 p-4">
                 <ShopifyGreensEmbed />
               </div>
+              <Link href="/green-energy" className="mt-3 block text-center text-sm font-medium text-green-600 hover:text-green-700 hover:underline">
+                View full Super Energy Blend details →
+              </Link>
             </motion.div>
           </div>
 
@@ -254,7 +261,7 @@ export default function ShopPage() {
                 ))}
               </div>
               <div className="mt-5 rounded-lg bg-blue-50/60 p-3 text-xs text-blue-700">
-                Pro tip: Stack with Super Energy Blend in the morning for all-day physical + mental stamina.
+                Pro tip: Pair with Super Energy Blend in the morning for all-day physical + mental stamina.
               </div>
             </div>
 

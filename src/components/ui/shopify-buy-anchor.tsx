@@ -8,7 +8,7 @@ interface Props {
 
 export function ShopifyBuyAnchor({ children, className }: Props) {
   return (
-    <a href="/shop" className={className}>
+    <a href="/focus-mode" className={className}>
       {children}
     </a>
   );

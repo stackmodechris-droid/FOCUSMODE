@@ -64,10 +64,10 @@ export function Navbar() {
 
         <div className="flex items-center gap-3">
           <Link
-            href="/shop"
+            href="/focus-mode"
             className="hidden items-center gap-2 bg-bolt px-6 py-2.5 font-heading text-sm font-bold text-black transition-all hover:scale-105 hover:glow-bolt md:inline-flex"
           >
-            SHOP
+            BUY NOW
           </Link>
           <button
             type="button"
@@ -101,11 +101,11 @@ export function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/shop"
+                href="/focus-mode"
                 onClick={() => setOpen(false)}
                 className="mt-4 inline-flex items-center justify-center gap-2 bg-bolt py-4 font-heading font-bold text-black"
               >
-                SHOP NOW
+                BUY NOW
               </Link>
               <p className="mt-4 text-center font-mono-data text-[10px] uppercase tracking-widest text-silver/50">
                 {SITE.tagline}
