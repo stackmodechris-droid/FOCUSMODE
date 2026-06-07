@@ -15,7 +15,7 @@ import { ProductShowcase } from "@/components/ui/spatial-product-showcase";
 import { StatsCard } from "@/components/ui/stats-card-1";
 import { StickyBuyBar } from "@/components/ui/sticky-buy-bar";
 import { Testimonials } from "@/components/ui/testimonials";
-import { GREENS } from "@/lib/site";
+import { GREENS, SITE } from "@/lib/site";
 import { Brain, Coins, TrendingUp } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -77,6 +77,9 @@ export default function Home() {
               />
             </Reveal>
           </div>
+          <div className="mt-8 flex justify-center">
+            <a href="/focus-mode" className="premium-cta px-8">Buy Focus Mode — ${SITE.price}</a>
+          </div>
         </div>
       </section>
 
@@ -100,6 +103,9 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
+          <div className="mt-8 flex justify-center">
+            <a href="/focus-mode" className="premium-cta px-8">Get The Clinical Edge</a>
+          </div>
         </div>
       </section>
 
@@ -115,6 +121,9 @@ export default function Home() {
           <div className="mt-6">
             <LockedInVisual />
           </div>
+          <div className="mt-8 flex justify-center">
+            <a href="/focus-mode" className="premium-cta px-8">Unlock All 6 Benefits</a>
+          </div>
         </div>
       </section>
 
@@ -127,6 +136,9 @@ export default function Home() {
           </div>
           <div className="premium-product-stage">
             <ProductShowcase />
+          </div>
+          <div className="mt-8 flex justify-center">
+            <a href="/focus-mode" className="premium-cta px-8">Buy Focus Mode Now</a>
           </div>
         </div>
       </section>
@@ -144,6 +156,9 @@ export default function Home() {
           <div className="mt-10">
             <FormulaStack />
           </div>
+          <div className="mt-8 flex justify-center">
+            <a href="/focus-mode" className="premium-cta px-8">Get The Exact Formula</a>
+          </div>
         </div>
       </section>
 
@@ -155,6 +170,9 @@ export default function Home() {
             <h2 className="mt-2 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">How it changed everything.</h2>
           </div>
           <Testimonials />
+          <div className="mt-8 flex justify-center">
+            <a href="/focus-mode" className="premium-cta px-8">Join 10,000+ High Performers</a>
+          </div>
         </div>
       </section>
 
@@ -218,6 +236,9 @@ export default function Home() {
             <h2 className="mt-2 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">What is fog costing you?</h2>
           </div>
           <FocusRoiCalculator />
+          <div className="mt-8 flex justify-center">
+            <a href="/focus-mode" className="premium-cta px-8">Stop The Leak — Buy Now</a>
+          </div>
         </div>
       </section>
 
@@ -232,6 +253,9 @@ export default function Home() {
             <Link href="/articles" className="text-sm font-medium text-neural/90 hover:text-neural">All articles →</Link>
           </div>
           <ArticlesGrid limit={3} variant="dark" />
+          <div className="mt-8 flex justify-center">
+            <a href="/focus-mode" className="premium-cta px-8">Shop Focus Mode</a>
+          </div>
         </div>
       </section>
 

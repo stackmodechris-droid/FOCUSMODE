@@ -112,6 +112,9 @@ export function PricingSection() {
           <div className="mb-3 flex items-center gap-2 text-[10px] tracking-[1.5px] text-silver/50">
             <div className="h-px flex-1 bg-white/10" /> SECURE SHOPIFY CHECKOUT <div className="h-px flex-1 bg-white/10" />
           </div>
+          <a href="/focus-mode" className="premium-cta mt-2 block w-full py-4 text-center text-base font-semibold">
+            Buy Focus Mode — ${SITE.price}
+          </a>
           <a
             href="/focus-mode"
             className="mt-3 block text-center font-mono-data text-[10px] uppercase tracking-widest text-silver/50 hover:text-neural underline-offset-4 hover:underline"
