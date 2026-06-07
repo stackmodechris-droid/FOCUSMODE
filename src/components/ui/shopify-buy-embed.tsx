@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const SHOPIFY_SCRIPT = "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";
 const DOMAIN = "qg5zmc-rx.myshopify.com";
@@ -27,31 +27,33 @@ function loadShopifySDK() {
 
 interface ShopifyEmbedProps {
   productId: string;
-  nodeId: string;
   options: Record<string, unknown>;
+  nodeRef: React.RefObject<HTMLDivElement | null>;
 }
 
-function useShopifyEmbed({ productId, nodeId, options }: ShopifyEmbedProps) {
-  const initialized = useRef(false);
-
+function useShopifyEmbed({ productId, options, nodeRef }: ShopifyEmbedProps) {
   useEffect(() => {
-    if (initialized.current) return;
-    initialized.current = true;
+    const node = nodeRef.current;
+    if (!node) return;
+    if (node.dataset.shopifyInit === "true") return;
 
     loadShopifySDK().then(() => {
+      const currentNode = nodeRef.current;
+      if (!currentNode) return;
+      if (currentNode.dataset.shopifyInit === "true") return;
+      currentNode.dataset.shopifyInit = "true";
+      currentNode.innerHTML = "";
+
       const ShopifyBuy = (window as unknown as Record<string, unknown>).ShopifyBuy as Record<string, unknown> | undefined;
       if (!ShopifyBuy) return;
       const buildClient = ShopifyBuy.buildClient as (cfg: Record<string, string>) => unknown;
       const client = buildClient({ domain: DOMAIN, storefrontAccessToken: TOKEN });
       const onReady = (ShopifyBuy.UI as Record<string, unknown>).onReady as (client: unknown) => Promise<Record<string, (type: string, cfg: Record<string, unknown>) => void>>;
       onReady(client).then((ui) => {
-        const node = document.getElementById(nodeId);
-        if (!node) return;
-        if (node.childNodes.length > 0) return; // prevent double-injection
-        node.innerHTML = "";
+        if (!nodeRef.current) return;
         ui.createComponent("product", {
           id: productId,
-          node,
+          node: currentNode,
           moneyFormat: "%24%7B%7Bamount%7D%7D",
           options,
         });
@@ -59,10 +61,12 @@ function useShopifyEmbed({ productId, nodeId, options }: ShopifyEmbedProps) {
     });
 
     return () => {
-      const node = document.getElementById(nodeId);
-      if (node) node.innerHTML = "";
+      if (node) {
+        node.innerHTML = "";
+        delete node.dataset.shopifyInit;
+      }
     };
-  }, [productId, nodeId, options]);
+  }, [productId, options, nodeRef]);
 }
 
 const focusOptions = {
@@ -170,15 +174,13 @@ const greensOptions = {
 };
 
 export function ShopifyFocusEmbed() {
-  const id = useId().replace(/:/g, "");
-  const nodeId = `product-component-focus-${id}`;
-  useShopifyEmbed({ productId: "9428000047362", nodeId, options: focusOptions as unknown as Record<string, unknown> });
-  return <div id={nodeId} className="fm-shopify-embed w-full" />;
+  const nodeRef = useRef<HTMLDivElement>(null);
+  useShopifyEmbed({ productId: "9428000047362", options: focusOptions as unknown as Record<string, unknown>, nodeRef });
+  return <div ref={nodeRef} className="fm-shopify-embed w-full" />;
 }
 
 export function ShopifyGreensEmbed() {
-  const id = useId().replace(/:/g, "");
-  const nodeId = `product-component-greens-${id}`;
-  useShopifyEmbed({ productId: "9451359273218", nodeId, options: greensOptions as unknown as Record<string, unknown> });
-  return <div id={nodeId} className="fm-shopify-embed w-full" />;
+  const nodeRef = useRef<HTMLDivElement>(null);
+  useShopifyEmbed({ productId: "9451359273218", options: greensOptions as unknown as Record<string, unknown>, nodeRef });
+  return <div ref={nodeRef} className="fm-shopify-embed w-full" />;
 }
