@@ -80,22 +80,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* BENEFITS — Visual first (interactive orbit) */}
-      <section id="benefits" className="border-b border-white/10 bg-[#111414]">
-        <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8">
-          <Reveal className="mx-auto max-w-2xl text-center mb-6">
-            <SectionLabel>6 Core Benefits</SectionLabel>
-            <h2 className="mt-3 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">
-              Everything you need to stay locked in
-            </h2>
-          </Reveal>
-          <div className="mt-6">
-            <LockedInVisual />
-          </div>
-        </div>
-      </section>
-
-      {/* THE DIFFERENCE — Visual comparison, minimal text */}
+      {/* THE DIFFERENCE — Why us first */}
       <section className="border-b border-white/10 bg-[#111414]">
         <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8">
           <Reveal className="mx-auto mb-8 max-w-2xl text-center">
@@ -114,6 +99,21 @@ export default function Home() {
                 <p className="mt-2 text-[13.5px] leading-relaxed text-silver/70">{c.body}</p>
               </Reveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* BENEFITS — Visual first (interactive orbit) */}
+      <section id="benefits" className="border-b border-white/10 bg-[#111414]">
+        <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8">
+          <Reveal className="mx-auto max-w-2xl text-center mb-6">
+            <SectionLabel>6 Core Benefits</SectionLabel>
+            <h2 className="mt-3 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">
+              Everything you need to stay locked in
+            </h2>
+          </Reveal>
+          <div className="mt-6">
+            <LockedInVisual />
           </div>
         </div>
       </section>
@@ -147,18 +147,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ROI CALCULATOR — Interactive high-converter */}
-      <section className="border-b border-white/10 bg-[#111414] scroll-mt-12">
+      {/* REAL RESULTS — Social proof before pricing */}
+      <section className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8">
           <div className="text-center mb-8">
-            <SectionLabel>See The Impact</SectionLabel>
-            <h2 className="mt-2 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">What is fog costing you?</h2>
+            <SectionLabel>Real Results</SectionLabel>
+            <h2 className="mt-2 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">How it changed everything.</h2>
           </div>
-          <FocusRoiCalculator />
+          <Testimonials />
         </div>
       </section>
 
-      {/* SUPER ENERGY BLEND — Visual + direct */}
+      {/* PRICING — The offer */}
+      <section id="pricing" className="border-b border-white/10 scroll-mt-12">
+        <div className="mx-auto max-w-7xl px-5 py-12 md:py-14 md:px-8">
+          <div className="text-center mb-6">
+            <SectionLabel>Limited • 40% Off Today</SectionLabel>
+            <h2 className="mt-1 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">One bottle. Out-think everyone.</h2>
+          </div>
+          <PricingSection />
+        </div>
+      </section>
+
+      {/* FAQ — Handle objections right after price */}
+      <section id="faq" className="border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8 mobile-bottom-safe">
+          <div className="text-center mb-8">
+            <SectionLabel>Questions</SectionLabel>
+            <h2 className="mt-2 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">Frequently asked</h2>
+          </div>
+          <FaqAccordion withSchema />
+          <div className="mt-8 flex justify-center">
+            <LiquidGlassButton href="/focus-mode">Buy Focus Mode Now</LiquidGlassButton>
+          </div>
+        </div>
+      </section>
+
+      {/* SUPER ENERGY BLEND — Upsell after main offer */}
       <section className="border-b border-white/10 bg-[#111414]">
         <div className="mx-auto max-w-7xl px-5 py-12 md:py-14 md:px-8">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
@@ -185,29 +210,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PRICING — High converting close */}
-      <section id="pricing" className="border-b border-white/10 scroll-mt-12">
-        <div className="mx-auto max-w-7xl px-5 py-12 md:py-14 md:px-8">
-          <div className="text-center mb-6">
-            <SectionLabel>Limited • 40% Off Today</SectionLabel>
-            <h2 className="mt-1 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">One bottle. Out-think everyone.</h2>
-          </div>
-          <PricingSection />
-        </div>
-      </section>
-
-      {/* REAL RESULTS */}
-      <section className="border-b border-white/10">
+      {/* ROI CALCULATOR — Rational justification */}
+      <section className="border-b border-white/10 bg-[#111414] scroll-mt-12">
         <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8">
           <div className="text-center mb-8">
-            <SectionLabel>Real Results</SectionLabel>
-            <h2 className="mt-2 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">How it changed everything.</h2>
+            <SectionLabel>See The Impact</SectionLabel>
+            <h2 className="mt-2 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">What is fog costing you?</h2>
           </div>
-          <Testimonials />
+          <FocusRoiCalculator />
         </div>
       </section>
 
-      {/* LEARN + FAQ — Keep light */}
+      {/* ARTICLES — Learn more */}
       <section className="border-b border-white/10 bg-[#111414]">
         <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8 mobile-bottom-safe">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
@@ -217,24 +231,11 @@ export default function Home() {
             </div>
             <Link href="/articles" className="text-sm font-medium text-neural/90 hover:text-neural">All articles →</Link>
           </div>
-          <ArticlesGrid limit={3} />
+          <ArticlesGrid limit={3} variant="dark" />
         </div>
       </section>
 
-      <section id="faq">
-        <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8 mobile-bottom-safe">
-          <div className="text-center mb-8">
-            <SectionLabel>Questions</SectionLabel>
-            <h2 className="mt-2 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">Frequently asked</h2>
-          </div>
-          <FaqAccordion withSchema />
-          <div className="mt-8 flex justify-center">
-            <LiquidGlassButton href="/focus-mode">Buy Focus Mode Now</LiquidGlassButton>
-          </div>
-        </div>
-      </section>
-
-      {/* GREEN ENERGY SHOWCASE — Bottom of home page */}
+      {/* GREEN ENERGY SHOWCASE — Final cross-sell */}
       <section className="border-b border-white/10 bg-[#111414]">
         <div className="mx-auto max-w-7xl px-5 py-14 md:py-20 md:px-8">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">

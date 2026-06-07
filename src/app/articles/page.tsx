@@ -27,7 +27,7 @@ export default function ArticlesPage() {
             </p>
           </Reveal>
 
-          <ArticlesGrid />
+          <ArticlesGrid variant="dark" />
 
           <div className="mt-16 flex flex-col items-center gap-3">
             <LiquidGlassButton href="/focus-mode">Get Focus Mode</LiquidGlassButton>

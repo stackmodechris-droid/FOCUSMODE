@@ -331,6 +331,161 @@ export const ARTICLES: Article[] = [
     ],
     keywords: ["adaptogens stress focus", "ashwagandha cortisol", "ginseng stress relief", "calm focus supplement"],
   },
+  {
+    slug: "the-morning-protocol-elite-performance-routine",
+    title: "The Morning Protocol: How Elite Performers Start Their Day",
+    metaTitle: "The Morning Protocol for Elite Performance — Focus Mode",
+    metaDescription:
+      "Discover the 60-second morning ritual used by top performers. One scoop of greens, two capsules of focus, and a system that compounds all day.",
+    category: "Peak Performance",
+    excerpt: "Your morning sets the trajectory for your entire day. Here's the exact protocol elite performers use.",
+    readTime: 6,
+    views: 3640,
+    image:
+      "https://images.unsplash.com/photo-1493770348161-369560ae357d?w=1200&q=80&auto=format&fit=crop",
+    intro:
+      "The highest performers don't leave their mornings to chance. They engineer them. The Morning Protocol is a simple, repeatable system that takes under 5 minutes and compounds into exponentially better days.",
+    sections: [
+      {
+        heading: "Step 1: Hydrate Immediately",
+        body: [
+          "After 7-8 hours without water, your brain is already dehydrated. Before coffee, before anything — drink 16 oz of water. This alone improves reaction time, short-term memory, and decision-making speed within 20 minutes.",
+        ],
+      },
+      {
+        heading: "Step 2: The 60-Second Greens Ritual",
+        body: [
+          "Mix one scoop of Super Energy Blend into cold water. In under a minute, you've delivered 20+ whole plants, superfoods, and adaptogens to your system. This isn't a replacement for food — it's biological insurance.",
+          "The Panax Ginseng and Ashwagandha begin modulating cortisol within 30 minutes. The Beet Root nitrates improve blood flow. The Spirulina and Barley Grass feed beneficial gut bacteria that produce neurotransmitters.",
+        ],
+      },
+      {
+        heading: "Step 3: Lock In With Focus Mode",
+        body: [
+          "Twenty minutes after your greens, take 2 capsules of Focus Mode. The Ginkgo Biloba increases cerebral blood flow while the Red Asian Ginseng ramps up dopamine and acetylcholine.",
+          "By the time you sit down for your first deep-work block, you're operating at a level most people won't reach all day. No jitters. No crash. Just clean, sustained cognitive performance.",
+        ],
+      },
+    ],
+    keywords: ["morning routine high performance", "greens powder morning", "focus supplement morning protocol", "elite daily routine"],
+  },
+  {
+    slug: "greens-plus-nootropics-complete-performance-stack",
+    title: "The Complete Performance Stack: Why Greens + Nootropics Work Better Together",
+    metaTitle: "Greens + Nootropics Stack — Complete Mind + Body Performance",
+    metaDescription:
+      "Combining whole-plant nutrition with clinical nootropics creates a synergy most supplements ignore. Learn why the greens + focus stack outperforms either alone.",
+    category: "Health & Nutrition",
+    excerpt: "One optimizes your biology. The other optimizes your brain. Together, they're unstoppable.",
+    readTime: 7,
+    views: 2980,
+    image:
+      "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1200&q=80&auto=format&fit=crop",
+    intro:
+      "Most people treat supplements like isolated tools — a pre-workout for the gym, a nootropic for focus, a multivitamin for health. But your body doesn't work in silos. Here's why combining whole-plant greens with clinical nootropics creates a performance stack greater than the sum of its parts.",
+    sections: [
+      {
+        heading: "The Foundation: Whole-Plant Nutrition",
+        body: [
+          "Your brain consumes 20% of your body's energy. It needs raw materials — vitamins, minerals, polyphenols, and antioxidants — to build neurotransmitters, maintain cell membranes, and clear metabolic waste.",
+          "Super Energy Blend delivers these in their natural, bioavailable forms. Not synthetic isolates. Real plants that your body recognizes and uses efficiently.",
+        ],
+      },
+      {
+        heading: "The Amplifier: Clinical Nootropics",
+        body: [
+          "Once the foundation is solid, Focus Mode amplifies specific cognitive pathways. The 24% Ginkgo flavones increase oxygen delivery. The 7% Ginsenosides support dopamine and acetylcholine production.",
+          "But here's the key: these ingredients work better when your baseline nutrition is dialed in. A depleted brain can't fully utilize even the best nootropics.",
+        ],
+      },
+      {
+        heading: "The Synergy Effect",
+        body: [
+          "Users who stack both report smoother energy curves, deeper focus sessions, and faster recovery between mentally demanding tasks. The greens handle the biological infrastructure. Focus Mode handles the cognitive output.",
+          "Start with Super Energy Blend every morning. Add Focus Mode 20 minutes later. Track your productivity for one week. The data will speak for itself.",
+        ],
+      },
+    ],
+    keywords: ["greens plus nootropics", "performance stack supplements", "whole plant nutrition focus", "supplement synergy"],
+  },
+  {
+    slug: "entrepreneurs-ditching-coffee-plant-energy",
+    title: "Why Entrepreneurs Are Ditching Coffee for Plant-Based Energy",
+    metaTitle: "Entrepreneurs Ditching Coffee for Plant-Based Energy — Here's Why",
+    metaDescription:
+      "The startup world's best-kept secret isn't another stimulant. It's whole-plant energy. Learn why founders are switching from coffee to adaptogens and superfoods.",
+    category: "Peak Performance",
+    excerpt: "Coffee is a loan. Plant-based energy is an investment in your biology.",
+    readTime: 6,
+    views: 4210,
+    image:
+      "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1200&q=80&auto=format&fit=crop",
+    intro:
+      "The image of the founder glued to a laptop, empty coffee cups stacked nearby, is outdated. The smartest operators in the game have moved on. They're trading caffeine dependency for something more sustainable — and more profitable.",
+    sections: [
+      {
+        heading: "The Coffee Tolerance Trap",
+        body: [
+          "Caffeine tolerance builds fast. What started as one cup becomes three. Then four. Meanwhile, sleep quality degrades, anxiety increases, and the afternoon crash gets deeper. For decision-makers, this volatility is expensive.",
+          "The entrepreneur's edge is consistency. Coffee delivers the opposite — peaks and valleys that make strategic thinking harder, not easier.",
+        ],
+      },
+      {
+        heading: "Plant-Based Energy: The Founder's Fuel",
+        body: [
+          "Super Energy Blend uses Panax Ginseng, Green Tea Extract (with natural L-theanine), and Ashwagandha to support your body's own energy production — not force it artificially.",
+          "The result is smooth, predictable alertness from morning to evening. No spikes. No crashes. No dependency. Just reliable output for the 12-hour days that building something great demands.",
+        ],
+      },
+      {
+        heading: "The Switch Protocol",
+        body: [
+          "Replace your second coffee of the day with Super Energy Blend. Keep your morning ritual if you love it, but give your biology a break from the caffeine treadmill.",
+          "Within a week, most entrepreneurs report better sleep, steadier mood, and sharper afternoon decision-making. The numbers in your business will reflect it.",
+        ],
+      },
+    ],
+    keywords: ["entrepreneur energy without coffee", "plant based energy vs caffeine", "founder productivity", "clean energy supplement"],
+  },
+  {
+    slug: "students-guide-exam-season-focus",
+    title: "The Student's Guide to Crushing Exam Season Without Burnout",
+    metaTitle: "Student's Exam Season Guide — Focus Without Burnout or Crash",
+    metaDescription:
+      "Exam season doesn't have to mean burnout. Learn how to sustain peak cognitive performance for weeks using the right nutrition, sleep, and nootropic strategy.",
+    category: "Peak Performance",
+    excerpt: "A's aren't about willpower. They're about sustainable systems.",
+    readTime: 7,
+    views: 3890,
+    image:
+      "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200&q=80&auto=format&fit=crop",
+    intro:
+      "The students who dominate exam season aren't necessarily the smartest. They're the ones who understand that cognitive endurance is a system, not a trait. Here's how to build that system and avoid the burnout that destroys most performance.",
+    sections: [
+      {
+        heading: "The Exam Season Mistake",
+        body: [
+          "Most students approach exams like a sprint — energy drinks, all-nighters, and cramming. But exams are a marathon. The ones who win pace themselves with nutrition, sleep, and strategic supplementation.",
+          "Your brain needs consistent fuel, not sugar spikes and caffeine crashes. The crash always hits during the most important exam.",
+        ],
+      },
+      {
+        heading: "The Study Stack",
+        body: [
+          "Take Super Energy Blend every morning for foundational nutrition and steady energy. Add Focus Mode 20 minutes before deep study blocks for 6+ hours of clean, crash-free concentration.",
+          "This combination supports memory consolidation during study and recall during exams — without the jitters that make handwriting shaky and thoughts scattered.",
+        ],
+      },
+      {
+        heading: "Protect Your Sleep at All Costs",
+        body: [
+          "One all-nighter drops your working memory capacity by 40%. It takes 4 days of quality sleep to recover. During exam season, that recovery time is time you don't have.",
+          "Set a hard stop for studying. Take Focus Mode in the morning and early afternoon only. Prioritize 7-8 hours of sleep. Your grades will thank you.",
+        ],
+      },
+    ],
+    keywords: ["student focus supplement", "exam season nootropics", "study without burnout", "memory supplement students"],
+  },
 ];
 
 export function getArticle(slug: string) {

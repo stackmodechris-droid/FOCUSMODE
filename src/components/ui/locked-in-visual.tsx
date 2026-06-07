@@ -286,8 +286,10 @@ export function LockedInVisual() {
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
               className={`group relative flex w-[80px] flex-col items-center rounded-2xl border px-1.5 py-1.5 text-center backdrop-blur-xl transition-all sm:w-[108px] md:w-[138px] ${
                 isActive
-                  ? "border-white/20 bg-[#141717]/95 shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_20px_55px_-18px_rgba(0,0,0,0.6)]"
-                  : "border-white/8 bg-surface/92 hover:border-white/15"
+                  ? "border-white/30 bg-surface-container-high/95 shadow-[0_0_0_1px_rgba(255,255,255,0.1),0_20px_55px_-18px_rgba(0,0,0,0.6)]"
+                  : b.accent === "bolt"
+                    ? "border-bolt/25 bg-surface-container/80 hover:border-bolt/40"
+                    : "border-neural/25 bg-surface-container/80 hover:border-neural/40"
               }`}
               style={{ transform: `scale(${cardScale})`, transformOrigin: "center" }}
               aria-label={b.title}
@@ -332,7 +334,7 @@ export function LockedInVisual() {
                     transition={{ duration: 2.8, repeat: isActive ? Infinity : 0, ease: "linear" }}
                   />
                 </svg>
-                <Icon className={`relative h-4 w-4 sm:h-4 sm:w-4 md:h-5 md:w-5 ${isActive ? (b.accent === "bolt" ? "text-bolt" : "text-neural") : "text-gray-300 group-hover:text-gray-200"}`} />
+                <Icon className={`relative h-4 w-4 sm:h-4 sm:w-4 md:h-5 md:w-5 ${isActive ? (b.accent === "bolt" ? "text-bolt" : "text-neural") : b.accent === "bolt" ? "text-bolt/70 group-hover:text-bolt" : "text-neural/70 group-hover:text-neural"}`} />
               </div>
 
               <div className="font-heading text-[9px] font-bold leading-tight tracking-[-0.1px] text-white sm:text-[10px] md:text-[11px]" style={{ textShadow: "0 1px 3px rgba(0,0,0,0.6)" }}>

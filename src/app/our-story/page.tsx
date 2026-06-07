@@ -8,6 +8,7 @@ import { Reveal, SectionLabel } from "@/components/ui/reveal";
 import { INGREDIENTS, SITE } from "@/lib/site";
 import { Activity, Brain, Cpu, Database, Eye, Leaf, Zap } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -106,6 +107,46 @@ export default function OurStoryPage() {
         </div>
       </section>
 
+      {/* The Full Stack — Green Energy */}
+      <section className="border-b border-white/10 bg-[#111414]">
+        <div className="mx-auto max-w-7xl px-5 py-24 md:px-8">
+          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+            <Reveal>
+              <SectionLabel>The Full Stack</SectionLabel>
+              <h2 className="mt-4 font-heading text-3xl font-extrabold leading-tight text-white md:text-4xl">
+                Mind + Body. <span className="text-neural">One System.</span>
+              </h2>
+              <p className="mt-5 text-base leading-relaxed text-silver/70">
+                Focus Mode started with the capsule — clinical nootropics for peak cognitive performance.
+                But we quickly realized something: the sharpest brain in the world can&apos;t perform on a
+                depleted biological foundation.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-silver/70">
+                That&apos;s why we built <span className="text-white font-semibold">Super Energy Blend</span>.
+                20+ whole plants, superfoods, and adaptogens in one scoop. Clean daily energy that makes
+                Focus Mode work even better — because performance isn&apos;t just mental. It&apos;s biological.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link href="/green-energy" className="premium-cta px-7">Try Super Energy Blend</Link>
+                <Link href="/green-energy" className="premium-cta-secondary px-7">Learn more</Link>
+              </div>
+            </Reveal>
+            <Reveal delay={0.15} className="flex justify-center">
+              <div className="premium-product-stage max-w-[360px]">
+                <Image
+                  src="/greens/1780864545880-generated-label-image-2.png"
+                  alt="Super Energy Blend — daily greens powder"
+                  width={420}
+                  height={420}
+                  className="h-auto w-full object-contain"
+                  priority
+                />
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
       {/* The Network */}
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-24 md:px-8">
@@ -186,7 +227,7 @@ export default function OurStoryPage() {
             </Reveal>
             <Link href="/articles" className="text-sm font-medium text-neural/90 hover:text-neural transition-colors">All articles →</Link>
           </div>
-          <ArticlesGrid limit={3} />
+          <ArticlesGrid limit={3} variant="dark" />
         </div>
       </section>
     </>

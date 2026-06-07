@@ -1,7 +1,7 @@
 "use client";
 
-import { PRODUCT_IMAGES, SITE } from "@/lib/site";
-import { X, Zap } from "lucide-react";
+import { GREENS, PRODUCT_IMAGES, SITE } from "@/lib/site";
+import { ShoppingBag, X, Zap } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import { useState } from "react";
@@ -20,8 +20,7 @@ export function LimitedOfferPopup({ defaultOpen = false }: Props) {
 
   const close = () => setOpen(false);
 
-  const goBuy = () => {
-    // fun: small celebration before redirect
+  const goShop = () => {
     const el = document.createElement("div");
     el.textContent = "⚡ LOCKED IN";
     el.className = "fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[100] text-4xl font-bold text-bolt pointer-events-none";
@@ -42,55 +41,88 @@ export function LimitedOfferPopup({ defaultOpen = false }: Props) {
             exit={{ opacity: 0, scale: 0.96, y: 20 }}
             transition={{ type: "spring", stiffness: 260, damping: 26 }}
             onClick={e => e.stopPropagation()}
-            className="relative w-full max-w-lg overflow-hidden rounded-2xl premium-card shadow-2xl"
+            className="relative w-full max-w-xl overflow-hidden rounded-2xl premium-card shadow-2xl"
           >
             {/* Light ambient background with subtle glow halos */}
             <div className="absolute inset-0 z-0 overflow-hidden rounded-2xl">
               <div className="absolute left-1/2 top-1/2 h-[85%] w-[85%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-neural/10 blur-[100px] animate-glow-pulse" />
               <div className="absolute left-1/2 top-1/2 h-[65%] w-[65%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-bolt/10 blur-[80px] animate-glow-pulse" />
-              <Image
-                src={PRODUCT_IMAGES.front}
-                alt="Focus Mode bottle"
-                fill
-                priority
-                className="object-contain opacity-[0.15] scale-125"
-                sizes="(max-width: 768px) 100vw, 512px"
-              />
             </div>
 
             {/* Content */}
             <div className="relative z-10">
               {/* Yellow header bar */}
-              <div className="relative bg-[#ffcb00] px-6 py-5 text-black rounded-t-2xl">
+              <div className="relative bg-[#ffcb00] px-5 py-4 text-black rounded-t-2xl">
                 <div className="flex items-start justify-between">
                   <div>
                     <div className="text-[10px] tracking-[2px] text-black/60">EXCLUSIVE OFFER</div>
-                    <div className="font-heading text-3xl font-extrabold tracking-[-1px] leading-none mt-1">
-                      40% OFF FOCUS — BUILD YOUR EDGE
+                    <div className="font-heading text-xl sm:text-2xl font-extrabold tracking-[-0.5px] leading-tight mt-1">
+                      BUILD YOUR STACK
                     </div>
                   </div>
                   <button onClick={close} className="rounded p-1 hover:bg-black/10" aria-label="Close">
                     <X className="h-5 w-5" />
                   </button>
                 </div>
-                <div className="mt-1 text-sm opacity-80">Only <span className="font-bold">${SITE.price}</span> (was ${SITE.originalPrice}). Offer ends soon.</div>
+                <div className="mt-1 text-xs sm:text-sm opacity-80">Focus Mode + Super Energy Blend. Limited time pricing.</div>
               </div>
 
-              <div className="p-8 text-center">
-                <div className="font-heading text-5xl sm:text-6xl font-extrabold text-gray-900">${SITE.price}</div>
-                <div className="text-gray-500 text-sm mt-1">40% off — was ${SITE.originalPrice}</div>
+              <div className="p-5 sm:p-6">
+                {/* Products grid */}
+                <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                  {/* Focus Mode */}
+                  <div className="flex flex-col items-center rounded-xl border border-yellow-200 bg-white/70 p-3 sm:p-4 text-center">
+                    <div className="relative h-20 w-20 sm:h-24 sm:w-24">
+                      <Image
+                        src={PRODUCT_IMAGES.front}
+                        alt="Focus Mode"
+                        fill
+                        className="object-contain"
+                        sizes="96px"
+                      />
+                    </div>
+                    <div className="mt-2 font-heading text-sm sm:text-base font-bold text-gray-900">Focus Mode</div>
+                    <div className="mt-0.5 text-[10px] uppercase tracking-wider text-blue-500 font-medium">Brain Booster</div>
+                    <div className="mt-1.5 flex items-baseline gap-1.5">
+                      <span className="font-heading text-xl sm:text-2xl font-extrabold text-gray-900">${SITE.price}</span>
+                      <span className="text-xs text-gray-400 line-through">${SITE.originalPrice}</span>
+                    </div>
+                    <span className="mt-1 rounded bg-green-100 px-1.5 py-0.5 text-[10px] font-bold text-green-700">SAVE ${Math.round(SITE.originalPrice - SITE.price)}</span>
+                  </div>
+
+                  {/* Super Energy Blend */}
+                  <div className="flex flex-col items-center rounded-xl border border-green-200 bg-white/70 p-3 sm:p-4 text-center">
+                    <div className="relative h-20 w-20 sm:h-24 sm:w-24">
+                      <Image
+                        src={GREENS.images.front}
+                        alt={GREENS.name}
+                        fill
+                        className="object-contain"
+                        sizes="96px"
+                      />
+                    </div>
+                    <div className="mt-2 font-heading text-sm sm:text-base font-bold text-gray-900">{GREENS.name}</div>
+                    <div className="mt-0.5 text-[10px] uppercase tracking-wider text-green-600 font-medium">Daily Energy</div>
+                    <div className="mt-1.5 flex items-baseline gap-1.5">
+                      <span className="font-heading text-xl sm:text-2xl font-extrabold text-gray-900">${GREENS.price}</span>
+                    </div>
+                    <span className="mt-1 rounded bg-green-100 px-1.5 py-0.5 text-[10px] font-bold text-green-700">PLANT POWER</span>
+                  </div>
+                </div>
 
                 <button
-                  onClick={goBuy}
-                  className="premium-cta mt-6 w-full py-3.5 text-lg flex items-center justify-center gap-2"
+                  onClick={goShop}
+                  className="premium-cta mt-5 w-full py-3 text-base sm:text-lg flex items-center justify-center gap-2"
                 >
-                  CLAIM NOW <Zap className="h-5 w-5" />
+                  SHOP NOW <ShoppingBag className="h-5 w-5" />
                 </button>
 
-                <button onClick={close} className="mt-3 text-xs text-gray-400 hover:text-gray-600 underline-offset-4 hover:underline">
-                  No thanks
-                </button>
-                <p className="mt-3 text-[10px] text-gray-400">30-day guarantee • Ships from USA</p>
+                <div className="mt-3 text-center">
+                  <button onClick={close} className="text-xs text-gray-400 hover:text-gray-600 underline-offset-4 hover:underline">
+                    No thanks
+                  </button>
+                  <p className="mt-2 text-[10px] text-gray-400">30-day guarantee • Ships from USA</p>
+                </div>
               </div>
             </div>
           </motion.div>
