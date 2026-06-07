@@ -284,12 +284,12 @@ export function LockedInVisual() {
                 y: isActive ? -2 : 0,
               }}
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
-              className={`group relative flex w-[80px] flex-col items-center rounded-2xl border px-1.5 py-1.5 text-center backdrop-blur-xl transition-all sm:w-[108px] md:w-[138px] ${
+              className={`group relative flex w-[80px] flex-col items-center rounded-2xl border px-1.5 py-1.5 text-center transition-all sm:w-[108px] md:w-[138px] ${
                 isActive
-                  ? "border-white/40 bg-white/20 shadow-[0_0_0_1px_rgba(255,255,255,0.15),0_20px_55px_-18px_rgba(0,0,0,0.5)]"
-                  : b.accent === "bolt"
-                    ? "border-bolt/30 bg-white/12 hover:border-bolt/50 hover:bg-white/18"
-                    : "border-neural/30 bg-white/12 hover:border-neural/50 hover:bg-white/18"
+                  ? b.accent === "bolt"
+                    ? "border-bolt bg-white shadow-[0_0_0_1px_rgba(253,228,0,0.25),0_12px_32px_-10px_rgba(0,0,0,0.18)]"
+                    : "border-neural bg-white shadow-[0_0_0_1px_rgba(46,185,223,0.25),0_12px_32px_-10px_rgba(0,0,0,0.18)]"
+                  : "border-black/10 bg-white shadow-sm hover:border-black/25 hover:shadow-md"
               }`}
               style={{ transform: `scale(${cardScale})`, transformOrigin: "center" }}
               aria-label={b.title}
@@ -337,13 +337,13 @@ export function LockedInVisual() {
                 <Icon className={`relative h-4 w-4 sm:h-4 sm:w-4 md:h-5 md:w-5 ${isActive ? (b.accent === "bolt" ? "text-bolt" : "text-neural") : b.accent === "bolt" ? "text-bolt/70 group-hover:text-bolt" : "text-neural/70 group-hover:text-neural"}`} />
               </div>
 
-              <div className="font-heading text-[9px] font-bold leading-tight tracking-[-0.1px] text-white sm:text-[10px] md:text-[11px]" style={{ textShadow: "0 1px 3px rgba(0,0,0,0.6)" }}>
+              <div className="font-heading text-[9px] font-bold leading-tight tracking-[-0.1px] text-white sm:text-[10px] md:text-[11px]">
                 {b.title}
               </div>
-              <div className="mt-0.5 font-mono-data text-[7px] tracking-[1.2px] text-neural sm:text-[7.5px]" style={{ textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}>{b.metric}</div>
+              <div className="mt-0.5 font-mono-data text-[7px] tracking-[1.2px] text-neural sm:text-[7.5px]">{b.metric}</div>
 
               {/* Inline glowing explanation on the node itself for extra clarity */}
-              <p className="mt-0.5 line-clamp-2 text-[7.5px] leading-snug text-gray-200 group-hover:text-white sm:text-[8px]" style={{ textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}>
+              <p className="mt-0.5 line-clamp-2 text-[7.5px] leading-snug text-silver/70 group-hover:text-black sm:text-[8px]">
                 {b.desc}
               </p>
             </motion.button>
@@ -352,8 +352,8 @@ export function LockedInVisual() {
       })}
 
       {/* Bottom subtle caption */}
-      <div className="pointer-events-none absolute -bottom-1 left-1/2 z-10 -translate-x-1/2 text-center text-[7px] tracking-[1.5px] text-silver/35 sm:-bottom-0 sm:text-[8px]">
-        <span className="text-gray-400">HOVER OR TAP NODES TO ACTIVATE GLOW EXPLANATIONS</span>
+      <div className="pointer-events-none absolute -bottom-1 left-1/2 z-10 -translate-x-1/2 text-center text-[7px] tracking-[1.5px] text-silver/60 sm:-bottom-0 sm:text-[8px]">
+        <span className="text-gray-500">HOVER OR TAP NODES TO ACTIVATE GLOW EXPLANATIONS</span>
       </div>
     </div>
   );
