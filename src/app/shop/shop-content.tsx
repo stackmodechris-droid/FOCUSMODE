@@ -66,26 +66,28 @@ export function ShopContent() {
           </div>
 
           {/* Price cards */}
-          <div className="mt-10 grid gap-5 md:grid-cols-2 max-w-4xl mx-auto">
+          <div className="mt-10 grid gap-5 md:grid-cols-2 items-stretch max-w-4xl mx-auto">
             {/* Focus Mode */}
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="relative rounded-2xl border-2 border-yellow-300 bg-white p-6 shadow-lg">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="relative h-full flex flex-col rounded-2xl border-2 border-yellow-300 bg-white p-6 shadow-lg">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded bg-yellow-400 px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider text-black shadow-sm">40% OFF TODAY</div>
-              <div className="flex items-center gap-3">
-                <div className="w-20 h-20 shrink-0 rounded-xl overflow-hidden bg-gray-50">
-                  <Image src="/products/1780438169847-generated-label-image-2.png" alt="Focus Mode" width={80} height={80} className="w-full h-full object-contain" />
+              <div className="flex-1 flex flex-col">
+                <div className="flex items-center gap-3">
+                  <div className="w-20 h-20 shrink-0 rounded-xl overflow-hidden bg-gray-50">
+                    <Image src="/products/1780438169847-generated-label-image-2.png" alt="Focus Mode" width={80} height={80} className="w-full h-full object-contain" />
+                  </div>
+                  <div>
+                    <div className="text-[10px] uppercase tracking-[2px] text-blue-500 font-semibold">All-Natural Brain Booster</div>
+                    <h2 className="font-heading text-2xl font-semibold text-gray-900">Focus Mode</h2>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-[10px] uppercase tracking-[2px] text-blue-500 font-semibold">All-Natural Brain Booster</div>
-                  <h2 className="font-heading text-2xl font-semibold text-gray-900">Focus Mode</h2>
+                <div className="mt-4 flex items-baseline gap-3">
+                  <span className="font-heading text-5xl font-extrabold text-gray-900">${focusPrice}</span>
+                  <span className="text-lg text-gray-400 line-through decoration-2">${SITE.originalPrice}</span>
+                  <span className="rounded bg-green-100 px-2 py-0.5 text-xs font-bold text-green-700">SAVE ${Math.round(SITE.originalPrice - focusPrice)}</span>
                 </div>
-              </div>
-              <div className="mt-4 flex items-baseline gap-3">
-                <span className="font-heading text-5xl font-extrabold text-gray-900">${focusPrice}</span>
-                <span className="text-lg text-gray-400 line-through decoration-2">${SITE.originalPrice}</span>
-                <span className="rounded bg-green-100 px-2 py-0.5 text-xs font-bold text-green-700">SAVE ${Math.round(SITE.originalPrice - focusPrice)}</span>
-              </div>
-              <div className="mt-3 space-y-1.5 text-sm text-gray-600">
-                {focusIncludes.map(t => <div key={t} className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-green-500" /> {t}</div>)}
+                <div className="mt-3 space-y-1.5 text-sm text-gray-600">
+                  {focusIncludes.map(t => <div key={t} className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-green-500" /> {t}</div>)}
+                </div>
               </div>
               <div className="mt-5 rounded-xl border border-gray-100 bg-gray-50 p-4 overflow-hidden">
                 <ShopifyFocusEmbed />
@@ -96,22 +98,24 @@ export function ShopContent() {
             </motion.div>
 
             {/* Super Energy Blend */}
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-              <div className="flex items-center gap-3">
-                <div className="w-20 h-20 shrink-0 rounded-xl overflow-hidden bg-gray-50">
-                  <Image src={GREENS.images.front} alt={GREENS.name} width={80} height={80} className="w-full h-full object-contain" />
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="h-full flex flex-col rounded-2xl border border-green-200 bg-white p-6 shadow-sm">
+              <div className="flex-1 flex flex-col">
+                <div className="flex items-center gap-3">
+                  <div className="w-20 h-20 shrink-0 rounded-xl overflow-hidden bg-gray-50">
+                    <Image src={GREENS.images.front} alt={GREENS.name} width={80} height={80} className="w-full h-full object-contain" />
+                  </div>
+                  <div>
+                    <div className="text-[10px] uppercase tracking-[2px] text-green-600 font-semibold">Whole-Plant Daily Energy</div>
+                    <h2 className="font-heading text-2xl font-semibold text-gray-900">{GREENS.name}</h2>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-[10px] uppercase tracking-[2px] text-green-600 font-semibold">Whole-Plant Daily Energy</div>
-                  <h2 className="font-heading text-2xl font-semibold text-gray-900">{GREENS.name}</h2>
+                <div className="mt-4 flex items-baseline gap-3">
+                  <span className="font-heading text-5xl font-extrabold text-gray-900">${greensPrice}</span>
+                  <span className="text-sm text-gray-400">{GREENS.servings} servings</span>
                 </div>
-              </div>
-              <div className="mt-4 flex items-baseline gap-3">
-                <span className="font-heading text-5xl font-extrabold text-gray-900">${greensPrice}</span>
-                <span className="text-sm text-gray-400">{GREENS.servings} servings</span>
-              </div>
-              <div className="mt-3 space-y-1.5 text-sm text-gray-600">
-                {["20+ plants, superfoods & adaptogens", "Clean sustained energy foundation", "One scoop daily"].map(t => <div key={t} className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-green-500" /> {t}</div>)}
+                <div className="mt-3 space-y-1.5 text-sm text-gray-600">
+                  {["20+ plants, superfoods & adaptogens", "Clean sustained energy foundation", "One scoop daily"].map(t => <div key={t} className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-green-500" /> {t}</div>)}
+                </div>
               </div>
               <div className="mt-5 rounded-xl border border-gray-100 bg-gray-50 p-4 overflow-hidden">
                 <ShopifyGreensEmbed />

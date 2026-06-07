@@ -98,7 +98,7 @@ export function Hero() {
                   size={430}
                   glow="dual"
                   priority
-                  className="mx-auto max-w-[240px] sm:max-w-[300px] lg:max-w-[380px]"
+                  className="mx-auto max-w-[280px] sm:max-w-[300px] lg:max-w-[380px]"
                 />
               </div>
               <div>
@@ -138,7 +138,7 @@ export function Hero() {
                   size={410}
                   glow="neural"
                   priority
-                  className="mx-auto max-w-[220px] sm:max-w-[280px] lg:max-w-[360px]"
+                  className="mx-auto max-w-[260px] sm:max-w-[280px] lg:max-w-[360px]"
                 />
               </div>
               <div>

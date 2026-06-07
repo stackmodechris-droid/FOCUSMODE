@@ -21,7 +21,7 @@ https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js
 https://connect.facebook.net/en_US/fbevents.js
 https://www.facebook.com/tr?id=1808935510076455&ev=PageView&noscript=1
 https://schema.org
-mailto:support@stackmode.net
+mailto:focusmodesupplementsshop@proton.me
 tel:+16785584327
 
 ALL INTERNAL PAGES (FULL URLS)

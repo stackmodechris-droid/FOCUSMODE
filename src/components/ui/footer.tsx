@@ -99,10 +99,10 @@ export function Footer() {
                   Call / Text 678-558-4327
                 </a>
                 <a
-                  href="mailto:support@stackmode.net"
+                  href="mailto:focusmodesupplementsshop@proton.me"
                   className="premium-cta-secondary inline-flex items-center gap-1.5 px-3 py-1 text-xs"
                 >
-                  support@stackmode.net
+                  focusmodesupplementsshop@proton.me
                 </a>
               </div>
             </div>

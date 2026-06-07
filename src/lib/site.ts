@@ -12,7 +12,7 @@ export const SITE = {
   currency: "USD",
   capsules: 60,
   supplyDays: 30,
-  email: "support@stackmode.net",
+  email: "focusmodesupplementsshop@proton.me",
   description:
     "The highest-performing all-natural focus supplement on earth. Straight from nature. 6+ hours of clean, crash-free mental clarity, sharper decisions, and zero fatigue — for entrepreneurs, professionals, students, creators, and high-performers who refuse to let brain fog hold them back. Scientifically dosed Ginkgo + Ginseng. Zero fillers. USA made. 30-day guarantee. Halal-friendly ingredients.",
   metaPixelId: "1808935510076455",
@@ -64,10 +64,10 @@ export const GREENS = {
   fdaDisclaimer:
     "These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Consult a healthcare professional before use.",
   images: {
-    front: "/greens/1780842565396-generated-label-image-2_800x800.png",
-    angle1: "/greens/1780842565402-generated-label-image-3_800x800.png",
-    angle2: "/greens/1780842565406-generated-label-image-0_800x800.png",
-    angle3: "/greens/1780842565435-generated-label-image-1_800x800.png",
+    front: "/greens/1780864545880-generated-label-image-2.png",
+    angle1: "/greens/1780864545881-generated-label-image-1.png",
+    angle2: "/greens/1780864545885-generated-label-image-3.png",
+    angle3: "/greens/1780864545890-generated-label-image-0.png",
   },
 } as const;
 
