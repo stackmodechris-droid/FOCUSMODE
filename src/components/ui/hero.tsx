@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatedCapsuleFloat } from "@/components/ui/animated-capsule-float";
+import { AnimatedBrainLeaves } from "@/components/ui/animated-brain-leaves";
 import { AnimatedLightning } from "@/components/ui/animated-lightning";
 import { AnimatedPlant } from "@/components/ui/animated-plant";
 import { ProductGlow } from "@/components/ui/product-glow";
@@ -20,16 +20,16 @@ export function Hero() {
         <div className="absolute bottom-0 inset-x-0 h-32 bg-linear-to-t from-white/60 to-transparent" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-5 pt-10 pb-4 md:pt-16 md:pb-2">
+      <div className="relative mx-auto max-w-7xl px-5 pt-14 pb-4 md:pt-20 md:pb-2">
         {/* MOBILE-FIRST: Animated visual composition at the very top */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.21, 0.92, 0.25, 1] }}
-          className="flex items-end justify-center gap-2 sm:gap-4 mb-6 md:mb-8"
+          className="flex items-end justify-center gap-2 sm:gap-4 mb-8 md:mb-12"
         >
           <AnimatedLightning className="scale-90 sm:scale-100" />
-          <AnimatedCapsuleFloat className="scale-90 sm:scale-100 -mb-4" />
+          <AnimatedBrainLeaves className="scale-[0.55] sm:scale-[0.65]" />
           <AnimatedPlant className="scale-90 sm:scale-100" />
         </motion.div>
 
