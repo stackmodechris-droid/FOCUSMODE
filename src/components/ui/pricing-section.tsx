@@ -51,7 +51,7 @@ export function PricingSection() {
   return (
     <div className="grid items-center justify-items-center gap-10 lg:grid-cols-2 lg:gap-14">
       <div className="relative flex items-center justify-center">
-        <div className="premium-product-stage max-w-[340px]">
+        <div className="premium-product-stage max-w-[340px] overflow-hidden">
           <ProductGlow src="/products/1780438169847-generated-label-image-2.png" alt="Focus Mode supplement bottle" size={460} glow="dual" priority className="max-w-[260px] sm:max-w-[320px] md:max-w-none" />
           {/* Fun floating urgency badge — premium, "on" the seamless stage */}
           <div className="premium-badge absolute -top-3 right-3 shadow-xl">
@@ -125,7 +125,7 @@ export function PricingSection() {
         </div>
 
         <div className="mt-5 flex items-center justify-between gap-3 rounded-xl border border-[#16a34a]/20 bg-[#16a34a]/5 px-4 py-3 text-xs">
-          <div className="text-silver/70">Want the complete bundle? Add <span className="text-[#7ee6a0] font-semibold">Super Energy Blend</span> — ${GREENS.price}</div>
+          <div className="text-silver/70 min-w-0">Want the complete bundle? Add <span className="text-[#7ee6a0] font-semibold">Super Energy Blend</span> — ${GREENS.price}</div>
           <Link href="/green-energy" className="shrink-0 font-bold text-[#7ee6a0] hover:text-[#16a34a] transition-colors">Add Greens →</Link>
         </div>
 

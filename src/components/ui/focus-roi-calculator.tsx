@@ -29,8 +29,8 @@ export function FocusRoiCalculator() {
       <div className="mt-8 space-y-8">
         {/* Hours lost slider */}
         <div>
-          <div className="flex justify-between text-sm mb-2">
-            <div>Hours lost to fog or distractions each week (school, work, or life)</div>
+          <div className="flex flex-wrap justify-between gap-x-3 gap-y-1 text-sm mb-2">
+            <div className="min-w-[60%]">Hours lost to fog or distractions each week</div>
             <div className="font-mono-data text-neural font-bold tabular-nums">{hoursLost} hrs</div>
           </div>
           <input
@@ -49,8 +49,8 @@ export function FocusRoiCalculator() {
 
         {/* Hourly value */}
         <div>
-          <div className="flex justify-between text-sm mb-2">
-            <div>What an extra focused hour is worth to your business, career, or goals</div>
+          <div className="flex flex-wrap justify-between gap-x-3 gap-y-1 text-sm mb-2">
+            <div className="min-w-[60%]">What an extra focused hour is worth to you</div>
             <div className="font-mono-data text-neural font-bold tabular-nums">${hourlyValue}</div>
           </div>
           <input

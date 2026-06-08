@@ -80,7 +80,7 @@ export function ShopContent() {
                     <h2 className="font-heading text-2xl font-semibold text-gray-900">Focus Mode</h2>
                   </div>
                 </div>
-                <div className="mt-4 flex items-baseline gap-3">
+                <div className="mt-4 flex flex-wrap items-baseline gap-3">
                   <span className="font-heading text-5xl font-extrabold text-gray-900">${focusPrice}</span>
                   <span className="text-lg text-gray-400 line-through decoration-2">${SITE.originalPrice}</span>
                   <span className="rounded bg-green-100 px-2 py-0.5 text-xs font-bold text-green-700">SAVE ${Math.round(SITE.originalPrice - focusPrice)}</span>
@@ -109,7 +109,7 @@ export function ShopContent() {
                     <h2 className="font-heading text-2xl font-semibold text-gray-900">{GREENS.name}</h2>
                   </div>
                 </div>
-                <div className="mt-4 flex items-baseline gap-3">
+                <div className="mt-4 flex flex-wrap items-baseline gap-3">
                   <span className="font-heading text-5xl font-extrabold text-gray-900">${greensPrice}</span>
                   <span className="text-sm text-gray-400">{GREENS.servings} servings</span>
                 </div>
@@ -146,7 +146,7 @@ export function ShopContent() {
               <h2 className="font-heading text-4xl md:text-5xl font-semibold tracking-[-1px] text-gray-900">Focus Mode</h2>
               <p className="mt-3 text-lg text-gray-600">6+ hours of clean, crash-free mental clarity. Sharper decisions, faster recall, zero fog.</p>
 
-              <div className="mt-6 flex items-baseline gap-3">
+              <div className="mt-6 flex flex-wrap items-baseline gap-3">
                 <span className="font-heading text-5xl font-extrabold tabular-nums tracking-[-1.5px] text-gray-900">${focusPrice}</span>
                 <span className="text-lg text-gray-400 line-through decoration-2">${SITE.originalPrice}</span>
               </div>
@@ -184,7 +184,7 @@ export function ShopContent() {
               <h2 className="font-heading text-4xl md:text-5xl font-semibold tracking-[-1px] text-gray-900">{GREENS.name}</h2>
               <p className="mt-3 text-lg text-gray-600">{GREENS.description}</p>
 
-              <div className="mt-6 flex items-baseline gap-3">
+              <div className="mt-6 flex flex-wrap items-baseline gap-3">
                 <span className="font-heading text-5xl font-extrabold tabular-nums tracking-[-1.5px] text-gray-900">${greensPrice}</span>
                 <span className="text-gray-500">USD • {GREENS.servings} servings</span>
               </div>

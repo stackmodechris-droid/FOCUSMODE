@@ -109,7 +109,7 @@ export function ProductShowcase() {
   return (
     <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
       {/* Visual */}
-      <div className="relative flex items-center justify-center">
+      <div className="relative flex items-center justify-center overflow-hidden">
         {/* Clean premium stage — subtle static depth, no spinning tech rings */}
         <div className="absolute aspect-square w-[82%] rounded-full border border-white/10" />
         <div className="absolute aspect-square w-[68%] rounded-full bg-neural/10 blur-3xl" />

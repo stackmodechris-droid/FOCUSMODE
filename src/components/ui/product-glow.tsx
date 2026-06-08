@@ -52,7 +52,7 @@ export function ProductGlow({
       ref={ref}
       onMouseMove={onMove}
       onMouseLeave={onLeave}
-      className={cn("relative flex items-center justify-center", className)}
+      className={cn("relative flex items-center justify-center overflow-hidden", className)}
       style={{ perspective: 1000 }}
     >
       {/* Glow halos */}

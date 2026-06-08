@@ -228,9 +228,9 @@ export default function Home() {
                 <div>✓ Spirulina, Beet, Acai, Ginseng + more</div>
                 <div>✓ Fuels body &amp; brain</div>
               </div>
-              <div className="mt-6 flex gap-3">
-                <Link href="/green-energy" className="premium-cta px-7">Buy Super Energy Blend — ${GREENS.price}</Link>
-                <Link href="/green-energy" className="premium-cta-secondary px-7">Learn more</Link>
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                <Link href="/green-energy" className="premium-cta px-7 text-center justify-center">Buy Super Energy Blend — ${GREENS.price}</Link>
+                <Link href="/green-energy" className="premium-cta-secondary px-7 text-center justify-center">Learn more</Link>
               </div>
               <p className="mt-2 text-[10px] text-silver/50">30 servings • USA made</p>
             </div>

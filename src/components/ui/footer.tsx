@@ -104,22 +104,20 @@ export function Footer() {
             </p>
 
             {/* Contact */}
-            <div className="flex flex-col md:flex-row md:items-center gap-3 text-xs">
-              <div className="flex items-center gap-3">
-                <a
-                  href="tel:+16785584327"
-                  className="premium-cta-secondary inline-flex items-center gap-1.5 px-3 py-1 text-xs"
-                >
-                  Call / Text 678-558-4327
-                </a>
-                <a
-                  href="mailto:focusmodesupplementsshop@proton.me"
-                  className="premium-cta-secondary inline-flex items-center gap-1.5 px-3 py-1 text-xs"
-                >
-                  focusmodesupplementsshop@proton.me
-                </a>
-              </div>
-            </div>
+            <div className="flex flex-wrap items-center gap-3 text-xs w-full md:w-auto">
+            <a
+              href="tel:+16785584327"
+              className="premium-cta-secondary inline-flex items-center gap-1.5 px-3 py-1 text-xs shrink-0"
+            >
+              Call / Text 678-558-4327
+            </a>
+            <a
+              href="mailto:focusmodesupplementsshop@proton.me"
+              className="premium-cta-secondary inline-flex items-center gap-1.5 px-3 py-1 text-xs max-w-full truncate"
+            >
+              <span className="truncate">focusmodesupplementsshop@proton.me</span>
+            </a>
+          </div>
           </div>
 
           {/* Ultra-subtle transparent footer strip at the very bottom for backlinks/SEO on every page */}

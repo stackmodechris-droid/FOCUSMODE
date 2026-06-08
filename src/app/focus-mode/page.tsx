@@ -68,7 +68,7 @@ export default function FocusModePage() {
               <h1 className="font-heading text-4xl md:text-5xl font-semibold tracking-[-1px] text-gray-900">Focus Mode</h1>
               <p className="mt-3 text-lg text-gray-600">6+ hours of clean, crash-free mental clarity. Sharper decisions, faster recall, zero fog.</p>
 
-              <div className="mt-6 flex items-baseline gap-3">
+              <div className="mt-6 flex flex-wrap items-baseline gap-3">
                 <span className="font-heading text-5xl font-extrabold tabular-nums tracking-[-1.5px] text-gray-900">${SITE.price}</span>
                 <span className="text-lg text-gray-400 line-through decoration-2">${orig}</span>
                 <span className="rounded bg-yellow-300 px-3 py-0.5 text-xs font-bold tracking-wider text-black">SAVE {discount}%</span>
@@ -185,7 +185,7 @@ export default function FocusModePage() {
       <section className="border-b border-gray-100 bg-gray-50/50">
         <div className="mx-auto max-w-7xl px-5 py-16 md:py-20 md:px-8 text-center">
           <div className="relative flex justify-center mb-8">
-            <div className="premium-product-stage max-w-[280px]">
+            <div className="premium-product-stage max-w-[280px] overflow-hidden">
               <Image src="/products/1780438169847-generated-label-image-2.png" alt="Focus Mode" width={280} height={280} className="h-auto w-full object-contain" priority />
             </div>
           </div>

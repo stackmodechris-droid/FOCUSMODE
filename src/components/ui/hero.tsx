@@ -26,11 +26,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.21, 0.92, 0.25, 1] }}
-          className="flex items-end justify-center gap-3 sm:gap-6 mb-10 md:mb-14"
+          className="flex items-end justify-center gap-2 sm:gap-6 mb-10 md:mb-14 overflow-hidden"
         >
-          <AnimatedLightning className="scale-[0.50] sm:scale-[0.60]" />
-          <AnimatedBrainLeaves className="scale-[0.75] sm:scale-[0.85]" />
-          <AnimatedPlant className="scale-[0.80] sm:scale-[0.90]" />
+          <AnimatedLightning className="scale-[0.38] sm:scale-[0.60]" />
+          <AnimatedBrainLeaves className="scale-[0.58] sm:scale-[0.85]" />
+          <AnimatedPlant className="scale-[0.62] sm:scale-[0.90]" />
         </motion.div>
 
         {/* Headline — punchy, short */}
@@ -160,11 +160,11 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.32 }}
           className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 rounded-2xl border border-white/10 bg-white/2.5 px-5 py-3.5 backdrop-blur-sm"
         >
-          <div className="flex items-center gap-3 text-sm text-silver/70">
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm text-silver/70">
             <span className="text-neural font-bold text-xs uppercase tracking-[1.5px]">Complete Daily Edge</span>
             <span className="hidden sm:inline text-white/20">·</span>
             <span className="hidden sm:inline">Focus Mode + Super Energy Blend</span>
-            <span className="text-xs text-silver/45">Clean energy + locked-in focus, zero crash</span>
+            <span className="text-xs text-silver/45 text-center w-full sm:w-auto">Clean energy + locked-in focus, zero crash</span>
           </div>
           <Link href="/shop" className="shrink-0 text-xs font-bold uppercase tracking-[1.5px] text-bolt hover:text-bolt/80 transition-colors">
             View Complete Bundle →

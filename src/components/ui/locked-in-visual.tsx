@@ -60,7 +60,7 @@ export function LockedInVisual() {
   }, []);
 
   return (
-    <div className="relative mx-auto w-full max-w-[860px] select-none min-h-[380px] pt-2 pb-2 sm:min-h-[440px] sm:pt-4 sm:pb-4 md:min-h-[600px] md:pt-10 md:pb-8">
+    <div className="relative mx-auto w-full max-w-[860px] select-none min-h-[380px] pt-2 pb-2 sm:min-h-[440px] sm:pt-4 sm:pb-4 md:min-h-[600px] md:pt-10 md:pb-8 overflow-hidden">
       {/* Ambient background — clean premium orbs + subtle static rings (no spinning coded tech) */}
       <svg
         className="pointer-events-none absolute inset-0 -m-6 sm:-m-8 h-[100%] w-[100%] sm:h-[110%] sm:w-[110%] opacity-35"
