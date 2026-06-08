@@ -171,7 +171,7 @@ export default function Home() {
           </div>
           <Testimonials />
           <div className="mt-8 flex justify-center">
-            <a href="/focus-mode" className="premium-cta px-8">Join 10,000+ High Performers</a>
+            <a href="/focus-mode" className="premium-cta px-8">Join Many High Performers</a>
           </div>
         </div>
       </section>
