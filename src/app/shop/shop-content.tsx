@@ -55,7 +55,7 @@ export function ShopContent() {
         <div className="mx-auto max-w-7xl px-5 py-12 md:py-20 md:px-8">
           <div className="mx-auto max-w-4xl text-center">
             <div className="inline-flex items-center gap-2 rounded-full bg-yellow-50 border border-yellow-200 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[1.5px] text-yellow-700 mb-5">
-              <Zap className="h-3 w-3" /> 60% OFF — LIMITED TIME
+              <Zap className="h-3 w-3" /> 40% OFF — LIMITED TIME
             </div>
             <h1 className="font-heading text-4xl font-semibold tracking-[-1.2px] md:text-6xl text-gray-900">
               The daily edge.<br />Add to cart in seconds.
@@ -69,7 +69,7 @@ export function ShopContent() {
           <div className="mt-10 grid gap-5 md:grid-cols-2 items-stretch max-w-4xl mx-auto">
             {/* Focus Mode */}
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="relative h-full flex flex-col rounded-2xl border-2 border-yellow-300 bg-white p-6 shadow-lg">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded bg-yellow-400 px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-black shadow-sm">60% OFF TODAY</div>
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded bg-yellow-400 px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-black shadow-sm">40% OFF TODAY</div>
               <div className="flex-1 flex flex-col">
                 <div className="flex items-center gap-3">
                   <div className="w-20 h-20 shrink-0 rounded-xl overflow-hidden bg-gray-50">
@@ -151,7 +151,7 @@ export function ShopContent() {
                 <span className="text-lg text-gray-400 line-through decoration-2">${SITE.originalPrice}</span>
               </div>
               <div className="flex items-center gap-2 mt-2">
-                <span className="rounded bg-yellow-300 px-3 py-0.5 text-xs font-bold tracking-wider text-black">60% OFF</span>
+                <span className="rounded bg-yellow-300 px-3 py-0.5 text-xs font-bold tracking-wider text-black">40% OFF</span>
                 <LimitedTimer />
               </div>
 

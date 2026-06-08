@@ -32,7 +32,7 @@ export function StickyBuyBar() {
             <Image src="/products/1780438169847-generated-label-image-2.png" alt="Focus Mode" width={32} height={32} className="h-8 w-8 object-contain" />
             <div className="flex-1 min-w-0">
               <p className="font-heading text-[11px] font-bold leading-tight text-gray-900">Focus Mode • Daily Greens</p>
-              <p className="text-[9px] tracking-wide text-neural tabular-nums">${SITE.price} (60% off) + Greens ${GREENS.price}</p>
+              <p className="text-[9px] tracking-wide text-neural tabular-nums">${SITE.price} (40% off) + Greens ${GREENS.price}</p>
             </div>
             <Link
               href="/focus-mode"

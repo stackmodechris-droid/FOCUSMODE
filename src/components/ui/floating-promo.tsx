@@ -6,19 +6,19 @@ import Link from "next/link";
 
 /**
  * Fixed floating promo CTA for the homepage.
- * - Bottom-right: yellow cart circle with "60% off • Shop today" badge
+ * - Bottom-right: yellow cart circle with "40% off • Shop today" badge
  * - Mobile: spaced well above sticky buy bar with periodic attention vibration
  */
 export function FloatingPromo() {
   return (
     <Link
       href="/shop"
-      aria-label="Shop now — 60% off"
+      aria-label="Shop now — 40% off"
       className="fixed bottom-[110px] right-4 z-[55] flex items-center gap-0 md:bottom-6 md:right-6 group"
     >
       {/* Badge label — hidden on mobile */}
       <span className="hidden md:inline-flex items-center rounded-full bg-black px-3 py-1.5 text-[11px] font-heading font-bold tracking-wide text-white shadow-lg transition-transform duration-200 group-hover:translate-x-0.5">
-        60% off • Shop today
+        40% off • Shop today
       </span>
 
       {/* Yellow circle with cart icon — subtle periodic jingle vibration on mobile */}

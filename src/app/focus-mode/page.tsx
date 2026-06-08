@@ -62,7 +62,7 @@ export default function FocusModePage() {
             </div>
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-yellow-50 border border-yellow-200 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[1.5px] text-yellow-700 mb-5">
-                <Zap className="h-3 w-3" /> 60% OFF — LIMITED TIME
+                <Zap className="h-3 w-3" /> 40% OFF — LIMITED TIME
               </div>
               <div className="uppercase tracking-[2px] text-[10px] text-blue-500 mb-2 font-semibold">Elite Nootropic</div>
               <h1 className="font-heading text-4xl md:text-5xl font-semibold tracking-[-1px] text-gray-900">Focus Mode</h1>
