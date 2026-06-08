@@ -1,5 +1,5 @@
 import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
-import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
+import { LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
 import { ARTICLES, getArticle } from "@/lib/articles";
 import { SITE } from "@/lib/site";
 import { ArrowLeft } from "lucide-react";
@@ -112,25 +112,68 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             ))}
           </div>
 
-          {/* Inline CTA */}
-          <div className="mt-12 border border-bolt/30 bg-surface-container-low p-8 text-center">
-            <h3 className="font-heading text-2xl font-bold text-white">Ready to think faster?</h3>
-            <p className="mt-3 text-silver/70">
-              Shop the all-natural formula that powers elite focus. Straight from nature. No fillers.
-            </p>
-            <div className="mt-6 flex justify-center">
-              <LiquidGlassButton href="/focus-mode">Get Focus Mode</LiquidGlassButton>
+          {/* Dual-product buy CTA */}
+          <div className="mt-12 rounded-2xl border border-white/10 bg-[#0f1212] p-6 sm:p-8">
+            <div className="text-center mb-6">
+              <span className="inline-block rounded-full border border-bolt/30 bg-bolt/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[1.5px] text-bolt">
+                Get the Edge
+              </span>
+              <h3 className="mt-3 font-heading text-2xl font-bold text-white">
+                Ready to think faster and perform better?
+              </h3>
+              <p className="mt-2 text-sm text-silver/60">
+                Two products. One complete stack. Clinical focus + whole-plant energy.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {/* Focus Mode card */}
+              <div className="flex flex-col rounded-xl border border-[#1e90ff]/25 bg-[#1e90ff]/8 p-5">
+                <div className="text-[10px] font-bold uppercase tracking-[1.5px] text-[#7ec4ff] mb-1">Brain + Focus</div>
+                <div className="font-heading text-lg font-bold text-white">Focus Mode</div>
+                <p className="mt-1.5 text-[12.5px] text-silver/60 leading-relaxed">
+                  Ginkgo + Ginseng. 6+ hours crash-free focus. Zero caffeine. Zero fillers.
+                </p>
+                <div className="mt-3 flex items-baseline gap-2">
+                  <span className="font-heading text-2xl font-bold text-white">$39.99</span>
+                  <span className="text-xs text-silver/40 line-through">$100</span>
+                  <span className="rounded bg-bolt px-1.5 py-0.5 text-[10px] font-bold text-black">60% OFF</span>
+                </div>
+                <Link
+                  href="/focus-mode"
+                  className="mt-4 inline-flex items-center justify-center rounded-xl bg-[#1e90ff] px-5 py-2.5 text-[13px] font-bold uppercase tracking-[1px] text-white hover:bg-[#1e90ff]/90 transition-colors"
+                >
+                  Get Focus Mode →
+                </Link>
+              </div>
+
+              {/* Super Energy Blend card */}
+              <div className="flex flex-col rounded-xl border border-[#16a34a]/25 bg-[#16a34a]/8 p-5">
+                <div className="text-[10px] font-bold uppercase tracking-[1.5px] text-[#7ee6a0] mb-1">Whole-Plant Energy</div>
+                <div className="font-heading text-lg font-bold text-white">Super Energy Blend</div>
+                <p className="mt-1.5 text-[12.5px] text-silver/60 leading-relaxed">
+                  20+ plants, adaptogens &amp; superfoods. Clean all-day energy. 30 servings.
+                </p>
+                <div className="mt-3 flex items-baseline gap-2">
+                  <span className="font-heading text-2xl font-bold text-white">$45</span>
+                  <span className="text-xs text-silver/40">30 servings</span>
+                </div>
+                <Link
+                  href="/green-energy"
+                  className="mt-4 inline-flex items-center justify-center rounded-xl bg-[#16a34a] px-5 py-2.5 text-[13px] font-bold uppercase tracking-[1px] text-white hover:bg-[#16a34a]/90 transition-colors"
+                >
+                  Get Super Energy Blend →
+                </Link>
+              </div>
+            </div>
+
+            <div className="mt-5 flex flex-col items-center gap-2">
               <OpenOfferButton />
+              <p className="text-[10px] text-silver/40">Or open the popup — answer 1 question, get your personal reason to buy now.</p>
             </div>
           </div>
         </div>
       </article>
-
-      <section className="border-t border-border bg-surface-dim">
-        <div className="mx-auto max-w-7xl px-5 py-20 md:px-8">
-
-        </div>
-      </section>
 
       {/* Related */}
       <section className="border-t border-border">

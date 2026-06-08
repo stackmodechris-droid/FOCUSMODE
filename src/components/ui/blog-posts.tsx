@@ -1,6 +1,6 @@
 import { ARTICLES } from "@/lib/articles";
 import { cn } from "@/lib/utils";
-import { MoveRight, Star } from "lucide-react";
+import { Clock, MoveRight, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,75 +17,111 @@ export function ArticlesGrid({
   const isDark = variant === "dark";
 
   return (
-    <div
-      className={cn(
-        "grid h-auto grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-[1fr_0.6fr] lg:auto-rows-[minmax(220px,1fr)]",
-        className
-      )}
-    >
+    <div className={cn("grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3", className)}>
       {posts.map((post, index) => {
-        const isPrimary = index === 0;
+        const isGreens =
+          post.category === "Health & Nutrition" ||
+          post.slug.includes("greens") ||
+          post.slug.includes("gut") ||
+          post.slug.includes("sleep") ||
+          post.slug.includes("natural-energy") ||
+          post.slug.includes("adaptogens") ||
+          post.slug.includes("pre-workout") ||
+          post.slug.includes("plant-energy");
+        const accentColor = isGreens ? "#16a34a" : "#1e90ff";
+        const accentText = isGreens ? "text-[#7ee6a0]" : "text-[#7ec4ff]";
+
         return (
-          <Link
+          <div
             key={post.slug}
-            href={`/articles/${post.slug}`}
             className={cn(
-              "group relative row-span-1 flex size-full flex-col overflow-hidden rounded-2xl border transition-all duration-300",
+              "group flex flex-col overflow-hidden rounded-2xl border transition-all duration-300",
               isDark
-                ? "border-white/10 bg-surface-container-low hover:border-white/20 hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.4)]"
-                : "border-gray-200 bg-white hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.12)]",
-              isPrimary && "md:col-span-2 md:row-span-2 lg:col-span-1"
+                ? "border-white/10 bg-[#111414] hover:border-white/25 hover:shadow-[0_16px_48px_-12px_rgba(0,0,0,0.5)]"
+                : "border-gray-200 bg-white hover:shadow-[0_16px_48px_-12px_rgba(0,0,0,0.12)]",
+              index === 0 && "sm:col-span-2 lg:col-span-1"
             )}
           >
+            {/* Top accent bar */}
+            <div className="h-[3px] w-full shrink-0" style={{ background: accentColor }} />
+
             {/* Image */}
-            <div className="relative h-[180px] w-full shrink-0 overflow-hidden bg-gray-100 sm:h-[200px]">
-              <Image
-                src={post.image}
-                alt={post.title}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                priority={index === 0}
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
-            </div>
-            {/* Content */}
-            <article className="flex flex-1 flex-col justify-between p-5 sm:p-6">
-              <div className="flex flex-col gap-3">
+            <Link href={`/articles/${post.slug}`} className="block">
+              <div className="relative h-[175px] w-full overflow-hidden bg-gray-900">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  priority={index < 3}
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
+                {/* Category badge over image */}
                 <span
-                  className={cn(
-                    "w-fit rounded px-2.5 py-px text-[10px] font-semibold tracking-[1px]",
-                    isDark ? "bg-bolt/90 text-black" : "bg-bolt/90 text-black"
-                  )}
+                  className="absolute bottom-3 left-3 rounded px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[1px] text-white"
+                  style={{ background: accentColor }}
                 >
                   {post.category}
                 </span>
+              </div>
+            </Link>
+
+            {/* Content */}
+            <div className="flex flex-1 flex-col p-4 sm:p-5">
+              {/* Read time */}
+              <div className={cn("mb-2 flex items-center gap-1.5 text-[11px]", isDark ? "text-white/40" : "text-gray-400")}>
+                <Clock className="h-3 w-3 shrink-0" />
+                {post.readTime} min read
+              </div>
+
+              {/* Title */}
+              <Link href={`/articles/${post.slug}`} className="block">
                 <h3
                   className={cn(
-                    "font-heading font-bold leading-tight",
-                    isDark ? "text-white" : "text-gray-900",
-                    isPrimary ? "text-2xl sm:text-3xl" : "text-xl"
+                    "font-heading text-[15px] font-bold leading-snug tracking-[-0.2px] transition-colors",
+                    isDark
+                      ? "text-white group-hover:text-white/90"
+                      : "text-gray-900 group-hover:text-gray-700"
                   )}
                 >
                   {post.title}
                 </h3>
-                <div className={cn("flex items-center gap-2", isDark ? "text-silver/60" : "text-gray-500")}>
-                  <span className="flex items-center gap-0.5">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} className="h-3.5 w-3.5 fill-bolt text-bolt" />
-                    ))}
-                  </span>
-                  <span className={cn("text-xs tracking-wider", isDark ? "text-silver/50" : "text-gray-400")}>
-                    {post.readTime} min read
-                  </span>
-                </div>
-              </div>
-              <div className="mt-4 flex items-center gap-2 text-sm font-medium text-neural">
+              </Link>
+
+              {/* Excerpt */}
+              <p className={cn("mt-2 text-[12.5px] leading-relaxed line-clamp-2", isDark ? "text-white/55" : "text-gray-500")}>
+                {post.excerpt}
+              </p>
+
+              {/* Read link */}
+              <Link
+                href={`/articles/${post.slug}`}
+                className={cn("mt-3 inline-flex items-center gap-1.5 text-[12px] font-semibold transition-colors", accentText)}
+              >
                 Read article
-                <MoveRight className="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={2} />
+                <MoveRight className="h-3.5 w-3.5 shrink-0 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={2} />
+              </Link>
+
+              {/* Buy buttons — both products */}
+              <div className="mt-4 flex flex-wrap gap-2 border-t pt-4" style={{ borderColor: isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.08)" }}>
+                <Link
+                  href="/focus-mode"
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-[#1e90ff]/15 border border-[#1e90ff]/30 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.8px] text-[#7ec4ff] hover:bg-[#1e90ff]/25 transition-colors"
+                >
+                  <ShoppingCart className="h-3 w-3 shrink-0" />
+                  Focus Mode
+                </Link>
+                <Link
+                  href="/green-energy"
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-[#16a34a]/15 border border-[#16a34a]/30 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.8px] text-[#7ee6a0] hover:bg-[#16a34a]/25 transition-colors"
+                >
+                  <ShoppingCart className="h-3 w-3 shrink-0" />
+                  Super Energy
+                </Link>
               </div>
-            </article>
-          </Link>
+            </div>
+          </div>
         );
       })}
     </div>

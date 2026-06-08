@@ -4,9 +4,11 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import * as React from "react";
 
-interface LiquidGlassButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface LiquidGlassButtonProps {
   href?: string;
   variant?: "bolt" | "glass";
+  className?: string;
+  children: React.ReactNode;
 }
 
 /**
@@ -16,12 +18,8 @@ interface LiquidGlassButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEl
  * Keeps the user's liked liquid/glare animations.
  */
 export const LiquidGlassButton = React.forwardRef<HTMLButtonElement, LiquidGlassButtonProps>(
-  ({ className, children, href, variant = "bolt", onClick, ...props }, ref) => {
+  ({ className, children, href, variant = "bolt" }, ref) => {
     const isBolt = variant === "bolt";
-
-    const handleClick = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
-      onClick?.(e as React.MouseEvent<HTMLButtonElement>);
-    };
 
     const content = (
       <span
@@ -59,14 +57,14 @@ export const LiquidGlassButton = React.forwardRef<HTMLButtonElement, LiquidGlass
 
     if (href) {
       return (
-        <Link href={href} className="inline-flex" onClick={handleClick}>
+        <Link href={href} className="inline-flex">
           {content}
         </Link>
       );
     }
 
     return (
-      <button ref={ref} type="button" className="inline-flex" onClick={handleClick} {...props}>
+      <button ref={ref} type="button" className="inline-flex">
         {content}
       </button>
     );

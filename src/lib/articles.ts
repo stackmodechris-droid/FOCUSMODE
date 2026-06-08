@@ -486,6 +486,123 @@ export const ARTICLES: Article[] = [
     ],
     keywords: ["student focus supplement", "exam season nootropics", "study without burnout", "memory supplement students"],
   },
+  {
+    slug: "athlete-mental-edge-reaction-time-focus",
+    title: "The Athlete's Mental Edge: Reaction Time, Focus & Performance Under Pressure",
+    metaTitle: "Athlete Mental Edge — Reaction Time & Focus Supplement for Sports Performance",
+    metaDescription:
+      "Elite athletes don't just train their bodies — they train their minds. Discover how clinical nootropics sharpen reaction time, decision-making speed, and sustained focus during competition and training.",
+    category: "Athletic Performance",
+    excerpt: "The difference between winning and losing is often measured in milliseconds — and it starts in the brain.",
+    readTime: 7,
+    views: 4890,
+    image:
+      "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=1200&q=80&auto=format&fit=crop",
+    intro:
+      "Every elite athlete knows that physical conditioning is only half the equation. The other half — the part most athletes neglect — is the mental game: reaction speed, pattern recognition, composure under pressure, and the ability to execute when it counts most. This is where Focus Mode gives you the edge your competition doesn't have.",
+    sections: [
+      {
+        heading: "Why Brain Speed = Athletic Speed",
+        body: [
+          "Reaction time is neurological, not muscular. When your brain processes visual information faster and fires motor signals with greater precision, you move faster — period. Studies show cerebral blood flow directly correlates with reaction time and decision accuracy under fatigue.",
+          "Focus Mode's Ginkgo Biloba Extract (24% Flavones) increases cerebral circulation, delivering more oxygen and glucose to the regions of the brain responsible for spatial awareness, motor planning, and rapid decision-making.",
+        ],
+      },
+      {
+        heading: "Ginseng for Composure and Late-Game Execution",
+        body: [
+          "The athletes who perform best in the fourth quarter, final round, or overtime aren't just fitter — they're neurochemically more resilient. Red Asian Ginseng (7% Ginsenosides) in Focus Mode supports healthy dopamine and acetylcholine production, which governs motivation, precision movement, and sustained cognitive output under physical stress.",
+          "When your opponent's brain is fatiguing and their decisions are slowing down, yours stays sharp. That's a competitive advantage you can't build in the gym.",
+        ],
+      },
+      {
+        heading: "Take It Before You Train or Compete",
+        body: [
+          "Take 2 capsules of Focus Mode 20–30 minutes before training sessions, competition warm-ups, or film study. The formula is stimulant-free — no jitters, no racing heart, no crash — just clean cognitive amplification that matches your physical output.",
+          "Stack it with Super Energy Blend in the morning for complete physical + mental performance: whole-plant nutrition that fuels your body, and clinical nootropics that sharpen your mind.",
+        ],
+      },
+    ],
+    keywords: ["athlete focus supplement", "reaction time nootropic", "mental edge sports", "brain speed for athletes", "Focus Mode athletes"],
+  },
+  {
+    slug: "pre-workout-plant-energy-athletes",
+    title: "Clean Pre-Workout: Why Elite Athletes Are Switching to Plant-Based Energy",
+    metaTitle: "Clean Pre-Workout for Athletes — Plant-Based Energy Without the Crash",
+    metaDescription:
+      "Pre-workout stims wreck your sleep, spike cortisol, and build tolerance fast. Elite athletes are switching to whole-plant energy for cleaner power, faster recovery, and sustainable performance.",
+    category: "Athletic Performance",
+    excerpt: "Pre-workout stimulants are costing you more than they're giving you. Here's the upgrade.",
+    readTime: 6,
+    views: 3760,
+    image:
+      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80&auto=format&fit=crop",
+    intro:
+      "The fitness industry has sold athletes on a lie: that more stimulants equal more performance. The truth is that high-dose caffeine and synthetic pre-workouts disrupt sleep architecture, spike cortisol, impair recovery, and cause tolerance buildup — all of which erode performance over time. The world's top athletes are waking up to a cleaner, smarter approach.",
+    sections: [
+      {
+        heading: "What Stimulants Are Actually Doing to Your Performance",
+        body: [
+          "High-dose pre-workout stims spike adrenaline and cortisol acutely, which feels like energy but comes at a cost: disrupted sleep (which is when 90% of adaptation and muscle repair happens), elevated baseline cortisol, and cardiovascular strain over time.",
+          "For serious athletes — whether you're playing collegiate sports, competing in combat sports, training for endurance events, or grinding through daily two-a-days — this is a long-term performance tax you can't afford.",
+        ],
+      },
+      {
+        heading: "Beet Root, Ginseng, and Adaptogens: The Athletic Difference",
+        body: [
+          "Super Energy Blend delivers Beet Root Powder — one of the most research-backed natural performance ingredients in sports science. Dietary nitrates from beet root convert to nitric oxide, improving oxygen efficiency in working muscles and delaying fatigue by 15–20% in endurance activities.",
+          "Panax Ginseng (adaptogen) improves VO2 utilization and buffers exercise-induced stress hormones. Ashwagandha has been shown in multiple clinical trials to improve strength, endurance, and reduce post-exercise cortisol — meaning faster recovery between training sessions.",
+        ],
+      },
+      {
+        heading: "The Smart Athlete's Daily Stack",
+        body: [
+          "Replace your second pre-workout drink with Super Energy Blend. One scoop in cold water — 20+ plants, real adaptogens, and natural nitrates — in 60 seconds flat. It's the biological foundation your performance is built on.",
+          "Then add 2 capsules of Focus Mode 20 minutes before training for the mental edge: sharper focus during technique work, faster pattern recognition during competition training, and cleaner execution when your body is under load.",
+        ],
+      },
+    ],
+    keywords: ["clean pre-workout athletes", "plant based energy sports", "beet root athletic performance", "natural pre-workout no crash", "Super Energy Blend athletes"],
+  },
+  {
+    slug: "game-day-mental-performance-stack",
+    title: "Game Day Performance Stack: How to Peak When It Matters Most",
+    metaTitle: "Game Day Performance Stack — Focus + Energy for Athletes on Competition Day",
+    metaDescription:
+      "Game day is not the day to experiment. Discover the science-backed focus and energy stack that helps athletes reach peak cognitive and physical performance on competition day — no stimulants, no crash, no regret.",
+    category: "Athletic Performance",
+    excerpt: "What you put in your body on game day either amplifies you or limits you. Here's what wins.",
+    readTime: 8,
+    views: 5200,
+    image:
+      "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1200&q=80&auto=format&fit=crop",
+    intro:
+      "Game day is when preparation meets opportunity. Every training session, every rep, every film study session has been leading to this moment. But all of that preparation can be undermined by poor game-day nutrition, excessive stimulants, or a foggy, anxious brain that can't execute what it knows. Here's how to show up locked in from the first second to the last.",
+    sections: [
+      {
+        heading: "Morning of Competition: Build Your Biological Foundation",
+        body: [
+          "3–4 hours before competition, mix one scoop of Super Energy Blend into cold water. The 20+ whole plants deliver steady, non-stimulant energy that doesn't spike or crash. The Beet Root nitrates begin improving oxygen delivery to muscles within 90 minutes. The Ashwagandha begins modulating cortisol so you feel dialed-in rather than anxious.",
+          "This is not a replacement for your pre-game meal — it's an insurance layer. Real plant diversity that primes your biology for peak output without any of the jitters or GI issues you get from synthetic pre-workouts on a competition day stomach.",
+        ],
+      },
+      {
+        heading: "90 Minutes Before: Sharpen the Mind",
+        body: [
+          "Take 2 capsules of Focus Mode 90 minutes before tip-off, kickoff, or competition start. The Ginkgo Biloba increases blood flow to the prefrontal cortex — the zone responsible for reading the game, making split-second calls, and staying composed under pressure.",
+          "The Red Asian Ginseng ramps up dopamine and acetylcholine for heightened situational awareness and precision motor execution. No caffeine crash. No anxious heart rate. Just clean, elevated mental performance that matches your physical preparation.",
+        ],
+      },
+      {
+        heading: "Recovery Window: Why the Stack Continues After the Final Whistle",
+        body: [
+          "Post-competition, your body's cortisol and oxidative stress are elevated. The Ashwagandha and whole-plant antioxidants in Super Energy Blend support faster stress normalization and cellular recovery. The anti-inflammatory compounds (Turmeric, Ginger, Pomegranate) reduce exercise-induced inflammation.",
+          "Athletes who stack both products report better recovery timelines, less post-game mental fog, and sharper performance in back-to-back competition weeks. Use the complete stack daily — not just on game day — for cumulative performance that compounds over a full season.",
+        ],
+      },
+    ],
+    keywords: ["game day supplement stack", "competition day focus", "athlete performance stack", "mental performance sports", "Focus Mode Super Energy Blend athletes"],
+  },
 ];
 
 export function getArticle(slug: string) {
