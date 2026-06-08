@@ -35,7 +35,7 @@ export function StickyBuyBar() {
               <p className="text-[9px] tracking-wide text-neural tabular-nums">${SITE.price} (60% off) + Greens ${GREENS.price}</p>
             </div>
             <Link
-              href="/focus-mode"
+              href="/shop"
               className="premium-cta inline-flex items-center gap-1 px-3 py-1.5 text-[10px] active:bg-[#ffea3d]"
             >
               BUY NOW <Zap className="h-3 w-3 fill-black" />
