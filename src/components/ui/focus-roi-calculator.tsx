@@ -18,7 +18,7 @@ export function FocusRoiCalculator() {
   const monthlyGain = weeklyGain * 4;
   const yearlyGain = monthlyGain * 12;
 
-  const bottleCost = 59.99;
+  const bottleCost = 39.99;
 
   return (
     <div className="premium-card border-neural/30 p-8 md:p-10">

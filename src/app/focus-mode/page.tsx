@@ -10,17 +10,17 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Focus Mode Capsules | Best Nootropic for 6+ Hour Focus & Mental Clarity",
   description:
-    "Buy the best all-natural nootropic for focus and productivity. 24% Ginkgo Biloba flavones + 7% Red Asian Ginseng ginsenosides. 6+ hours crash-free mental clarity. 60 capsules, 30-day supply. Zero fillers, zero caffeine. USA made. 40% off + 30-day guarantee.",
+    "Buy the best all-natural nootropic for focus and productivity. 24% Ginkgo Biloba flavones + 7% Red Asian Ginseng ginsenosides. 6+ hours crash-free mental clarity. 60 capsules, 30-day supply. Zero fillers, zero caffeine. USA made. 60% off + 30-day guarantee.",
   alternates: { canonical: "/focus-mode" },
   openGraph: {
     title: "Focus Mode Capsules | Best Nootropic for 6+ Hour Focus & Mental Clarity",
-    description: "Clinical Ginkgo + Ginseng. 6+ hours crash-free focus. 60 capsules. Zero fillers. 40% off.",
+    description: "Clinical Ginkgo + Ginseng. 6+ hours crash-free focus. 60 capsules. Zero fillers. 60% off.",
     url: "/focus-mode",
   },
   twitter: {
     card: "summary_large_image",
     title: "Focus Mode Capsules | Best Nootropic for 6+ Hour Focus & Mental Clarity",
-    description: "Clinical Ginkgo + Ginseng. 6+ hours crash-free focus. 60 capsules. Zero fillers. 40% off.",
+    description: "Clinical Ginkgo + Ginseng. 6+ hours crash-free focus. 60 capsules. Zero fillers. 60% off.",
     images: ["/og/og-1200x900.png"],
   },
 };
@@ -62,7 +62,7 @@ export default function FocusModePage() {
             </div>
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-yellow-50 border border-yellow-200 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[1.5px] text-yellow-700 mb-5">
-                <Zap className="h-3 w-3" /> 40% OFF — LIMITED TIME
+                <Zap className="h-3 w-3" /> 60% OFF — LIMITED TIME
               </div>
               <div className="uppercase tracking-[2px] text-[10px] text-blue-500 mb-2 font-semibold">Elite Nootropic</div>
               <h1 className="font-heading text-4xl md:text-5xl font-semibold tracking-[-1px] text-gray-900">Focus Mode</h1>
@@ -85,7 +85,7 @@ export default function FocusModePage() {
                 ))}
               </div>
 
-              <div className="mt-6 rounded-xl border border-gray-100 bg-gray-50 p-4">
+              <div className="mt-6 rounded-xl border border-gray-100 bg-gray-50 p-4 overflow-hidden">
                 <ShopifyFocusEmbed />
               </div>
 

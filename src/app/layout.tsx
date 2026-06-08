@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     template: "%s | Focus Mode",
   },
   description:
-    "Buy the best all-natural focus supplement for 6+ hours of crash-free mental clarity. Clinical Ginkgo Biloba 24% flavones + Red Asian Ginseng 7% ginsenosides. 60 capsules, 30-day supply. Zero fillers, zero caffeine, zero crash. USA made. 40% off + 30-day guarantee.",
+    "Buy the best all-natural focus supplement for 6+ hours of crash-free mental clarity. Clinical Ginkgo Biloba 24% flavones + Red Asian Ginseng 7% ginsenosides. 60 capsules, 30-day supply. Zero fillers, zero caffeine, zero crash. USA made. 60% off + 30-day guarantee.",
   applicationName: SITE.name,
   keywords: [
     "focus supplement",
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: "Focus Mode | Best All-Natural Focus Supplement — 6+ Hour Clean Focus, Zero Crash",
     description:
-      "Buy the best all-natural focus supplement. 6+ hours of crash-free mental clarity with clinical Ginkgo Biloba 24% flavones + Red Asian Ginseng 7% ginsenosides. 60 capsules. Zero fillers, zero caffeine. USA made. 40% off + 30-day guarantee.",
+      "Buy the best all-natural focus supplement. 6+ hours of crash-free mental clarity with clinical Ginkgo Biloba 24% flavones + Red Asian Ginseng 7% ginsenosides. 60 capsules. Zero fillers, zero caffeine. USA made. 60% off + 30-day guarantee.",
     url: SITE.url,
     images: [
       { url: "/og/og-1200x900.png", width: 1448, height: 1086, alt: "Focus Mode — Elite focus supplement, no crash, Atlanta made" },
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "#1 All-Natural Focus Supplement | 6+ Hours Clean Focus, Zero Crash | Focus Mode",
-    description: "Buy the #1 all-natural focus supplement with clinical Ginkgo Biloba + Red Asian Ginseng. 6+ hours crash-free mental clarity. 60 capsules. Zero fillers, zero caffeine. USA made. 40% off + 30-day guarantee.",
+    description: "Buy the #1 all-natural focus supplement with clinical Ginkgo Biloba + Red Asian Ginseng. 6+ hours crash-free mental clarity. 60 capsules. Zero fillers, zero caffeine. USA made. 60% off + 30-day guarantee.",
     images: ["/og/og-1200x900.png"],
   },
   robots: { index: true, follow: true },

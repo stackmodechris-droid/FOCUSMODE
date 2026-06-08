@@ -9,10 +9,10 @@ import { motion } from "motion/react";
 export function AnimatedBrainLeaves({ className }: { className?: string }) {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
-      {/* Soft cool fog glow */}
+      {/* Soft pink brain glow */}
       <motion.div
         className="absolute inset-0 rounded-full blur-[60px]"
-        style={{ background: "radial-gradient(circle, rgba(148,163,184,0.22) 0%, rgba(46,185,223,0.08) 50%, transparent 100%)" }}
+        style={{ background: "radial-gradient(circle, rgba(255,77,141,0.22) 0%, rgba(255,26,107,0.08) 50%, transparent 100%)" }}
         animate={{ scale: [1, 1.08, 1], opacity: [0.5, 0.75, 0.5] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -26,12 +26,12 @@ export function AnimatedBrainLeaves({ className }: { className?: string }) {
       >
         <defs>
           <linearGradient id="brainGrad" x1="130" y1="40" x2="130" y2="230" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#94a3b8" stopOpacity="0.15" />
-            <stop offset="100%" stopColor="#2eb9df" stopOpacity="0.06" />
+            <stop offset="0%" stopColor="#ff4d8d" stopOpacity="0.15" />
+            <stop offset="100%" stopColor="#ff1a6b" stopOpacity="0.06" />
           </linearGradient>
           <linearGradient id="fogGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#cbd5e1" stopOpacity="0.5" />
-            <stop offset="100%" stopColor="#94a3b8" stopOpacity="0.2" />
+            <stop offset="0%" stopColor="#ff99bb" stopOpacity="0.5" />
+            <stop offset="100%" stopColor="#ff4d8d" stopOpacity="0.2" />
           </linearGradient>
           <filter id="fogBlur" x="-20%" y="-20%" width="140%" height="140%">
             <feGaussianBlur stdDeviation="4" />
@@ -41,7 +41,7 @@ export function AnimatedBrainLeaves({ className }: { className?: string }) {
         {/* Brain outline — realistic two-hemisphere shape */}
         <motion.path
           d="M130 38 C100 38 72 52 58 78 C48 98 46 122 50 148 C54 172 64 192 78 208 C86 216 94 222 100 226 L100 238 L118 238 L118 250 Q118 270 130 285 Q142 270 142 250 L142 238 L160 238 L160 226 C166 222 174 216 182 208 C196 192 206 172 210 148 C214 122 212 98 202 78 C188 52 160 38 130 38 Z"
-          stroke="#94a3b8"
+          stroke="#ff4d8d"
           strokeWidth="1.8"
           strokeOpacity="0.5"
           fill="url(#brainGrad)"
@@ -53,7 +53,7 @@ export function AnimatedBrainLeaves({ className }: { className?: string }) {
         {/* Central longitudinal fissure */}
         <motion.path
           d="M130 42 Q126 75 128 110 Q130 145 128 180 Q126 210 130 238"
-          stroke="#64748b"
+          stroke="#ff3377"
           strokeWidth="1.2"
           strokeOpacity="0.35"
           strokeLinecap="round"
@@ -75,7 +75,7 @@ export function AnimatedBrainLeaves({ className }: { className?: string }) {
           <motion.path
             key={`l-${i}`}
             d={d}
-            stroke="#64748b"
+            stroke="#ff6699"
             strokeWidth="1"
             strokeOpacity="0.22"
             strokeLinecap="round"
@@ -98,7 +98,7 @@ export function AnimatedBrainLeaves({ className }: { className?: string }) {
           <motion.path
             key={`r-${i}`}
             d={d}
-            stroke="#64748b"
+            stroke="#ff6699"
             strokeWidth="1"
             strokeOpacity="0.22"
             strokeLinecap="round"
@@ -157,8 +157,8 @@ export function AnimatedBrainLeaves({ className }: { className?: string }) {
             animate={{ opacity: [0.4, 0.9, 0.4], y: [0, 4, 0] }}
             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0 }}
           >
-            <path d="M 100 300 L 100 316" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" />
-            <path d="M 94 310 L 100 318 L 106 310" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <path d="M 100 300 L 100 316" stroke="#ff4d8d" strokeWidth="2" strokeLinecap="round" />
+            <path d="M 94 310 L 100 318 L 106 310" stroke="#ff4d8d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
           </motion.g>
 
           {/* Center arrow */}
@@ -166,8 +166,8 @@ export function AnimatedBrainLeaves({ className }: { className?: string }) {
             animate={{ opacity: [0.5, 1, 0.5], y: [0, 5, 0] }}
             transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
           >
-            <path d="M 130 306 L 130 324" stroke="#64748b" strokeWidth="2.2" strokeLinecap="round" />
-            <path d="M 124 318 L 130 326 L 136 318" stroke="#64748b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <path d="M 130 306 L 130 324" stroke="#ff3377" strokeWidth="2.2" strokeLinecap="round" />
+            <path d="M 124 318 L 130 326 L 136 318" stroke="#ff3377" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
           </motion.g>
 
           {/* Right arrow */}
@@ -175,8 +175,8 @@ export function AnimatedBrainLeaves({ className }: { className?: string }) {
             animate={{ opacity: [0.4, 0.9, 0.4], y: [0, 4, 0] }}
             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
           >
-            <path d="M 160 300 L 160 316" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" />
-            <path d="M 154 310 L 160 318 L 166 310" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <path d="M 160 300 L 160 316" stroke="#ff4d8d" strokeWidth="2" strokeLinecap="round" />
+            <path d="M 154 310 L 160 318 L 166 310" stroke="#ff4d8d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
           </motion.g>
         </motion.g>
       </svg>

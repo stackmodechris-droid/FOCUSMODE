@@ -72,7 +72,7 @@ export default function GreenEnergyPage() {
                 ))}
               </div>
 
-              <div className="mt-6 rounded-xl border border-gray-100 bg-gray-50 p-4">
+              <div className="mt-6 rounded-xl border border-gray-100 bg-gray-50 p-4 overflow-hidden">
                 <ShopifyGreensEmbed />
               </div>
 

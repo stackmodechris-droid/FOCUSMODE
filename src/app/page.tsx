@@ -27,7 +27,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Focus Mode | #1 All-Natural Focus Supplement & Daily Greens for Clean Energy",
   description:
-    "The #1 all-natural focus supplement and daily greens powder. 6+ hours crash-free focus + clean all-day energy. Clinical Ginkgo + Ginseng + 20+ superfoods. Zero fillers, zero caffeine, zero crash. USA made. 40% off today + 30-day guarantee.",
+    "The #1 all-natural focus supplement and daily greens powder. 6+ hours crash-free focus + clean all-day energy. Clinical Ginkgo + Ginseng + 20+ superfoods. Zero fillers, zero caffeine, zero crash. USA made. 60% off today + 30-day guarantee.",
   alternates: { canonical: "/" },
 };
 
@@ -194,7 +194,7 @@ export default function Home() {
       <section id="pricing" className="border-b border-white/10 scroll-mt-12">
         <div className="mx-auto max-w-7xl px-5 py-12 md:py-14 md:px-8">
           <div className="text-center mb-6">
-            <SectionLabel>Limited • 40% Off Today</SectionLabel>
+            <SectionLabel>Limited • 60% Off Today</SectionLabel>
             <h2 className="mt-1 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">One bottle. Out-think everyone.</h2>
           </div>
           <PricingSection />

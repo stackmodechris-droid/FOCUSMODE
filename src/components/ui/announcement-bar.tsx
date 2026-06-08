@@ -22,7 +22,7 @@ export function AnnouncementBar() {
       >
         <span className="inline-flex items-center gap-1.5">
           <span className="rounded bg-black px-1.5 py-0.5 text-[10px] font-extrabold text-bolt">
-            40% OFF
+            60% OFF
           </span>
           <span className="uppercase tracking-[0.5px]">TODAY — Limited Time</span>
         </span>

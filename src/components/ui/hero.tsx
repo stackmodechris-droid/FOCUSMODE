@@ -26,11 +26,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.21, 0.92, 0.25, 1] }}
-          className="flex items-end justify-center gap-2 sm:gap-4 mb-8 md:mb-12"
+          className="flex items-end justify-center gap-3 sm:gap-6 mb-10 md:mb-14"
         >
-          <AnimatedLightning className="scale-90 sm:scale-100" />
-          <AnimatedBrainLeaves className="scale-[0.55] sm:scale-[0.65]" />
-          <AnimatedPlant className="scale-90 sm:scale-100" />
+          <AnimatedLightning className="scale-[0.50] sm:scale-[0.60]" />
+          <AnimatedBrainLeaves className="scale-[0.75] sm:scale-[0.85]" />
+          <AnimatedPlant className="scale-[0.80] sm:scale-[0.90]" />
         </motion.div>
 
         {/* Headline — punchy, short */}
@@ -99,7 +99,7 @@ export function Hero() {
                 <div className="mt-2 flex items-baseline gap-2">
                   <span className="font-heading text-4xl font-bold text-white">${SITE.price}</span>
                   <span className="text-sm text-silver/45 line-through">${SITE.originalPrice}</span>
-                  <span className="rounded bg-bolt px-2 py-0.5 text-xs font-bold text-black">40% OFF</span>
+                  <span className="rounded bg-bolt px-2 py-0.5 text-xs font-bold text-black">60% OFF</span>
                 </div>
                 <div className="mt-3 flex flex-wrap gap-2 text-[12px] text-silver/70">
                   <span className="rounded-full bg-white/5 px-3 py-1">Ginkgo + Ginseng</span>

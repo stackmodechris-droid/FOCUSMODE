@@ -109,7 +109,7 @@ const focusOptions = {
   },
   toggle: {
     styles: {
-      toggle: { "background-color": "#f4ff00", ":hover": { "background-color": "#dce600" }, ":focus": { "background-color": "#dce600" } },
+      toggle: { "background-color": "#f4ff00", ":hover": { "background-color": "#dce600" }, ":focus": { "background-color": "#dce600" }, "position": "fixed", "top": "10px", "right": "10px", "bottom": "auto", "left": "auto", "z-index": "50" },
       count: { "font-size": "18px", color: "#000000", ":hover": { color: "#000000" } },
       iconPath: { fill: "#000000" }
     }
@@ -161,7 +161,7 @@ const greensOptions = {
   },
   toggle: {
     styles: {
-      toggle: { "background-color": "#00ff13", ":hover": { "background-color": "#00e611" }, ":focus": { "background-color": "#00e611" } },
+      toggle: { "background-color": "#00ff13", ":hover": { "background-color": "#00e611" }, ":focus": { "background-color": "#00e611" }, "position": "fixed", "top": "10px", "right": "10px", "bottom": "auto", "left": "auto", "z-index": "50" },
       count: { "font-size": "18px", color: "#000000", ":hover": { color: "#000000" } },
       iconPath: { fill: "#000000" }
     }
@@ -176,11 +176,11 @@ const greensOptions = {
 export function ShopifyFocusEmbed() {
   const nodeRef = useRef<HTMLDivElement>(null);
   useShopifyEmbed({ productId: "9428000047362", options: focusOptions as unknown as Record<string, unknown>, nodeRef });
-  return <div ref={nodeRef} className="fm-shopify-embed w-full" />;
+  return <div ref={nodeRef} className="fm-shopify-embed w-full overflow-hidden" />;
 }
 
 export function ShopifyGreensEmbed() {
   const nodeRef = useRef<HTMLDivElement>(null);
   useShopifyEmbed({ productId: "9451359273218", options: greensOptions as unknown as Record<string, unknown>, nodeRef });
-  return <div ref={nodeRef} className="fm-shopify-embed w-full" />;
+  return <div ref={nodeRef} className="fm-shopify-embed w-full overflow-hidden" />;
 }
