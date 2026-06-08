@@ -55,7 +55,7 @@ export const GREENS = {
     { name: "Green Tea Extract (leaf)", amount: "—", role: "Gentle L-theanine + catechins for smooth alertness" },
     { name: "Black Pepper Extract", amount: "—", role: "Piperine to dramatically increase nutrient absorption" },
   ],
-  factsImage: "/greens/d0247e84c2ab57d48958ef01f29b2654de5b944d-842x461.png",
+  factsImage: "/greens/super-energy-blend-supplement-facts-label.png",
   usage: "1 scoop daily in 6–8 oz of cold water or beverage; consume within 10 minutes of mixing.",
   manufactured: "USA",
   additives: "None",
@@ -64,10 +64,10 @@ export const GREENS = {
   fdaDisclaimer:
     "These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Consult a healthcare professional before use.",
   images: {
-    front: "/greens/1780864545880-generated-label-image-2.png",
-    angle1: "/greens/1780864545881-generated-label-image-1.png",
-    angle2: "/greens/1780864545885-generated-label-image-3.png",
-    angle3: "/greens/1780864545890-generated-label-image-0.png",
+    front: "/greens/super-energy-blend-greens-powder-front.png",
+    angle1: "/greens/super-energy-blend-greens-powder-angle-left.png",
+    angle2: "/greens/super-energy-blend-greens-powder-angle-right.png",
+    angle3: "/greens/super-energy-blend-greens-powder-side.png",
   },
 } as const;
 
@@ -81,11 +81,11 @@ export const NAV_LINKS = [
 ] as const;
 
 export const PRODUCT_IMAGES = {
-  front: "/products/1780438169847-generated-label-image-2.png",
-  trio: "/products/1780438169836-generated-label-image-3.png",
-  capsules: "/products/1780438169844-generated-label-image-0.png",
-  open: "/products/1780438169849-generated-label-image-1.png",
-  pill: "/products/pill.png",
+  front: "/products/focus-mode-nootropic-supplement-bottle.png",
+  trio: "/products/focus-mode-brain-booster-bottles.png",
+  capsules: "/products/focus-mode-capsules-product.png",
+  open: "/products/focus-mode-open-supplement-bottle.png",
+  pill: "/products/focus-mode-premium-capsule.png",
 } as const;
 
 export const FAQS: { q: string; a: string }[] = [

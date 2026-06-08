@@ -10,7 +10,7 @@ const reviewSchema = {
   itemReviewed: {
     "@type": "Product",
     name: "Focus Mode Focus Supplement",
-    image: `${SITE.url}/products/1780438169847-generated-label-image-2.png`,
+    image: `${SITE.url}/products/focus-mode-nootropic-supplement-bottle.png`,
     brand: { "@type": "Brand", name: SITE.brand },
   },
   author: { "@type": "Person", name: SITE.founder },

@@ -133,8 +133,8 @@ const jsonLd = {
       "@id": `${SITE.url}/#product`,
       name: "Focus Mode Focus Supplement",
       image: [
-        `${SITE.url}/products/1780438169847-generated-label-image-2.png`,
-        `${SITE.url}/products/1780438169836-generated-label-image-3.png`,
+        `${SITE.url}/products/focus-mode-nootropic-supplement-bottle.png`,
+        `${SITE.url}/products/focus-mode-brain-booster-bottles.png`,
       ],
       description: SITE.description,
       brand: { "@type": "Brand", name: SITE.brand },

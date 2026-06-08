@@ -52,7 +52,7 @@ export function PricingSection() {
     <div className="grid items-center justify-items-center gap-10 lg:grid-cols-2 lg:gap-14">
       <div className="relative flex items-center justify-center">
         <div className="premium-product-stage max-w-[340px] overflow-hidden">
-          <ProductGlow src="/products/1780438169847-generated-label-image-2.png" alt="Focus Mode supplement bottle" size={460} glow="dual" priority className="max-w-[260px] sm:max-w-[320px] md:max-w-none" />
+          <ProductGlow src="/products/focus-mode-nootropic-supplement-bottle.png" alt="Focus Mode supplement bottle" size={460} glow="dual" priority className="max-w-[260px] sm:max-w-[320px] md:max-w-none" />
           {/* Fun floating urgency badge — premium, "on" the seamless stage */}
           <div className="premium-badge absolute -top-3 right-3 shadow-xl">
             60% OFF TODAY ONLY

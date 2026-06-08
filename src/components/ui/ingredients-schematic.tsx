@@ -77,7 +77,7 @@ export function IngredientsSchematic() {
           <div className="relative">
             <div className="absolute inset-0 -m-6 rounded-full bg-bolt/10 blur-[28px]" />
             <Image
-              src="/products/pill.png"
+              src="/products/focus-mode-premium-capsule.png"
               alt=""
               width={92}
               height={92}

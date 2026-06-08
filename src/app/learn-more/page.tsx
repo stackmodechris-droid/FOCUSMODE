@@ -95,7 +95,7 @@ export default function LearnMorePage() {
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <Reveal className="flex justify-center">
               <div className="premium-product-stage max-w-[320px]">
-                <ProductGlow src="/products/1780438169849-generated-label-image-1.png" alt="Focus Mode capsules" size={460} glow="dual" className="max-w-[280px] sm:max-w-sm md:max-w-none" />
+                <ProductGlow src="/products/focus-mode-open-supplement-bottle.png" alt="Focus Mode capsules" size={460} glow="dual" className="max-w-[280px] sm:max-w-sm md:max-w-none" />
               </div>
             </Reveal>
             <div className="space-y-5">

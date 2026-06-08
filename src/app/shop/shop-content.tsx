@@ -73,7 +73,7 @@ export function ShopContent() {
               <div className="flex-1 flex flex-col">
                 <div className="flex items-center gap-3">
                   <div className="w-20 h-20 shrink-0 rounded-xl overflow-hidden bg-gray-50">
-                    <Image src="/products/1780438169847-generated-label-image-2.png" alt="Focus Mode" width={80} height={80} className="w-full h-full object-contain" />
+                    <Image src="/products/focus-mode-nootropic-supplement-bottle.png" alt="Focus Mode" width={80} height={80} className="w-full h-full object-contain" />
                   </div>
                   <div>
                     <div className="text-xs uppercase tracking-[2px] text-blue-500 font-semibold">All-Natural Brain Booster</div>
@@ -138,7 +138,7 @@ export function ShopContent() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative flex justify-center">
               <div className="premium-product-stage max-w-[420px]">
-                <ProductGlow src="/products/1780438169847-generated-label-image-2.png" alt="Focus Mode" size={520} glow="dual" priority />
+                <ProductGlow src="/products/focus-mode-nootropic-supplement-bottle.png" alt="Focus Mode" size={520} glow="dual" priority />
               </div>
             </div>
             <div>

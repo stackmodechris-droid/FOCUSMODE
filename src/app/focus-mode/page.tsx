@@ -58,7 +58,7 @@ export default function FocusModePage() {
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <div className="relative flex justify-center">
               <div className="premium-product-stage max-w-[420px]">
-                <ProductGlow src="/products/1780438169847-generated-label-image-2.png" alt="Focus Mode supplement bottle" size={520} glow="dual" priority />
+                <ProductGlow src="/products/focus-mode-nootropic-supplement-bottle.png" alt="Focus Mode supplement bottle" size={520} glow="dual" priority />
               </div>
             </div>
             <div>
@@ -187,7 +187,7 @@ export default function FocusModePage() {
         <div className="mx-auto max-w-7xl px-5 py-16 md:py-20 md:px-8 text-center">
           <div className="relative flex justify-center mb-8">
             <div className="premium-product-stage max-w-[280px] overflow-hidden">
-              <Image src="/products/1780438169847-generated-label-image-2.png" alt="Focus Mode" width={280} height={280} className="h-auto w-full object-contain" priority />
+              <Image src="/products/focus-mode-nootropic-supplement-bottle.png" alt="Focus Mode" width={280} height={280} className="h-auto w-full object-contain" priority />
             </div>
           </div>
           <h2 className="font-heading text-3xl md:text-4xl font-semibold tracking-[-1px] text-gray-900">Ready to lock in?</h2>

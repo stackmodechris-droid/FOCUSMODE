@@ -1,7 +1,7 @@
 "use client";
 
 import { ProductGlow } from "@/components/ui/product-glow";
-import { GREENS, SITE } from "@/lib/site";
+import { GREENS, PRODUCT_IMAGES, SITE } from "@/lib/site";
 import { ChevronDown, Leaf, ShieldCheck, Star, Truck, Zap } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
@@ -68,7 +68,7 @@ export function Hero() {
             <div className="relative z-10 grid grid-cols-1 sm:grid-cols-[0.9fr_1.1fr] items-center gap-3">
               <div className="premium-product-stage px-1 py-2">
                 <ProductGlow
-                  src="/products/1780438169836-generated-label-image-3.png"
+                  src={PRODUCT_IMAGES.trio}
                   alt="Focus Mode all-natural brain booster bottles"
                   size={430}
                   glow="dual"

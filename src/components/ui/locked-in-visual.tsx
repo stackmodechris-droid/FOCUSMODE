@@ -262,10 +262,10 @@ export function LockedInVisual() {
 
         {/* Layered ghost pills for depth + using the pill.png prominently (cool factor) */}
         <div className="absolute left-1/2 top-[51%] z-0 -translate-x-1/2 -translate-y-1/2 opacity-20 blur-[2px]">
-          <Image src="/products/pill.png" alt="" width={240} height={240} className="rotate-[-12deg] scale-[0.72]" />
+          <Image src="/products/focus-mode-premium-capsule.png" alt="" width={240} height={240} className="rotate-[-12deg] scale-[0.72]" />
         </div>
         <div className="absolute left-1/2 top-[49%] z-0 -translate-x-1/2 -translate-y-1/2 opacity-10 blur-[6px]">
-          <Image src="/products/pill.png" alt="" width={270} height={270} className="rotate-[17deg] scale-[0.82]" />
+          <Image src="/products/focus-mode-premium-capsule.png" alt="" width={270} height={270} className="rotate-[17deg] scale-[0.82]" />
         </div>
 
         {/* The Pill PNG itself — large, floating, glowing */}
@@ -282,7 +282,7 @@ export function LockedInVisual() {
             {/* Inner subtle highlight ring on the pill */}
             <div className="absolute inset-0 -m-3 rounded-full border border-white/10" />
             <Image
-              src="/products/pill.png"
+              src="/products/focus-mode-premium-capsule.png"
               alt="Focus Mode premium capsule — the core of locked-in performance"
               width={420}
               height={420}
@@ -399,7 +399,7 @@ export function LockedInVisual() {
                 <Icon className={`relative h-4 w-4 sm:h-4 sm:w-4 md:h-5 md:w-5 ${isActive ? (b.accent === "bolt" ? "text-bolt" : "text-neural") : b.accent === "bolt" ? "text-bolt/70 group-hover:text-bolt" : "text-neural/70 group-hover:text-neural"}`} />
               </div>
 
-              <div className="font-heading text-[9px] font-bold leading-tight tracking-[-0.1px] text-white sm:text-[10px] md:text-[11px]">
+              <div className="font-heading text-[9px] font-bold leading-tight tracking-[-0.1px] text-gray-950 sm:text-[10px] md:text-[11px]">
                 {b.title}
               </div>
               <div className="mt-0.5 font-mono-data text-[7px] tracking-[1.2px] text-neural sm:text-[7.5px]">{b.metric}</div>
