@@ -1,3 +1,6 @@
+import { AnimatedBrainLeaves } from "@/components/ui/animated-brain-leaves";
+import { AnimatedCapsuleFloat } from "@/components/ui/animated-capsule-float";
+import { AnimatedLightning } from "@/components/ui/animated-lightning";
 import { ArticlesGrid } from "@/components/ui/blog-posts";
 import { FaqAccordion } from "@/components/ui/faq-accordion";
 import { FocusRoiCalculator } from "@/components/ui/focus-roi-calculator";
@@ -43,27 +46,31 @@ export default function Home() {
       <Hero />
       <MarqueeTrust />
 
-      {/* VISUAL IMPACT — Short, punchy, stats forward */}
+      {/* VISUAL IMPACT — Visual-first with animated brain-leaves */}
       <section id="impact" className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8">
-          <Reveal className="mx-auto max-w-2xl text-center mb-8">
+          <Reveal className="mx-auto max-w-2xl text-center mb-6">
             <SectionLabel>The Real Cost</SectionLabel>
             <h2 className="mt-3 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">
-              Brain fog is stealing your edge.<br />Get it back.
+              Brain fog is stealing your edge.
             </h2>
           </Reveal>
+
+          <div className="flex justify-center mb-6">
+            <AnimatedBrainLeaves />
+          </div>
 
           <div className="grid items-start gap-5 lg:grid-cols-3 max-w-6xl mx-auto">
             <Reveal className="lg:col-span-2 grid gap-5 sm:grid-cols-3">
               {[
-                { icon: Brain, stat: "Memory", label: "Recall details, conversations & strategies when it matters" },
-                { icon: TrendingUp, stat: "Speed", label: "Move faster on deals, exams, calls & execution" },
-                { icon: Coins, stat: "Output", label: "Turn focus into more wins — business, school, creative" },
+                { icon: Brain, stat: "Memory", label: "Recall details when it matters" },
+                { icon: TrendingUp, stat: "Speed", label: "Move faster on every task" },
+                { icon: Coins, stat: "Output", label: "Turn focus into more wins" },
               ].map((c, i) => (
-                <div key={i} className="premium-card p-7 text-center sm:text-left">
+                <div key={i} className="premium-card p-6 text-center sm:text-left">
                   <c.icon className="h-6 w-6 text-neural mx-auto sm:mx-0" />
-                  <p className="mt-4 font-heading text-3xl font-semibold tracking-[-0.6px] text-white">{c.stat}</p>
-                  <p className="mt-1.5 text-[13px] leading-relaxed text-silver/60">{c.label}</p>
+                  <p className="mt-3 font-heading text-2xl font-semibold tracking-[-0.4px] text-white">{c.stat}</p>
+                  <p className="mt-1 text-[13px] leading-relaxed text-silver/60">{c.label}</p>
                 </div>
               ))}
             </Reveal>
@@ -78,7 +85,7 @@ export default function Home() {
             </Reveal>
           </div>
           <div className="mt-8 flex justify-center">
-            <a href="/focus-mode" className="premium-cta px-8">Buy Focus Mode — ${SITE.price}</a>
+            <a href="/shop" className="premium-cta px-8">Shop Now — ${SITE.price}</a>
           </div>
         </div>
       </section>
@@ -86,15 +93,18 @@ export default function Home() {
       {/* THE DIFFERENCE — Why us first */}
       <section className="border-b border-white/10 bg-[#111414]">
         <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8">
-          <Reveal className="mx-auto mb-8 max-w-2xl text-center">
+          <Reveal className="mx-auto mb-6 max-w-2xl text-center">
             <SectionLabel>The Difference</SectionLabel>
             <h2 className="mt-3 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">Not all focus is created equal.</h2>
           </Reveal>
+          <div className="flex justify-center mb-6">
+            <AnimatedLightning className="scale-75" />
+          </div>
           <div className="grid gap-4 md:grid-cols-3 max-w-6xl mx-auto">
             {[
               { title: "Caffeine & Stims", body: "Spikes. Jitters. 2pm crash. Tolerance builds fast.", bad: true },
               { title: "Generic Nootropics", body: "Under-dosed. Mystery fillers. Marketing over molecules.", bad: true },
-              { title: "Focus Mode", body: "24% Ginkgo flavones + 7% Ginsenosides Ginseng. Exact clinical doses. Zero fillers. Zero crash.", bad: false },
+              { title: "Focus Mode", body: "24% Ginkgo flavones + 7% Ginsenosides. Exact clinical doses. Zero crash.", bad: false },
             ].map((c, i) => (
               <Reveal key={i} delay={i * 0.04} className={`premium-card p-6 ${c.bad ? "opacity-60" : "border-neural/40 glow-neural"}`}>
                 <div className={`text-[10px] tracking-[1.5px] mb-2 ${c.bad ? "text-silver/40" : "text-neural"}`}>{c.bad ? "OLD WAY" : "THE EDGE"}</div>
@@ -104,7 +114,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-8 flex justify-center">
-            <a href="/focus-mode" className="premium-cta px-8">Get The Clinical Edge</a>
+            <a href="/shop" className="premium-cta px-8">Get The Clinical Edge</a>
           </div>
         </div>
       </section>
@@ -122,7 +132,7 @@ export default function Home() {
             <LockedInVisual />
           </div>
           <div className="mt-8 flex justify-center">
-            <a href="/focus-mode" className="premium-cta px-8">Unlock All 6 Benefits</a>
+            <a href="/shop" className="premium-cta px-8">Unlock All 6 Benefits</a>
           </div>
         </div>
       </section>
@@ -138,7 +148,7 @@ export default function Home() {
             <ProductShowcase />
           </div>
           <div className="mt-8 flex justify-center">
-            <a href="/focus-mode" className="premium-cta px-8">Buy Focus Mode Now</a>
+            <a href="/shop" className="premium-cta px-8">Shop Now</a>
           </div>
         </div>
       </section>
@@ -156,8 +166,11 @@ export default function Home() {
           <div className="mt-10">
             <FormulaStack />
           </div>
+          <div className="flex justify-center mt-6 mb-6">
+            <AnimatedCapsuleFloat />
+          </div>
           <div className="mt-8 flex justify-center">
-            <a href="/focus-mode" className="premium-cta px-8">Get The Exact Formula</a>
+            <a href="/shop" className="premium-cta px-8">Get The Exact Formula</a>
           </div>
         </div>
       </section>
@@ -171,7 +184,7 @@ export default function Home() {
           </div>
           <Testimonials />
           <div className="mt-8 flex justify-center">
-            <a href="/focus-mode" className="premium-cta px-8">Join Many High Performers</a>
+            <a href="/shop" className="premium-cta px-8">Join Many High Performers</a>
           </div>
         </div>
       </section>
@@ -196,7 +209,7 @@ export default function Home() {
           </div>
           <FaqAccordion withSchema />
           <div className="mt-8 flex justify-center">
-            <LiquidGlassButton href="/focus-mode">Buy Focus Mode Now</LiquidGlassButton>
+            <LiquidGlassButton href="/shop">Shop Now</LiquidGlassButton>
           </div>
         </div>
       </section>
@@ -237,7 +250,7 @@ export default function Home() {
           </div>
           <FocusRoiCalculator />
           <div className="mt-8 flex justify-center">
-            <a href="/focus-mode" className="premium-cta px-8">Stop The Leak — Buy Now</a>
+            <a href="/shop" className="premium-cta px-8">Stop The Leak — Buy Now</a>
           </div>
         </div>
       </section>
@@ -254,7 +267,7 @@ export default function Home() {
           </div>
           <ArticlesGrid limit={3} variant="dark" />
           <div className="mt-8 flex justify-center">
-            <a href="/focus-mode" className="premium-cta px-8">Shop Focus Mode</a>
+            <a href="/shop" className="premium-cta px-8">Shop All Products</a>
           </div>
         </div>
       </section>

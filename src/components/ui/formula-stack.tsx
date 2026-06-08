@@ -9,7 +9,7 @@ const INGREDIENTS = [
     dose: "120mg",
     role: "Oxygen delivery",
     accent: "neural",
-    desc: "Ancient Asian herb that increases cerebral blood flow, delivering more oxygen to neural pathways for faster synaptic firing and sharper mental clarity.",
+    desc: "Ancient herb that increases cerebral blood flow for faster synaptic firing and sharper mental clarity.",
   },
   {
     name: "Red Ginseng",
@@ -17,7 +17,7 @@ const INGREDIENTS = [
     dose: "200mg",
     role: "Neurochemical drive",
     accent: "bolt",
-    desc: "Clinically-backed adaptogen that boosts dopamine and acetylcholine production, fueling sustained mental stamina and stress resilience.",
+    desc: "Clinically-backed adaptogen that boosts dopamine and acetylcholine for sustained mental stamina.",
   },
 ];
 

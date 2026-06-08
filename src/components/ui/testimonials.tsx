@@ -17,11 +17,11 @@ export function Testimonials() {
         <Quote className="absolute right-8 top-8 h-10 w-10 text-neural/10" />
 
         <div className="text-[15px] md:text-[17px] leading-relaxed text-silver/85">
-          I built Focus Mode because I was the first customer. Mental fatigue was destroying my output. By early afternoon the fog would hit — slow decisions, missed details, and the feeling that my brain just couldn&apos;t keep up with the businesses I was trying to scale.
+          I built Focus Mode because I was the first customer. Mental fatigue was destroying my output — slow decisions, missed details, and the feeling my brain couldn&apos;t keep up.
           <br /><br />
-          I locked in on the two exact ingredients now in every bottle: <span className="text-white font-medium">Ginkgo Biloba Leaf Extract (24% flavones)</span> for oxygen delivery and clean mental clarity, and <span className="text-white font-medium">Red Asian Ginseng Extract (7% ginsenosides)</span> for dopamine support, stress adaptation, and real sustained stamina — plus powerful natural antioxidants for long-term brain health.
+          I locked in on two exact ingredients: <span className="text-white font-medium">Ginkgo Biloba (24% flavones)</span> for oxygen delivery and clarity, and <span className="text-white font-medium">Red Asian Ginseng (7% ginsenosides)</span> for dopamine support and sustained stamina.
           <br /><br />
-          The difference was immediate and lasting. The afternoon fatigue disappeared. I could power through demanding work, important meetings, and creative marathons with sharp recall — and still have energy left for what matters. My businesses (and life) scaled because my brain finally stopped being the bottleneck. This clean formula is now helping students, professionals, and lifelong learners everywhere stay sharp.
+          The difference was immediate. Afternoon fatigue disappeared. I could power through demanding work and creative marathons with sharp recall. My businesses scaled because my brain stopped being the bottleneck.
         </div>
 
         <figcaption className="mt-8 pt-6 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
