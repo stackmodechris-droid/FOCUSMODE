@@ -38,9 +38,25 @@ export function AnimatedBrainLeaves({ className }: { className?: string }) {
           </filter>
         </defs>
 
-        {/* Brain outline — realistic two-hemisphere shape */}
+        {/* Brain outline — anatomical front-view cerebrum */}
         <motion.path
-          d="M130 38 C100 38 72 52 58 78 C48 98 46 122 50 148 C54 172 64 192 78 208 C86 216 94 222 100 226 L100 238 L118 238 L118 250 Q118 270 130 285 Q142 270 142 250 L142 238 L160 238 L160 226 C166 222 174 216 182 208 C196 192 206 172 210 148 C214 122 212 98 202 78 C188 52 160 38 130 38 Z"
+          d="M130 32
+             C110 32, 88 40, 74 56
+             C60 72, 52 94, 52 120
+             C52 148, 60 174, 74 194
+             C82 206, 90 214, 96 220
+             C100 224, 104 226, 108 228
+             L108 242
+             C108 252, 112 262, 118 268
+             C122 272, 126 274, 130 274
+             C134 274, 138 272, 142 268
+             C148 262, 152 252, 152 242
+             L152 228
+             C156 226, 160 224, 164 220
+             C170 214, 178 206, 186 194
+             C200 174, 208 148, 208 120
+             C208 94, 200 72, 186 56
+             C172 40, 150 32, 130 32 Z"
           stroke="#ff4d8d"
           strokeWidth="1.8"
           strokeOpacity="0.5"
@@ -50,9 +66,9 @@ export function AnimatedBrainLeaves({ className }: { className?: string }) {
           transition={{ duration: 2, ease: "easeOut" }}
         />
 
-        {/* Central longitudinal fissure */}
+        {/* Central longitudinal fissure — slightly organic */}
         <motion.path
-          d="M130 42 Q126 75 128 110 Q130 145 128 180 Q126 210 130 238"
+          d="M130 38 Q127 60 129 85 Q131 110 128 135 Q126 160 129 185 Q132 210 130 238"
           stroke="#ff3377"
           strokeWidth="1.2"
           strokeOpacity="0.35"
@@ -63,14 +79,18 @@ export function AnimatedBrainLeaves({ className }: { className?: string }) {
           transition={{ duration: 1.8, delay: 0.3, ease: "easeOut" }}
         />
 
-        {/* Left hemisphere gyri (fold ridges) */}
+        {/* Left hemisphere gyri — organic curved folds */}
         {[
-          "M 62 88 Q 85 78 105 88",
-          "M 56 118 Q 82 108 102 118",
-          "M 54 148 Q 80 138 100 148",
-          "M 60 178 Q 84 168 104 178",
-          "M 72 202 Q 92 192 108 202",
-          "M 85 68 Q 105 58 120 68",
+          "M 66 82 Q 88 72 108 84",
+          "M 58 108 Q 82 96 106 108",
+          "M 54 134 Q 80 122 104 136",
+          "M 56 160 Q 78 148 102 162",
+          "M 64 186 Q 86 174 108 188",
+          "M 76 210 Q 94 198 112 212",
+          "M 82 58 Q 100 48 118 58",
+          "M 72 72 Q 92 62 112 74",
+          "M 88 228 Q 100 220 114 230",
+          "M 96 244 Q 108 236 122 246",
         ].map((d, i) => (
           <motion.path
             key={`l-${i}`}
@@ -82,18 +102,22 @@ export function AnimatedBrainLeaves({ className }: { className?: string }) {
             fill="none"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
-            transition={{ duration: 1.2, delay: 0.5 + i * 0.1, ease: "easeOut" }}
+            transition={{ duration: 1.2, delay: 0.5 + i * 0.08, ease: "easeOut" }}
           />
         ))}
 
-        {/* Right hemisphere gyri */}
+        {/* Right hemisphere gyri — organic curved folds */}
         {[
-          "M 198 88 Q 175 78 155 88",
-          "M 204 118 Q 178 108 158 118",
-          "M 206 148 Q 180 138 160 148",
-          "M 200 178 Q 176 168 156 178",
-          "M 188 202 Q 168 192 152 202",
-          "M 175 68 Q 155 58 140 68",
+          "M 194 82 Q 172 72 152 84",
+          "M 202 108 Q 178 96 154 108",
+          "M 206 134 Q 180 122 156 136",
+          "M 204 160 Q 182 148 158 162",
+          "M 196 186 Q 174 174 152 188",
+          "M 184 210 Q 166 198 148 212",
+          "M 178 58 Q 160 48 142 58",
+          "M 188 72 Q 168 62 148 74",
+          "M 172 228 Q 160 220 146 230",
+          "M 164 244 Q 152 236 138 246",
         ].map((d, i) => (
           <motion.path
             key={`r-${i}`}
@@ -105,7 +129,7 @@ export function AnimatedBrainLeaves({ className }: { className?: string }) {
             fill="none"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
-            transition={{ duration: 1.2, delay: 0.6 + i * 0.1, ease: "easeOut" }}
+            transition={{ duration: 1.2, delay: 0.6 + i * 0.08, ease: "easeOut" }}
           />
         ))}
 
