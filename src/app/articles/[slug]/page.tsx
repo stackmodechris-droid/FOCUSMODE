@@ -33,12 +33,18 @@ export async function generateMetadata({
       url: `${SITE.url}/articles/${article.slug}`,
       images: [
         {
-          url: "/og/og-1200x900.png",
-          width: 1448,
-          height: 1086,
+          url: article.image,
+          width: 1200,
+          height: 800,
           alt: `Focus Mode — ${article.title}`,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.metaTitle,
+      description: article.metaDescription,
+      images: [article.image],
     },
   };
 }
@@ -54,6 +60,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     headline: article.title,
     description: article.metaDescription,
     image: article.image,
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
     author: { "@type": "Organization", name: SITE.legalName },
     publisher: {
       "@type": "Organization",
@@ -86,9 +94,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             {article.readTime} min read · Focus Mode
           </p>
 
-          <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden border border-border">
+          <div className="relative mt-8 aspect-video w-full overflow-hidden border border-border">
             <Image src={article.image} alt={article.title} fill sizes="(max-width:768px) 100vw, 768px" className="object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-surface-dim/70 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-surface-dim/70 to-transparent" />
           </div>
 
           <p className="mt-10 text-lg font-medium leading-relaxed text-silver/85">{article.intro}</p>

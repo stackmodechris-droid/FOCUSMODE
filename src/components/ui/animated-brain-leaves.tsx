@@ -3,180 +3,182 @@
 import { motion } from "motion/react";
 
 /**
- * Brain silhouette with organic leaves + lightning accents.
- * Represents focus + nature synergy. Pure SVG + Framer Motion.
+ * Realistic brain with drifting fog clouds and downward arrows.
+ * Represents the cognitive decline of brain fog. Pure SVG + Framer Motion.
  */
 export function AnimatedBrainLeaves({ className }: { className?: string }) {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
-      {/* Soft ambient glow */}
+      {/* Soft cool fog glow */}
       <motion.div
         className="absolute inset-0 rounded-full blur-[60px]"
-        style={{ background: "radial-gradient(circle, rgba(46,185,223,0.18) 0%, rgba(34,197,94,0.1) 50%, transparent 100%)" }}
-        animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.8, 0.5] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        style={{ background: "radial-gradient(circle, rgba(148,163,184,0.22) 0%, rgba(46,185,223,0.08) 50%, transparent 100%)" }}
+        animate={{ scale: [1, 1.08, 1], opacity: [0.5, 0.75, 0.5] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       />
 
       <svg
-        viewBox="0 0 240 260"
+        viewBox="0 0 260 340"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="relative z-10 w-[180px] h-[200px] sm:w-[220px] sm:h-[240px]"
+        className="relative z-10 w-[190px] h-[250px] sm:w-[240px] sm:h-[310px]"
         aria-hidden
       >
         <defs>
-          <linearGradient id="brainGrad" x1="120" y1="50" x2="120" y2="200" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#2eb9df" stopOpacity="0.2" />
-            <stop offset="100%" stopColor="#2eb9df" stopOpacity="0.05" />
+          <linearGradient id="brainGrad" x1="130" y1="40" x2="130" y2="230" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#94a3b8" stopOpacity="0.15" />
+            <stop offset="100%" stopColor="#2eb9df" stopOpacity="0.06" />
           </linearGradient>
-          <linearGradient id="leafGrad2" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#4ade80" />
-            <stop offset="100%" stopColor="#16a34a" />
+          <linearGradient id="fogGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#cbd5e1" stopOpacity="0.5" />
+            <stop offset="100%" stopColor="#94a3b8" stopOpacity="0.2" />
           </linearGradient>
+          <filter id="fogBlur" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="4" />
+          </filter>
         </defs>
 
-        {/* Brain outline */}
+        {/* Brain outline — realistic two-hemisphere shape */}
         <motion.path
-          d="M120 55 C85 55 60 80 60 115 C60 145 80 165 95 175 C100 180 105 185 105 195 L105 205 L135 205 L135 195 C135 185 140 180 145 175 C160 165 180 145 180 115 C180 80 155 55 120 55 Z"
-          stroke="#2eb9df"
-          strokeWidth="2"
-          strokeOpacity="0.4"
+          d="M130 38 C100 38 72 52 58 78 C48 98 46 122 50 148 C54 172 64 192 78 208 C86 216 94 222 100 226 L100 238 L118 238 L118 250 Q118 270 130 285 Q142 270 142 250 L142 238 L160 238 L160 226 C166 222 174 216 182 208 C196 192 206 172 210 148 C214 122 212 98 202 78 C188 52 160 38 130 38 Z"
+          stroke="#94a3b8"
+          strokeWidth="1.8"
+          strokeOpacity="0.5"
           fill="url(#brainGrad)"
           initial={{ pathLength: 0, opacity: 0 }}
           animate={{ pathLength: 1, opacity: 1 }}
           transition={{ duration: 2, ease: "easeOut" }}
         />
 
-        {/* Brain fold lines */}
+        {/* Central longitudinal fissure */}
         <motion.path
-          d="M85 105 Q105 95 120 105 Q140 115 155 105"
-          stroke="#2eb9df"
-          strokeWidth="1.5"
-          strokeOpacity="0.25"
+          d="M130 42 Q126 75 128 110 Q130 145 128 180 Q126 210 130 238"
+          stroke="#64748b"
+          strokeWidth="1.2"
+          strokeOpacity="0.35"
           strokeLinecap="round"
           fill="none"
           initial={{ pathLength: 0 }}
           animate={{ pathLength: 1 }}
-          transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
-        />
-        <motion.path
-          d="M90 135 Q110 125 125 135 Q145 145 160 135"
-          stroke="#2eb9df"
-          strokeWidth="1.5"
-          strokeOpacity="0.25"
-          strokeLinecap="round"
-          fill="none"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{ duration: 1.5, delay: 0.7, ease: "easeOut" }}
+          transition={{ duration: 1.8, delay: 0.3, ease: "easeOut" }}
         />
 
-        {/* Left leaf growing from brain */}
+        {/* Left hemisphere gyri (fold ridges) */}
+        {[
+          "M 62 88 Q 85 78 105 88",
+          "M 56 118 Q 82 108 102 118",
+          "M 54 148 Q 80 138 100 148",
+          "M 60 178 Q 84 168 104 178",
+          "M 72 202 Q 92 192 108 202",
+          "M 85 68 Q 105 58 120 68",
+        ].map((d, i) => (
+          <motion.path
+            key={`l-${i}`}
+            d={d}
+            stroke="#64748b"
+            strokeWidth="1"
+            strokeOpacity="0.22"
+            strokeLinecap="round"
+            fill="none"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 1.2, delay: 0.5 + i * 0.1, ease: "easeOut" }}
+          />
+        ))}
+
+        {/* Right hemisphere gyri */}
+        {[
+          "M 198 88 Q 175 78 155 88",
+          "M 204 118 Q 178 108 158 118",
+          "M 206 148 Q 180 138 160 148",
+          "M 200 178 Q 176 168 156 178",
+          "M 188 202 Q 168 192 152 202",
+          "M 175 68 Q 155 58 140 68",
+        ].map((d, i) => (
+          <motion.path
+            key={`r-${i}`}
+            d={d}
+            stroke="#64748b"
+            strokeWidth="1"
+            strokeOpacity="0.22"
+            strokeLinecap="round"
+            fill="none"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 1.2, delay: 0.6 + i * 0.1, ease: "easeOut" }}
+          />
+        ))}
+
+        {/* Fog clouds — drifting across upper brain */}
         <motion.g
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 1.0, duration: 0.7, ease: "easeOut" }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 1 }}
         >
-          <motion.path
-            d="M70 110 Q45 100 35 85 Q50 95 70 105"
-            fill="url(#leafGrad2)"
-            animate={{ rotate: [-2, 4, -2] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            style={{ transformOrigin: "70px 110px" }}
-          />
-          <motion.path
-            d="M70 120 Q40 120 30 135 Q50 125 70 125"
-            fill="url(#leafGrad2)"
-            animate={{ rotate: [2, -3, 2] }}
-            transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut" }}
-            style={{ transformOrigin: "70px 120px" }}
-          />
+          {/* Cloud 1 — upper left */}
+          <motion.g
+            animate={{ x: [-6, 8, -6], opacity: [0.35, 0.6, 0.35] }}
+            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <ellipse cx="85" cy="72" rx="28" ry="14" fill="url(#fogGrad)" filter="url(#fogBlur)" />
+            <ellipse cx="105" cy="68" rx="22" ry="11" fill="url(#fogGrad)" filter="url(#fogBlur)" />
+            <ellipse cx="68" cy="76" rx="18" ry="9" fill="url(#fogGrad)" filter="url(#fogBlur)" />
+          </motion.g>
+
+          {/* Cloud 2 — upper right */}
+          <motion.g
+            animate={{ x: [5, -7, 5], opacity: [0.3, 0.55, 0.3] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          >
+            <ellipse cx="185" cy="78" rx="26" ry="13" fill="url(#fogGrad)" filter="url(#fogBlur)" />
+            <ellipse cx="165" cy="74" rx="20" ry="10" fill="url(#fogGrad)" filter="url(#fogBlur)" />
+            <ellipse cx="200" cy="80" rx="16" ry="8" fill="url(#fogGrad)" filter="url(#fogBlur)" />
+          </motion.g>
+
+          {/* Cloud 3 — top center, drifting across both hemispheres */}
+          <motion.g
+            animate={{ x: [-10, 12, -10], opacity: [0.25, 0.5, 0.25] }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          >
+            <ellipse cx="130" cy="55" rx="34" ry="15" fill="url(#fogGrad)" filter="url(#fogBlur)" />
+            <ellipse cx="110" cy="52" rx="24" ry="11" fill="url(#fogGrad)" filter="url(#fogBlur)" />
+            <ellipse cx="150" cy="54" rx="20" ry="9" fill="url(#fogGrad)" filter="url(#fogBlur)" />
+          </motion.g>
         </motion.g>
 
-        {/* Right leaf growing from brain */}
+        {/* Down arrows — cognitive decline */}
         <motion.g
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.7, ease: "easeOut" }}
-        >
-          <motion.path
-            d="M170 105 Q195 95 205 80 Q190 90 170 100"
-            fill="url(#leafGrad2)"
-            animate={{ rotate: [2, -4, 2] }}
-            transition={{ duration: 4.3, repeat: Infinity, ease: "easeInOut" }}
-            style={{ transformOrigin: "170px 105px" }}
-          />
-          <motion.path
-            d="M170 125 Q200 125 210 140 Q190 130 170 130"
-            fill="url(#leafGrad2)"
-            animate={{ rotate: [-2, 3, -2] }}
-            transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}
-            style={{ transformOrigin: "170px 125px" }}
-          />
-        </motion.g>
-
-        {/* Top lightning accent */}
-        <motion.g
-          initial={{ opacity: 0, y: -10 }}
+          initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5, duration: 0.5 }}
+          transition={{ delay: 1.8, duration: 0.6 }}
         >
-          <motion.path
-            d="M115 50 L108 35 L113 35 L108 20"
-            stroke="#fde400"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            fill="none"
-            animate={{ opacity: [0.4, 1, 0.4] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.path
-            d="M125 50 L132 35 L127 35 L132 22"
-            stroke="#fde400"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            fill="none"
-            animate={{ opacity: [0.3, 0.9, 0.3] }}
-            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
-          />
-        </motion.g>
+          {/* Left arrow */}
+          <motion.g
+            animate={{ opacity: [0.4, 0.9, 0.4], y: [0, 4, 0] }}
+            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0 }}
+          >
+            <path d="M 100 300 L 100 316" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" />
+            <path d="M 94 310 L 100 318 L 106 310" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          </motion.g>
 
-        {/* Bottom root / stem */}
-        <motion.path
-          d="M120 205 Q120 225 120 240"
-          stroke="#22c55e"
-          strokeWidth="2"
-          strokeOpacity="0.3"
-          strokeLinecap="round"
-          fill="none"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{ duration: 1.2, delay: 1.8, ease: "easeOut" }}
-        />
-        <motion.path
-          d="M120 225 Q105 235 100 245"
-          stroke="#22c55e"
-          strokeWidth="1.5"
-          strokeOpacity="0.25"
-          strokeLinecap="round"
-          fill="none"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{ duration: 1, delay: 2.0, ease: "easeOut" }}
-        />
-        <motion.path
-          d="M120 225 Q135 235 140 245"
-          stroke="#22c55e"
-          strokeWidth="1.5"
-          strokeOpacity="0.25"
-          strokeLinecap="round"
-          fill="none"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{ duration: 1, delay: 2.2, ease: "easeOut" }}
-        />
+          {/* Center arrow */}
+          <motion.g
+            animate={{ opacity: [0.5, 1, 0.5], y: [0, 5, 0] }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+          >
+            <path d="M 130 306 L 130 324" stroke="#64748b" strokeWidth="2.2" strokeLinecap="round" />
+            <path d="M 124 318 L 130 326 L 136 318" stroke="#64748b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          </motion.g>
+
+          {/* Right arrow */}
+          <motion.g
+            animate={{ opacity: [0.4, 0.9, 0.4], y: [0, 4, 0] }}
+            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+          >
+            <path d="M 160 300 L 160 316" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" />
+            <path d="M 154 310 L 160 318 L 166 310" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          </motion.g>
+        </motion.g>
       </svg>
     </div>
   );

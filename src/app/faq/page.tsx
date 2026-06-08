@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   description:
     "Focus supplement FAQ: how fast does the best no-crash focus formula work, exact Ginkgo + Ginseng dosing, safety for students/professionals, and results without caffeine jitters. Atlanta made.",
   alternates: { canonical: "/faq" },
+  twitter: {
+    card: "summary_large_image",
+    title: "Focus Supplement FAQ | How Focus Mode Works, Dosing, Safety",
+    description: "Focus supplement FAQ: how fast does the best no-crash focus formula work, exact Ginkgo + Ginseng dosing, safety for students/professionals.",
+    images: ["/og/og-1200x900.png"],
+  },
 };
 
 export default function FaqPage() {

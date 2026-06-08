@@ -23,7 +23,7 @@ export function IngredientsSchematic() {
             transition={{ delay: i * 0.1 }}
             className="relative premium-card p-6"
           >
-            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-neural via-bolt to-transparent" />
+            <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-neural via-bolt to-transparent" />
             <div className="flex items-center justify-between font-mono-data text-[11px] uppercase tracking-widest text-neural">
               <span>ACTIVE {i + 1}</span>
               <span className="text-neural">{ing.dose}</span>

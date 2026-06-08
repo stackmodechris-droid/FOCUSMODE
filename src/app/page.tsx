@@ -3,6 +3,7 @@ import { AnimatedCapsuleFloat } from "@/components/ui/animated-capsule-float";
 import { AnimatedLightning } from "@/components/ui/animated-lightning";
 import { ArticlesGrid } from "@/components/ui/blog-posts";
 import { FaqAccordion } from "@/components/ui/faq-accordion";
+import { FloatingPromo } from "@/components/ui/floating-promo";
 import { FocusRoiCalculator } from "@/components/ui/focus-roi-calculator";
 import { FormulaStack } from "@/components/ui/formula-stack";
 import { GreenSmoothieAnimation } from "@/components/ui/green-smoothie";
@@ -276,6 +277,7 @@ export default function Home() {
 
       {/* Premium limited offer popup — lazy-loaded client only after ~22s (tuned timing + perf). Elegant, non-intrusive conversion. */}
       <HomeLazyPopups />
+      <FloatingPromo />
     </>
   );
 }

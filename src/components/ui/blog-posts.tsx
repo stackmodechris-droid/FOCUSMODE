@@ -1,6 +1,7 @@
 import { ARTICLES } from "@/lib/articles";
 import { cn } from "@/lib/utils";
 import { MoveRight, Star } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export function ArticlesGrid({
@@ -37,11 +38,16 @@ export function ArticlesGrid({
             )}
           >
             {/* Image */}
-            <div
-              className="relative h-[180px] w-full shrink-0 overflow-hidden bg-gray-100 sm:h-[200px]"
-              style={{ backgroundImage: `url(${post.image})`, backgroundSize: "cover", backgroundPosition: "center" }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+            <div className="relative h-[180px] w-full shrink-0 overflow-hidden bg-gray-100 sm:h-[200px]">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                priority={index === 0}
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
             </div>
             {/* Content */}
             <article className="flex flex-1 flex-col justify-between p-5 sm:p-6">

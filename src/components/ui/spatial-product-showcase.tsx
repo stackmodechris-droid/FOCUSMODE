@@ -183,7 +183,7 @@ export function ProductShowcase() {
                       initial={{ width: 0 }}
                       animate={{ width: `${m.value}%` }}
                       transition={{ duration: 1, delay: 0.3 + i * 0.15 }}
-                      className="h-full bg-gradient-to-r from-neural to-bolt"
+                      className="h-full bg-linear-to-r from-neural to-bolt"
                     />
                   </div>
                 </div>

@@ -14,10 +14,10 @@ export function Hero() {
     <section className="relative overflow-hidden bg-[#0a0c0c]">
       {/* Ambient background glows */}
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute left-1/2 -top-20 h-[360px] w-[600px] sm:h-[480px] sm:w-[900px] -translate-x-1/2 rounded-full bg-gradient-to-b from-[#fde400]/[0.07] to-transparent blur-[80px] sm:blur-[120px]" />
+        <div className="absolute left-1/2 -top-20 h-[360px] w-[600px] sm:h-[480px] sm:w-[900px] -translate-x-1/2 rounded-full bg-linear-to-b from-[#fde400]/[0.07] to-transparent blur-[80px] sm:blur-[120px]" />
         <div className="absolute top-1/4 right-[5%] h-[240px] w-[240px] sm:h-[380px] sm:w-[380px] rounded-full bg-[#2eb9df]/[0.05] blur-[70px] sm:blur-[100px]" />
         <div className="absolute top-[10%] left-[8%] h-[200px] w-[200px] sm:h-[320px] sm:w-[320px] rounded-full bg-[#2eb9df]/[0.04] blur-[60px] sm:blur-[90px]" />
-        <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-white/60 to-transparent" />
+        <div className="absolute bottom-0 inset-x-0 h-32 bg-linear-to-t from-white/60 to-transparent" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-5 pt-10 pb-4 md:pt-16 md:pb-2">
@@ -80,7 +80,7 @@ export function Hero() {
             className="premium-card relative overflow-hidden border-[#1e90ff]/30 p-5 md:p-7"
           >
             <div className="absolute -right-12 -top-12 h-44 w-44 rounded-full bg-[#1e90ff]/10 blur-3xl" />
-            <div className="relative z-10 grid grid-cols-[0.9fr_1.1fr] items-center gap-3">
+            <div className="relative z-10 grid grid-cols-1 sm:grid-cols-[0.9fr_1.1fr] items-center gap-3">
               <div className="premium-product-stage px-1 py-2">
                 <ProductGlow
                   src="/products/1780438169836-generated-label-image-3.png"
@@ -120,7 +120,7 @@ export function Hero() {
             className="premium-card relative overflow-hidden border-[#16a34a]/30 p-5 md:p-7"
           >
             <div className="absolute -right-12 -top-12 h-44 w-44 rounded-full bg-[#16a34a]/10 blur-3xl" />
-            <div className="relative z-10 grid grid-cols-[0.9fr_1.1fr] items-center gap-3">
+            <div className="relative z-10 grid grid-cols-1 sm:grid-cols-[0.9fr_1.1fr] items-center gap-3">
               <div className="premium-product-stage px-1 py-2">
                 <ProductGlow
                   src={GREENS.images.front}

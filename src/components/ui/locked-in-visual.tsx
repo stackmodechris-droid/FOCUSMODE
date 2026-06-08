@@ -85,6 +85,68 @@ export function LockedInVisual() {
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
         />
 
+        {/* Subtle brain outline behind the pill — thematic anchor */}
+        <motion.path
+          d="M400 140 C355 140 320 160 305 195 C293 225 290 260 295 295 C300 330 315 360 335 382 C345 394 355 402 365 408 L365 423 L390 423 L390 440 Q390 465 400 485 Q410 465 410 440 L410 423 L435 423 L435 408 C445 402 455 394 465 382 C485 360 500 330 505 295 C510 260 507 225 495 195 C480 160 445 140 400 140 Z"
+          stroke="#64748b"
+          strokeWidth="1"
+          strokeOpacity="0.04"
+          fill="none"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 3, ease: "easeOut" }}
+        />
+        {/* Central fissure */}
+        <motion.path
+          d="M400 145 Q395 190 398 235 Q400 280 398 325 Q395 365 400 420"
+          stroke="#64748b"
+          strokeWidth="0.8"
+          strokeOpacity="0.03"
+          strokeLinecap="round"
+          fill="none"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 2.5, delay: 0.5, ease: "easeOut" }}
+        />
+
+        {/* Neural mesh — faint connecting lines between node positions */}
+        {[
+          // Hexagon perimeter connections
+          { a: -90, b: -30 },
+          { a: -30, b: 30 },
+          { a: 30, b: 90 },
+          { a: 90, b: 150 },
+          { a: 150, b: 210 },
+          { a: 210, b: -90 },
+          // Cross connections for mesh feel
+          { a: -90, b: 90 },
+          { a: -30, b: 150 },
+          { a: 30, b: 210 },
+        ].map((conn, idx) => {
+          const r = 250 * (orbitRadius / 192);
+          const radA = (conn.a * Math.PI) / 180;
+          const radB = (conn.b * Math.PI) / 180;
+          const x1 = 400 + Math.cos(radA) * r;
+          const y1 = 310 + Math.sin(radA) * r;
+          const x2 = 400 + Math.cos(radB) * r;
+          const y2 = 310 + Math.sin(radB) * r;
+          return (
+            <motion.line
+              key={`mesh-${idx}`}
+              x1={x1}
+              y1={y1}
+              x2={x2}
+              y2={y2}
+              stroke="#2eb9df"
+              strokeOpacity="0.04"
+              strokeWidth="0.8"
+              strokeLinecap="round"
+              animate={{ strokeOpacity: [0.03, 0.07, 0.03] }}
+              transition={{ duration: 5 + idx * 0.5, repeat: Infinity, ease: "easeInOut", delay: idx * 0.3 }}
+            />
+          );
+        })}
+
         {/* 6 radial connection lines - base faint (responsive to orbit) */}
         {ANGLES.map((angle, i) => {
           const rad = (angle * Math.PI) / 180;

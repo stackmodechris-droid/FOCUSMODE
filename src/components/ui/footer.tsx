@@ -36,7 +36,7 @@ const COLS = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-surface-dim">
+    <footer className="border-t border-border bg-surface-dim pb-[env(safe-area-inset-bottom)]">
       <div className="mx-auto max-w-7xl px-5 py-16 md:px-8">
         <div className="grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-5 md:gap-10">
           <div className="col-span-2 md:col-span-2">

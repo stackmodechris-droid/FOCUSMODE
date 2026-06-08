@@ -1,12 +1,33 @@
 "use client";
 
+import { SITE } from "@/lib/site";
 import { Quote } from "lucide-react";
 import { motion } from "motion/react";
+
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "Review",
+  itemReviewed: {
+    "@type": "Product",
+    name: "Focus Mode Focus Supplement",
+    image: `${SITE.url}/products/1780438169847-generated-label-image-2.png`,
+    brand: { "@type": "Brand", name: SITE.brand },
+  },
+  author: { "@type": "Person", name: SITE.founder },
+  reviewBody:
+    "I built Focus Mode because I was the first customer. Mental fatigue was destroying my output. I locked in on two exact ingredients: Ginkgo Biloba (24% flavones) for oxygen delivery and clarity, and Red Asian Ginseng (7% ginsenosides) for dopamine support and sustained stamina. The difference was immediate. Afternoon fatigue disappeared.",
+  reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+  publisher: { "@type": "Organization", name: SITE.legalName },
+};
 
 export function Testimonials() {
   // Real founder story — no fake reviews. Focused on the ingredients, results, and shopping the product.
   return (
     <div className="mx-auto max-w-4xl">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+      />
       <motion.figure
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

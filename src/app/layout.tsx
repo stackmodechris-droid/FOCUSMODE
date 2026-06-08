@@ -97,6 +97,7 @@ export const viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: "#fde400",
+  viewportFit: "cover",
 };
 
 const jsonLd = {
@@ -249,6 +250,12 @@ fbq('track', 'PageView');`}
         {/* End Meta Pixel Code */}
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-100 focus:rounded-lg focus:bg-bolt focus:px-4 focus:py-2 focus:text-black focus:font-bold"
+        >
+          Skip to content
+        </a>
         <noscript>
           {/* eslint-disable-next-line @next/next/no-img-element -- Required Meta Pixel noscript fallback (1x1 transparent tracking pixel for no-JS). Standard per Meta docs; cannot/should not use next/image for this. */}
           <img
@@ -263,7 +270,7 @@ fbq('track', 'PageView');`}
 
         <AnnouncementBar />
         <Navbar1 />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

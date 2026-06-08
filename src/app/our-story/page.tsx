@@ -16,6 +16,12 @@ export const metadata: Metadata = {
   description:
     "The story behind Focus Mode — the Atlanta-based all-natural focus supplement. Clinical Ginkgo + Ginseng for no-crash mental clarity. Straight from nature. Halal-friendly ingredients.",
   alternates: { canonical: "/our-story" },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Story | Atlanta Focus Supplement by Focus Mode",
+    description: "The story behind Focus Mode — the Atlanta-based all-natural focus supplement. Clinical Ginkgo + Ginseng for no-crash mental clarity.",
+    images: ["/og/og-1200x900.png"],
+  },
 };
 
 const PHILOSOPHY = [

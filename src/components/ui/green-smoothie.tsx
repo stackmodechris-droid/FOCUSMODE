@@ -16,6 +16,13 @@ export function GreenSmoothieAnimation({ className }: { className?: string }) {
         animate={{ scale: [1, 1.12, 1], opacity: [0.7, 1, 0.7] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
       />
+      {/* Bolt-yellow energy aura — signals focus + energy, not just greens */}
+      <motion.div
+        className="absolute inset-0 rounded-full blur-[55px]"
+        style={{ background: "radial-gradient(circle, rgba(253,228,0,0.12) 0%, rgba(46,185,223,0.06) 55%, transparent 100%)" }}
+        animate={{ scale: [1, 1.18, 1], opacity: [0.4, 0.75, 0.4] }}
+        transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+      />
 
       <svg
         viewBox="0 0 260 340"
@@ -221,6 +228,14 @@ export function GreenSmoothieAnimation({ className }: { className?: string }) {
           <path d="M150 50 L160 51" stroke="#f59e0b" strokeWidth="1.5" opacity="0.35" strokeLinecap="round" />
           <path d="M153 38 L163 39" stroke="#f59e0b" strokeWidth="1.5" opacity="0.35" strokeLinecap="round" />
         </g>
+
+        {/* Tiny lightning accent at straw base — energy signal */}
+        <motion.g
+          animate={{ opacity: [0.3, 0.9, 0.3] }}
+          transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <path d="M138 58 L133 68 L136 68 L132 78" stroke="#fde400" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        </motion.g>
 
         {/* Small leaf garnish on rim */}
         <motion.g

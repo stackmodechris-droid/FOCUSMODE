@@ -12,6 +12,12 @@ export const metadata: Metadata = {
   description:
     "Ginkgo Biloba 24% flavones + Red Asian Ginseng 7% ginsenosides. The exact clinical formula inside Focus Mode — the crash-free focus supplement for students, professionals, entrepreneurs and creators.",
   alternates: { canonical: "/learn-more" },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Science | Best Focus Supplement Ingredients & Clinical Dosing",
+    description: "Ginkgo Biloba 24% flavones + Red Asian Ginseng 7% ginsenosides. The exact clinical formula inside Focus Mode.",
+    images: ["/og/og-1200x900.png"],
+  },
 };
 
 const MECHANICS = [
