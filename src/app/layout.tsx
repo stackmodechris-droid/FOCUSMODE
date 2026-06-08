@@ -1,3 +1,4 @@
+import { AnnouncementBar } from "@/components/ui/announcement-bar";
 import { Footer } from "@/components/ui/footer";
 import { MetaPixel } from "@/components/ui/meta-pixel";
 import { Navbar1 } from "@/components/ui/shadcnblocks-com-navbar1";
@@ -260,6 +261,7 @@ fbq('track', 'PageView');`}
         </noscript>
         <MetaPixel />
 
+        <AnnouncementBar />
         <Navbar1 />
         <main className="flex-1">{children}</main>
         <Footer />
