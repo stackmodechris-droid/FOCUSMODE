@@ -8,7 +8,7 @@ export const SITE = {
   tagline: "Think Faster. Work Smarter. Earn More.",
   price: 39.99,
   originalPrice: 100,
-  discountPercent: 40,
+  discountPercent: 60,
   currency: "USD",
   capsules: 60,
   supplyDays: 30,

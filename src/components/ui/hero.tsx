@@ -26,7 +26,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.21, 0.92, 0.25, 1] }}
-          className="flex items-end justify-center gap-2 sm:gap-6 mb-10 md:mb-14 overflow-hidden"
+          className="flex items-center justify-center gap-2 sm:gap-6 mb-10 md:mb-14 overflow-hidden"
         >
           <AnimatedLightning className="scale-[0.38] sm:scale-[0.60]" />
           <AnimatedBrainLeaves className="scale-[0.58] sm:scale-[0.85]" />
