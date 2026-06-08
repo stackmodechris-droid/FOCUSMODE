@@ -117,11 +117,12 @@ const Navbar1 = ({
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
+            key="mobile-menu"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.12 }}
-            className="fixed inset-0 z-[70] bg-[#0a0c0c] lg:hidden"
+            className="fixed inset-0 z-80 bg-[#0a0c0c] lg:hidden"
             onClick={closeMobile}
           >
             <div className="flex h-full flex-col" onClick={(e) => e.stopPropagation()}>
@@ -168,12 +169,14 @@ const Navbar1 = ({
               <div className="mt-auto p-6 space-y-2.5">
                 <Link
                   href="/focus-mode"
+                  onClick={closeMobile}
                   className="flex w-full items-center justify-center gap-2.5 rounded-full bg-[#1e90ff] active:scale-[0.985] py-4 text-lg font-heading font-bold text-black shadow-[0_1px_0_0_rgba(255,255,255,0.25)_inset]"
                 >
                   Focus Mode <Zap className="h-5 w-5 fill-black/80" />
                 </Link>
                 <Link
                   href="/green-energy"
+                  onClick={closeMobile}
                   className="flex w-full items-center justify-center gap-2.5 rounded-full bg-[#16a34a] active:scale-[0.985] py-4 text-lg font-heading font-bold text-black shadow-[0_1px_0_0_rgba(255,255,255,0.2)_inset]"
                 >
                   Super Energy Blend <Leaf className="h-5 w-5 fill-black/80" />

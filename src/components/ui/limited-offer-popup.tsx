@@ -18,7 +18,10 @@ export function LimitedOfferPopup({ defaultOpen = false }: Props) {
     return !localStorage.getItem(key);
   });
 
-  const close = () => setOpen(false);
+  const close = () => {
+    localStorage.setItem("fm_popup_shown", "1");
+    setOpen(false);
+  };
 
   const goShop = () => {
     const el = document.createElement("div");
@@ -34,7 +37,7 @@ export function LimitedOfferPopup({ defaultOpen = false }: Props) {
   return (
     <AnimatePresence>
       {open && (
-        <div className="fixed inset-0 z-[70] flex items-center justify-center bg-black/80 p-4 backdrop-blur-md" onClick={close}>
+        <div className="fixed inset-0 z-60 flex items-center justify-center bg-black/80 p-4 backdrop-blur-md" onClick={close}>
           <motion.div
             initial={{ opacity: 0, scale: 0.92, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}

@@ -110,7 +110,7 @@ export default function GreenEnergyPage() {
               ))}
             </div>
             <div className="mt-5 rounded-lg bg-green-50/60 p-3 text-xs text-green-700">
-              Best taken in the morning on an empty stomach or with a light breakfast. Pair with <a href="/focus-mode" className="font-semibold underline">Focus Mode</a> for complete mind + body coverage.
+              Best taken in the morning on an empty stomach or with a light breakfast. Pair with <Link href="/focus-mode" className="font-semibold underline">Focus Mode</Link> for complete mind + body coverage.
             </div>
           </div>
         </div>
@@ -175,7 +175,7 @@ export default function GreenEnergyPage() {
           <h2 className="font-heading text-3xl md:text-4xl font-semibold tracking-[-1px] text-gray-900">Fuel your day the clean way</h2>
           <p className="mt-3 text-gray-500 max-w-xl mx-auto">One scoop. 20+ superfoods. Ships today from the USA.</p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a href="/shop" className="inline-flex items-center justify-center rounded-xl bg-green-500 px-8 py-4 text-sm font-bold uppercase tracking-wider text-white hover:bg-green-600 transition">Buy Now — ${GREENS.price}</a>
+            <Link href="/shop" className="inline-flex items-center justify-center rounded-xl bg-green-500 px-8 py-4 text-sm font-bold uppercase tracking-wider text-white hover:bg-green-600 transition">Buy Now — ${GREENS.price}</Link>
             <Link href="/shop" className="inline-flex items-center justify-center rounded-xl border border-gray-300 px-8 py-4 text-sm font-medium text-gray-700 hover:bg-gray-50 transition">View Shop →</Link>
           </div>
         </div>

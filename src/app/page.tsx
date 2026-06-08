@@ -85,7 +85,7 @@ export default function Home() {
             </Reveal>
           </div>
           <div className="mt-8 flex justify-center">
-            <a href="/shop" className="premium-cta px-8">Shop Now — ${SITE.price}</a>
+            <Link href="/shop" className="premium-cta px-8">Shop Now — ${SITE.price}</Link>
           </div>
         </div>
       </section>
@@ -114,7 +114,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-8 flex justify-center">
-            <a href="/shop" className="premium-cta px-8">Get The Clinical Edge</a>
+            <Link href="/shop" className="premium-cta px-8">Get The Clinical Edge</Link>
           </div>
         </div>
       </section>
@@ -132,7 +132,7 @@ export default function Home() {
             <LockedInVisual />
           </div>
           <div className="mt-8 flex justify-center">
-            <a href="/shop" className="premium-cta px-8">Unlock All 6 Benefits</a>
+            <Link href="/shop" className="premium-cta px-8">Unlock All 6 Benefits</Link>
           </div>
         </div>
       </section>
@@ -148,7 +148,7 @@ export default function Home() {
             <ProductShowcase />
           </div>
           <div className="mt-8 flex justify-center">
-            <a href="/shop" className="premium-cta px-8">Shop Now</a>
+            <Link href="/shop" className="premium-cta px-8">Shop Now</Link>
           </div>
         </div>
       </section>
@@ -170,7 +170,7 @@ export default function Home() {
             <AnimatedCapsuleFloat />
           </div>
           <div className="mt-8 flex justify-center">
-            <a href="/shop" className="premium-cta px-8">Get The Exact Formula</a>
+            <Link href="/shop" className="premium-cta px-8">Get The Exact Formula</Link>
           </div>
         </div>
       </section>
@@ -184,7 +184,7 @@ export default function Home() {
           </div>
           <Testimonials />
           <div className="mt-8 flex justify-center">
-            <a href="/shop" className="premium-cta px-8">Join Many High Performers</a>
+            <Link href="/shop" className="premium-cta px-8">Join Many High Performers</Link>
           </div>
         </div>
       </section>
@@ -228,7 +228,7 @@ export default function Home() {
                 <div>✓ Fuels body &amp; brain</div>
               </div>
               <div className="mt-6 flex gap-3">
-                <a href="/green-energy" className="premium-cta px-7">Buy Super Energy Blend — ${GREENS.price}</a>
+                <Link href="/green-energy" className="premium-cta px-7">Buy Super Energy Blend — ${GREENS.price}</Link>
                 <Link href="/green-energy" className="premium-cta-secondary px-7">Learn more</Link>
               </div>
               <p className="mt-2 text-[10px] text-silver/50">30 servings • USA made</p>
@@ -250,7 +250,7 @@ export default function Home() {
           </div>
           <FocusRoiCalculator />
           <div className="mt-8 flex justify-center">
-            <a href="/shop" className="premium-cta px-8">Stop The Leak — Buy Now</a>
+            <Link href="/shop" className="premium-cta px-8">Stop The Leak — Buy Now</Link>
           </div>
         </div>
       </section>
@@ -267,7 +267,7 @@ export default function Home() {
           </div>
           <ArticlesGrid limit={3} variant="dark" />
           <div className="mt-8 flex justify-center">
-            <a href="/shop" className="premium-cta px-8">Shop All Products</a>
+            <Link href="/shop" className="premium-cta px-8">Shop All Products</Link>
           </div>
         </div>
       </section>

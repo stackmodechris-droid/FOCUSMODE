@@ -64,16 +64,30 @@ export function Footer() {
             <div key={col.title}>
               <h3 className="font-mono-data text-xs uppercase tracking-widest text-neural">{col.title}</h3>
               <ul className="mt-4 space-y-3">
-                {col.links.map((l) => (
-                  <li key={l.label}>
-                    <Link
-                      href={l.href}
-                      className="text-sm text-silver/70 transition-colors hover:text-white"
-                    >
-                      {l.label}
-                    </Link>
-                  </li>
-                ))}
+                {col.links.map((l) => {
+                  const isExternal = l.href.startsWith("http") || l.href.startsWith("mailto:");
+                  return (
+                    <li key={l.label}>
+                      {isExternal ? (
+                        <a
+                          href={l.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-silver/70 transition-colors hover:text-white"
+                        >
+                          {l.label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={l.href}
+                          className="text-sm text-silver/70 transition-colors hover:text-white"
+                        >
+                          {l.label}
+                        </Link>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}

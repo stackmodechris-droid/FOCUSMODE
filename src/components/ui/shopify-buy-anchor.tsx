@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 
 interface Props {
   children: React.ReactNode;
@@ -8,8 +9,8 @@ interface Props {
 
 export function ShopifyBuyAnchor({ children, className }: Props) {
   return (
-    <a href="/focus-mode" className={className}>
+    <Link href="/focus-mode" className={className}>
       {children}
-    </a>
+    </Link>
   );
 }

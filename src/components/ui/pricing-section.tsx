@@ -5,6 +5,7 @@ import { SectionLabel } from "@/components/ui/reveal";
 import { GREENS, SITE } from "@/lib/site";
 import { Check, Clock, ShieldCheck, Truck } from "lucide-react";
 import { motion } from "motion/react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const INCLUDES = [
@@ -112,20 +113,20 @@ export function PricingSection() {
           <div className="mb-3 flex items-center gap-2 text-[10px] tracking-[1.5px] text-silver/50">
             <div className="h-px flex-1 bg-white/10" /> SECURE SHOPIFY CHECKOUT <div className="h-px flex-1 bg-white/10" />
           </div>
-          <a href="/focus-mode" className="premium-cta mt-2 block w-full py-4 text-center text-base font-semibold">
+          <Link href="/focus-mode" className="premium-cta mt-2 block w-full py-4 text-center text-base font-semibold">
             Buy Focus Mode — ${SITE.price}
-          </a>
-          <a
+          </Link>
+          <Link
             href="/focus-mode"
             className="mt-3 block text-center font-mono-data text-[10px] uppercase tracking-widest text-silver/50 hover:text-neural underline-offset-4 hover:underline"
           >
             or view full Focus Mode details →
-          </a>
+          </Link>
         </div>
 
         <div className="mt-5 flex items-center justify-between gap-3 rounded-xl border border-[#16a34a]/20 bg-[#16a34a]/5 px-4 py-3 text-xs">
           <div className="text-silver/70">Want the complete bundle? Add <span className="text-[#7ee6a0] font-semibold">Super Energy Blend</span> — ${GREENS.price}</div>
-          <a href="/green-energy" className="shrink-0 font-bold text-[#7ee6a0] hover:text-[#16a34a] transition-colors">Add Greens →</a>
+          <Link href="/green-energy" className="shrink-0 font-bold text-[#7ee6a0] hover:text-[#16a34a] transition-colors">Add Greens →</Link>
         </div>
 
         <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-silver/55">

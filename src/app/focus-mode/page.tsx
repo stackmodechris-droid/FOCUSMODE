@@ -123,7 +123,7 @@ export default function FocusModePage() {
               ))}
             </div>
             <div className="mt-5 rounded-lg bg-blue-50/60 p-3 text-xs text-blue-700">
-              Pro tip: Pair with <a href="/green-energy" className="font-semibold underline">Super Energy Blend</a> in the morning for all-day physical + mental stamina.
+              Pro tip: Pair with <Link href="/green-energy" className="font-semibold underline">Super Energy Blend</Link> in the morning for all-day physical + mental stamina.
             </div>
           </div>
         </div>
@@ -186,7 +186,7 @@ export default function FocusModePage() {
           <h2 className="font-heading text-3xl md:text-4xl font-semibold tracking-[-1px] text-gray-900">Ready to lock in?</h2>
           <p className="mt-3 text-gray-500 max-w-xl mx-auto">One bottle. 30 days of sharper focus. Ships today from the USA.</p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a href="/shop" className="inline-flex items-center justify-center rounded-xl bg-bolt px-8 py-4 text-sm font-bold uppercase tracking-wider text-black hover:bg-bolt-dim transition">Buy Now — ${SITE.price}</a>
+            <Link href="/shop" className="inline-flex items-center justify-center rounded-xl bg-bolt px-8 py-4 text-sm font-bold uppercase tracking-wider text-black hover:bg-bolt-dim transition">Buy Now — ${SITE.price}</Link>
             <Link href="/shop" className="inline-flex items-center justify-center rounded-xl border border-gray-300 px-8 py-4 text-sm font-medium text-gray-700 hover:bg-gray-50 transition">View Shop →</Link>
           </div>
         </div>
