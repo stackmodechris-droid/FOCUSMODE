@@ -38,7 +38,7 @@ export default function LearnMorePage() {
   return (
     <>
       <LiquidGlassFilter />
-      <section className="relative overflow-hidden border-b border-white/10 bg-[#0c0f0f] pt-16 md:pt-20">
+      <section className="relative overflow-hidden border-b border-white/10 bg-[#0c0f0f]">
         <ElectricBrainBg />
         <div className="relative mx-auto max-w-4xl px-5 py-20 md:py-24 text-center md:px-8">
           <Reveal>

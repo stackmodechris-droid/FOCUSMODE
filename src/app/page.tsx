@@ -49,7 +49,7 @@ export default function Home() {
 
       {/* VISUAL IMPACT — Visual-first with animated brain-leaves */}
       <section id="impact" className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8">
+        <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8 mobile-bottom-safe">
           <Reveal className="mx-auto max-w-2xl text-center mb-6">
             <SectionLabel>The Real Cost</SectionLabel>
             <h2 className="mt-3 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">
@@ -93,7 +93,7 @@ export default function Home() {
 
       {/* THE DIFFERENCE — Why us first */}
       <section className="border-b border-white/10 bg-[#111414]">
-        <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8">
+        <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8 mobile-bottom-safe">
           <Reveal className="mx-auto mb-6 max-w-2xl text-center">
             <SectionLabel>The Difference</SectionLabel>
             <h2 className="mt-3 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">Not all focus is created equal.</h2>
@@ -122,7 +122,7 @@ export default function Home() {
 
       {/* BENEFITS — Visual first (interactive orbit) */}
       <section id="benefits" className="border-b border-white/10 bg-[#111414]">
-        <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8">
+        <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8 mobile-bottom-safe">
           <Reveal className="mx-auto max-w-2xl text-center mb-6">
             <SectionLabel>6 Core Benefits</SectionLabel>
             <h2 className="mt-3 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">
@@ -140,7 +140,7 @@ export default function Home() {
 
       {/* VISUAL PRODUCT — Clean showcase */}
       <section className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-12 md:py-14 md:px-8">
+        <div className="mx-auto max-w-7xl px-5 py-12 md:py-14 md:px-8 mobile-bottom-safe">
           <div className="text-center mb-6">
             <SectionLabel>Engineered Inside</SectionLabel>
             <h2 className="mt-2 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">Premium. Clinical. No fillers.</h2>
@@ -156,7 +156,7 @@ export default function Home() {
 
       {/* FORMULA — Visual + clinical (lean on components) */}
       <section id="formula" className="border-b border-white/10 bg-[#111414]">
-        <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8">
+        <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8 mobile-bottom-safe">
           <div className="text-center mb-8">
             <SectionLabel>The Formula</SectionLabel>
             <h2 className="mt-2 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">
@@ -178,7 +178,7 @@ export default function Home() {
 
       {/* REAL RESULTS — Social proof before pricing */}
       <section className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8">
+        <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8 mobile-bottom-safe">
           <div className="text-center mb-8">
             <SectionLabel>Real Results</SectionLabel>
             <h2 className="mt-2 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">How it changed everything.</h2>
@@ -192,7 +192,7 @@ export default function Home() {
 
       {/* PRICING — The offer */}
       <section id="pricing" className="border-b border-white/10 scroll-mt-12">
-        <div className="mx-auto max-w-7xl px-5 py-12 md:py-14 md:px-8">
+        <div className="mx-auto max-w-7xl px-5 py-12 md:py-14 md:px-8 mobile-bottom-safe">
           <div className="text-center mb-6">
             <SectionLabel>Limited • 60% Off Today</SectionLabel>
             <h2 className="mt-1 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">One bottle. Out-think everyone.</h2>
@@ -217,7 +217,7 @@ export default function Home() {
 
       {/* SUPER ENERGY BLEND — Upsell after main offer */}
       <section className="border-b border-white/10 bg-[#111414]">
-        <div className="mx-auto max-w-7xl px-5 py-12 md:py-14 md:px-8">
+        <div className="mx-auto max-w-7xl px-5 py-12 md:py-14 md:px-8 mobile-bottom-safe">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             <div>
               <SectionLabel>Whole-Plant Daily Energy</SectionLabel>
@@ -244,7 +244,7 @@ export default function Home() {
 
       {/* ROI CALCULATOR — Rational justification */}
       <section className="border-b border-white/10 bg-[#111414] scroll-mt-12">
-        <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8">
+        <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8 mobile-bottom-safe">
           <div className="text-center mb-8">
             <SectionLabel>See The Impact</SectionLabel>
             <h2 className="mt-2 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">What is fog costing you?</h2>

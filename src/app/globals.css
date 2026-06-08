@@ -550,7 +550,7 @@ a.premium-cta-secondary {
 
 /* Ensure no button/title overlap, generous tap targets, clean spacing */
 .premium-card { margin-bottom: 0; }
-button, a { min-height: 44px; } /* iOS/Android tap target */
+button { min-height: 44px; } /* iOS/Android tap target */
 section { overflow: visible; } /* prevent clip on mobile anims */
 
 /* ===== Mobile centering + premium glass shop polish (375px, 768px) =====

@@ -171,11 +171,11 @@ export function ShopContent() {
       <section id="greens" className="border-b border-gray-100">
         <div className="mx-auto max-w-7xl px-5 py-16 md:py-20 md:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="relative flex justify-center order-1 lg:order-0">
+            <div className="flex flex-col items-center gap-3 order-1 lg:order-0">
               <div className="premium-product-stage max-w-[420px]">
                 <ProductGlow src={GREENS.images.front} alt={GREENS.name} size={520} glow="neural" priority />
               </div>
-              <button onClick={() => setShowFacts(!showFacts)} className="absolute -bottom-2 right-4 text-xs tracking-[1.5px] px-4 py-1.5 rounded-full border border-gray-200 bg-white hover:bg-gray-50 transition text-gray-500">
+              <button onClick={() => setShowFacts(!showFacts)} className="self-end text-xs tracking-[1.5px] px-4 py-1.5 rounded-full border border-gray-200 bg-white hover:bg-gray-50 transition text-gray-500">
                 {showFacts ? "HIDE" : "VIEW"} FULL SUPPLEMENT FACTS
               </button>
             </div>

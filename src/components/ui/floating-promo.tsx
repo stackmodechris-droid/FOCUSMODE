@@ -14,7 +14,7 @@ export function FloatingPromo() {
     <Link
       href="/shop"
       aria-label="Shop now — 60% off"
-      className="fixed bottom-[110px] right-4 z-[55] flex items-center gap-0 md:bottom-6 md:right-6 group"
+      className="fixed bottom-[130px] right-4 z-55 flex items-center gap-0 md:bottom-6 md:right-6 group"
     >
       {/* Badge label — hidden on mobile */}
       <span className="hidden md:inline-flex items-center rounded-full bg-black px-3 py-1.5 text-[11px] font-heading font-bold tracking-wide text-bolt shadow-lg transition-transform duration-200 group-hover:translate-x-0.5">

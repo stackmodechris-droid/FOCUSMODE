@@ -35,7 +35,7 @@ export default function OurStoryPage() {
   return (
     <>
       <LiquidGlassFilter />
-      <section className="relative overflow-hidden border-b border-border bg-surface-dim pt-16 md:pt-20">
+      <section className="relative overflow-hidden border-b border-border bg-surface-dim">
         <ElectricBrainBg />
         <div className="relative mx-auto max-w-4xl px-5 py-20 md:py-24 text-center md:px-8">
           <Reveal>
