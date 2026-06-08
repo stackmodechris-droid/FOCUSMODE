@@ -170,52 +170,6 @@ const jsonLd = {
       telephone: "+1-678-558-4327",
       sameAs: [SITE.partnerUrl],
     },
-    {
-      "@type": "FAQPage",
-      "@id": `${SITE.url}/#faq`,
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "How fast does Focus Mode work?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Most high-performers feel the brain fog lift within 20-30 minutes. Ginkgo Biloba increases oxygen delivery to neural pathways while Red Asian Ginseng ramps up dopamine and acetylcholine for fast, clean mental activation.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Will it give me jitters or a crash like caffeine?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "No. Focus Mode contains zero synthetic stimulants and zero caffeine. You get 6+ hours of sustained, locked-in focus with no anxiety and no afternoon crash.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Who is Focus Mode designed for?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Entrepreneurs building businesses, professionals crushing deadlines, students mastering exams, creators writing and shipping, doctors and executives making critical calls under pressure, business leaders scaling, and anyone who needs a sharper, more productive mind without jitters or crashes.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How do I take it?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Take 2 capsules, twice daily. For maximum performance, take 20-30 minutes before your most important study session, meeting, exam, or deep-work block.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What's actually inside Focus Mode?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Two clinically-backed, antioxidant-rich ingredients: Ginkgo Biloba Leaf Extract (24% Flavones) for cerebral blood flow and mental clarity, and Red Asian Ginseng Extract (7% Ginsenosides) for dopamine support and stress resilience — in clean, plant-based capsules. Zero fillers.",
-          },
-        },
-      ],
-    },
   ],
 };
 
