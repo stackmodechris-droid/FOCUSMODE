@@ -27,7 +27,7 @@ export const GREENS_CART_URL =
 export const GREENS = {
   name: "Super Energy Blend",
   brand: "Focus Mode",
-  price: 45,
+  price: 44.99,
   currency: "USD",
   netWeight: "0.28 lb (126 g)",
   servings: 30,

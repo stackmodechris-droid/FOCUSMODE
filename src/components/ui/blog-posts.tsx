@@ -29,7 +29,7 @@ export function ArticlesGrid({
           post.slug.includes("pre-workout") ||
           post.slug.includes("plant-energy");
         const accentColor = isGreens ? "#16a34a" : "#1e90ff";
-        const accentText = isGreens ? "text-[#7ee6a0]" : "text-[#7ec4ff]";
+        const accentText = isGreens ? (isDark ? "text-[#7ee6a0]" : "text-[#16a34a]") : (isDark ? "text-[#7ec4ff]" : "text-[#1e90ff]");
 
         return (
           <div
@@ -47,7 +47,7 @@ export function ArticlesGrid({
 
             {/* Image */}
             <Link href={`/articles/${post.slug}`} className="block">
-              <div className="relative h-[175px] w-full overflow-hidden bg-gray-900">
+              <div className={cn("relative h-[175px] w-full overflow-hidden", isDark ? "bg-gray-900" : "bg-gray-100")}>
                 <Image
                   src={post.image}
                   alt={post.title}
@@ -107,14 +107,20 @@ export function ArticlesGrid({
               <div className="mt-4 flex flex-wrap gap-2 border-t pt-4" style={{ borderColor: isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.08)" }}>
                 <Link
                   href="/focus-mode"
-                  className="inline-flex items-center gap-1.5 rounded-lg bg-[#1e90ff]/15 border border-[#1e90ff]/30 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.8px] text-[#7ec4ff] hover:bg-[#1e90ff]/25 transition-colors"
+                  className={cn(
+                    "inline-flex items-center gap-1.5 rounded-lg border border-[#1e90ff]/30 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.8px] transition-colors",
+                    isDark ? "bg-[#1e90ff]/15 text-[#7ec4ff] hover:bg-[#1e90ff]/25" : "bg-[#1e90ff]/10 text-[#1e90ff] hover:bg-[#1e90ff]/15"
+                  )}
                 >
                   <ShoppingCart className="h-3 w-3 shrink-0" />
                   Focus Mode
                 </Link>
                 <Link
                   href="/green-energy"
-                  className="inline-flex items-center gap-1.5 rounded-lg bg-[#16a34a]/15 border border-[#16a34a]/30 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.8px] text-[#7ee6a0] hover:bg-[#16a34a]/25 transition-colors"
+                  className={cn(
+                    "inline-flex items-center gap-1.5 rounded-lg border border-[#16a34a]/30 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.8px] transition-colors",
+                    isDark ? "bg-[#16a34a]/15 text-[#7ee6a0] hover:bg-[#16a34a]/25" : "bg-[#16a34a]/10 text-[#16a34a] hover:bg-[#16a34a]/15"
+                  )}
                 >
                   <ShoppingCart className="h-3 w-3 shrink-0" />
                   Super Energy
