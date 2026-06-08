@@ -3,6 +3,7 @@
 import { FaqAccordion } from "@/components/ui/faq-accordion";
 import { ProductGlow } from "@/components/ui/product-glow";
 import { ShopifyFocusEmbed, ShopifyGreensEmbed } from "@/components/ui/shopify-buy-embed";
+import { TrackViewContent } from "@/components/ui/track-view-content";
 import { GREENS, SITE } from "@/lib/site";
 import { Check, Clock, Leaf, ShieldCheck, Star, Truck, Zap } from "lucide-react";
 import { motion } from "motion/react";
@@ -50,6 +51,8 @@ export function ShopContent() {
 
   return (
     <div className="bg-white text-gray-900">
+      <TrackViewContent name="Focus Mode" value={focusPrice} currency="USD" />
+      <TrackViewContent name={GREENS.name} value={greensPrice} currency="USD" />
       {/* HERO */}
       <section className="border-b border-gray-100 pt-16 md:pt-24">
         <div className="mx-auto max-w-7xl px-5 py-12 md:py-20 md:px-8">

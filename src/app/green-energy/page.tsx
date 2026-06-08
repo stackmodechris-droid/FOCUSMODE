@@ -1,5 +1,6 @@
 import { ProductGlow } from "@/components/ui/product-glow";
 import { ShopifyGreensEmbed } from "@/components/ui/shopify-buy-embed";
+import { TrackViewContent } from "@/components/ui/track-view-content";
 import { GREENS } from "@/lib/site";
 import { Check, Clock, Leaf, ShieldCheck, Star, Truck } from "lucide-react";
 import type { Metadata } from "next";
@@ -40,6 +41,7 @@ const HOW_TO = [
 export default function GreenEnergyPage() {
   return (
     <div className="bg-white text-gray-900">
+      <TrackViewContent name={GREENS.name} value={GREENS.price} currency="USD" />
       {/* HERO */}
       <section className="border-b border-gray-100 pt-16 md:pt-24">
         <div className="mx-auto max-w-7xl px-5 py-12 md:py-20 md:px-8">

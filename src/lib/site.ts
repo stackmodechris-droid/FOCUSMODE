@@ -137,9 +137,36 @@ export const INGREDIENTS = [
 export const FDA_DISCLAIMER =
   "These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Consult a healthcare professional before use.";
 
-/** Fire Meta Pixel AddToCart event if fbq is available. */
-export function trackAddToCart() {
-  if (typeof window !== "undefined" && (window as unknown as Record<string, unknown>).fbq) {
-    ((window as unknown as Record<string, (cmd: string, event: string) => void>).fbq)("track", "AddToCart");
-  }
+interface PixelParams {
+  value?: number;
+  currency?: string;
+  content_name?: string;
+  content_ids?: string[];
+  content_type?: string;
+}
+
+function firePixel(event: string, params?: PixelParams) {
+  if (typeof window === "undefined") return;
+  const w = window as unknown as Record<string, unknown>;
+  if (!w.fbq) return;
+  (w.fbq as (cmd: string, event: string, params?: PixelParams) => void)("track", event, params);
+}
+
+/** Fire Meta Pixel ViewContent event with value and currency. */
+export function trackViewContent(params: { name: string; value: number; currency?: string; contentIds?: string[] }) {
+  firePixel("ViewContent", {
+    content_name: params.name,
+    value: params.value,
+    currency: params.currency ?? "USD",
+    content_ids: params.contentIds,
+    content_type: params.contentIds ? "product" : undefined,
+  });
+}
+
+/** Fire Meta Pixel AddToCart event with optional value and currency. */
+export function trackAddToCart(params?: { value?: number; currency?: string }) {
+  firePixel("AddToCart", {
+    value: params?.value,
+    currency: params?.currency ?? "USD",
+  });
 }
