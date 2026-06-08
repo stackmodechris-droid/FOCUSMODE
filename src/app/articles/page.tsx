@@ -9,11 +9,12 @@ export const metadata: Metadata = {
   description:
     "Evidence-based articles on the best focus supplement strategies: beat brain fog, build discipline without caffeine, improve recall, and engineer sustained mental performance for entrepreneurs, professionals & students.",
   alternates: { canonical: "/articles" },
+  openGraph: { images: ["/og/Front.png"] },
   twitter: {
     card: "summary_large_image",
     title: "Focus Supplement Articles | Beat Brain Fog, Build Discipline",
     description: "Evidence-based articles on the best focus supplement strategies for entrepreneurs, professionals & students.",
-    images: ["/og/og-1200x900.png"],
+    images: ["/og/Front.png"],
   },
 };
 

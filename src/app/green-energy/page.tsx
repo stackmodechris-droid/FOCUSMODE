@@ -15,12 +15,13 @@ export const metadata: Metadata = {
     title: "Super Energy Blend | Best Daily Greens Powder for Clean Energy & Focus",
     description: "20+ superfoods in one scoop. Clean energy. No crash. 30 servings.",
     url: "/green-energy",
+    images: ["/og/Front.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Super Energy Blend | Best Daily Greens Powder for Clean Energy & Focus",
     description: "20+ superfoods in one scoop. Clean energy. No crash. 30 servings.",
-    images: ["/og/og-1200x900.png"],
+    images: ["/og/Front.png"],
   },
 };
 

@@ -1,10 +1,12 @@
 "use client"
 
+import { useMobileMenu } from "@/components/ui/mobile-menu-context"
 import { Leaf, Menu, X, Zap } from "lucide-react"
 import { AnimatePresence, motion } from "motion/react"
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
+import { useEffect, useRef, useState } from "react"
 
 const Navbar1 = ({
   logo = {
@@ -16,19 +18,28 @@ const Navbar1 = ({
 }: {
   logo?: { url: string; src: string; alt: string; title: string }
 }) => {
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const { mobileOpen, setMobileOpen } = useMobileMenu()
   const [progress, setProgress] = useState(0)
+  const rafRef = useRef<number | null>(null)
+  const pathname = usePathname()
 
-  // Subtle top progress line for orientation (integrated into the header = perfectly seamless top, no separate bar/gap)
+  // Smooth RAF-throttled scroll progress — no glitching
   useEffect(() => {
     const onScroll = () => {
-      const h = document.documentElement
-      const scrolled = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100
-      setProgress(Math.min(100, Math.max(0, scrolled)))
+      if (rafRef.current) return
+      rafRef.current = requestAnimationFrame(() => {
+        const h = document.documentElement
+        const scrolled = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100
+        setProgress(Math.min(100, Math.max(0, scrolled)))
+        rafRef.current = null
+      })
     }
     onScroll()
     window.addEventListener("scroll", onScroll, { passive: true })
-    return () => window.removeEventListener("scroll", onScroll)
+    return () => {
+      window.removeEventListener("scroll", onScroll)
+      if (rafRef.current) cancelAnimationFrame(rafRef.current)
+    }
   }, [])
 
   const navLinks = [
@@ -41,6 +52,7 @@ const Navbar1 = ({
   ]
 
   const closeMobile = () => setMobileOpen(false)
+  const isActive = (href: string) => pathname === href || (href !== "/" && pathname.startsWith(href))
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/[0.04] bg-[#0c0f0f]">
@@ -70,15 +82,18 @@ const Navbar1 = ({
 
           {/* Elegant centered links - premium, minimal, no heavy dropdowns */}
           <div className="flex items-center gap-7 text-sm lg:gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="font-medium text-silver/80 transition-all hover:text-white relative after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-neural after:transition-all hover:after:w-full"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const active = isActive(link.href)
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className={`relative font-medium transition-all hover:text-white after:absolute after:-bottom-1 after:left-0 after:h-px after:bg-neural after:transition-all ${active ? "text-white after:w-full" : "text-silver/80 after:w-0 hover:after:w-full"}`}
+                >
+                  {link.label}
+                </Link>
+              )
+            })}
           </div>
 
           {/* Right side — Clean single CTA */}

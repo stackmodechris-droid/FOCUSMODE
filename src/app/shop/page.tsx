@@ -10,12 +10,13 @@ export const metadata: Metadata = {
     title: "Shop Focus Mode | Best Nootropic & Daily Greens — 60% Off Today",
     description: "Buy Focus Mode and Super Energy Blend. 60% off today. Clinical formulas. Zero fillers. USA made.",
     url: "/shop",
+    images: ["/og/Front.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Shop Focus Mode | Best Nootropic & Daily Greens — 60% Off Today",
     description: "Buy Focus Mode and Super Energy Blend. 60% off today. Clinical formulas. Zero fillers. USA made.",
-    images: ["/og/og-1200x900.png"],
+    images: ["/og/Front.png"],
   },
 };
 

@@ -38,25 +38,23 @@ export function AnimatedBrainLeaves({ className }: { className?: string }) {
           </filter>
         </defs>
 
-        {/* Brain outline — anatomical front-view cerebrum */}
+        {/* Brain outline — rounder, more realistic front-view cerebrum */}
         <motion.path
-          d="M130 32
-             C110 32, 88 40, 74 56
-             C60 72, 52 94, 52 120
-             C52 148, 60 174, 74 194
-             C82 206, 90 214, 96 220
-             C100 224, 104 226, 108 228
-             L108 242
-             C108 252, 112 262, 118 268
-             C122 272, 126 274, 130 274
-             C134 274, 138 272, 142 268
-             C148 262, 152 252, 152 242
-             L152 228
-             C156 226, 160 224, 164 220
-             C170 214, 178 206, 186 194
-             C200 174, 208 148, 208 120
-             C208 94, 200 72, 186 56
-             C172 40, 150 32, 130 32 Z"
+          d="M130 28
+             C100 28, 66 40, 48 62
+             C32 84, 28 118, 32 152
+             C36 186, 46 216, 60 238
+             C72 256, 88 268, 104 276
+             L106 286
+             C106 296, 114 304, 122 308
+             C126 310, 128 310, 130 310
+             C132 310, 134 310, 138 308
+             C146 304, 154 296, 154 286
+             L156 276
+             C172 268, 188 256, 200 238
+             C214 216, 224 186, 228 152
+             C232 118, 228 84, 212 62
+             C194 40, 160 28, 130 28 Z"
           stroke="#ff4d8d"
           strokeWidth="1.8"
           strokeOpacity="0.5"
@@ -66,9 +64,9 @@ export function AnimatedBrainLeaves({ className }: { className?: string }) {
           transition={{ duration: 2, ease: "easeOut" }}
         />
 
-        {/* Central longitudinal fissure — slightly organic */}
+        {/* Central longitudinal fissure — follows new rounder shape */}
         <motion.path
-          d="M130 38 Q127 60 129 85 Q131 110 128 135 Q126 160 129 185 Q132 210 130 238"
+          d="M130 34 Q127 60 129 90 Q131 124 128 162 Q126 200 129 240 Q132 278 130 306"
           stroke="#ff3377"
           strokeWidth="1.2"
           strokeOpacity="0.35"
@@ -81,16 +79,16 @@ export function AnimatedBrainLeaves({ className }: { className?: string }) {
 
         {/* Left hemisphere gyri — organic curved folds */}
         {[
-          "M 66 82 Q 88 72 108 84",
-          "M 58 108 Q 82 96 106 108",
-          "M 54 134 Q 80 122 104 136",
-          "M 56 160 Q 78 148 102 162",
-          "M 64 186 Q 86 174 108 188",
-          "M 76 210 Q 94 198 112 212",
-          "M 82 58 Q 100 48 118 58",
-          "M 72 72 Q 92 62 112 74",
-          "M 88 228 Q 100 220 114 230",
-          "M 96 244 Q 108 236 122 246",
+          "M 58 82 Q 86 70 110 82",
+          "M 48 108 Q 78 94 108 106",
+          "M 44 134 Q 76 120 106 134",
+          "M 46 160 Q 74 146 104 160",
+          "M 56 186 Q 82 172 110 186",
+          "M 66 210 Q 90 196 114 210",
+          "M 72 58 Q 96 46 120 56",
+          "M 62 72 Q 86 60 114 72",
+          "M 78 228 Q 96 218 116 228",
+          "M 86 244 Q 104 234 124 244",
         ].map((d, i) => (
           <motion.path
             key={`l-${i}`}
@@ -108,16 +106,16 @@ export function AnimatedBrainLeaves({ className }: { className?: string }) {
 
         {/* Right hemisphere gyri — organic curved folds */}
         {[
-          "M 194 82 Q 172 72 152 84",
-          "M 202 108 Q 178 96 154 108",
-          "M 206 134 Q 180 122 156 136",
-          "M 204 160 Q 182 148 158 162",
-          "M 196 186 Q 174 174 152 188",
-          "M 184 210 Q 166 198 148 212",
-          "M 178 58 Q 160 48 142 58",
-          "M 188 72 Q 168 62 148 74",
-          "M 172 228 Q 160 220 146 230",
-          "M 164 244 Q 152 236 138 246",
+          "M 202 82 Q 174 70 150 82",
+          "M 212 108 Q 182 94 152 106",
+          "M 216 134 Q 184 120 154 134",
+          "M 214 160 Q 186 146 156 160",
+          "M 204 186 Q 178 172 150 186",
+          "M 194 210 Q 170 196 146 210",
+          "M 188 58 Q 164 46 140 56",
+          "M 198 72 Q 174 60 146 72",
+          "M 182 228 Q 164 218 144 228",
+          "M 174 244 Q 156 234 136 244",
         ].map((d, i) => (
           <motion.path
             key={`r-${i}`}

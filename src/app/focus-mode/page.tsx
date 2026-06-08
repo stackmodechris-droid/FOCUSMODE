@@ -16,12 +16,13 @@ export const metadata: Metadata = {
     title: "Focus Mode Capsules | Best Nootropic for 6+ Hour Focus & Mental Clarity",
     description: "Clinical Ginkgo + Ginseng. 6+ hours crash-free focus. 60 capsules. Zero fillers. 60% off.",
     url: "/focus-mode",
+    images: ["/og/Front.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Focus Mode Capsules | Best Nootropic for 6+ Hour Focus & Mental Clarity",
     description: "Clinical Ginkgo + Ginseng. 6+ hours crash-free focus. 60 capsules. Zero fillers. 60% off.",
-    images: ["/og/og-1200x900.png"],
+    images: ["/og/Front.png"],
   },
 };
 

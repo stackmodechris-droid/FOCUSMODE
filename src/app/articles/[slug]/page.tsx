@@ -33,7 +33,7 @@ export async function generateMetadata({
       url: `${SITE.url}/articles/${article.slug}`,
       images: [
         {
-          url: article.image,
+          url: "/og/Front.png",
           width: 1200,
           height: 800,
           alt: `Focus Mode — ${article.title}`,
@@ -44,7 +44,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: article.metaTitle,
       description: article.metaDescription,
-      images: [article.image],
+      images: ["/og/Front.png"],
     },
   };
 }

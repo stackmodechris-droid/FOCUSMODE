@@ -1,5 +1,6 @@
 "use client";
 
+import { useMobileMenu } from "@/components/ui/mobile-menu-context";
 import { GREENS, SITE } from "@/lib/site";
 import { Zap } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
@@ -7,9 +8,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-/** Mobile-first sticky buy bar that appears after the user scrolls past the hero. */
+/** Mobile-first sticky buy bar that appears after the user scrolls past the hero. Hides when mobile nav is open. */
 export function StickyBuyBar() {
   const [show, setShow] = useState(false);
+  const { mobileOpen } = useMobileMenu();
 
   useEffect(() => {
     const onScroll = () => setShow(window.scrollY > 700);
@@ -18,9 +20,11 @@ export function StickyBuyBar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const visible = show && !mobileOpen;
+
   return (
     <AnimatePresence>
-      {show && (
+      {visible && (
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

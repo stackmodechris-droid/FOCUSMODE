@@ -1,6 +1,7 @@
 import { AnnouncementBar } from "@/components/ui/announcement-bar";
 import { Footer } from "@/components/ui/footer";
 import { MetaPixel } from "@/components/ui/meta-pixel";
+import { MobileMenuProvider } from "@/components/ui/mobile-menu-context";
 import { Navbar1 } from "@/components/ui/shadcnblocks-com-navbar1";
 import { SITE } from "@/lib/site";
 import type { Metadata } from "next";
@@ -81,14 +82,14 @@ export const metadata: Metadata = {
       "Buy the best all-natural focus supplement. 6+ hours of crash-free mental clarity with clinical Ginkgo Biloba 24% flavones + Red Asian Ginseng 7% ginsenosides. 60 capsules. Zero fillers, zero caffeine. USA made. 60% off + 30-day guarantee.",
     url: SITE.url,
     images: [
-      { url: "/og/og-1200x900.png", width: 1448, height: 1086, alt: "Focus Mode — Elite focus supplement, no crash, Atlanta made" },
+      { url: "/og/Front.png", width: 1448, height: 1086, alt: "Focus Mode — Elite focus supplement, no crash, Atlanta made" },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "#1 All-Natural Focus Supplement | 6+ Hours Clean Focus, Zero Crash | Focus Mode",
     description: "Buy the #1 all-natural focus supplement with clinical Ginkgo Biloba + Red Asian Ginseng. 6+ hours crash-free mental clarity. 60 capsules. Zero fillers, zero caffeine. USA made. 60% off + 30-day guarantee.",
-    images: ["/og/og-1200x900.png"],
+    images: ["/og/Front.png"],
   },
   robots: { index: true, follow: true },
 };
@@ -222,10 +223,12 @@ fbq('track', 'PageView');`}
         </noscript>
         <MetaPixel />
 
-        <AnnouncementBar />
-        <Navbar1 />
-        <main id="main-content" className="flex-1">{children}</main>
-        <Footer />
+        <MobileMenuProvider>
+          <AnnouncementBar />
+          <Navbar1 />
+          <main id="main-content" className="flex-1">{children}</main>
+          <Footer />
+        </MobileMenuProvider>
       </body>
     </html>
   );
