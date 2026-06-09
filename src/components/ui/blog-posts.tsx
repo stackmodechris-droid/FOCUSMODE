@@ -1,9 +1,10 @@
 import { ARTICLES } from "@/lib/articles";
-import { GREENS, SITE, trackPurchase } from "@/lib/site";
+import { GREENS, SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { Clock, MoveRight, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { TrackableLink } from "./trackable-link";
 
 export function ArticlesGrid({
   limit,
@@ -106,28 +107,28 @@ export function ArticlesGrid({
 
               {/* Buy buttons — both products */}
               <div className="mt-4 flex flex-wrap gap-2 border-t pt-4" style={{ borderColor: isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.08)" }}>
-                <Link
+                <TrackableLink
                   href="/focus-mode"
+                  price={SITE.price}
                   className={cn(
                     "inline-flex items-center gap-1.5 rounded-lg border border-[#1e90ff]/30 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.8px] transition-colors",
                     isDark ? "bg-[#1e90ff]/15 text-[#7ec4ff] hover:bg-[#1e90ff]/25" : "bg-[#1e90ff]/10 text-[#1e90ff] hover:bg-[#1e90ff]/15"
                   )}
-                  onClick={() => trackPurchase({ value: SITE.price, currency: "USD" })}
                 >
                   <ShoppingCart className="h-3 w-3 shrink-0" />
                   Focus Mode
-                </Link>
-                <Link
+                </TrackableLink>
+                <TrackableLink
                   href="/green-energy"
+                  price={GREENS.price}
                   className={cn(
                     "inline-flex items-center gap-1.5 rounded-lg border border-[#16a34a]/30 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.8px] transition-colors",
                     isDark ? "bg-[#16a34a]/15 text-[#7ee6a0] hover:bg-[#16a34a]/25" : "bg-[#16a34a]/10 text-[#16a34a] hover:bg-[#16a34a]/15"
                   )}
-                  onClick={() => trackPurchase({ value: GREENS.price, currency: "USD" })}
                 >
                   <ShoppingCart className="h-3 w-3 shrink-0" />
                   Super Energy
-                </Link>
+                </TrackableLink>
               </div>
             </div>
           </div>
