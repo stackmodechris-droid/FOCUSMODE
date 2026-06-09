@@ -627,8 +627,8 @@ section { overflow: visible; } /* prevent clip on mobile anims */
   /* Keep CTAs full width but centered text */
   .premium-cta, .premium-cta-secondary { justify-content: center; }
   /* Locked pill visual + orbiting squares: extra room, perfect sizing no overlap on 375px */
-  .min-h-\[380px\] { min-height: 340px; }
-  .min-h-\[420px\] { min-height: 340px; }
+  .min-h-\[420px\] { min-height: 400px; }
+  .min-h-\[460px\] { min-height: 420px; }
   /* Prevent fixed "Buy Now" sticky bar from overlapping bottom content (FAQ buy button, etc.) on mobile */
   .mobile-bottom-safe { padding-bottom: 4.25rem !important; }
 }

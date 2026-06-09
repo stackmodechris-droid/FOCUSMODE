@@ -38,17 +38,17 @@ export function LockedInVisual() {
     const updateLayout = () => {
       const w = window.innerWidth;
       if (w < 375) {
-        setOrbitRadius(115);
-        setCardScale(0.88);
+        setOrbitRadius(150);
+        setCardScale(0.72);
       } else if (w < 420) {
-        setOrbitRadius(125);
-        setCardScale(0.92);
+        setOrbitRadius(160);
+        setCardScale(0.78);
       } else if (w < 640) {
-        setOrbitRadius(142);
-        setCardScale(0.96);
+        setOrbitRadius(172);
+        setCardScale(0.88);
       } else if (w < 768) {
-        setOrbitRadius(158);
-        setCardScale(1);
+        setOrbitRadius(180);
+        setCardScale(0.96);
       } else {
         setOrbitRadius(192);
         setCardScale(1);
@@ -60,7 +60,7 @@ export function LockedInVisual() {
   }, []);
 
   return (
-    <div className="relative mx-auto w-full max-w-[860px] select-none min-h-[380px] pt-2 pb-2 sm:min-h-[440px] sm:pt-4 sm:pb-4 md:min-h-[600px] md:pt-10 md:pb-8 overflow-hidden">
+    <div className="relative mx-auto w-full max-w-[860px] select-none min-h-[420px] pt-2 pb-2 sm:min-h-[460px] sm:pt-4 sm:pb-4 md:min-h-[600px] md:pt-10 md:pb-8 overflow-hidden">
       {/* Ambient background — clean premium orbs + subtle static rings (no spinning coded tech) */}
       <svg
         className="pointer-events-none absolute inset-0 -m-6 sm:-m-8 h-[100%] w-[100%] sm:h-[110%] sm:w-[110%] opacity-35"
