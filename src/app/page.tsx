@@ -45,6 +45,8 @@ const incomeChart = [
 export default function Home() {
   return (
     <>
+      <link rel="preload" as="image" href="/products/focus-mode-brain-booster-bottles.png" />
+      <link rel="preload" as="image" href="/greens/super-energy-blend-greens-powder-front.png" />
       <TrackViewContent name="Focus Mode" value={SITE.price} currency="USD" />
       <LiquidGlassFilter />
       <Hero />

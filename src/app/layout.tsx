@@ -185,6 +185,13 @@ export default function RootLayout({
       className={`${sora.variable} ${inter.variable} ${jetbrains.variable} h-full antialiased`}
     >
       <head>
+        <link rel="preconnect" href="https://connect.facebook.net" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
+        <link rel="preconnect" href="https://www.facebook.com" />
+        <link rel="dns-prefetch" href="https://www.facebook.com" />
+        <link rel="preconnect" href="https://sdks.shopifycdn.com" />
+        <link rel="dns-prefetch" href="https://sdks.shopifycdn.com" />
+        <link rel="preconnect" href="https://qg5zmc-rx.myshopify.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

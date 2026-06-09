@@ -71,7 +71,7 @@ export function ShopContent() {
           {/* Price cards */}
           <div className="mt-10 grid gap-5 md:grid-cols-2 items-stretch max-w-4xl mx-auto">
             {/* Focus Mode */}
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="relative h-full flex flex-col rounded-2xl border-2 border-yellow-300 bg-white p-6 shadow-lg">
+            <motion.div initial={{ opacity: 1, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }} className="relative h-full flex flex-col rounded-2xl border-2 border-yellow-300 bg-white p-6 shadow-lg">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded bg-yellow-400 px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-black shadow-sm">60% OFF TODAY</div>
               <div className="flex-1 flex flex-col">
                 <div className="flex items-center gap-3">
@@ -101,7 +101,7 @@ export function ShopContent() {
             </motion.div>
 
             {/* Super Energy Blend */}
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="h-full flex flex-col rounded-2xl border border-green-200 bg-white p-6 shadow-sm">
+            <motion.div initial={{ opacity: 1, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, delay: 0.05 }} className="h-full flex flex-col rounded-2xl border border-green-200 bg-white p-6 shadow-sm">
               <div className="flex-1 flex flex-col">
                 <div className="flex items-center gap-3">
                   <div className="w-20 h-20 shrink-0 rounded-xl overflow-hidden bg-gray-50">

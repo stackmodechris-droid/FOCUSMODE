@@ -12,7 +12,7 @@ export function AnnouncementBar() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: -4 }}
+      initial={{ opacity: 1, y: -4 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, ease: "easeOut" }}
       className="relative z-50 flex h-9 w-full items-center justify-center bg-bolt"

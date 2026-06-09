@@ -71,7 +71,7 @@ export function ProductGlow({
       />
 
       <motion.div
-        initial={{ opacity: 0, y: 40, scale: 0.9 }}
+        initial={priority ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 40, scale: 0.9 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ type: "spring", stiffness: 80, damping: 16 }}

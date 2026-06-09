@@ -21,5 +21,10 @@ export const metadata: Metadata = {
 };
 
 export default function ShopPage() {
-  return <ShopContent />;
+  return (
+    <>
+      <link rel="preload" as="script" href="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js" />
+      <ShopContent />
+    </>
+  );
 }

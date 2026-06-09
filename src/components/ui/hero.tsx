@@ -20,9 +20,9 @@ export function Hero() {
       <div className="relative mx-auto max-w-7xl px-5 pt-14 pb-4 md:pt-20 md:pb-2">
         {/* Headline — punchy, short */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.15, ease: [0.21, 0.92, 0.25, 1] }}
+          transition={{ duration: 0.45, delay: 0.05, ease: [0.21, 0.92, 0.25, 1] }}
           className="text-center"
         >
           <div className="premium-badge mb-4">
@@ -59,9 +59,9 @@ export function Hero() {
       <div className="relative z-10 mx-auto mt-6 max-w-7xl px-5 pb-10 sm:pb-14 md:pb-20">
         <div className="grid gap-4 lg:grid-cols-2">
           <motion.div
-            initial={{ opacity: 0, y: 22 }}
+            initial={{ opacity: 1, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.1 }}
+            transition={{ duration: 0.4, delay: 0.05 }}
             className="premium-card relative overflow-hidden border-[#1e90ff]/30 p-5 md:p-7"
           >
             <div className="absolute -right-12 -top-12 h-44 w-44 rounded-full bg-[#1e90ff]/10 blur-3xl" />
@@ -99,9 +99,9 @@ export function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 22 }}
+            initial={{ opacity: 1, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.18 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
             className="premium-card relative overflow-hidden border-[#16a34a]/30 p-5 md:p-7"
           >
             <div className="absolute -right-12 -top-12 h-44 w-44 rounded-full bg-[#16a34a]/10 blur-3xl" />
@@ -140,9 +140,9 @@ export function Hero() {
 
         {/* Bundle upsell strip */}
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 1, y: 4 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.32 }}
+          transition={{ duration: 0.35, delay: 0.15 }}
           className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 rounded-2xl border border-white/10 bg-white/2.5 px-5 py-3.5 backdrop-blur-sm"
         >
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm text-silver/70">
