@@ -145,11 +145,22 @@ interface PixelParams {
   content_type?: string;
 }
 
+function stripUndefined<T extends Record<string, unknown>>(obj: T): Partial<T> {
+  const result: Partial<T> = {};
+  for (const key in obj) {
+    if (obj[key] !== undefined) {
+      result[key] = obj[key];
+    }
+  }
+  return result;
+}
+
 function firePixel(event: string, params?: PixelParams) {
   if (typeof window === "undefined") return;
   const w = window as unknown as Record<string, unknown>;
   if (!w.fbq) return;
-  (w.fbq as (cmd: string, event: string, params?: PixelParams) => void)("track", event, params);
+  const cleanParams = params ? stripUndefined(params as Record<string, unknown>) : undefined;
+  (w.fbq as (cmd: string, event: string, params?: PixelParams) => void)("track", event, cleanParams);
 }
 
 /** Fire Meta Pixel ViewContent event with value and currency. */

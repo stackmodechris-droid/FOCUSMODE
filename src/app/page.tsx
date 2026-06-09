@@ -19,6 +19,7 @@ import { ProductShowcase } from "@/components/ui/spatial-product-showcase";
 import { StatsCard } from "@/components/ui/stats-card-1";
 import { StickyBuyBar } from "@/components/ui/sticky-buy-bar";
 import { Testimonials } from "@/components/ui/testimonials";
+import { TrackViewContent } from "@/components/ui/track-view-content";
 import { TrackableLink } from "@/components/ui/trackable-link";
 import { GREENS, SITE } from "@/lib/site";
 import { Brain, Coins, TrendingUp } from "lucide-react";
