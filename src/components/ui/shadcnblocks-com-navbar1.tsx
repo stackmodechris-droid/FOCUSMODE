@@ -1,6 +1,7 @@
 "use client"
 
 import { useMobileMenu } from "@/components/ui/mobile-menu-context"
+import { SITE, trackPurchase } from "@/lib/site"
 import { Leaf, Menu, X, Zap } from "lucide-react"
 import { AnimatePresence, motion } from "motion/react"
 import Image from "next/image"
@@ -101,6 +102,7 @@ const Navbar1 = ({
             <Link
               href="/shop"
               className="group inline-flex items-center gap-2 rounded-full bg-bolt hover:brightness-105 active:scale-[0.985] px-6 py-2.5 text-sm font-heading font-extrabold text-black transition-all shadow-[0_1px_0_0_rgba(255,255,255,0.45)_inset,0_2px_10px_-2px_rgba(253,228,0,0.55)]"
+              onClick={() => trackPurchase({ value: SITE.price, currency: "USD" })}
             >
               Shop Now
               <Zap className="h-4 w-4 fill-black/80 transition group-hover:translate-x-px" />
@@ -198,7 +200,10 @@ const Navbar1 = ({
                 </Link>
                 <Link
                   href="/shop"
-                  onClick={closeMobile}
+                  onClick={() => {
+                    trackPurchase({ value: SITE.price, currency: "USD" });
+                    closeMobile();
+                  }}
                   className="flex w-full items-center justify-center gap-2.5 rounded-full bg-bolt active:scale-[0.985] py-4 text-lg font-heading font-extrabold text-black shadow-[0_1px_0_0_rgba(255,255,255,0.45)_inset]"
                 >
                   Shop Now <Zap className="h-5 w-5 fill-black/80" />

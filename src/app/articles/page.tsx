@@ -2,6 +2,7 @@ import { ArticlesGrid } from "@/components/ui/blog-posts";
 import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
 import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
 import { Reveal, SectionLabel } from "@/components/ui/reveal";
+import { SITE } from "@/lib/site";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -37,7 +38,7 @@ export default function ArticlesPage() {
           <ArticlesGrid variant="light" />
 
           <div className="mt-16 flex flex-col items-center gap-3">
-            <LiquidGlassButton href="/focus-mode">Get Focus Mode</LiquidGlassButton>
+            <LiquidGlassButton href="/focus-mode" trackPrice={SITE.price}>Get Focus Mode</LiquidGlassButton>
             <OpenOfferButton />
             <p className="text-[10px] text-gray-500">Or open the popup — answer 1 question, see your personal “why buy now”.</p>
           </div>

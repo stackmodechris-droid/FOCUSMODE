@@ -2,6 +2,7 @@ import { FaqAccordion } from "@/components/ui/faq-accordion";
 import { ProductGlow } from "@/components/ui/product-glow";
 import { ShopifyFocusEmbed } from "@/components/ui/shopify-buy-embed";
 import { TrackViewContent } from "@/components/ui/track-view-content";
+import { TrackableLink } from "@/components/ui/trackable-link";
 import { SITE } from "@/lib/site";
 import { Check, Clock, ShieldCheck, Star, Truck, Zap } from "lucide-react";
 import type { Metadata } from "next";
@@ -195,7 +196,7 @@ export default function FocusModePage() {
           <h2 className="font-heading text-3xl md:text-4xl font-semibold tracking-[-1px] text-gray-900">Ready to lock in?</h2>
           <p className="mt-3 text-gray-500 max-w-xl mx-auto">One bottle. 30 days of sharper focus. Ships today from the USA.</p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <Link href="/shop" className="inline-flex items-center justify-center rounded-xl bg-bolt px-8 py-4 text-sm font-bold uppercase tracking-wider text-black hover:bg-bolt-dim transition">Buy Now — ${SITE.price}</Link>
+            <TrackableLink href="/shop" price={SITE.price} className="inline-flex items-center justify-center rounded-xl bg-bolt px-8 py-4 text-sm font-bold uppercase tracking-wider text-black hover:bg-bolt-dim transition">Buy Now — ${SITE.price}</TrackableLink>
             <Link href="/shop" className="inline-flex items-center justify-center rounded-xl border border-gray-300 px-8 py-4 text-sm font-medium text-gray-700 hover:bg-gray-50 transition">View Shop →</Link>
           </div>
         </div>

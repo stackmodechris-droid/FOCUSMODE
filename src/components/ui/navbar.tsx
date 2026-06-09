@@ -1,6 +1,6 @@
 "use client";
 
-import { NAV_LINKS, SITE } from "@/lib/site";
+import { NAV_LINKS, SITE, trackPurchase } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
@@ -66,6 +66,7 @@ export function Navbar() {
           <Link
             href="/focus-mode"
             className="hidden items-center gap-2 bg-bolt px-6 py-2.5 font-heading text-sm font-bold text-black transition-all hover:scale-105 hover:glow-bolt md:inline-flex"
+            onClick={() => trackPurchase({ value: SITE.price, currency: "USD" })}
           >
             BUY NOW
           </Link>
@@ -102,7 +103,10 @@ export function Navbar() {
               ))}
               <Link
                 href="/focus-mode"
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  trackPurchase({ value: SITE.price, currency: "USD" });
+                  setOpen(false);
+                }}
                 className="mt-4 inline-flex items-center justify-center gap-2 bg-bolt py-4 font-heading font-bold text-black"
               >
                 BUY NOW

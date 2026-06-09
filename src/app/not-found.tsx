@@ -1,3 +1,4 @@
+import { TrackableLink } from "@/components/ui/trackable-link";
 import { SITE } from "@/lib/site";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -21,9 +22,9 @@ export default function NotFound() {
         <Link href="/" className="premium-cta px-8">
           Go Home
         </Link>
-        <Link href="/shop" className="premium-cta-secondary px-8">
+        <TrackableLink href="/shop" price={SITE.price} className="premium-cta-secondary px-8">
           Shop Now
-        </Link>
+        </TrackableLink>
       </div>
       <p className="mt-6 text-sm text-gray-400">
         Need help? Email us at{" "}

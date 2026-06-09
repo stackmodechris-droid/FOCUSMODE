@@ -1,5 +1,6 @@
 "use client";
 
+import { SITE, trackPurchase } from "@/lib/site";
 import { X } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
@@ -19,6 +20,7 @@ export function AnnouncementBar() {
       <Link
         href="/shop"
         className="flex items-center gap-2 pr-8 text-xs font-heading font-bold text-black sm:text-sm"
+        onClick={() => trackPurchase({ value: SITE.price, currency: "USD" })}
       >
         <span className="inline-flex items-center gap-1.5">
           <span className="rounded bg-black px-1.5 py-0.5 text-[10px] font-extrabold text-bolt">

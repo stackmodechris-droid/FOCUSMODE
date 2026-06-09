@@ -1,5 +1,6 @@
 import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
 import { LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
+import { TrackableLink } from "@/components/ui/trackable-link";
 import { ARTICLES, getArticle } from "@/lib/articles";
 import { GREENS, SITE } from "@/lib/site";
 import { ArrowLeft } from "lucide-react";
@@ -137,12 +138,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                   <span className="text-xs text-gray-400 line-through">$100</span>
                   <span className="rounded bg-bolt px-1.5 py-0.5 text-[10px] font-bold text-black">60% OFF</span>
                 </div>
-                <Link
+                <TrackableLink
                   href="/focus-mode"
+                  price={SITE.price}
                   className="mt-4 inline-flex items-center justify-center rounded-xl bg-[#1e90ff] px-5 py-2.5 text-[13px] font-bold uppercase tracking-[1px] text-white hover:bg-[#1e90ff]/90 transition-colors"
                 >
                   Get Focus Mode →
-                </Link>
+                </TrackableLink>
               </div>
 
               <div className="flex flex-col rounded-xl border border-[#16a34a]/20 bg-white p-5 shadow-sm">
@@ -155,12 +157,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                   <span className="font-heading text-2xl font-bold text-gray-900">${GREENS.price}</span>
                   <span className="text-xs text-gray-400">30 servings</span>
                 </div>
-                <Link
+                <TrackableLink
                   href="/green-energy"
+                  price={GREENS.price}
                   className="mt-4 inline-flex items-center justify-center rounded-xl bg-[#16a34a] px-5 py-2.5 text-[13px] font-bold uppercase tracking-[1px] text-white hover:bg-[#16a34a]/90 transition-colors"
                 >
                   Get Super Energy Blend →
-                </Link>
+                </TrackableLink>
               </div>
             </div>
 

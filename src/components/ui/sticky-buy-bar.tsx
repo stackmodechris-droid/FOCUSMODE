@@ -1,7 +1,7 @@
 "use client";
 
 import { useMobileMenu } from "@/components/ui/mobile-menu-context";
-import { GREENS, SITE } from "@/lib/site";
+import { GREENS, SITE, trackPurchase } from "@/lib/site";
 import { Zap } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
@@ -41,6 +41,7 @@ export function StickyBuyBar() {
             <Link
               href="/shop"
               className="premium-cta inline-flex items-center gap-1 px-3 py-1.5 text-[10px] active:bg-[#ffea3d]"
+              onClick={() => trackPurchase({ value: SITE.price, currency: "USD" })}
             >
               BUY NOW <Zap className="h-3 w-3 fill-black" />
             </Link>

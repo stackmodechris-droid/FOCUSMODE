@@ -79,7 +79,7 @@ export default function OurStoryPage() {
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
-              <LiquidGlassButton href="/focus-mode">Get Focus Mode</LiquidGlassButton>
+              <LiquidGlassButton href="/focus-mode" trackPrice={SITE.price}>Get Focus Mode</LiquidGlassButton>
               <OpenOfferButton />
             </div>
           </Reveal>
@@ -166,7 +166,7 @@ export default function OurStoryPage() {
           </Reveal>
           <Founders />
           <div className="mt-14 flex justify-center">
-            <LiquidGlassButton href="/focus-mode">Get Focus Mode</LiquidGlassButton>
+            <LiquidGlassButton href="/focus-mode" trackPrice={SITE.price}>Get Focus Mode</LiquidGlassButton>
           </div>
         </div>
       </section>

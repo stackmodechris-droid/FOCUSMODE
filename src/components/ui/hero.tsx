@@ -1,7 +1,7 @@
 "use client";
 
 import { ProductGlow } from "@/components/ui/product-glow";
-import { GREENS, PRODUCT_IMAGES, SITE } from "@/lib/site";
+import { GREENS, PRODUCT_IMAGES, SITE, trackPurchase } from "@/lib/site";
 import { ChevronDown, Leaf, ShieldCheck, Star, Truck, Zap } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
@@ -91,7 +91,7 @@ export function Hero() {
                   <span className="rounded-full bg-white/5 px-3 py-1">Zero crash</span>
                   <span className="rounded-full bg-white/5 px-3 py-1">60 capsules</span>
                 </div>
-                <Link href="/shop" className="premium-cta mt-5 w-full">
+                <Link href="/shop" className="premium-cta mt-5 w-full" onClick={() => trackPurchase({ value: SITE.price, currency: "USD" })}>
                   Shop Now <Star className="h-4 w-4 fill-black" />
                 </Link>
               </div>
@@ -130,7 +130,7 @@ export function Hero() {
                   <span className="rounded-full bg-white/5 px-3 py-1">Adaptogens</span>
                   <span className="rounded-full bg-white/5 px-3 py-1">1 scoop daily</span>
                 </div>
-                <Link href="/shop" className="premium-cta mt-5 w-full">
+                <Link href="/shop" className="premium-cta mt-5 w-full" onClick={() => trackPurchase({ value: GREENS.price, currency: "USD" })}>
                   Shop Now <Leaf className="h-4 w-4" />
                 </Link>
               </div>

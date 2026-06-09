@@ -1,5 +1,6 @@
 "use client";
 
+import { SITE, trackPurchase } from "@/lib/site";
 import { ShoppingCart } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
@@ -15,6 +16,7 @@ export function FloatingPromo() {
       href="/shop"
       aria-label="Shop now — 60% off"
       className="fixed bottom-[130px] right-4 z-55 flex items-center gap-0 md:bottom-6 md:right-6 group"
+      onClick={() => trackPurchase({ value: SITE.price, currency: "USD" })}
     >
       {/* Badge label — hidden on mobile */}
       <span className="hidden md:inline-flex items-center rounded-full bg-black px-3 py-1.5 text-[11px] font-heading font-bold tracking-wide text-bolt shadow-lg transition-transform duration-200 group-hover:translate-x-0.5">

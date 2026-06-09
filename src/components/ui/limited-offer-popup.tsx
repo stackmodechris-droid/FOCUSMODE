@@ -1,6 +1,6 @@
 "use client";
 
-import { GREENS, PRODUCT_IMAGES, SITE } from "@/lib/site";
+import { GREENS, PRODUCT_IMAGES, SITE, trackPurchase } from "@/lib/site";
 import { ShoppingBag, X, Zap } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
@@ -24,6 +24,7 @@ export function LimitedOfferPopup({ defaultOpen = false }: Props) {
   };
 
   const goShop = () => {
+    trackPurchase({ value: SITE.price, currency: "USD" });
     const el = document.createElement("div");
     el.textContent = "⚡ LOCKED IN";
     el.className = "fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[100] text-4xl font-bold text-bolt pointer-events-none";

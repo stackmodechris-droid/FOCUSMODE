@@ -1,5 +1,6 @@
 "use client";
 
+import { GREENS, SITE, trackPurchase } from "@/lib/site";
 import { useEffect, useRef } from "react";
 
 const SHOPIFY_SCRIPT = "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";
@@ -83,7 +84,12 @@ const focusOptions = {
     layout: "horizontal",
     contents: { img: false, imgWithCarousel: true, button: false, buttonWithQuantity: true, description: false },
     width: "100%",
-    text: { button: "Add to cart" }
+    text: { button: "Add to cart" },
+    events: {
+      addVariantToCart: () => {
+        trackPurchase({ value: SITE.price, currency: "USD" });
+      },
+    }
   },
   productSet: { styles: { products: { "@media (min-width: 601px)": { "margin-left": "-20px" } } } },
   modalProduct: {
@@ -135,7 +141,12 @@ const greensOptions = {
     layout: "horizontal",
     contents: { img: false, imgWithCarousel: true, button: false, buttonWithQuantity: true, description: false },
     width: "100%",
-    text: { button: "Add to cart" }
+    text: { button: "Add to cart" },
+    events: {
+      addVariantToCart: () => {
+        trackPurchase({ value: GREENS.price, currency: "USD" });
+      },
+    }
   },
   productSet: { styles: { products: { "@media (min-width: 601px)": { "margin-left": "-20px" } } } },
   modalProduct: {

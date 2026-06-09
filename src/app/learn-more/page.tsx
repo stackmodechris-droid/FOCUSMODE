@@ -3,7 +3,7 @@ import { OpenOfferButton } from "@/components/ui/limited-offer-popup";
 import { LiquidGlassButton, LiquidGlassFilter } from "@/components/ui/liquid-glass-button";
 import { ProductGlow } from "@/components/ui/product-glow";
 import { Reveal, SectionLabel } from "@/components/ui/reveal";
-import { INGREDIENTS } from "@/lib/site";
+import { INGREDIENTS, SITE } from "@/lib/site";
 import { Activity, Brain, Database, Leaf, Lock, Target, Zap } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -139,7 +139,7 @@ export default function LearnMorePage() {
             ))}
           </div>
           <div className="mt-12 flex justify-center">
-            <LiquidGlassButton href="/focus-mode">Get Focus Mode</LiquidGlassButton>
+            <LiquidGlassButton href="/focus-mode" trackPrice={SITE.price}>Get Focus Mode</LiquidGlassButton>
           </div>
         </div>
       </section>

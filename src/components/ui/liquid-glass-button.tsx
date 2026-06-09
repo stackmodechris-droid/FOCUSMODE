@@ -1,5 +1,6 @@
 "use client";
 
+import { trackPurchase } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import * as React from "react";
@@ -9,6 +10,7 @@ interface LiquidGlassButtonProps {
   variant?: "bolt" | "glass";
   className?: string;
   children: React.ReactNode;
+  trackPrice?: number;
 }
 
 /**
@@ -18,7 +20,7 @@ interface LiquidGlassButtonProps {
  * Keeps the user's liked liquid/glare animations.
  */
 export const LiquidGlassButton = React.forwardRef<HTMLButtonElement, LiquidGlassButtonProps>(
-  ({ className, children, href, variant = "bolt" }, ref) => {
+  ({ className, children, href, variant = "bolt", trackPrice }, ref) => {
     const isBolt = variant === "bolt";
 
     const content = (
@@ -57,7 +59,15 @@ export const LiquidGlassButton = React.forwardRef<HTMLButtonElement, LiquidGlass
 
     if (href) {
       return (
-        <Link href={href} className="inline-flex">
+        <Link
+          href={href}
+          className="inline-flex"
+          onClick={() => {
+            if (typeof trackPrice === "number") {
+              trackPurchase({ value: trackPrice, currency: "USD" });
+            }
+          }}
+        >
           {content}
         </Link>
       );

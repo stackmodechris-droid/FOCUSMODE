@@ -163,10 +163,10 @@ export function trackViewContent(params: { name: string; value: number; currency
   });
 }
 
-/** Fire Meta Pixel AddToCart event with optional value and currency. */
-export function trackAddToCart(params?: { value?: number; currency?: string }) {
-  firePixel("AddToCart", {
-    value: params?.value,
+/** Fire Meta Pixel Purchase event with value and currency. */
+export function trackPurchase(params?: { value?: number; currency?: string }) {
+  firePixel("Purchase", {
+    value: params?.value ?? 0,
     currency: params?.currency ?? "USD",
   });
 }

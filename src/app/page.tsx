@@ -19,6 +19,7 @@ import { ProductShowcase } from "@/components/ui/spatial-product-showcase";
 import { StatsCard } from "@/components/ui/stats-card-1";
 import { StickyBuyBar } from "@/components/ui/sticky-buy-bar";
 import { Testimonials } from "@/components/ui/testimonials";
+import { TrackableLink } from "@/components/ui/trackable-link";
 import { GREENS, SITE } from "@/lib/site";
 import { Brain, Coins, TrendingUp } from "lucide-react";
 import type { Metadata } from "next";
@@ -43,6 +44,7 @@ const incomeChart = [
 export default function Home() {
   return (
     <>
+      <TrackViewContent name="Focus Mode" value={SITE.price} currency="USD" />
       <LiquidGlassFilter />
       <Hero />
       <MarqueeTrust />
@@ -86,7 +88,7 @@ export default function Home() {
             </Reveal>
           </div>
           <div className="mt-8 flex justify-center">
-            <Link href="/shop" className="premium-cta px-8">Shop Now — ${SITE.price}</Link>
+            <TrackableLink href="/shop" price={SITE.price} className="premium-cta px-8">Shop Now — ${SITE.price}</TrackableLink>
           </div>
         </div>
       </section>
@@ -115,7 +117,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-8 flex justify-center">
-            <Link href="/shop" className="premium-cta px-8">Get The Clinical Edge</Link>
+            <TrackableLink href="/shop" price={SITE.price} className="premium-cta px-8">Get The Clinical Edge</TrackableLink>
           </div>
         </div>
       </section>
@@ -133,7 +135,7 @@ export default function Home() {
             <LockedInVisual />
           </div>
           <div className="mt-8 flex justify-center">
-            <Link href="/shop" className="premium-cta px-8">Unlock All 6 Benefits</Link>
+            <TrackableLink href="/shop" price={SITE.price} className="premium-cta px-8">Unlock All 6 Benefits</TrackableLink>
           </div>
         </div>
       </section>
@@ -149,7 +151,7 @@ export default function Home() {
             <ProductShowcase />
           </div>
           <div className="mt-8 flex justify-center">
-            <Link href="/shop" className="premium-cta px-8">Shop Now</Link>
+            <TrackableLink href="/shop" price={SITE.price} className="premium-cta px-8">Shop Now</TrackableLink>
           </div>
         </div>
       </section>
@@ -171,7 +173,7 @@ export default function Home() {
             <AnimatedCapsuleFloat />
           </div>
           <div className="mt-8 flex justify-center">
-            <Link href="/shop" className="premium-cta px-8">Get The Exact Formula</Link>
+            <TrackableLink href="/shop" price={SITE.price} className="premium-cta px-8">Get The Exact Formula</TrackableLink>
           </div>
         </div>
       </section>
@@ -185,7 +187,7 @@ export default function Home() {
           </div>
           <Testimonials />
           <div className="mt-8 flex justify-center">
-            <Link href="/shop" className="premium-cta px-8">Join Many High Performers</Link>
+            <TrackableLink href="/shop" price={SITE.price} className="premium-cta px-8">Join Many High Performers</TrackableLink>
           </div>
         </div>
       </section>
@@ -210,7 +212,7 @@ export default function Home() {
           </div>
           <FaqAccordion withSchema />
           <div className="mt-8 flex justify-center">
-            <LiquidGlassButton href="/shop">Shop Now</LiquidGlassButton>
+            <LiquidGlassButton href="/shop" trackPrice={SITE.price}>Shop Now</LiquidGlassButton>
           </div>
         </div>
       </section>
@@ -229,7 +231,7 @@ export default function Home() {
                 <div>✓ Fuels body &amp; brain</div>
               </div>
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                <Link href="/green-energy" className="premium-cta px-7 text-center justify-center">Buy Super Energy Blend — ${GREENS.price}</Link>
+                <TrackableLink href="/green-energy" price={GREENS.price} className="premium-cta px-7 text-center justify-center">Buy Super Energy Blend — ${GREENS.price}</TrackableLink>
                 <Link href="/green-energy" className="premium-cta-secondary px-7 text-center justify-center">Learn more</Link>
               </div>
               <p className="mt-2 text-[10px] text-silver/50">30 servings • USA made</p>
@@ -251,7 +253,7 @@ export default function Home() {
           </div>
           <FocusRoiCalculator />
           <div className="mt-8 flex justify-center">
-            <Link href="/shop" className="premium-cta px-8">Stop The Leak — Buy Now</Link>
+            <TrackableLink href="/shop" price={SITE.price} className="premium-cta px-8">Stop The Leak — Buy Now</TrackableLink>
           </div>
         </div>
       </section>
@@ -268,7 +270,7 @@ export default function Home() {
           </div>
           <ArticlesGrid limit={3} variant="dark" />
           <div className="mt-8 flex justify-center">
-            <Link href="/shop" className="premium-cta px-8">Shop All Products</Link>
+            <TrackableLink href="/shop" price={SITE.price} className="premium-cta px-8">Shop All Products</TrackableLink>
           </div>
         </div>
       </section>

@@ -2,7 +2,7 @@
 
 import { ProductGlow } from "@/components/ui/product-glow";
 import { SectionLabel } from "@/components/ui/reveal";
-import { GREENS, SITE } from "@/lib/site";
+import { GREENS, SITE, trackPurchase } from "@/lib/site";
 import { Check, Clock, ShieldCheck, Truck } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
@@ -113,7 +113,7 @@ export function PricingSection() {
           <div className="mb-3 flex items-center gap-2 text-[10px] tracking-[1.5px] text-silver/50">
             <div className="h-px flex-1 bg-white/10" /> SECURE SHOPIFY CHECKOUT <div className="h-px flex-1 bg-white/10" />
           </div>
-          <Link href="/focus-mode" className="premium-cta mt-2 block w-full py-4 text-center text-base font-semibold">
+          <Link href="/focus-mode" className="premium-cta mt-2 block w-full py-4 text-center text-base font-semibold" onClick={() => trackPurchase({ value: SITE.price, currency: "USD" })}>
             Buy Focus Mode — ${SITE.price}
           </Link>
           <Link

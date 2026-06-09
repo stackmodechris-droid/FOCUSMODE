@@ -1,6 +1,6 @@
 "use client";
 
-import { } from "@/lib/site";
+import { SITE } from "@/lib/site";
 import { useState } from "react";
 import { LiquidGlassButton } from "./liquid-glass-button";
 
@@ -98,7 +98,7 @@ export function FocusRoiCalculator() {
       </div>
 
       <div className="mt-6 flex justify-center">
-        <LiquidGlassButton href="/focus-mode">
+        <LiquidGlassButton href="/focus-mode" trackPrice={SITE.price}>
           Stop losing ${weeklyGain} every week — Buy Focus Mode
         </LiquidGlassButton>
       </div>
