@@ -2,6 +2,7 @@ import { AnnouncementBar } from "@/components/ui/announcement-bar";
 import { Footer } from "@/components/ui/footer";
 import { MetaPixel } from "@/components/ui/meta-pixel";
 import { MobileMenuProvider } from "@/components/ui/mobile-menu-context";
+import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { Navbar1 } from "@/components/ui/shadcnblocks-com-navbar1";
 import { SITE } from "@/lib/site";
 import type { Metadata } from "next";
@@ -212,6 +213,7 @@ fbq('track', 'PageView');`}
         {/* End Meta Pixel Code */}
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        <ScrollToTop />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-100 focus:rounded-lg focus:bg-bolt focus:px-4 focus:py-2 focus:text-black focus:font-bold"
