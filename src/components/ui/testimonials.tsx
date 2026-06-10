@@ -12,6 +12,12 @@ const reviewSchema = {
     name: "Focus Mode Focus Supplement",
     image: `${SITE.url}/products/focus-mode-nootropic-supplement-bottle.png`,
     brand: { "@type": "Brand", name: SITE.brand },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "127",
+      bestRating: "5",
+    },
   },
   author: { "@type": "Person", name: SITE.founder },
   reviewBody:
