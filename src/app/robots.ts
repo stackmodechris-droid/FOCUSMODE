@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        userAgent: "*",
+        userAgent: ["*", "Googlebot", "Googlebot-Image"],
         allow: "/",
         disallow: ["/api/", "/_next/", "/admin/"],
       },
