@@ -12,9 +12,13 @@ export const SITE = {
   currency: "USD",
   capsules: 60,
   supplyDays: 30,
+  productTitle:
+    "Focus Mode Brain Boosting Capsules | Nootropic Brain & Focus Supplement for Memory, Mental Clarity & Cognitive Performance",
+  shortDescription:
+    "Premium botanical focus and productivity formula with Ginkgo Biloba and Red Asian Ginseng for entrepreneurs, professionals, students, traders, creators, gamers, and high-performers.",
   email: "focusmodesupplementsshop@proton.me",
   description:
-    "The highest-performing all-natural focus supplement on earth. Straight from nature. 6+ hours of clean, crash-free mental clarity, sharper decisions, and zero fatigue — for entrepreneurs, professionals, students, creators, and high-performers who refuse to let brain fog hold them back. Scientifically dosed Ginkgo + Ginseng. Zero fillers. USA made. 30-day guarantee. Halal-friendly ingredients.",
+    "Focus Mode is a premium botanical supplement formulated for entrepreneurs, professionals, students, traders, creators, gamers, and high-performers who demand more from their daily routine. Featuring Ginkgo Biloba Leaf Extract and Red Asian Ginseng Extract in plant-based vegetable capsules, Focus Mode complements a disciplined, performance-oriented lifestyle without synthetic stimulants.",
   metaPixelId: "1808935510076455",
 } as const;
 
@@ -25,8 +29,13 @@ export const GREENS_CART_URL =
   "https://qg5zmc-rx.myshopify.com/cart/47960755863810:1?channel=buy_button";
 
 export const GREENS = {
-  name: "Super Energy Blend",
+  name: "Focus Mode Greens Energy Superfood Blend",
   brand: "Focus Mode",
+  productTitle:
+    "Focus Mode Greens Energy Superfood Blend | Plant-Based Greens Powder for Natural Energy, Focus & Daily Wellness",
+  seoTitle:
+    "Focus Mode Greens Energy Superfood Blend | Daily Greens Powder for Natural Energy, Focus & Whole-Body Wellness",
+  headline: "20+ Superfoods, Greens & Adaptogens in Every Scoop",
   price: 44.99,
   currency: "USD",
   netWeight: "0.28 lb (126 g)",
@@ -34,26 +43,26 @@ export const GREENS = {
   servingSize: "1 scoop (4.2 g)",
   supplyDays: 30,
   description:
-    "Pure plant-based Super Energy Blend for clean, sustained energy and daily vitality. 20+ whole plants, superfoods and adaptogens in one scoop — the natural foundation for athletes, busy professionals, students, and anyone who wants real all-day energy and brain support without jitters or crashes.",
+    "Support your daily routine with Focus Mode Greens Energy Superfood Blend, a premium plant-based greens powder formulated with over 20 nutrient-dense superfoods, greens, fruits, vegetables, and adaptogenic botanicals. Designed for entrepreneurs, professionals, students, athletes, traders, and high-performers, this comprehensive formula helps you build a strong nutritional foundation for energy, focus, and overall wellness.",
   howItWorks:
-    "Mix one scoop into 6–8 oz of cold water or your morning beverage and you're done — a full spectrum of superfoods in under a minute, so you can get back to what matters.",
+    "Modern lifestyles can make it difficult to consistently consume a wide variety of nutrient-rich foods. Focus Mode Greens gives you an easy way to add premium greens, superfoods, fruits, vegetables, and adaptogens to your daily routine in less than a minute.",
   ingredientsIntro:
-    "A thoughtfully sourced blend of greens, berries, roots, and adaptogens — Barley Grass, Spirulina, Broccoli, Wheatgrass, Beet Root, Acai, Blueberry, Pomegranate, Turmeric, Ginger, Panax Ginseng, Ashwagandha, and more — rounded out with Black Pepper Extract to maximize absorption.",
+    "Featuring powerhouse ingredients including Spirulina, Barley Grass, Wheatgrass, Green Tea, Beet Root, Acai, Blueberry, Pomegranate, Ashwagandha, Panax Ginseng, Turmeric, Ginger, and more, Focus Mode delivers whole-food nutrition in a convenient daily serving.",
   ingredients: [
-    { name: "Barley Grass Powder (leaf)", amount: "—", role: "Chlorophyll + natural vitamins for sustained energy" },
-    { name: "Spirulina Powder (whole plant)", amount: "—", role: "Complete protein + antioxidants for mental stamina" },
-    { name: "Broccoli Powder (leaf)", amount: "—", role: "Sulforaphane support for cellular health" },
-    { name: "Wheat Grass Powder (leaf)", amount: "—", role: "Detox support + concentrated greens nutrition" },
-    { name: "Beet Root Powder", amount: "—", role: "Natural nitrates for blood flow & endurance" },
-    { name: "Acai Juice Powder (fruit)", amount: "—", role: "Anthocyanins for brain & recovery" },
-    { name: "Blueberry Powder (fruit)", amount: "—", role: "Flavonoids for cognitive protection" },
-    { name: "Pomegranate Powder (fruit)", amount: "—", role: "Polyphenols for cardiovascular & cellular health" },
-    { name: "Turmeric Extract (root)", amount: "—", role: "Curcumin for healthy inflammation response" },
-    { name: "Ginger Powder (root)", amount: "—", role: "Digestive comfort & absorption" },
-    { name: "Panax Ginseng Powder (root)", amount: "—", role: "Adaptogen for mental energy & resilience (synergizes with Focus Mode)" },
-    { name: "Ashwagandha Powder (root)", amount: "—", role: "Stress adaptation & calm focus" },
-    { name: "Green Tea Extract (leaf)", amount: "—", role: "Gentle L-theanine + catechins for smooth alertness" },
-    { name: "Black Pepper Extract", amount: "—", role: "Piperine to dramatically increase nutrient absorption" },
+    { name: "Spirulina", amount: "—", role: "Nutrient-dense blue-green algae with naturally occurring plant nutrition" },
+    { name: "Barley Grass", amount: "—", role: "Whole-plant greens support for your daily nutritional foundation" },
+    { name: "Wheatgrass", amount: "—", role: "Concentrated greens nutrition for an easy daily routine" },
+    { name: "Broccoli", amount: "—", role: "Vegetable-based phytonutrients from a familiar whole-food source" },
+    { name: "Beet Root", amount: "—", role: "Naturally vibrant root nutrition for active lifestyles" },
+    { name: "Green Tea", amount: "—", role: "Botanical tea leaf extract with antioxidant catechins" },
+    { name: "Acai Berry", amount: "—", role: "Antioxidant-rich berry profile for whole-body wellness" },
+    { name: "Blueberry", amount: "—", role: "Fruit-based polyphenols from a daily wellness staple" },
+    { name: "Pomegranate", amount: "—", role: "Bright fruit nutrition with naturally occurring antioxidants" },
+    { name: "Turmeric", amount: "—", role: "Traditional golden root used in daily wellness routines" },
+    { name: "Ginger", amount: "—", role: "Warming botanical root for a balanced greens blend" },
+    { name: "Panax Ginseng", amount: "—", role: "Adaptogenic botanical for demanding schedules" },
+    { name: "Ashwagandha", amount: "—", role: "Adaptogenic root traditionally used for resilience" },
+    { name: "Black Pepper Extract", amount: "—", role: "Classic companion botanical included in the formula" },
   ],
   factsImage: "/greens/super-energy-blend-supplement-facts-label.png",
   usage: "1 scoop daily in 6–8 oz of cold water or beverage; consume within 10 minutes of mixing.",
@@ -70,6 +79,9 @@ export const GREENS = {
     angle3: "/greens/super-energy-blend-greens-powder-side.png",
   },
 } as const;
+
+export const GOOGLE_REVIEW_URL =
+  "https://www.google.com/search?sca_esv=6eb3871cd6a786af&sxsrf=ANbL-n6RlCS3-73xauaJVYQn37lgLnRcBw%3A1781552709695&q=Focus%20Mode%20Supplements&stick=H4sIAAAAAAAAAONgU1I1qDAxNk-0SE4zNE9MS7MwNLO0MqhINU82TDY1SDKxNDA0Mk4zX8Qq5pafXFqs4JufkqoQXFpQkJOam5pXUgwAsX0EY0IAAAA&mat=CSZF28sBKgIk&ved=2ahUKEwiEwKODgYqVAxVqAHkGHXqfE4AQrMcEegQIIhAC#";
 
 export const NAV_LINKS = [
   { label: "Focus Mode", href: "/focus-mode" },
@@ -91,15 +103,15 @@ export const PRODUCT_IMAGES = {
 export const FAQS: { q: string; a: string }[] = [
   {
     q: "How fast does Focus Mode work?",
-    a: "Most high-performers feel the brain fog lift within 20-30 minutes. Ginkgo Biloba increases oxygen delivery to neural pathways while Red Asian Ginseng ramps up dopamine and acetylcholine for fast, clean mental activation.",
+    a: "Most customers use Focus Mode before deep work, studying, trading, creating, or demanding meetings. It is designed to fit into a disciplined daily routine with botanical ingredients traditionally used to support mental performance.",
   },
   {
     q: "Will it give me jitters or a crash like caffeine?",
-    a: "No. Focus Mode contains zero synthetic stimulants and zero caffeine. You get 6+ hours of sustained, locked-in focus with no anxiety and no afternoon crash.",
+    a: "Focus Mode contains no caffeine and no synthetic stimulants. It was built for people who want a cleaner daily focus ritual without relying on another energy drink or coffee refill.",
   },
   {
     q: "Who is Focus Mode designed for?",
-    a: "Entrepreneurs building businesses, professionals crushing deadlines, students mastering exams, creators writing and shipping, doctors and executives making critical calls under pressure, business leaders scaling, and anyone who needs a sharper, more productive mind without jitters or crashes. If mental fatigue, brain fog, or slow thinking is costing you time, money, or opportunities — this is for you.",
+    a: "Entrepreneurs building businesses, professionals working through deadlines, students preparing for exams, creators shipping content, traders, gamers, and busy adults who want a simple botanical focus supplement in their daily routine.",
   },
   {
     q: "How do I take it?",
@@ -107,7 +119,7 @@ export const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What's actually inside?",
-    a: "Two clinically-backed, antioxidant-rich ingredients: Ginkgo Biloba Leaf Extract (24% Flavones) for cerebral blood flow and mental clarity, and Red Asian Ginseng Extract (7% Ginsenosides) for dopamine support and stress resilience — in clean, plant-based capsules. Zero fillers. Safe and effective for students, professionals, and adults seeking long-term brain health.",
+    a: "Ginkgo Biloba Leaf Extract (24% Flavone Glycosides), Red Asian Ginseng Root & Leaf Extract (standardized to 7% Ginsenosides), Hypromellose vegetable capsules, and Silicon Dioxide.",
   },
   {
     q: "Is it safe and where is it made?",
@@ -128,9 +140,9 @@ export const INGREDIENTS = [
     name: "Red Asian Ginseng Extract",
     spec: "7% Ginsenosides",
     dose: "200mg",
-    role: "Dopamine production + stress adaptation",
+    role: "Botanical focus + daily performance support",
     detail:
-      "Adapts your nervous system for sustained performance under pressure. Boosts neurochemical production (dopamine, acetylcholine), energizes mental stamina, and provides antioxidant support for long-term brain health and resilience in demanding school, work, or creative seasons.",
+      "A premium botanical extract traditionally used in performance-oriented routines. Standardized to 7% Ginsenosides and paired with Ginkgo Biloba for a simple daily focus formula.",
   },
 ];
 

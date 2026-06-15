@@ -7,22 +7,22 @@ const INGREDIENTS = [
     name: "Ginkgo Biloba",
     spec: "24% Flavones",
     dose: "120mg",
-    role: "Oxygen delivery",
+    role: "Botanical clarity",
     accent: "neural",
-    desc: "Ancient herb that increases cerebral blood flow for faster synaptic firing and sharper mental clarity.",
+    desc: "Premium Ginkgo extract standardized to 24% flavones for a clean botanical focus routine.",
   },
   {
     name: "Red Ginseng",
     spec: "7% Ginsenosides",
     dose: "200mg",
-    role: "Neurochemical drive",
+    role: "Daily performance",
     accent: "bolt",
-    desc: "Clinically-backed adaptogen that boosts dopamine and acetylcholine for sustained mental stamina.",
+    desc: "Classic botanical extract standardized to 7% ginsenosides for high-performance daily routines.",
   },
 ];
 
 const BADGES = [
-  { label: "Sustained Power" },
+  { label: "Botanical Focus" },
   { label: "Veg Capsules" },
   { label: "Zero Fillers" },
 ];
@@ -56,8 +56,7 @@ export function FormulaStack() {
           transition={{ delay: 0.08 }}
           className="mx-auto mt-3 max-w-xl text-[15px] leading-relaxed text-gray-500"
         >
-          Two clinically-dosed botanicals working in concert — oxygen delivery meets neurochemical drive — in a clean,
-          plant-based capsule. No fillers, no fluff.
+          Two transparent botanical extracts in a clean, plant-based capsule. No proprietary blend mystery.
         </motion.p>
       </div>
 

@@ -11,12 +11,12 @@ interface Benefit {
 }
 
 const BENEFITS: Benefit[] = [
-  { icon: Brain, title: "Sharper Mental Clarity", desc: "Cut through brain fog and distraction within 20-30 minutes of your first dose.", metric: "20-30 MIN ONSET" },
-  { icon: Zap, title: "Faster Decision-Making", desc: "Enhanced cognitive processing for sharper calls in business, exams, creative work, and high-stakes moments.", metric: "REACTION +" },
-  { icon: Timer, title: "Sustained Focus", desc: "Stay locked in for 6+ hours with zero jitters and zero afternoon crashes.", metric: "6+ HOURS" },
-  { icon: Database, title: "Improved Memory", desc: "Recall lessons, ideas, conversations, and strategies with clarity when it matters most.", metric: "RECALL +" },
-  { icon: ShieldCheck, title: "No Jitters, No Crash", desc: "Zero caffeine, zero synthetic stimulants. Pure, clean mental performance.", metric: "0 STIMULANTS" },
-  { icon: Activity, title: "Neurological Support", desc: "Improved blood flow and natural antioxidants mean fewer headaches, less fatigue, and lasting brain health.", metric: "BLOOD FLOW +" },
+  { icon: Brain, title: "Daily Mental Clarity", desc: "A simple botanical ritual for deep work, studying, trading, and creation.", metric: "DAILY RITUAL" },
+  { icon: Zap, title: "Decision Routine", desc: "Support a focused state before business, exams, creative work, and high-stakes moments.", metric: "READY" },
+  { icon: Timer, title: "Structured Focus", desc: "Use it consistently before the work blocks that matter most.", metric: "FOCUS BLOCK" },
+  { icon: Database, title: "Memory Routine", desc: "Pair your study, planning, and work systems with a consistent botanical ritual.", metric: "RECALL" },
+  { icon: ShieldCheck, title: "No Synthetic Stimulants", desc: "Zero caffeine and no synthetic stimulants in the capsule formula.", metric: "0 STIMULANTS" },
+  { icon: Activity, title: "Botanical Support", desc: "Ginkgo, Red Asian Ginseng, and antioxidants in a clean capsule routine.", metric: "BOTANICAL" },
 ];
 
 export function BenefitCards() {

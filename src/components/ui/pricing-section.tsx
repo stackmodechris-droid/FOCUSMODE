@@ -10,9 +10,9 @@ import { useEffect, useState } from "react";
 
 const INCLUDES = [
   "60 capsules · full 30-day supply",
-  "6+ hours of crash-free focus",
-  "USA manufactured · zero fillers · kid-friendly clean formula",
-  "Transparent clinical dosing with natural antioxidants (24% flavones / 7% ginsenosides)",
+  "Premium botanical focus formula",
+  "USA manufactured · no synthetic stimulants",
+  "Transparent Ginkgo + Red Asian Ginseng extracts (24% flavones / 7% ginsenosides)",
 ];
 
 const TRUST = [
@@ -75,7 +75,7 @@ export function PricingSection() {
         </div>
 
         <h2 className="mt-4 font-heading text-3xl font-extrabold leading-tight text-white md:text-4xl">
-          Focus Mode <span className="text-neural">Cognitive Formula</span>
+          Focus Mode <span className="text-neural">Botanical Focus Formula</span>
         </h2>
 
         {/* High-converting price block with anchoring + scarcity */}
@@ -106,7 +106,7 @@ export function PricingSection() {
 
         <div className="mt-5 flex items-center gap-2 rounded border border-neural/30 bg-neural/10 px-4 py-3 text-xs text-neural">
           <ShieldCheck className="h-4 w-4" />
-          <span><strong>30-day empty-bottle guarantee.</strong> No questions. Full refund if it doesn’t deliver sharper focus and lasting mental energy.</span>
+          <span><strong>30-day support.</strong> Secure checkout, fast shipping, and simple help if the product is not the right fit for your routine.</span>
         </div>
 
         <div className="mt-7 border-t border-white/10 pt-7">

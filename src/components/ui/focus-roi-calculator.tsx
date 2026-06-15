@@ -6,15 +6,14 @@ import { LiquidGlassButton } from "./liquid-glass-button";
 
 /**
  * Fun, interactive ROI calculator.
- * Makes the abstract "focus" painfully concrete in $ terms.
- * Highest-converting pages always do this: turn benefit into personal math.
+ * Makes the abstract value of a better work routine concrete in dollar terms.
  * Gender neutral, exciting language.
  */
 export function FocusRoiCalculator() {
   const [hoursLost, setHoursLost] = useState(9); // per week
   const [hourlyValue, setHourlyValue] = useState(85);
 
-  const weeklyGain = Math.round(hoursLost * 0.65 * hourlyValue); // conservative 65% recovery
+  const weeklyGain = Math.round(hoursLost * 0.35 * hourlyValue);
   const monthlyGain = weeklyGain * 4;
   const yearlyGain = monthlyGain * 12;
 
@@ -22,15 +21,15 @@ export function FocusRoiCalculator() {
 
   return (
     <div className="premium-card border-neural/30 p-8 md:p-10">
-      <div className="font-mono-data text-xs uppercase tracking-[2px] text-neural">YOUR FOCUS ROI</div>
-      <h3 className="mt-2 font-heading text-3xl font-extrabold text-white">What is 6+ hrs of clean focus worth… to <span className="text-neural">you</span>?</h3>
-      <p className="mt-1 text-sm text-white/70">Slide your reality. See the real cost of brain fog for students, professionals, and creators — then the life-changing ROI of one bottle.</p>
+      <div className="font-mono-data text-xs uppercase tracking-[2px] text-neural">YOUR ROUTINE ROI</div>
+      <h3 className="mt-2 font-heading text-3xl font-extrabold text-white">What is a cleaner focus routine worth to <span className="text-neural">you</span>?</h3>
+      <p className="mt-1 text-sm text-white/70">Slide your reality. Estimate what better structure around your work blocks could be worth over time.</p>
 
       <div className="mt-8 space-y-8">
         {/* Hours lost slider */}
         <div>
           <div className="flex flex-wrap justify-between gap-x-3 gap-y-1 text-sm mb-2">
-            <div className="min-w-[60%]">Hours lost to fog or distractions each week</div>
+            <div className="min-w-[60%]">Hours lost to distractions each week</div>
             <div className="font-mono-data text-neural font-bold tabular-nums">{hoursLost} hrs</div>
           </div>
           <input

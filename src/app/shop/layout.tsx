@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Shop | Focus Mode — Best All-Natural Focus Supplement & Daily Greens",
+  title: "Shop | Focus Mode Botanical Capsules & Daily Greens",
   description:
-    "Shop the best all-natural focus supplement and daily greens powder. Focus Mode capsules + Super Energy Blend. 6+ hours crash-free focus + clean all-day energy. USA made. 60% off + 30-day guarantee.",
+    "Shop Focus Mode botanical focus capsules and Focus Mode Greens Energy Superfood Blend. Plant-based daily greens, Ginkgo, Red Asian Ginseng, 20+ superfoods, and USA manufacturing.",
   alternates: { canonical: "/shop" },
 };
 

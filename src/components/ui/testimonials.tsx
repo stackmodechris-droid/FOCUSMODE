@@ -14,14 +14,14 @@ const reviewSchema = {
     brand: { "@type": "Brand", name: SITE.brand },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "127",
+      ratingValue: "5",
+      reviewCount: "1",
       bestRating: "5",
     },
   },
   author: { "@type": "Person", name: SITE.founder },
   reviewBody:
-    "I built Focus Mode because I was the first customer. Mental fatigue was destroying my output. I locked in on two exact ingredients: Ginkgo Biloba (24% flavones) for oxygen delivery and clarity, and Red Asian Ginseng (7% ginsenosides) for dopamine support and sustained stamina. The difference was immediate. Afternoon fatigue disappeared.",
+    "I built Focus Mode because I wanted a simple daily botanical routine for demanding work. I chose Ginkgo Biloba (24% flavones) and Red Asian Ginseng (7% ginsenosides) because the formula needed to feel focused, disciplined, and clean.",
   reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
   publisher: { "@type": "Organization", name: SITE.legalName },
 };
@@ -44,11 +44,11 @@ export function Testimonials() {
         <Quote className="absolute right-8 top-8 h-10 w-10 text-neural/10" />
 
         <div className="text-[15px] md:text-[17px] leading-relaxed text-silver/85">
-          I built Focus Mode because I was the first customer. Mental fatigue was destroying my output — slow decisions, missed details, and the feeling my brain couldn&apos;t keep up.
+          I built Focus Mode because I wanted a simple daily botanical routine for demanding work, study, trading, and creation — something clean enough to fit a disciplined lifestyle.
           <br /><br />
-          I locked in on two exact ingredients: <span className="text-white font-medium">Ginkgo Biloba (24% flavones)</span> for oxygen delivery and clarity, and <span className="text-white font-medium">Red Asian Ginseng (7% ginsenosides)</span> for dopamine support and sustained stamina.
+          I locked in on two exact ingredients: <span className="text-white font-medium">Ginkgo Biloba (24% flavones)</span> and <span className="text-white font-medium">Red Asian Ginseng (7% ginsenosides)</span>, then kept the capsule clean, plant-based, and direct.
           <br /><br />
-          The difference was immediate. Afternoon fatigue disappeared. I could power through demanding work and creative marathons with sharp recall. My businesses scaled because my brain stopped being the bottleneck.
+          Focus Mode is for people who take their output seriously. It is built for focus, powered by discipline, and made to pair with a routine that already includes sleep, hydration, nutrition, and hard work.
         </div>
 
         <figcaption className="mt-8 pt-6 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -57,8 +57,8 @@ export function Testimonials() {
             <p className="text-sm text-neural/80 tracking-[0.5px]">Founder, Focus Mode</p>
           </div>
           <div className="text-xs text-silver/50 md:text-right leading-tight">
-            Eliminated mental fatigue • 8–10+ hrs locked focus daily<br />
-            Scaled businesses &amp; protected long-term brain health
+            Built for focus • Powered by discipline<br />
+            Botanical capsules for demanding daily routines
           </div>
         </figcaption>
       </motion.figure>

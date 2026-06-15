@@ -6,15 +6,15 @@ import { SITE } from "@/lib/site";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Focus Supplement FAQ | How Focus Mode Works, Dosing, Safety",
+  title: "Focus Mode FAQ | Botanical Capsules, Greens, Dosing & Safety",
   description:
-    "Focus supplement FAQ: how fast does the best no-crash focus formula work, exact Ginkgo + Ginseng dosing, safety for students/professionals, and results without caffeine jitters. Atlanta made.",
+    "Focus Mode FAQ for botanical focus capsules and plant-based daily greens: ingredients, suggested use, safety, shipping, and secure checkout details.",
   alternates: { canonical: "/faq" },
   openGraph: { images: ["/og/Front.png"] },
   twitter: {
     card: "summary_large_image",
-    title: "Focus Supplement FAQ | How Focus Mode Works, Dosing, Safety",
-    description: "Focus supplement FAQ: how fast does the best no-crash focus formula work, exact Ginkgo + Ginseng dosing, safety for students/professionals.",
+    title: "Focus Mode FAQ | Botanical Capsules, Greens, Dosing & Safety",
+    description: "Answers about Focus Mode capsules, Focus Mode Greens Energy Superfood Blend, ingredients, suggested use, shipping, and checkout.",
     images: ["/og/Front.png"],
   },
 };

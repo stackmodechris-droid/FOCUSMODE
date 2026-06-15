@@ -34,21 +34,21 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Focus Mode | Best All-Natural Focus Supplement — 6+ Hour Clean Focus, Zero Crash",
+    default: "Focus Mode | Botanical Focus Capsules & Plant-Based Daily Greens",
     template: "%s | Focus Mode",
   },
   description:
-    "Buy the best all-natural focus supplement for 6+ hours of crash-free mental clarity. Clinical Ginkgo Biloba 24% flavones + Red Asian Ginseng 7% ginsenosides. 60 capsules, 30-day supply. Zero fillers, zero caffeine, zero crash. USA made. 60% off + 30-day guarantee.",
+    "Shop Focus Mode Brain Boosting Capsules and Focus Mode Greens Energy Superfood Blend: botanical focus support, plant-based daily greens, 20+ superfoods, and USA manufacturing.",
   applicationName: SITE.name,
   keywords: [
     "focus supplement",
     "daily greens powder",
     "whole plant greens",
     "superfood greens",
-    "best focus supplement",
+    "botanical focus supplement",
     "nootropic for focus and productivity",
-    "crash free focus supplement",
-    "brain fog supplement",
+    "plant based greens powder",
+    "greens energy superfood blend",
     "ginkgo biloba ginseng focus",
     "Focus Mode supplement",
     "mental clarity supplement",
@@ -56,9 +56,9 @@ export const metadata: Metadata = {
     "natural brain booster",
     "all natural energy supplement",
     "straight from nature supplement",
-    "clean focus no crash",
-    "6 hour focus no crash",
-    "clinical focus formula",
+    "daily wellness supplement",
+    "memory mental clarity supplement",
+    "botanical focus formula",
     "Atlanta focus supplement",
   ],
   authors: [{ name: SITE.legalName, url: SITE.partnerUrl }],
@@ -79,18 +79,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: SITE.name,
-    title: "Focus Mode | Best All-Natural Focus Supplement — 6+ Hour Clean Focus, Zero Crash",
+    title: "Focus Mode | Botanical Focus Capsules & Plant-Based Daily Greens",
     description:
-      "Buy the best all-natural focus supplement. 6+ hours of crash-free mental clarity with clinical Ginkgo Biloba 24% flavones + Red Asian Ginseng 7% ginsenosides. 60 capsules. Zero fillers, zero caffeine. USA made. 60% off + 30-day guarantee.",
+      "Shop Focus Mode Brain Boosting Capsules and Focus Mode Greens Energy Superfood Blend: botanical focus support, plant-based daily greens, 20+ superfoods, and USA manufacturing.",
     url: SITE.url,
     images: [
-      { url: "/og/Front.png", width: 1448, height: 1086, alt: "Focus Mode — Elite focus supplement, no crash, Atlanta made" },
+      { url: "/og/Front.png", width: 1448, height: 1086, alt: "Focus Mode botanical focus capsules and daily greens" },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "#1 All-Natural Focus Supplement | 6+ Hours Clean Focus, Zero Crash | Focus Mode",
-    description: "Buy the #1 all-natural focus supplement with clinical Ginkgo Biloba + Red Asian Ginseng. 6+ hours crash-free mental clarity. 60 capsules. Zero fillers, zero caffeine. USA made. 60% off + 30-day guarantee.",
+    title: "Focus Mode | Botanical Focus Capsules & Plant-Based Daily Greens",
+    description: "Buy Focus Mode capsules and Focus Mode Greens Energy Superfood Blend. Botanical focus support plus plant-based daily greens.",
     images: ["/og/Front.png"],
   },
   robots: { index: true, follow: true },
@@ -133,7 +133,7 @@ const jsonLd = {
     {
       "@type": "Product",
       "@id": `${SITE.url}/#product`,
-      name: "Focus Mode Focus Supplement",
+      name: SITE.productTitle,
       image: [
         `${SITE.url}/products/focus-mode-nootropic-supplement-bottle.png`,
         `${SITE.url}/products/focus-mode-brain-booster-bottles.png`,
@@ -151,8 +151,8 @@ const jsonLd = {
       },
       aggregateRating: {
         "@type": "AggregateRating",
-        ratingValue: "4.9",
-        reviewCount: "127",
+        ratingValue: "5",
+        reviewCount: "1",
         bestRating: "5",
       },
     },
@@ -163,7 +163,7 @@ const jsonLd = {
       url: SITE.url,
       logo: `${SITE.url}/logo.png`,
       image: `${SITE.url}/logo.png`,
-      description: "Atlanta-based focus supplement and cognitive performance formula by Stackmode Network. Clean, crash-free mental clarity for high-performers.",
+      description: "Focus Mode botanical supplements by Stackmode Network: focus capsules, daily greens, plant-based ingredients, and USA manufacturing for high-performers.",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Atlanta",

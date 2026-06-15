@@ -75,7 +75,7 @@ const focusOptions = {
     styles: {
       product: { "@media (min-width: 601px)": { "max-width": "100%", "margin-left": "0", "margin-bottom": "50px" }, "@media (max-width: 600px)": { "max-width": "100%", "margin-left": "0", "margin-bottom": "20px" }, "text-align": "left" },
       title: { "font-size": "26px", color: "#000000" },
-      button: { "font-size": "18px", "padding-top": "17px", "padding-bottom": "17px", color: "#000000", ":hover": { color: "#000000", "background-color": "#dce600" }, "background-color": "#f4ff00", ":focus": { "background-color": "#dce600" }, "border-radius": "5px", "padding-left": "67px", "padding-right": "67px" },
+      button: { "font-size": "18px", "padding-top": "17px", "padding-bottom": "17px", color: "#000000", ":hover": { color: "#000000", "background-color": "#dce600" }, "background-color": "#f4ff00", ":focus": { "background-color": "#dce600" }, "border-radius": "5px", "padding-left": "20px", "padding-right": "20px", "width": "100%", "box-sizing": "border-box" },
       quantityInput: { "font-size": "18px", "padding-top": "17px", "padding-bottom": "17px" },
       price: { "font-weight": "bold", "font-size": "18px", color: "#000000" },
       compareAt: { "font-weight": "bold", "font-size": "15.299999999999999px", color: "#000000" },
@@ -84,7 +84,7 @@ const focusOptions = {
     layout: "horizontal",
     contents: { img: false, imgWithCarousel: true, button: false, buttonWithQuantity: true, description: false },
     width: "100%",
-    text: { button: "Add to cart" },
+    text: { button: "Add to Cart" },
     events: {
       addVariantToCart: () => {
         trackPurchase({ value: SITE.price, currency: "USD" });
@@ -96,14 +96,14 @@ const focusOptions = {
     contents: { img: false, imgWithCarousel: true, button: false, buttonWithQuantity: true, description: false },
     styles: {
       product: { "@media (min-width: 601px)": { "max-width": "100%", "margin-left": "0px", "margin-bottom": "0px" } },
-      button: { "font-size": "18px", "padding-top": "17px", "padding-bottom": "17px", color: "#000000", ":hover": { color: "#000000", "background-color": "#dce600" }, "background-color": "#f4ff00", ":focus": { "background-color": "#dce600" }, "border-radius": "5px", "padding-left": "67px", "padding-right": "67px" },
+      button: { "font-size": "18px", "padding-top": "17px", "padding-bottom": "17px", color: "#000000", ":hover": { color: "#000000", "background-color": "#dce600" }, "background-color": "#f4ff00", ":focus": { "background-color": "#dce600" }, "border-radius": "5px", "padding-left": "20px", "padding-right": "20px", "width": "100%", "box-sizing": "border-box" },
       quantityInput: { "font-size": "18px", "padding-top": "17px", "padding-bottom": "17px" },
       title: { "font-family": "Helvetica Neue, sans-serif", "font-weight": "bold", "font-size": "26px", color: "#4c4c4c" },
       price: { "font-family": "Helvetica Neue, sans-serif", "font-weight": "normal", "font-size": "18px", color: "#4c4c4c" },
       compareAt: { "font-family": "Helvetica Neue, sans-serif", "font-weight": "normal", "font-size": "15.299999999999999px", color: "#4c4c4c" },
       unitPrice: { "font-family": "Helvetica Neue, sans-serif", "font-weight": "normal", "font-size": "15.299999999999999px", color: "#4c4c4c" }
     },
-    text: { button: "Add to cart" }
+    text: { button: "Add to Cart" }
   },
   option: { styles: { label: { "font-weight": "bold", color: "#ffffff" }, select: { "font-weight": "bold" } } },
   cart: {
@@ -111,7 +111,7 @@ const focusOptions = {
       button: { "font-size": "18px", "padding-top": "17px", "padding-bottom": "17px", color: "#000000", ":hover": { color: "#000000", "background-color": "#dce600" }, "background-color": "#f4ff00", ":focus": { "background-color": "#dce600" }, "border-radius": "5px" },
       title: { color: "#ffffff" }, header: { color: "#ffffff" }, lineItems: { color: "#ffffff" }, subtotalText: { color: "#ffffff" }, subtotal: { color: "#ffffff" }, notice: { color: "#ffffff" }, currency: { color: "#ffffff" }, close: { color: "#ffffff", ":hover": { color: "#ffffff" } }, empty: { color: "#ffffff" }, noteDescription: { color: "#ffffff" }, discountText: { color: "#ffffff" }, discountIcon: { fill: "#ffffff" }, discountAmount: { color: "#ffffff" }, cart: { "background-color": "#000000" }, footer: { "background-color": "#000000" }
     },
-    text: { total: "Subtotal", button: "Checkout" }
+    text: { total: "Subtotal", button: "Secure Checkout" }
   },
   toggle: {
     styles: {
@@ -132,7 +132,7 @@ const greensOptions = {
     styles: {
       product: { "@media (min-width: 601px)": { "max-width": "100%", "margin-left": "0", "margin-bottom": "50px" }, "@media (max-width: 600px)": { "max-width": "100%", "margin-left": "0", "margin-bottom": "20px" }, "text-align": "left" },
       title: { "font-size": "26px", color: "#000000" },
-      button: { "font-size": "18px", "padding-top": "17px", "padding-bottom": "17px", color: "#000000", ":hover": { color: "#000000", "background-color": "#00e611" }, "background-color": "#00ff13", ":focus": { "background-color": "#00e611" }, "border-radius": "5px", "padding-left": "67px", "padding-right": "67px" },
+      button: { "font-size": "18px", "padding-top": "17px", "padding-bottom": "17px", color: "#000000", ":hover": { color: "#000000", "background-color": "#00e611" }, "background-color": "#00ff13", ":focus": { "background-color": "#00e611" }, "border-radius": "5px", "padding-left": "20px", "padding-right": "20px", "width": "100%", "box-sizing": "border-box" },
       quantityInput: { "font-size": "18px", "padding-top": "17px", "padding-bottom": "17px" },
       price: { "font-weight": "bold", "font-size": "18px", color: "#000000" },
       compareAt: { "font-weight": "bold", "font-size": "15.299999999999999px", color: "#000000" },
@@ -141,7 +141,7 @@ const greensOptions = {
     layout: "horizontal",
     contents: { img: false, imgWithCarousel: true, button: false, buttonWithQuantity: true, description: false },
     width: "100%",
-    text: { button: "Add to cart" },
+    text: { button: "Add to Cart" },
     events: {
       addVariantToCart: () => {
         trackPurchase({ value: GREENS.price, currency: "USD" });
@@ -153,14 +153,14 @@ const greensOptions = {
     contents: { img: false, imgWithCarousel: true, button: false, buttonWithQuantity: true, description: false },
     styles: {
       product: { "@media (min-width: 601px)": { "max-width": "100%", "margin-left": "0px", "margin-bottom": "0px" } },
-      button: { "font-size": "18px", "padding-top": "17px", "padding-bottom": "17px", color: "#000000", ":hover": { color: "#000000", "background-color": "#00e611" }, "background-color": "#00ff13", ":focus": { "background-color": "#00e611" }, "border-radius": "5px", "padding-left": "67px", "padding-right": "67px" },
+      button: { "font-size": "18px", "padding-top": "17px", "padding-bottom": "17px", color: "#000000", ":hover": { color: "#000000", "background-color": "#00e611" }, "background-color": "#00ff13", ":focus": { "background-color": "#00e611" }, "border-radius": "5px", "padding-left": "20px", "padding-right": "20px", "width": "100%", "box-sizing": "border-box" },
       quantityInput: { "font-size": "18px", "padding-top": "17px", "padding-bottom": "17px" },
       title: { "font-family": "Helvetica Neue, sans-serif", "font-weight": "bold", "font-size": "26px", color: "#4c4c4c" },
       price: { "font-family": "Helvetica Neue, sans-serif", "font-weight": "normal", "font-size": "18px", color: "#4c4c4c" },
       compareAt: { "font-family": "Helvetica Neue, sans-serif", "font-weight": "normal", "font-size": "15.299999999999999px", color: "#4c4c4c" },
       unitPrice: { "font-family": "Helvetica Neue, sans-serif", "font-weight": "normal", "font-size": "15.299999999999999px", color: "#4c4c4c" }
     },
-    text: { button: "Add to cart" }
+    text: { button: "Add to Cart" }
   },
   option: { styles: { label: { "font-weight": "bold", color: "#ffffff" }, select: { "font-weight": "bold" } } },
   cart: {
@@ -168,7 +168,7 @@ const greensOptions = {
       button: { "font-size": "18px", "padding-top": "17px", "padding-bottom": "17px", color: "#000000", ":hover": { color: "#000000", "background-color": "#00e611" }, "background-color": "#00ff13", ":focus": { "background-color": "#00e611" }, "border-radius": "5px" },
       title: { color: "#ffffff" }, header: { color: "#ffffff" }, lineItems: { color: "#ffffff" }, subtotalText: { color: "#ffffff" }, subtotal: { color: "#ffffff" }, notice: { color: "#ffffff" }, currency: { color: "#ffffff" }, close: { color: "#ffffff", ":hover": { color: "#ffffff" } }, empty: { color: "#ffffff" }, noteDescription: { color: "#ffffff" }, discountText: { color: "#ffffff" }, discountIcon: { fill: "#ffffff" }, discountAmount: { color: "#ffffff" }, cart: { "background-color": "#000000" }, footer: { "background-color": "#000000" }
     },
-    text: { total: "Subtotal", button: "Checkout" }
+    text: { total: "Subtotal", button: "Secure Checkout" }
   },
   toggle: {
     styles: {

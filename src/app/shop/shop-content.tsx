@@ -1,6 +1,7 @@
 "use client";
 
 import { FaqAccordion } from "@/components/ui/faq-accordion";
+import { GoogleReviewBadge } from "@/components/ui/google-review-badge";
 import { ProductGlow } from "@/components/ui/product-glow";
 import { ShopifyFocusEmbed, ShopifyGreensEmbed } from "@/components/ui/shopify-buy-embed";
 import { TrackViewContent } from "@/components/ui/track-view-content";
@@ -32,15 +33,15 @@ function LimitedTimer() {
 
 const focusIncludes = [
   "60 capsules · full 30-day supply",
-  "6+ hours of crash-free focus",
-  "USA manufactured · zero fillers",
+  "Premium botanical focus formula",
+  "USA manufactured · no synthetic stimulants",
   "24% Ginkgo flavones + 7% Ginsenosides",
 ];
 
 const trustItems = [
   { icon: Truck, label: "Fast shipping" },
   { icon: ShieldCheck, label: "30-day guarantee" },
-  { icon: Star, label: "4.9/5 rating" },
+  { icon: Star, label: "Google reviewed" },
 ];
 
 export function ShopContent() {
@@ -61,11 +62,14 @@ export function ShopContent() {
               <Zap className="h-3 w-3" /> 60% OFF — LIMITED TIME
             </div>
             <h1 className="font-heading text-4xl font-semibold tracking-[-1.2px] md:text-6xl text-gray-900">
-              The daily edge.<br />Add to cart in seconds.
+              Focus Mode™ daily performance stack
             </h1>
             <p className="mt-5 mx-auto max-w-2xl text-[15px] md:text-lg text-gray-500">
-              Two clean, clinical products built for sharper work, better output, and zero crash. Choose one or bundle both.
+              Choose the premium botanical focus capsules, the plant-based greens superfood blend, or both for a simple daily routine.
             </p>
+            <div className="mt-5">
+              <GoogleReviewBadge />
+            </div>
           </div>
 
           {/* Price cards */}
@@ -79,8 +83,8 @@ export function ShopContent() {
                     <Image src="/products/focus-mode-nootropic-supplement-bottle.png" alt="Focus Mode" width={80} height={80} className="w-full h-full object-contain" />
                   </div>
                   <div>
-                    <div className="text-xs uppercase tracking-[2px] text-blue-500 font-semibold">All-Natural Brain Booster</div>
-                    <h2 className="font-heading text-2xl font-semibold text-gray-900">Focus Mode</h2>
+                    <div className="text-xs uppercase tracking-[2px] text-blue-500 font-semibold">Botanical Focus Formula</div>
+                    <h2 className="font-heading text-2xl font-semibold text-gray-900">Focus Mode Capsules</h2>
                   </div>
                 </div>
                 <div className="mt-4 flex flex-wrap items-baseline gap-3">
@@ -108,7 +112,7 @@ export function ShopContent() {
                     <Image src={GREENS.images.front} alt={GREENS.name} width={80} height={80} className="w-full h-full object-contain" />
                   </div>
                   <div>
-                    <div className="text-xs uppercase tracking-[2px] text-green-600 font-semibold">Whole-Plant Daily Energy</div>
+                    <div className="text-xs uppercase tracking-[2px] text-green-600 font-semibold">Plant-Based Daily Greens</div>
                     <h2 className="font-heading text-2xl font-semibold text-gray-900">{GREENS.name}</h2>
                   </div>
                 </div>
@@ -117,7 +121,7 @@ export function ShopContent() {
                   <span className="text-sm text-gray-400">{GREENS.servings} servings</span>
                 </div>
                 <div className="mt-3 space-y-1.5 text-sm text-gray-600">
-                  {["20+ plants, superfoods & adaptogens", "Clean sustained energy foundation", "One scoop daily"].map(t => <div key={t} className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-green-500" /> {t}</div>)}
+                  {["20+ superfoods, greens & adaptogens", "Fruits, vegetables, and botanicals", "One scoop daily"].map(t => <div key={t} className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-green-500" /> {t}</div>)}
                 </div>
               </div>
               <div className="mt-5 rounded-xl border border-gray-100 bg-gray-50 p-4 overflow-hidden">
@@ -145,9 +149,9 @@ export function ShopContent() {
               </div>
             </div>
             <div>
-              <div className="uppercase tracking-[2px] text-xs text-blue-500 mb-2 font-semibold">Elite Nootropic</div>
-              <h2 className="font-heading text-4xl md:text-5xl font-semibold tracking-[-1px] text-gray-900">Focus Mode</h2>
-              <p className="mt-3 text-lg text-gray-600">6+ hours of clean, crash-free mental clarity. Sharper decisions, faster recall, zero fog.</p>
+              <div className="uppercase tracking-[2px] text-xs text-blue-500 mb-2 font-semibold">Premium Botanical Focus Formula</div>
+              <h2 className="font-heading text-4xl md:text-5xl font-semibold tracking-[-1px] text-gray-900">Focus Mode Capsules</h2>
+              <p className="mt-3 text-lg text-gray-600">{SITE.shortDescription}</p>
 
               <div className="mt-6 flex flex-wrap items-baseline gap-3">
                 <span className="font-heading text-5xl font-extrabold tabular-nums tracking-[-1.5px] text-gray-900">${focusPrice}</span>
@@ -159,12 +163,12 @@ export function ShopContent() {
               </div>
 
               <div className="mt-6 space-y-2.5 text-[14px] text-gray-700">
-                {["2 clinically-dosed extracts (24% Ginkgo flavones + 7% Ginsenosides)", "Zero synthetic stimulants. Zero crash. Zero fillers.", "USA manufactured · 30-day empty-bottle guarantee"].map((t, i) => (
+                {["Ginkgo Biloba Leaf Extract + Red Asian Ginseng Extract", "No synthetic stimulants · Plant-based vegetable capsules", "USA manufactured · Secure Shopify checkout"].map((t, i) => (
                   <div key={i} className="flex gap-3"><Check className="h-4 w-4 mt-0.5 text-blue-500 shrink-0" /> {t}</div>
                 ))}
               </div>
 
-              <p className="mt-8 text-xs text-gray-400">Ships same day • 30-day guarantee • Subscribe & save extra at checkout</p>
+              <p className="mt-8 text-xs text-gray-400">Ships from USA • Secure Shopify checkout • Subscribe & save extra at checkout</p>
             </div>
           </div>
         </div>
@@ -185,6 +189,7 @@ export function ShopContent() {
             <div>
               <div className="uppercase tracking-[2px] text-xs text-green-600 mb-2 font-semibold">Whole-Plant Daily Nutrition</div>
               <h2 className="font-heading text-4xl md:text-5xl font-semibold tracking-[-1px] text-gray-900">{GREENS.name}</h2>
+              <p className="mt-2 font-heading text-2xl font-semibold tracking-[-0.5px] text-green-700">{GREENS.headline}</p>
               <p className="mt-3 text-lg text-gray-600">{GREENS.description}</p>
 
               <div className="mt-6 flex flex-wrap items-baseline gap-3">

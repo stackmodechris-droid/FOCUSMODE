@@ -28,14 +28,14 @@ const VIEWS: Record<ViewId, ProductView> = {
   formula: {
     id: "formula",
     label: "Formula",
-    title: "Cognitive Performance Formula",
+    title: "Botanical Focus Formula",
     description:
-      "60 vegetable capsules engineered to cut through brain fog in 20-30 minutes. Zero fillers. Zero synthetic stimulants. Pure cognitive output for students, professionals, and lifelong learners.",
+      "60 vegetable capsules with Ginkgo Biloba Leaf Extract and Red Asian Ginseng Extract for entrepreneurs, professionals, students, traders, creators, gamers, and high-performers.",
     image: PRODUCT_IMAGES.front,
     status: "In Stock • Ships Today",
     metrics: [
-      { label: "Clarity Onset", value: 92, icon: Zap },
-      { label: "Focus Duration", value: 88, icon: Timer },
+      { label: "Routine Fit", value: 92, icon: Zap },
+      { label: "Daily Focus", value: 88, icon: Timer },
     ],
   },
   capsules: {
@@ -43,9 +43,9 @@ const VIEWS: Record<ViewId, ProductView> = {
     label: "Dose",
     title: "2 Caps, Twice Daily",
     description:
-      "Take 20-30 minutes before study sessions, important meetings, or deep creative work. Clean, plant-based capsules absorb fast for rapid neural activation — suitable for growing minds and adult performance.",
+      "Use as directed on the label as part of a balanced diet and healthy lifestyle. Built for demanding work blocks, study sessions, trading windows, and creative sprints.",
     image: PRODUCT_IMAGES.capsules,
-    status: "Clinical Dose",
+    status: "Daily Routine",
     metrics: [
       { label: "Absorption", value: 95, icon: Activity },
       { label: "Bioavailability", value: 90, icon: Pill },
@@ -56,12 +56,12 @@ const VIEWS: Record<ViewId, ProductView> = {
     label: "Inside",
     title: "What's Inside",
     description:
-      "Ginkgo Biloba (24% Flavones) — powerful antioxidants for oxygen delivery and brain protection + Red Asian Ginseng (7% Ginsenosides) for dopamine, stress adaptation, and sustained stamina. Clinically dosed for all ages.",
+      "Ginkgo Biloba Leaf Extract (24% Flavone Glycosides), Red Asian Ginseng Root & Leaf Extract (7% Ginsenosides), vegetable capsules, and Silicon Dioxide.",
     image: PRODUCT_IMAGES.open,
     status: "Premium Quality",
     metrics: [
-      { label: "Synaptic Speed", value: 94, icon: Brain },
-      { label: "Memory Recall", value: 86, icon: Activity },
+      { label: "Ginkgo", value: 94, icon: Brain },
+      { label: "Ginseng", value: 86, icon: Activity },
     ],
   },
   pill: {
@@ -69,12 +69,12 @@ const VIEWS: Record<ViewId, ProductView> = {
     label: "The Pill",
     title: "Engineered Capsule",
     description:
-      "One premium capsule. Zero fillers. The exact clinical extracts — with natural antioxidants — that deliver 6+ hours of locked-in focus and support long-term brain health. See the real thing.",
+      "A clean plant-based vegetable capsule format for people who want a simple botanical focus supplement without caffeine or synthetic stimulants.",
     image: PRODUCT_IMAGES.pill,
     status: "Ready for You",
     metrics: [
       { label: "Purity", value: 99, icon: ShieldCheck },
-      { label: "Activation", value: 91, icon: Zap },
+      { label: "Simplicity", value: 91, icon: Zap },
     ],
   },
 };

@@ -14,12 +14,12 @@ interface Benefit {
 }
 
 const BENEFITS: Benefit[] = [
-  { icon: Brain, title: "Sharper Mental Clarity", desc: "Cut through brain fog and distraction within 20-30 minutes. Think clearer, longer.", metric: "20-30 MIN", accent: "neural" },
-  { icon: Zap, title: "Faster Decision-Making", desc: "Enhanced processing for sharp calls in business, exams, creative work, and high-stakes moments.", metric: "SPEED +", accent: "bolt" },
-  { icon: Timer, title: "Sustained Focus", desc: "Stay locked in for 6+ hours with zero jitters and zero afternoon crashes. Real productivity.", metric: "6+ HOURS", accent: "bolt" },
-  { icon: Database, title: "Improved Memory", desc: "Remember critical details, patterns, conversations, and strategies when it matters most.", metric: "RECALL +", accent: "neural" },
-  { icon: ShieldCheck, title: "No Jitters, No Crash", desc: "Zero caffeine, zero synthetic stimulants. Pure, clean mental performance all day.", metric: "CLEAN", accent: "bolt" },
-  { icon: Activity, title: "Neurological Support", desc: "Better blood flow + powerful antioxidants = fewer headaches, less fatigue, and long-term brain vitality.", metric: "VITALITY +", accent: "neural" },
+  { icon: Brain, title: "Mental Clarity Routine", desc: "Build a cleaner ritual around deep work, studying, trading, meetings, and creative output.", metric: "DAILY", accent: "neural" },
+  { icon: Zap, title: "Decision Routine", desc: "Support a focused state before business, exams, creative work, and high-stakes moments.", metric: "READY", accent: "bolt" },
+  { icon: Timer, title: "Structured Focus", desc: "Use the same simple supplement routine before your most demanding blocks.", metric: "FOCUS", accent: "bolt" },
+  { icon: Database, title: "Memory Routine", desc: "Pair your study, planning, and work systems with a consistent botanical ritual.", metric: "RECALL", accent: "neural" },
+  { icon: ShieldCheck, title: "No Synthetic Stimulants", desc: "Zero caffeine and no synthetic stimulants in the capsule formula.", metric: "CLEAN", accent: "bolt" },
+  { icon: Activity, title: "Botanical Support", desc: "Ginkgo, Red Asian Ginseng, and plant nutrition designed for a performance-oriented lifestyle.", metric: "PLANTS", accent: "neural" },
 ];
 
 // Angles for 6 nodes, evenly spaced, starting from top

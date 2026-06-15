@@ -116,22 +116,22 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <div className="mt-12 rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-sm sm:p-8">
             <div className="text-center mb-6">
               <span className="inline-block rounded-full border border-[#1e90ff]/20 bg-[#1e90ff]/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[1.5px] text-[#1e90ff]">
-                Get the Edge
+                Shop Focus Mode
               </span>
               <h3 className="mt-3 font-heading text-2xl font-bold text-gray-900">
-                Ready to think faster and perform better?
+                Ready to build your daily routine?
               </h3>
               <p className="mt-2 text-sm text-gray-600">
-                Two products. One complete stack. Clinical focus + whole-plant energy.
+                Botanical focus capsules plus plant-based daily greens in one simple shop.
               </p>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="flex flex-col rounded-xl border border-[#1e90ff]/20 bg-white p-5 shadow-sm">
-                <div className="text-[10px] font-bold uppercase tracking-[1.5px] text-[#7ec4ff] mb-1">Brain + Focus</div>
-                <div className="font-heading text-lg font-bold text-gray-900">Focus Mode</div>
+                <div className="text-[10px] font-bold uppercase tracking-[1.5px] text-[#7ec4ff] mb-1">Botanical Focus</div>
+                <div className="font-heading text-lg font-bold text-gray-900">Focus Mode Capsules</div>
                 <p className="mt-1.5 text-[12.5px] text-gray-600 leading-relaxed">
-                  Ginkgo + Ginseng. 6+ hours crash-free focus. Zero caffeine. Zero fillers.
+                  Ginkgo Biloba + Red Asian Ginseng in plant-based vegetable capsules.
                 </p>
                 <div className="mt-3 flex items-baseline gap-2">
                   <span className="font-heading text-2xl font-bold text-gray-900">$39.99</span>
@@ -148,10 +148,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               </div>
 
               <div className="flex flex-col rounded-xl border border-[#16a34a]/20 bg-white p-5 shadow-sm">
-                <div className="text-[10px] font-bold uppercase tracking-[1.5px] text-[#16a34a] mb-1">Whole-Plant Energy</div>
-                <div className="font-heading text-lg font-bold text-gray-900">Super Energy Blend</div>
+                <div className="text-[10px] font-bold uppercase tracking-[1.5px] text-[#16a34a] mb-1">Plant-Based Greens</div>
+                <div className="font-heading text-lg font-bold text-gray-900">{GREENS.name}</div>
                 <p className="mt-1.5 text-[12.5px] text-gray-600 leading-relaxed">
-                  20+ plants, adaptogens &amp; superfoods. Clean all-day energy. 30 servings.
+                  20+ superfoods, greens, fruits, vegetables, and adaptogens. 30 servings.
                 </p>
                 <div className="mt-3 flex items-baseline gap-2">
                   <span className="font-heading text-2xl font-bold text-gray-900">${GREENS.price}</span>

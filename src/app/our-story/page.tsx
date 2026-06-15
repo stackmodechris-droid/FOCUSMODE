@@ -12,23 +12,23 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Our Story | Atlanta Focus Supplement by Focus Mode",
+  title: "Our Story | Focus Mode Botanical Supplements",
   description:
-    "The story behind Focus Mode — the Atlanta-based all-natural focus supplement. Clinical Ginkgo + Ginseng for no-crash mental clarity. Straight from nature. Halal-friendly ingredients.",
+    "The story behind Focus Mode botanical focus capsules and daily greens: plant-based ingredients, transparent formulas, USA manufacturing, and a disciplined performance lifestyle.",
   alternates: { canonical: "/our-story" },
   openGraph: { images: ["/og/Front.png"] },
   twitter: {
     card: "summary_large_image",
-    title: "Our Story | Atlanta Focus Supplement by Focus Mode",
-    description: "The story behind Focus Mode — the Atlanta-based all-natural focus supplement. Clinical Ginkgo + Ginseng for no-crash mental clarity.",
+    title: "Our Story | Focus Mode Botanical Supplements",
+    description: "The story behind Focus Mode botanical focus capsules and daily greens.",
     images: ["/og/Front.png"],
   },
 };
 
 const PHILOSOPHY = [
-  { icon: Cpu, title: "Mind as the Ultimate Asset", body: "Your cognition is the foundation of every win. Focus Mode protects and elevates it with clinical precision — for sustained high performance." },
-  { icon: Eye, title: "Clinical Transparency", body: "No proprietary blends. No hidden fillers. Every milligram is accounted for, published, and justified by peer-reviewed research." },
-  { icon: Leaf, title: "Pure Ingredients", body: "Sourced globally for maximum bioavailability. If an ingredient doesn't meet the rigorous standards of elite cognitive optimization, it doesn't enter our supply chain." },
+  { icon: Cpu, title: "Mind as the Ultimate Asset", body: "Your routine shapes your output. Focus Mode is built for people who treat discipline, nutrition, and focus as daily standards." },
+  { icon: Eye, title: "Formula Transparency", body: "No proprietary blend mystery. The core botanicals and label details are clear so customers know what they are buying." },
+  { icon: Leaf, title: "Plant-Based Ingredients", body: "Botanical capsules and greens-first nutrition, selected for clean daily use and manufactured in the USA." },
 ];
 
 export default function OurStoryPage() {
@@ -41,13 +41,13 @@ export default function OurStoryPage() {
           <Reveal>
             <SectionLabel>Our Standard</SectionLabel>
             <h1 className="mx-auto mt-6 max-w-3xl font-heading text-4xl font-extrabold leading-[1.05] tracking-tight text-white md:text-6xl">
-              Engineered by the Elite, <br />
-              <span className="text-silver">for the </span>
-              <span className="text-neural">Elite.</span>
+              Built for Discipline, <br />
+              <span className="text-silver">Built for </span>
+              <span className="text-neural">Focus.</span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-silver/75 md:text-lg">
-              We didn&apos;t set out to build another supplement company. We set out to solve a critical infrastructure
-              problem: cognitive fatigue in high-stakes environments.
+              We built Focus Mode for people who want a cleaner daily routine around work, study, training, trading,
+              and creation.
             </p>
           </Reveal>
         </div>
@@ -63,19 +63,16 @@ export default function OurStoryPage() {
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-silver/70">
               <p>
-                Before Focus Mode existed, Christopher was pushing the absolute limits of entrepreneurial endurance —
-                running multiple ventures, managing global teams, and operating in a state of perpetual high-alert.
-                The bottleneck wasn&apos;t a lack of ambition. It was neuro-chemical depletion.
+                Before Focus Mode existed, Christopher was building through long workdays, constant context switching,
+                and the pressure of staying consistent while running multiple ventures.
               </p>
               <p>
-                &ldquo;The industry was saturated with low-grade stimulants masking the problem. I needed cognitive
-                infrastructure, not a temporary spike. I needed my brain to function like a supercomputer — reliably,
-                every single day.&rdquo;
+                &ldquo;I wanted a cleaner routine, not another chaotic spike. Something simple, botanical, transparent,
+                and easy to repeat every day.&rdquo;
               </p>
               <p>
-                So {SITE.founder} and the Focus Mode team engineered the solution: a clinically-dosed, fully
-                transparent formula for sustained cognitive performance. Now, it&apos;s available to everyone who
-                demands the same relentless output.
+                So {SITE.founder} and the Focus Mode team built a focused botanical capsule formula, then added
+                a plant-based greens blend for whole-body daily wellness.
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -96,7 +93,7 @@ export default function OurStoryPage() {
         <div className="mx-auto max-w-7xl px-5 py-24 md:px-8">
           <Reveal className="mb-12 text-center">
             <h2 className="font-heading text-3xl font-extrabold leading-tight text-white md:text-4xl">Our Philosophy</h2>
-            <p className="mt-4 text-silver/65">We don&apos;t sell &ldquo;energy.&rdquo; We provide the biological architecture for sustained, unyielding focus.</p>
+            <p className="mt-4 text-silver/65">We build simple daily wellness products for people who take their routine seriously.</p>
           </Reveal>
           <div className="grid gap-5 md:grid-cols-3">
             {PHILOSOPHY.map((p, i) => (
@@ -124,14 +121,12 @@ export default function OurStoryPage() {
                 Mind + Body. <span className="text-neural">One System.</span>
               </h2>
               <p className="mt-5 text-base leading-relaxed text-silver/70">
-                Focus Mode started with the capsule — clinical nootropics for peak cognitive performance.
-                But we quickly realized something: the sharpest brain in the world can&apos;t perform on a
-                depleted biological foundation.
+                Focus Mode started with the capsule: Ginkgo Biloba and Red Asian Ginseng in a clean vegetable
+                capsule format for demanding daily routines.
               </p>
               <p className="mt-4 text-base leading-relaxed text-silver/70">
-                That&apos;s why we built <span className="text-white font-semibold">Super Energy Blend</span>.
-                20+ whole plants, superfoods, and adaptogens in one scoop. Clean daily energy that makes
-                Focus Mode work even better — because performance isn&apos;t just mental. It&apos;s biological.
+                That&apos;s why we built <span className="text-white font-semibold">Focus Mode Greens Energy Superfood Blend</span>.
+                20+ superfoods, greens, fruits, vegetables, and adaptogens in one scoop for whole-plant daily nutrition.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="/green-energy" className="premium-cta px-7">Try Super Energy Blend</Link>
@@ -179,7 +174,7 @@ export default function OurStoryPage() {
             <h2 className="mt-4 font-heading text-3xl font-semibold tracking-[-0.5px] text-white md:text-4xl">
               A Look Inside The Capsule
             </h2>
-            <p className="mt-4 text-silver/65">No proprietary blends. Just pure, performance engineering.</p>
+            <p className="mt-4 text-silver/65">No proprietary blend mystery. Just a simple look at what is inside.</p>
           </Reveal>
 
           <div className="grid items-center gap-10 lg:grid-cols-2">
@@ -206,10 +201,10 @@ export default function OurStoryPage() {
 
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Zap, title: "Dopaminergic Activation", body: "Ginsenosides support dopamine and acetylcholine for motivation and crisp decision-making." },
-              { icon: Activity, title: "Synaptic Velocity", body: "Optimized oxygen and blood flow enhance processing speed and memory." },
-              { icon: Brain, title: "Cognitive Endurance", body: "Adaptogens buffer stress and prevent the afternoon crash for 6+ hours of clarity." },
-              { icon: Database, title: "The Standard", body: "Aggressively dosed, clinically-backed, fully transparent. Zero proprietary blends." },
+              { icon: Zap, title: "Botanical Focus", body: "Red Asian Ginseng standardized to 7% Ginsenosides." },
+              { icon: Activity, title: "Ginkgo Extract", body: "Ginkgo Biloba Leaf Extract standardized to 24% Flavone Glycosides." },
+              { icon: Brain, title: "Daily Routine", body: "Designed to fit work, study, trading, gaming, and creative schedules." },
+              { icon: Database, title: "The Standard", body: "Transparent ingredients, plant-based capsules, and no proprietary blend mystery." },
             ].map((m, i) => (
               <Reveal key={m.title} delay={i * 0.06}>
                 <div className="h-full premium-card p-6">
@@ -230,7 +225,7 @@ export default function OurStoryPage() {
             <Reveal>
               <SectionLabel>The Journal</SectionLabel>
               <h2 className="mt-3 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-4xl">Sharpen your mind.</h2>
-              <p className="mt-3 text-silver/65 max-w-lg">Evidence-based reads on focus, discipline, and elite cognitive performance.</p>
+              <p className="mt-3 text-silver/65 max-w-lg">Readable guides on focus, discipline, botanicals, greens, and daily performance routines.</p>
             </Reveal>
             <Link href="/articles" className="text-sm font-medium text-neural/90 hover:text-neural transition-colors">All articles →</Link>
           </div>

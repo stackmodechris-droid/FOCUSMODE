@@ -459,6 +459,24 @@ a.premium-cta-secondary {
   font-family: var(--font-sora), sans-serif !important;
 }
 
+.fm-shopify-embed,
+.fm-shopify-embed .shopify-buy__product,
+.fm-shopify-embed .shopify-buy__layout,
+.fm-shopify-embed iframe {
+  max-width: 100% !important;
+}
+
+.fm-shopify-embed .shopify-buy__btn,
+.fm-shopify-embed .shopify-buy__quantity,
+.fm-shopify-embed .shopify-buy__quantity-container {
+  box-sizing: border-box !important;
+}
+
+.fm-shopify-embed .shopify-buy__btn {
+  min-height: 52px !important;
+  white-space: normal !important;
+}
+
 /* White-BG image removal for Shopify embed (the embedded product card had white studio bottle PNG clashing with dark theme).
    We show our own premium ProductGlow + custom price above; embed now renders ONLY the clean yellow Buy Now button. */
 .fm-checkout img,
@@ -546,6 +564,12 @@ a.premium-cta-secondary {
     padding: 11px 18px !important;
   }
   h1 { font-size: 36px !important; line-height: 0.95 !important; letter-spacing: -1.8px !important; }
+  .fm-shopify-embed .shopify-buy__btn,
+  .fm-shopify-embed .shopify-buy__quantity {
+    font-size: 15px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
 }
 
 /* Ensure no button/title overlap, generous tap targets, clean spacing */

@@ -27,9 +27,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Focus Mode | #1 All-Natural Focus Supplement & Daily Greens for Clean Energy",
+  title: "Focus Mode | Botanical Focus Capsules & Plant-Based Daily Greens Powder",
   description:
-    "The #1 all-natural focus supplement and daily greens powder. 6+ hours crash-free focus + clean all-day energy. Clinical Ginkgo + Ginseng + 20+ superfoods. Zero fillers, zero caffeine, zero crash. USA made. 60% off today + 30-day guarantee.",
+    "Shop Focus Mode botanical focus capsules and Focus Mode Greens Energy Superfood Blend. Ginkgo, Red Asian Ginseng, 20+ superfoods, greens, fruits, vegetables, and adaptogens. USA made.",
   alternates: { canonical: "/" },
 };
 
@@ -108,9 +108,9 @@ export default function Home() {
           </div>
           <div className="grid gap-4 md:grid-cols-3 max-w-6xl mx-auto">
             {[
-              { title: "Caffeine & Stims", body: "Spikes. Jitters. 2pm crash. Tolerance builds fast.", bad: true },
+              { title: "Caffeine & Stims", body: "Short spike. More refills. Harder to keep a steady daily rhythm.", bad: true },
               { title: "Generic Nootropics", body: "Under-dosed. Mystery fillers. Marketing over molecules.", bad: true },
-              { title: "Focus Mode", body: "24% Ginkgo flavones + 7% Ginsenosides. Exact clinical doses. Zero crash.", bad: false },
+              { title: "Focus Mode", body: "Transparent Ginkgo + Red Asian Ginseng capsules, plus whole-plant greens for daily wellness.", bad: false },
             ].map((c, i) => (
               <Reveal key={i} delay={i * 0.04} className={`premium-card p-6 ${c.bad ? "opacity-60" : "border-neural/40 glow-neural"}`}>
                 <div className={`text-[10px] tracking-[1.5px] mb-2 ${c.bad ? "text-silver/40" : "text-neural"}`}>{c.bad ? "OLD WAY" : "THE EDGE"}</div>
@@ -159,13 +159,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FORMULA — Visual + clinical (lean on components) */}
+      {/* FORMULA — Visual + botanical (lean on components) */}
       <section id="formula" className="border-b border-white/10 bg-[#111414]">
         <div className="mx-auto max-w-7xl px-5 py-14 md:py-16 md:px-8 mobile-bottom-safe">
           <div className="text-center mb-8">
             <SectionLabel>The Formula</SectionLabel>
             <h2 className="mt-2 font-heading text-3xl font-semibold tracking-[-0.6px] text-white md:text-5xl">
-              Two clinical extracts.<br /><span className="text-neural">Zero fillers.</span>
+              Two botanical extracts.<br /><span className="text-neural">No synthetic stimulants.</span>
             </h2>
           </div>
           <IngredientsSchematic />
@@ -227,7 +227,7 @@ export default function Home() {
             <div>
               <SectionLabel>Whole-Plant Daily Energy</SectionLabel>
               <h2 className="mt-2 font-heading text-3xl md:text-5xl font-semibold tracking-[-0.8px] text-white">Super Energy Blend</h2>
-              <p className="mt-3 text-silver/75">20+ plants, superfoods &amp; adaptogens in one scoop. Clean all-day energy + the foundation that makes Focus Mode work even better.</p>
+              <p className="mt-3 text-silver/75">{GREENS.description}</p>
               <div className="mt-5 flex flex-wrap gap-x-4 gap-y-1 text-sm text-silver/70">
                 <div>✓ 1 scoop = 60 seconds</div>
                 <div>✓ Spirulina, Beet, Acai, Ginseng + more</div>

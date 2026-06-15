@@ -1,6 +1,7 @@
 "use client";
 
 import { ProductGlow } from "@/components/ui/product-glow";
+import { GoogleReviewBadge } from "@/components/ui/google-review-badge";
 import { GREENS, PRODUCT_IMAGES, SITE, trackPurchase } from "@/lib/site";
 import { ChevronDown, Leaf, ShieldCheck, Star, Truck, Zap } from "lucide-react";
 import { motion } from "motion/react";
@@ -30,27 +31,30 @@ export function Hero() {
           </div>
 
           <h1 className="mx-auto max-w-4xl font-heading text-[38px] font-semibold leading-[0.95] tracking-[-1.8px] text-white sm:text-[52px] md:text-[68px] lg:text-[80px]">
-            Unlock your daily edge
+            Focus, energy, daily wellness
           </h1>
 
           <p className="mx-auto mt-4 max-w-[580px] text-[15px] leading-relaxed text-silver/70 md:text-[17px]">
-            Clean focus + all-day energy. Two clinical products. Zero stimulant crash.
+            Premium botanical capsules plus a plant-based greens powder for high-performers who want a cleaner daily routine.
           </p>
 
           {/* Compact trust row */}
           <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-silver/60">
             <div className="flex items-center gap-1.5">
-              <div className="flex" aria-label="4.9 out of 5 stars">
+              <div className="flex" aria-label="Google review rating">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="h-3.5 w-3.5 fill-bolt text-bolt" />
                 ))}
               </div>
-              <span className="font-medium text-white/80">4.9/5</span>
+              <span className="font-medium text-white/80">Google reviewed</span>
             </div>
             <span className="hidden h-3 w-px bg-white/15 sm:inline-block" />
             <span className="inline-flex items-center gap-1 text-silver/55"><Truck className="h-3.5 w-3.5 text-neural" /> Ships today</span>
             <span className="hidden h-3 w-px bg-white/15 sm:inline-block" />
             <span className="inline-flex items-center gap-1 text-silver/55"><ShieldCheck className="h-3.5 w-3.5 text-neural" /> 30-day guarantee</span>
+          </div>
+          <div className="mt-4">
+            <GoogleReviewBadge />
           </div>
         </motion.div>
       </div>
@@ -88,7 +92,7 @@ export function Hero() {
                 </div>
                 <div className="mt-3 flex flex-wrap gap-2 text-[12px] text-silver/70">
                   <span className="rounded-full bg-white/5 px-3 py-1">Ginkgo + Ginseng</span>
-                  <span className="rounded-full bg-white/5 px-3 py-1">Zero crash</span>
+                  <span className="rounded-full bg-white/5 px-3 py-1">No synthetic stimulants</span>
                   <span className="rounded-full bg-white/5 px-3 py-1">60 capsules</span>
                 </div>
                 <Link href="/shop" className="premium-cta mt-5 w-full" onClick={() => trackPurchase({ value: SITE.price, currency: "USD" })}>
@@ -149,7 +153,7 @@ export function Hero() {
             <span className="text-neural font-bold text-xs uppercase tracking-[1.5px]">Complete Daily Edge</span>
             <span className="hidden sm:inline text-white/20">·</span>
             <span className="hidden sm:inline">Focus Mode + Super Energy Blend</span>
-            <span className="text-xs text-silver/45 text-center w-full sm:w-auto">Clean energy + locked-in focus, zero crash</span>
+            <span className="text-xs text-silver/45 text-center w-full sm:w-auto">Botanical focus + whole-plant daily nutrition</span>
           </div>
           <Link href="/shop" className="shrink-0 text-xs font-bold uppercase tracking-[1.5px] text-bolt hover:text-bolt/80 transition-colors">
             View Complete Bundle →

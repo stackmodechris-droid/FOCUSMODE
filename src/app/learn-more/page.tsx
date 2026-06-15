@@ -8,30 +8,30 @@ import { Activity, Brain, Database, Leaf, Lock, Target, Zap } from "lucide-react
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Science | Best Focus Supplement Ingredients & Clinical Dosing",
+  title: "The Formula | Focus Mode Botanical Ingredients & Daily Routine",
   description:
-    "Ginkgo Biloba 24% flavones + Red Asian Ginseng 7% ginsenosides. The exact clinical formula inside Focus Mode — the crash-free focus supplement for students, professionals, entrepreneurs and creators.",
+    "Learn about the Focus Mode formula: Ginkgo Biloba 24% flavones, Red Asian Ginseng 7% ginsenosides, plant-based capsules, and daily routine guidance.",
   alternates: { canonical: "/learn-more" },
   openGraph: { images: ["/og/Front.png"] },
   twitter: {
     card: "summary_large_image",
-    title: "The Science | Best Focus Supplement Ingredients & Clinical Dosing",
-    description: "Ginkgo Biloba 24% flavones + Red Asian Ginseng 7% ginsenosides. The exact clinical formula inside Focus Mode.",
+    title: "The Formula | Focus Mode Botanical Ingredients & Daily Routine",
+    description: "Ginkgo Biloba 24% flavones, Red Asian Ginseng 7% ginsenosides, plant-based capsules, and daily routine guidance.",
     images: ["/og/Front.png"],
   },
 };
 
 const MECHANICS = [
-  { icon: Zap, title: "Dopaminergic Activation", body: "Ginsenosides support dopamine and acetylcholine — the neurochemicals behind motivation, learning, and crisp decision-making for students and professionals alike." },
-  { icon: Activity, title: "Synaptic Velocity + Antioxidant Shield", body: "Optimized oxygen and blood flow plus powerful natural antioxidants enhance processing speed, memory, and long-term brain health." },
-  { icon: Brain, title: "Cognitive Endurance", body: "Adaptogens help buffer stress and prevent the afternoon crash, sustaining clear thinking for 6+ hours — ideal for long school days or demanding careers." },
-  { icon: Database, title: "The Focus Mode Standard", body: "Aggressively dosed, clinically-backed, fully transparent. 100% label accuracy. Zero proprietary blends. Kid-friendly clean formula for growing minds and adult performance." },
+  { icon: Zap, title: "Red Asian Ginseng", body: "Standardized to 7% Ginsenosides and selected for disciplined, performance-oriented daily routines." },
+  { icon: Activity, title: "Ginkgo Biloba", body: "Leaf extract standardized to 24% Flavone Glycosides, paired with Red Asian Ginseng in a simple capsule formula." },
+  { icon: Brain, title: "Daily Consistency", body: "Designed to complement sleep, hydration, nutrition, planning, and focused work blocks." },
+  { icon: Database, title: "The Focus Mode Standard", body: "Transparent ingredient details, plant-based vegetable capsules, and no proprietary blend mystery." },
 ];
 
 const HOW_TO = [
-  { icon: Target, title: "Time It Right", body: "Take 2 capsules 20-30 minutes before your most important study session, meeting, creative block, or exam." },
-  { icon: Leaf, title: "Stay Consistent", body: "Take twice daily. Benefits to blood flow, neurochemistry, and antioxidant protection compound with consistent use for lasting results." },
-  { icon: Lock, title: "Lock The Environment", body: "Eliminate distractions. Phone away, one task at a time. Focus Mode helps your mind do the rest — for kids and adults." },
+  { icon: Target, title: "Time It Right", body: "Take as directed on the product label before your most important study session, meeting, creative block, or work sprint." },
+  { icon: Leaf, title: "Stay Consistent", body: "Use consistently as part of a balanced diet, hydration, sleep, and healthy lifestyle." },
+  { icon: Lock, title: "Lock The Environment", body: "Eliminate distractions. Phone away, one task at a time. Let the routine support the work." },
 ];
 
 export default function LearnMorePage() {
@@ -44,10 +44,10 @@ export default function LearnMorePage() {
           <Reveal>
             <SectionLabel>The Formula</SectionLabel>
             <h1 className="mx-auto mt-6 max-w-3xl font-heading text-4xl font-extrabold leading-[1.05] tracking-tight text-white md:text-6xl">
-              The Architecture of <span className="text-neural">Elite Focus</span>
+              The Focus Mode <span className="text-neural">Formula</span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-silver/75 md:text-lg">
-              We engineered a neuro-activation sequence for real life. Discover the clinically-dosed ingredients behind 6+ hours of sustained focus, reduced mental fatigue, and a sharper mind — for entrepreneurs, professionals, students, and creators who perform at the highest level.
+              A transparent botanical capsule formula built with Ginkgo Biloba Leaf Extract, Red Asian Ginseng Root &amp; Leaf Extract, and plant-based vegetable capsules for demanding daily routines.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <LiquidGlassButton href="/focus-mode">Get The Formula</LiquidGlassButton>
@@ -81,15 +81,15 @@ export default function LearnMorePage() {
         </div>
       </section>
 
-      {/* Clinical components */}
+      {/* Formula components */}
       <section className="border-b border-white/10 bg-[#111414]">
         <div className="mx-auto max-w-7xl px-5 py-20 md:py-24 md:px-8">
           <Reveal className="mb-12 text-center">
-            <SectionLabel>Clinical Components</SectionLabel>
+            <SectionLabel>Formula Components</SectionLabel>
             <h2 className="mt-4 font-heading text-3xl font-semibold tracking-[-0.5px] text-white md:text-4xl">
               A Look Inside The Capsule
             </h2>
-            <p className="mt-4 text-silver/65">No proprietary blends. Just pure, performance engineering.</p>
+            <p className="mt-4 text-silver/65">No proprietary blend mystery. Just a clear look at the core botanicals.</p>
           </Reveal>
 
           <div className="grid items-center gap-10 lg:grid-cols-2">
