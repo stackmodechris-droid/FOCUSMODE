@@ -28,6 +28,7 @@ const COLS = [
     links: [
       { label: "Terms of Service", href: "/terms" },
       { label: "Privacy Policy", href: "/privacy" },
+      { label: "Return Policy", href: "/returns" },
       { label: "Shipping Info", href: "/terms#shipping" },
       { label: "Contact", href: `mailto:${SITE.email}` },
     ],
