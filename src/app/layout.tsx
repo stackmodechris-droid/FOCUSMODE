@@ -4,6 +4,7 @@ import { MetaPixel } from "@/components/ui/meta-pixel";
 import { MobileMenuProvider } from "@/components/ui/mobile-menu-context";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { Navbar1 } from "@/components/ui/shadcnblocks-com-navbar1";
+import { FloatingReviewButton } from "@/components/ui/floating-review-button";
 import { SITE } from "@/lib/site";
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Sora } from "next/font/google";
@@ -238,6 +239,50 @@ fbq('track', 'PageView');`}
           <main id="main-content" className="flex-1">{children}</main>
           <Footer />
         </MobileMenuProvider>
+
+        <FloatingReviewButton />
+
+        {/* Google Survey Opt-in */}
+        <Script src="https://apis.google.com/js/platform.js?onload=renderOptIn" strategy="lazyOnload" />
+        <Script id="google-survey-optin" strategy="lazyOnload">
+          {`
+            window.renderOptIn = function() {
+              if (window.gapi && window.gapi.load) {
+                window.gapi.load('surveyoptin', function() {
+                  window.gapi.surveyoptin.render(
+                    {
+                      // REQUIRED FIELDS
+                      "merchant_id": 5808927323,
+                      "order_id": "ORDER_ID",
+                      "email": "CUSTOMER_EMAIL",
+                      "delivery_country": "US",
+                      "estimated_delivery_date": new Date().toISOString().split('T')[0],
+
+                      // OPTIONAL FIELDS
+                      "products": [{"gtin":"GTIN1"}, {"gtin":"GTIN2"}]
+                    });
+                });
+              }
+            }
+          `}
+        </Script>
+
+        {/* Google Merchant Widget */}
+        <Script src="https://www.gstatic.com/shopping/merchant/merchantwidget.js" strategy="lazyOnload" />
+        <Script id="google-merchant-widget" strategy="lazyOnload">
+          {`
+            if (typeof window !== 'undefined') {
+              window.addEventListener('load', function () {
+                if (window.merchantwidget) {
+                  window.merchantwidget.start({
+                       merchant_id: 5808927323,
+                       position: 'BOTTOM_RIGHT'
+                  });
+                }
+              });
+            }
+          `}
+        </Script>
       </body>
     </html>
   );
