@@ -1,10 +1,10 @@
 import { AnnouncementBar } from "@/components/ui/announcement-bar";
+import { FloatingReviewButton } from "@/components/ui/floating-review-button";
 import { Footer } from "@/components/ui/footer";
 import { MetaPixel } from "@/components/ui/meta-pixel";
 import { MobileMenuProvider } from "@/components/ui/mobile-menu-context";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { Navbar1 } from "@/components/ui/shadcnblocks-com-navbar1";
-import { FloatingReviewButton } from "@/components/ui/floating-review-button";
 import { SITE } from "@/lib/site";
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Sora } from "next/font/google";
@@ -143,17 +143,44 @@ const jsonLd = {
       sku: "FM-60CAP",
       offers: {
         "@type": "Offer",
-        url: "/shop",
+        url: `${SITE.url}/shop`,
         priceCurrency: SITE.currency,
-        price: SITE.price,
+        price: String(SITE.price),
         availability: "https://schema.org/InStock",
         seller: { "@id": `${SITE.url}/#organization` },
+        shippingDetails: {
+          "@type": "OfferShippingDetails",
+          shippingRate: {
+            "@type": "MonetaryAmount",
+            value: "5.99",
+            currency: "USD",
+          },
+          shippingDestination: {
+            "@type": "DefinedRegion",
+            addressCountry: "US",
+          },
+          deliveryTime: {
+            "@type": "ShippingDeliveryTime",
+            handlingTime: {
+              "@type": "QuantitativeValue",
+              minValue: 0,
+              maxValue: 1,
+              unitCode: "DAY",
+            },
+            transitTime: {
+              "@type": "QuantitativeValue",
+              minValue: 2,
+              maxValue: 5,
+              unitCode: "DAY",
+            },
+          },
+        },
       },
       aggregateRating: {
         "@type": "AggregateRating",
-        ratingValue: "5",
-        reviewCount: "1",
-        bestRating: "5",
+        ratingValue: 5,
+        reviewCount: 1,
+        bestRating: 5,
       },
     },
     {

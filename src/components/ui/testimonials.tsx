@@ -9,20 +9,15 @@ const reviewSchema = {
   "@type": "Review",
   itemReviewed: {
     "@type": "Product",
-    name: "Focus Mode Focus Supplement",
+    "@id": `${SITE.url}/#product`,
+    name: SITE.productTitle,
     image: `${SITE.url}/products/focus-mode-nootropic-supplement-bottle.png`,
     brand: { "@type": "Brand", name: SITE.brand },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      reviewCount: "1",
-      bestRating: "5",
-    },
   },
   author: { "@type": "Person", name: SITE.founder },
   reviewBody:
     "I built Focus Mode because I wanted a simple daily botanical routine for demanding work. I chose Ginkgo Biloba (24% flavones) and Red Asian Ginseng (7% ginsenosides) because the formula needed to feel focused, disciplined, and clean.",
-  reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+  reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
   publisher: { "@type": "Organization", name: SITE.legalName },
 };
 
